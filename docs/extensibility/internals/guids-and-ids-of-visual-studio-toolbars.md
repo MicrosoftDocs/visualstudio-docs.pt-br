@@ -3,7 +3,7 @@ title: GUIDs e IDs das barras de ferramentas do Visual Studio | Microsoft Docs
 description: Exiba uma lista de valores GUID e ID para as barras de ferramentas e os grupos que eles contêm, que estão incluídos no IDE (ambiente de desenvolvimento integrado) do Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - visual studio groups
 - toolbars
@@ -18,12 +18,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8ca3a2ec0b9d0eef7821641eaf05e93f83f94f40
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 3d2ba6c92a2913ec63a59751a4181454aa67fa67
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082069"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898104"
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>GUIDs e IDs das barras de ferramentas do Visual Studio
 Este tópico enumera os valores de GUID e ID das barras de ferramentas que estão incluídas no IDE (ambiente de desenvolvimento integrado) do Visual Studio e nos grupos que eles contêm. Esses valores são definidos em arquivos *. vsct* que são instalados como parte do SDK do Visual Studio. Para obter mais informações, consulte [comandos, menus e grupos definidos pelo IDE](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).
@@ -56,7 +56,7 @@ Este tópico enumera os valores de GUID e ID das barras de ferramentas que estã
 |Adicionar comando|IDM_VS_TOOL_ADDCOMMAND|
 |Indefinido|IDM_VS_TOOL_UNDEFINED|
 |esquema XML|IDM_VS_TOOL_SCHEMA|
-|Dados XML|IDM_VS_TOOL_DATA|
+|dados XML|IDM_VS_TOOL_DATA|
 
 ## <a name="groups-on-the-ide-toolbars"></a>Grupos nas barras de ferramentas do IDE
  Para adicionar um botão a uma barra de ferramentas padrão, defina um dos grupos a seguir como seu pai. Os grupos são classificados por barra de ferramentas pai.
@@ -107,15 +107,15 @@ Este tópico enumera os valores de GUID e ID das barras de ferramentas que estã
 |Local de depuração|IDG_DEBUG_CONTEXT_TOOLBAR|
 
 ## <a name="tool-window-toolbars"></a>Barras de ferramentas da janela de ferramentas
- As barras de ferramentas podem aparecer diretamente no IDE ou em janelas de ferramentas, como **Gerenciador de soluções**. Como as janelas de ferramentas não estão definidas nos arquivos *. vsct* , as barras de ferramentas da janela de ferramentas não têm pais definidos. Em vez disso, eles são colocados no código. A tabela a seguir mostra as barras de ferramentas que aparecem nas janelas de ferramentas no IDE e os grupos de comandos que elas contêm.
+ As barras de ferramentas podem aparecer diretamente no IDE ou nas janelas de ferramentas, **como** Gerenciador de Soluções . Como as janelas de ferramentas não são definidas *em arquivos .vsct,* as barras de ferramentas da janela de ferramentas não têm pais definidos. Em vez disso, eles são colocados no código. A tabela a seguir mostra as barras de ferramentas que aparecem nas janelas de ferramentas no IDE e os grupos de comandos que elas contêm.
 
 > [!NOTE]
-> Barras de ferramentas e grupos usam o GUID `guidSHLMainMenu` , exceto quando especificado de outra forma usando GUID: ID de sintaxe. Onde um GUID é especificado para uma barra de ferramentas, ele também se aplica aos grupos que descendem dessa barra de ferramentas.
+> Barras de ferramentas e grupos usam o GUID , exceto quando especificado de outra `guidSHLMainMenu` forma usando a sintaxe GUID:ID. Quando um GUID é especificado para uma barra de ferramentas, ele também se aplica aos grupos descendentes dessa barra de ferramentas.
 
 |Janela de ferramentas|Barra de ferramentas|Grupos|
 |-----------------|-------------|------------|
-|Gerenciador de Soluções|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. 05|
-|Gerenciador de Servidores|guid_SE_MenuGroup: IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
+|Gerenciador de Soluções|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1.. 5|
+|Gerenciador de Servidores|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|
 |Propriedades|IDM_VS_TOOL_PROPERTIES|IDG_VS_PROPERTIES_SORT<br /><br /> IDG_VS_PROPERTIES_PAGES|
 |Exibição de Classe|IDM_VS_TOOL_CLASSVIEW|IDG_VS_CLASSVIEW_FOLDERS<br /><br /> IDG_VS_CLASSVIEW_SEARCH<br /><br /> IDG_VS_CLASSVIEW_SETTINGS|
 |Exibição de Classe|IDM_VS_TOOL_CLASSVIEW_GO|IDG_VS_CLASSVIEW_SEARCH2|
@@ -123,17 +123,17 @@ Este tópico enumera os valores de GUID e ID das barras de ferramentas que estã
 |Pesquisador de Objetos|IDM_VS_TOOL_OBJECT_BROWSER_GO|IDG_VS_OBJBROWSER_SEARCH2|
 |Saída|IDM_VS_TOOL_OUTPUTWINDOW|IDG_VS_OUTPUTWINDOW_SELECT<br /><br /> IDG_VS_OUTPUTWINDOW_GOTO<br /><br /> IDG_VS_OUTPUTWINDOW_NEXTPREV<br /><br /> IDG_VS_OUTPUTWINDOW_CLEAR<br /><br /> IDG_VS_OUTPUTWINDOW_WORDWRAP|
 |Localizar e Substituir|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|
-|Localizar resultados 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
-|Localizar resultados 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
+|Encontrar Resultados 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|
+|Encontrar Resultados 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|
 |Snippet|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|
 |Indicadores|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|
 |Lista de Tarefas|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|
 |Tarefas do usuário|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|
 |Lista de Erros|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|
 |Pesquisador de Chamadas|IDM_VS_TOOL_CALLBROWSER1.. 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|
-|Pontos de interrupção|guidVSDebugGroup: IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
-|Desmontagem|guidVSDebugGroup: IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
-|Memória 1-4|guidVSDebugGroup: IDM_MEMORY_WINDOW_TOOLBAR1... quatro|IDG_MEMORY_EXPRESSION1.. quatro<br /><br /> IDG_MEMORY_COLUMNS1.. quatro|
+|Pontos de interrupção|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|
+|Desmontagem|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|
+|Memória de 1 a 4|guidVSDebugGroup: IDM_MEMORY_WINDOW_TOOLBAR1... quatro|IDG_MEMORY_EXPRESSION1.. quatro<br /><br /> IDG_MEMORY_COLUMNS1.. quatro|
 |Processos|guidVSDebugGroup: IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|
 
 ## <a name="see-also"></a>Confira também

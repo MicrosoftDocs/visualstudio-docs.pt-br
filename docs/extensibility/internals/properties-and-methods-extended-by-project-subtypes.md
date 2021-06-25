@@ -3,7 +3,7 @@ title: Propriedades e métodos estendidos por subtipos de projeto | Microsoft Do
 description: Saiba mais sobre os recursos que os subtipos de projeto podem melhorar ou modificar, o que permite que você personalize o comportamento dos sistemas de projeto do Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project subtypes, extended methods
 - project subtypes, extended properties
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f32c489ba2907cabff47b916039f96754d403455
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8ddcf020cf0b3e3e4f0f4a7c61ff1f15ce9ded5e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064235"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903535"
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>Propriedades e métodos estendidos por subtipos de projeto
 Um subtipo de projeto tem muita potência para influenciar o comportamento do projeto, pois ele é construído como um agregador de um projeto base. Esta seção resume alguns dos recursos que podem ser aprimorados ou modificados por subtipos de projeto.
@@ -28,9 +28,9 @@ Um subtipo de projeto tem muita potência para influenciar o comportamento do pr
 
 |Métodos substituídos por agregação|Subtipo de projeto|
 |---------------------------------------|---------------------|
-|De <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|Habilita um subtipo de projeto para<br /><br /> -Alterar a legenda e o ícone do nó do projeto.<br />– Substituir completamente o `Browse` objeto Project.<br />-Controlar se o projeto pode ser renomeado.<br />-Ordem de classificação de controle.<br />-Controle o contexto do usuário para obter ajuda dinâmica.|
-|De <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> :<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Habilita um subtipo de projeto para controlar quais serviços contextuais são fornecidos aos designers e editores.|
-|De <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> :<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|Habilita um subtipo de projeto para<br /><br /> -Participar do comando roteamento de comandos de projeto.<br />-Adicionar, remover ou desabilitar os comandos de ambiente do projeto e Gerenciador de Soluções comandos ativos.|
+|De <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetGuidProperty%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.SetGuidProperty%2A>|Habilita um subtipo de projeto para<br /><br /> -Alterar a legenda e o ícone do nó do projeto.<br />– Substituir completamente o `Browse` objeto Project.<br />-Controlar se o projeto pode ser renomeado.<br />-Ordem de classificação de controle.<br />-Controle o contexto do usuário para obter ajuda dinâmica.|
+|De <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>:<br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject.GetItemContext%2A>|Habilita um subtipo de projeto para controlar quais serviços contextuais são fornecidos aos designers e editores.|
+|De <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>:<br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A>|Habilita um subtipo de projeto para<br /><br /> -Participar do comando roteamento de comandos de projeto.<br />-Adicionar, remover ou desabilitar os comandos de ambiente do projeto e Gerenciador de Soluções comandos ativos.|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>|Habilita o subtipo de projeto para filtrar o que o usuário vê na caixa de diálogo **Adicionar novo item** .|
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGeneratorFactory>|Habilita um subtipo de projeto para<br /><br /> -Determinar o gerador padrão fornecido por uma extensão de arquivo.<br />-Mapeie um nome de gerador legível por humanos para um objeto COM.|
 

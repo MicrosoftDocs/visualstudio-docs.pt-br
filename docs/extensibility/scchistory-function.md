@@ -2,7 +2,7 @@
 description: Essa função exibe o histórico dos arquivos especificados.
 title: Função SccHistory | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccHistory
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11a3056e34d15e2e04b687a518e86041dc270997
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 1208bd0cb13661f1aa60bb9f97c9e4502e517e6d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063845"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902534"
 ---
 # <a name="scchistory-function"></a>Função SccHistory
 Essa função exibe o histórico dos arquivos especificados.
@@ -39,49 +39,49 @@ SCCRTN SccHistory(
 #### <a name="parameters"></a>Parâmetros
  `pvContext`
 
-no A estrutura de contexto do plug-in de controle do código-fonte.
+[in] A estrutura de contexto de plug-in do controle do código-fonte.
 
  `hWnd`
 
-no Um identificador para a janela do IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornecer.
+[in] Um alça para a janela IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornece.
 
  `nFiles`
 
-no Número de arquivos especificados na `lpFileName` matriz.
+[in] Número de arquivos especificados na `lpFileName` matriz.
 
  `lpFileName`
 
-no Matriz de nomes totalmente qualificados de arquivos.
+[in] Matriz de nomes totalmente qualificados de arquivos.
 
  `fOptions`
 
-no Sinalizadores de comando (atualmente não usados).
+[in] Sinalizadores de comando (atualmente não usados).
 
  `pvOptions`
 
-no Opções específicas de plug-ins de controle do código-fonte.
+[in] Opções específicas do plug-in de controle do código-fonte.
 
 ## <a name="return-value"></a>Valor Retornado
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
 |SCC_OK|O histórico de versão foi obtido com êxito.|
-|SCC_I_RELOADFILE|O sistema de controle do código-fonte realmente modificou o arquivo no disco ao buscar o histórico (por exemplo, obtendo uma versão antiga dele), portanto, o IDE deve recarregar esse arquivo.|
-|SCC_E_FILENOTCONTROLLED|O arquivo não está no controle do código-fonte.|
-|SCC_E_OPNOTSUPPORTED|O sistema de controle do código-fonte não oferece suporte a essa operação.|
-|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar esta operação.|
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. Uma nova tentativa é recomendada.|
+|SCC_I_RELOADFILE|O sistema de controle do código-fonte realmente modificou o arquivo no disco ao buscar o histórico (por exemplo, ao obter uma versão antiga dele), de modo que o IDE deve recarregar esse arquivo.|
+|SCC_E_FILENOTCONTROLLED|O arquivo não está sob controle do código-fonte.|
+|SCC_E_OPNOTSUPPORTED|O sistema de controle do código-fonte não dá suporte a essa operação.|
+|SCC_E_NOTAUTHORIZED|O usuário não tem permissão para executar essa operação.|
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou contenção. Uma nova tentativa é recomendada.|
 |SCC_E_PROJNOTOPEN|O projeto não foi aberto.|
 |SCC_E_NONSPECIFICERROR|Falha não específica. Não foi possível obter o histórico de arquivos.|
 
 ## <a name="remarks"></a>Comentários
- O plug-in de controle do código-fonte pode exibir sua própria caixa de diálogo para mostrar o histórico de cada arquivo, usando `hWnd` como a janela pai. Como alternativa, a função de retorno de chamada de saída de texto opcional fornecida para o [SccOpenProject](../extensibility/sccopenproject-function.md) pode ser usada, se houver suporte.
+ O plug-in de controle do código-fonte pode exibir sua própria caixa de diálogo para mostrar o histórico de cada arquivo, usando `hWnd` como a janela pai. Como alternativa, a função de retorno de chamada de saída de texto opcional fornecida ao [SccOpenProject](../extensibility/sccopenproject-function.md) poderá ser usada, se tiver suporte.
 
- Observe que, em determinadas circunstâncias, o arquivo que está sendo examinado pode ser alterado durante a execução dessa chamada. Por exemplo, o [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] comando de histórico dá ao usuário a oportunidade de obter uma versão antiga do arquivo. Nesse caso, o plug-in de controle do código-fonte retorna `SCC_I_RELOAD` para avisar o IDE de que ele precisa para recarregar o arquivo.
+ Observe que, em determinadas circunstâncias, o arquivo que está sendo examinado pode mudar durante a execução dessa chamada. Por exemplo, o [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] comando de histórico dá ao usuário a oportunidade de obter uma versão antiga do arquivo. Nesse caso, o plug-in de controle do código-fonte retorna para avisar o IDE de que ele `SCC_I_RELOAD` precisa recarregar o arquivo.
 
 > [!NOTE]
-> Se o plug-in de controle do código-fonte não oferecer suporte a essa função para uma matriz de arquivos, somente o histórico de arquivos do primeiro arquivo poderá ser exibido.
+> Se o plug-in de controle do código-fonte não dá suporte a essa função para uma matriz de arquivos, somente o histórico de arquivos para o primeiro arquivo pode ser exibido.
 
 ## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

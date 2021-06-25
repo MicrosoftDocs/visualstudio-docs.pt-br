@@ -3,7 +3,7 @@ title: Parâmetros de contexto | Microsoft Docs
 description: Saiba mais sobre parâmetros de contexto no IDE (ambiente de desenvolvimento integrado) do Visual Studio que definem o estado de um projeto quando você adiciona ou implementa um assistente.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - wizards, context parameters
 - context parameters
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14d60aa31fb586651ea6e2b00a8f8038bfaa42b9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 536e5abf92884c5c19399e73b4e1773e66919657
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057059"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898221"
 ---
 # <a name="context-parameters"></a>Parâmetros de contexto
 No [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE (ambiente de desenvolvimento integrado), você pode adicionar assistentes às caixas de diálogo **novo projeto**, **Adicionar novo item** ou **Adicionar subprojeto** . Os assistentes adicionados estão disponíveis no menu **arquivo** ou clicando com o botão direito do mouse em um projeto no **Gerenciador de soluções**. O IDE passa parâmetros de contexto para a implementação do assistente. Os parâmetros de contexto definem o estado do projeto quando o IDE chama o assistente.

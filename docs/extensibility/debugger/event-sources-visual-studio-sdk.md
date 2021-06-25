@@ -1,9 +1,9 @@
 ---
-title: Origens de eventos (SDK do Visual Studio) | Microsoft Docs
-description: 'Saiba mais sobre as duas fontes de eventos na depuração do Visual Studio: o mecanismo de depuração e o Gerenciador de depuração de sessão.'
+title: Fontes de evento (Visual Studio SDK) | Microsoft Docs
+description: 'Saiba mais sobre as duas fontes de eventos Visual Studio depuração: o mecanismo de depuração e o Gerenciador de Depuração de Sessão.'
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], event sources
 ms.assetid: b9ba0908-ae4c-4a64-aab1-bee453dd7a22
@@ -12,18 +12,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ec6213a1462c391d13bbdf8a20ac61e232cafb49
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8a1956cb3643b9f49fae6bb42bbb46675b7b2398
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105097000"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898559"
 ---
-# <a name="event-sources-visual-studio-sdk"></a>Origens de eventos (SDK do Visual Studio)
-Há duas fontes de eventos: o mecanismo de depuração (DE) e o SDM (Gerenciador de depuração de sessão). Os eventos enviados de um DE têm um mecanismo não nulo, enquanto os eventos enviados do SDM têm um mecanismo nulo.
+# <a name="event-sources-visual-studio-sdk"></a>Fontes de evento (Visual Studio SDK)
+Há duas fontes de eventos: o DE (mecanismo de depuração) e o SDM (Gerenciador de Depuração de Sessão). Os eventos enviados de um DE têm um mecanismo não NULL, enquanto os eventos enviados do SDM têm um mecanismo NULL.
 
 ## <a name="example"></a>Exemplo
-O exemplo a seguir mostra como enviar o **IDebugProgramCreateEvent2** do de para o SDM.
+O exemplo a seguir mostra como enviar **o IDebugProgramCreateEvent2** do DE para o SDM.
 
 ```csharp
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();

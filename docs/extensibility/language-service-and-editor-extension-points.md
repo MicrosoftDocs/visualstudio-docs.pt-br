@@ -1,9 +1,9 @@
 ---
-title: Pontos de extensão do serviço de linguagem e do editor | Microsoft Docs
-description: Saiba mais sobre os pontos de extensão no editor de código do Visual Studio que você pode estender, incluindo a maioria dos recursos de serviço de linguagem.
+title: Pontos de extensão do Serviço de Linguagem e do Editor | Microsoft Docs
+description: Saiba mais sobre os pontos de extensão no editor Visual Studio código que você pode estender, incluindo a maioria dos recursos do serviço de linguagem.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
@@ -12,15 +12,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: a8d71e6c7cd7569c9e73134345584a8237337bc7
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 293851f1f3e72508a9bc119fb7551b0118ab2a9b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073294"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903141"
 ---
 # <a name="language-service-and-editor-extension-points"></a>Pontos de extensão do serviço de linguagem e do editor
-O Editor fornece pontos de extensão que você pode estender como partes de componente Managed Extensibility Framework (MEF), incluindo a maioria dos recursos de serviço de linguagem. Estas são as principais categorias de ponto de extensão:
+O editor fornece pontos de extensão que você pode estender como Managed Extensibility Framework componente mef (mef), incluindo a maioria dos recursos do serviço de linguagem. Estas são as principais categorias de ponto de extensão:
 
 - Tipos de conteúdo
 
@@ -28,28 +28,28 @@ O Editor fornece pontos de extensão que você pode estender como partes de comp
 
 - Margens e barras de rolagem
 
-- Marcações
+- Marcas
 
 - Adornos
 
-- Processadores do mouse
+- Processadores de mouse
 
-- Descartar manipuladores
+- Manipuladores de soltar
 
 - Opções
 
 - IntelliSense
 
 ## <a name="extend-content-types"></a>Estender tipos de conteúdo
- Tipos de conteúdo são as definições dos tipos de texto manipulados pelo editor, por exemplo, "texto", "código" ou "CSharp". Você define um novo tipo de conteúdo declarando uma variável do tipo <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> e dando ao novo tipo de conteúdo um nome exclusivo. Para registrar o tipo de conteúdo com o editor, exporte-o junto com os seguintes atributos:
+ Os tipos de conteúdo são as definições dos tipos de texto manipulados pelo editor, por exemplo, "text", "code" ou "CSharp". Você define um novo tipo de conteúdo declarando uma variável do tipo e dando ao novo tipo <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> de conteúdo um nome exclusivo. Para registrar o tipo de conteúdo com o editor, exporte-o junto com os seguintes atributos:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute> é o nome do tipo de conteúdo.
 
 - <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> é o nome do tipo de conteúdo do qual esse tipo de conteúdo é derivado. Um tipo de conteúdo pode herdar de vários outros tipos de conteúdo.
 
-  Como a <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> classe é selada, você pode exportá-la sem nenhum parâmetro de tipo.
+  Como a <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> classe é lacrada, você pode exportá-la sem nenhum parâmetro de tipo.
 
-  O exemplo a seguir mostra atributos de exportação em uma definição de tipo de conteúdo.
+  O exemplo a seguir mostra os atributos de exportação em uma definição de tipo de conteúdo.
 
 ```
 [Export]
@@ -59,27 +59,27 @@ O Editor fornece pontos de extensão que você pode estender como partes de comp
 internal static ContentTypeDefinition TestContentTypeDefinition;
 ```
 
- Os tipos de conteúdo podem ser baseados em zero ou mais tipos de conteúdo pré-existentes. Estes são os tipos internos:
+ Os tipos de conteúdo podem ser baseados em zero ou mais tipos de conteúdo pré-existentes. Estes são os tipos integrados:
 
-- Any: o tipo de conteúdo básico. Pai de todos os outros tipos de conteúdo.
+- Qualquer: o tipo de conteúdo básico. Pai de todos os outros tipos de conteúdo.
 
-- Text: o tipo básico para conteúdo que não é de projeção. Herda de "any".
+- Texto: o tipo básico para conteúdo sem projeção. Herda de "any".
 
-- Texto não criptografado: para textos que não são de código. Herda de "text".
+- Texto não criptografado: para texto sem código. Herda de "text".
 
-- Código: para o código de todos os tipos. Herda de "text".
+- Código: para código de todos os tipos. Herda de "text".
 
-- Inert: exclui o texto de qualquer tipo de manipulação. O texto desse tipo de conteúdo nunca terá nenhuma extensão aplicada a ele.
+- Inerte: exclui o texto de qualquer tipo de manipulação. O texto desse tipo de conteúdo nunca terá nenhuma extensão aplicada a ele.
 
 - Projeção: para o conteúdo dos buffers de projeção. Herda de "any".
 
 - IntelliSense: para o conteúdo do IntelliSense. Herda de "text".
 
-- Sighelp: ajuda da assinatura. Herda de "IntelliSense".
+- Sighelp: ajuda de assinatura. Herda de "intelliSense".
 
-- Sighelp-doc: documentação de ajuda da assinatura. Herda de "IntelliSense".
+- Sighelp-doc: documentação de ajuda de assinatura. Herda de "intelliSense".
 
-  Estes são alguns dos tipos de conteúdo que são definidos pelo Visual Studio e alguns dos idiomas hospedados no Visual Studio:
+  Estes são alguns dos tipos de conteúdo definidos por Visual Studio e alguns dos idiomas hospedados no Visual Studio:
 
 - Basic
 
@@ -91,7 +91,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - CSS
 
-- ENC
+- Enc
 
 - FindResults
 
@@ -105,7 +105,7 @@ internal static ContentTypeDefinition TestContentTypeDefinition;
 
 - XML
 
-  Para descobrir a lista de tipos de conteúdo disponíveis, importe o <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> , que mantém a coleção de tipos de conteúdo para o editor. O código a seguir importa esse serviço como uma propriedade.
+  Para descobrir a lista de tipos de conteúdo disponíveis, importe o , que mantém a <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService> coleção de tipos de conteúdo para o editor. O código a seguir importa esse serviço como uma propriedade.
 
 ```
 [Import]
@@ -115,7 +115,7 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
  Para associar um tipo de conteúdo a uma extensão de nome de arquivo, use <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> .
 
 > [!NOTE]
-> No Visual Studio, as extensões de nome de arquivo são registradas usando o <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> em um pacote de serviço de idioma. O <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> associa um tipo de conteúdo do MEF a uma extensão de nome de arquivo que foi registrada dessa maneira.
+> No Visual Studio, as extensões de nome de arquivo são registradas usando o <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> em um pacote de serviço de linguagem. O <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> associa um tipo de conteúdo MEF a uma extensão de nome de arquivo que foi registrada dessa maneira.
 
  Para exportar a extensão de nome de arquivo para a definição de tipo de conteúdo, você deve incluir os seguintes atributos:
 
@@ -123,7 +123,7 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 
 - <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: especifica o tipo de conteúdo.
 
-  Como a <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> classe é selada, você pode exportá-la sem nenhum parâmetro de tipo.
+  Como a <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> classe é lacrada, você pode exportá-la sem nenhum parâmetro de tipo.
 
   O exemplo a seguir mostra os atributos de exportação em uma extensão de nome de arquivo para uma definição de tipo de conteúdo.
 
@@ -134,20 +134,20 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition;
 ```
 
- O <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> gerencia as associações entre as extensões de nome de arquivo e os tipos de conteúdo.
+ O <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> gerencia as associações entre extensões de nome de arquivo e tipos de conteúdo.
 
 ## <a name="extend-classification-types-and-classification-formats"></a>Estender tipos de classificação e formatos de classificação
- Você pode usar tipos de classificação para definir os tipos de texto para os quais você deseja fornecer manipulação diferente (por exemplo, colorir o texto "palavra-chave" azul e o texto "comentário" verde). Defina um novo tipo de classificação declarando uma variável do tipo <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> e dando a ela um nome exclusivo.
+ Você pode usar tipos de classificação para definir os tipos de texto para os quais deseja fornecer tratamentos diferentes (por exemplo, colorir o texto "palavra-chave" azul e o texto "comentário" verde). Defina um novo tipo de classificação declarando uma variável do tipo <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> e dando a ela um nome exclusivo.
 
  Para registrar o tipo de classificação com o editor, exporte-o junto com os seguintes atributos:
 
 - <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: o nome do tipo de classificação.
 
-- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: o nome do tipo de classificação do qual esse tipo de classificação é herdado. Todos os tipos de classificação herdam de "texto", e um tipo de classificação pode herdar de vários outros tipos de classificação.
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: o nome do tipo de classificação do qual esse tipo de classificação herda. Todos os tipos de classificação herdam de "texto", e um tipo de classificação pode herdar de vários outros tipos de classificação.
 
-  Como a <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> classe é selada, você pode exportá-la sem nenhum parâmetro de tipo.
+  Como a <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> classe é lacrada, você pode exportá-la sem nenhum parâmetro de tipo.
 
-  O exemplo a seguir mostra atributos de exportação em uma definição de tipo de classificação.
+  O exemplo a seguir mostra os atributos de exportação em uma definição de tipo de classificação.
 
 ```
 [Export]
@@ -156,21 +156,21 @@ internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition
 internal static ClassificationTypeDefinition CSharpTestDefinition;
 ```
 
- O <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> fornece acesso a classificações padrão. Os tipos de classificação internos incluem:
+ O <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> fornece acesso a classificações padrão. Os tipos de classificação integrados incluem estes:
 
 - "texto"
 
-- "idioma natural" (deriva de "text")
+- "linguagem natural" (deriva de "texto")
 
-- "linguagem formal" (derivada de "text")
+- "linguagem formal" (deriva de "texto")
 
-- "String" (deriva de "literal")
+- "string" (deriva de "literal")
 
-- "Character" (deriva de "literal")
+- "character" (deriva de "literal")
 
 - "numerical" (deriva de "literal")
 
-  Um conjunto de tipos de erro diferentes é herdado de <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition> . Eles incluem os seguintes tipos de erro:
+  Um conjunto de tipos de erro diferentes herdam de <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition> . Eles incluem os seguintes tipos de erro:
 
 - "erro de sintaxe"
 
@@ -178,9 +178,9 @@ internal static ClassificationTypeDefinition CSharpTestDefinition;
 
 - "outro erro"
 
-- alerta
+- "aviso"
 
-  Para descobrir a lista de tipos de classificação disponíveis, importe o <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> , que mantém a coleção de tipos de classificação para o editor. O código a seguir importa esse serviço como uma propriedade.
+  Para descobrir a lista de tipos de classificação disponíveis, importe o , que mantém a <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService> coleção de tipos de classificação para o editor. O código a seguir importa esse serviço como uma propriedade.
 
 ```
 [Import]
@@ -193,11 +193,11 @@ internal IClassificationTypeRegistryService ClassificationTypeRegistryService { 
 
 - <xref:Microsoft.VisualStudio.Utilities.DisplayNameAttribute>: o nome de exibição do formato.
 
-- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: especifica se o formato aparece na página **fontes e cores** da caixa de diálogo **Opções** .
+- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: especifica se o formato aparece na página **Fontes** e Cores da caixa **de diálogo** Opções.
 
 - <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: a prioridade do formato. Os valores válidos são de <xref:Microsoft.VisualStudio.Text.Classification.Priority> .
 
-- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: o nome do tipo de classificação ao qual esse formato é mapeado.
+- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: o nome do tipo de classificação para o qual esse formato é mapeado.
 
   O exemplo a seguir mostra os atributos de exportação em uma definição de formato de classificação.
 
@@ -414,7 +414,7 @@ internal sealed class TestMouseProcessorProvider : IMouseProcessorProvider
 
   6. Diferencial
 
-  7. Locale
+  7. Local
 
   8. Paleta
 

@@ -3,7 +3,7 @@ title: Tipo de projeto Essentials | Microsoft Docs
 description: Saiba mais sobre quando você deve criar um tipo de projeto e quando você pode estender um tipo de projeto existente usando subtipos de projeto.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 86ed1c1098fe13cd19ce686782e18b190f455f8c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 051e7b76edd4559914307459fdcbdf1b7c0b600e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105064287"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903548"
 ---
 # <a name="project-type-essentials"></a>Conceitos básicos do tipo de projeto
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] inclui vários tipos de projeto para linguagens como [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] ou [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] também permite que você crie seus próprios tipos de projeto.
@@ -56,7 +56,7 @@ ms.locfileid: "105064287"
 
 - Para desenvolvedores de C++, as classes na biblioteca HierUtil funcionam de maneira semelhante. Para obter mais informações, consulte [não está no Build: usando classes de projeto HierUtil7 para implementar um tipo de projeto (C++)](/previous-versions/bb166212(v=vs.100)).
 
-- Os tipos de projeto podem dar suporte a dados diferentes de arquivos de código-fonte típicos que se baseiam em um assembly. exe ou. dll. Por exemplo, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] os projetos de banco de dados contêm referências a arquivos de script e de consulta armazenados no disco e adicionam comandos a **Gerenciador de soluções** para executar os scripts e consultas em um banco de dados, mas os projetos não dão suporte ao comportamento de compilação. Para obter mais informações, consulte [abrindo e salvando itens de projeto](../../extensibility/internals/opening-and-saving-project-items.md).
+- Os tipos de projeto podem dar suporte a dados diferentes de arquivos de código-fonte típicos que se desenvolvem em um assembly .exe ou .dll. Por exemplo, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] os projetos de banco de dados contêm referências a arquivos de script e de consulta armazenados no disco e adicionam comandos a **Gerenciador de soluções** para executar os scripts e consultas em um banco de dados, mas os projetos não dão suporte ao comportamento de compilação. Para obter mais informações, consulte [abrindo e salvando itens de projeto](../../extensibility/internals/opening-and-saving-project-items.md).
 
 - Um tipo de projeto não precisa usar arquivos. Por exemplo, um tipo de projeto pode armazenar todos os seus dados em um banco de dado. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] fornece ao tipo de projeto controle completo sobre como eles mantêm dados para projetos e itens de projeto. Para obter mais informações, consulte [Project Type design decisions](../../extensibility/internals/project-type-design-decisions.md).
 

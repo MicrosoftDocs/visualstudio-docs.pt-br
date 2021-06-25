@@ -3,7 +3,7 @@ title: Descrições de evento | Microsoft Docs
 description: Saiba mais sobre os tipos de eventos e os motivos para seu uso. Cada tipo de evento tem uma finalidade específica.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], events
 ms.assetid: 09f61652-7e16-4bb0-8055-f61a84bf384e
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: cd8c6dbb4eddfcffa779b70b17819bf5e92c0c45
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ee2eedac924b3bbd58fac6980da9151a88da9196
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105096961"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902638"
 ---
 # <a name="event-descriptions"></a>Descrições de eventos
 Cada tipo de evento tem uma finalidade específica.

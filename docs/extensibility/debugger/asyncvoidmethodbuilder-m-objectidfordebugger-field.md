@@ -1,8 +1,8 @@
 ---
-description: Representa o objeto inicializado lentamente usado pelo depurador para identificar exclusivamente este construtor.
-title: Campo de AsyncVoidMethodBuilder.m_objectIdForDebugger | Microsoft Docs
+description: Representa o objeto inicializado com azily usado pelo depurador para identificar exclusivamente esse construtor.
+title: AsyncVoidMethodBuilder.m_objectIdForDebugger campo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - m_objectIdForDebugger field, AsyncVoidMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: 81331a7b-6bec-46e4-a53e-515d0fad2400
@@ -11,21 +11,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8d85e2bfde83e84080be18cba10ad5bef810ddb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 5a555bb2138bdeb28e5155709b516739fa85fa9f
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055473"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903704"
 ---
-# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>Campo de AsyncVoidMethodBuilder.m_objectIdForDebugger
-Representa o objeto inicializado lentamente usado pelo depurador para identificar exclusivamente este construtor.
+# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>AsyncVoidMethodBuilder.m_objectIdForDebugger campo
+Representa o objeto inicializado com azily usado pelo depurador para identificar exclusivamente esse construtor.
 
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Assembly:** mscorlib (no mscorlib.dll)
+ **Assembly:** mscorlib (em mscorlib.dll)
 
- Como você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida em Common Intermediate Language (CIL).
+ Como você não pode acessar esse membro interno do .NET Framework, a sintaxe a seguir é fornecida Common Intermediate Language (CIL).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,4 +35,4 @@ Representa o objeto inicializado lentamente usado pelo depurador para identifica
 
 ## <a name="see-also"></a>Confira também
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [Elementos internos de extensão paralela para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Internas de extensão paralela para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

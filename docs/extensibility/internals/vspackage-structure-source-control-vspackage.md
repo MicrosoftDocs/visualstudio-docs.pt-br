@@ -1,9 +1,9 @@
 ---
-title: Estrutura VSPackage (controle do código-fonte VSPackage) | Microsoft Docs
-description: Saiba mais sobre o SDK do pacote de controle do código-fonte, que fornece diretrizes para um VSPackage com um implementador de controle do código-fonte para integração com o Visual Studio.
+title: Estrutura VSPackage (VSPackage de controle do código-fonte) | Microsoft Docs
+description: Saiba mais sobre o SDK do Pacote de Controle do Código-Fonte, que fornece diretrizes para um VSPackage com um implementador de controle do código-fonte para integração com Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSPackages, structure
 - source control packages, VSPackage overview
@@ -13,30 +13,30 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae037e3bda4ca09ee11969325b67ff0f8323722d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b95c382342675d79c0c6e854b5fc087d495827e2
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060686"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898816"
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>Estrutura do VSPackage (VSPackage de controle do código-fonte)
 
-O SDK do pacote de controle do código-fonte fornece diretrizes para criar um VSPackage que permite que um implementador de controle do código-fonte integre sua funcionalidade de controle do código-fonte com o ambiente do Visual Studio. Um VSPackage é um componente COM que normalmente é carregado sob demanda pelo IDE (ambiente de desenvolvimento integrado) do Visual Studio com base nos serviços anunciados pelo pacote em suas entradas de registro. Cada VSPackage deve implementar <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . Um VSPackage normalmente consome os serviços oferecidos pelo IDE do Visual Studio e proffers alguns serviços próprios.
+O SDK do Pacote de Controle do Código-Fonte fornece diretrizes para criar um VSPackage que permite que um implementador de controle do código-fonte integre sua funcionalidade de controle do código-fonte ao Visual Studio ambiente. Um VSPackage é um componente COM que normalmente é carregado sob demanda pelo IDE (ambiente de desenvolvimento integrado) do Visual Studio com base nos serviços anunciados pelo pacote em suas entradas do Registro. Cada VSPackage deve implementar <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> . Um VSPackage normalmente consome serviços oferecidos pelo Visual Studio IDE e oferece alguns serviços próprios.
 
-Um VSPackage declara seus itens de menu e estabelece um estado de item padrão por meio do arquivo. vsct. O IDE do Visual Studio exibe os itens de menu nesse estado até que o VSPackage seja carregado. Subsequentemente, a implementação do VSPackage do <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> método é chamada para habilitar ou Desabilitar itens de menu.
+Um VSPackage declara seus itens de menu e estabelece um estado de item padrão por meio do arquivo .vsct. O Visual Studio IDE exibe os itens de menu nesse estado até que o VSPackage seja carregado. Posteriormente, a implementação do VSPackage do método <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> é chamada para habilitar ou desabilitar itens de menu.
 
 ## <a name="source-control-package-characteristics"></a>Características do pacote de controle do código-fonte
 
-Um VSPackage de controle do código-fonte está profundamente integrado ao Visual Studio. A semântica VSPackage inclui:
+Um VSPackage de controle do código-fonte é profundamente integrado Visual Studio. A semântica vsPackage inclui:
 
 - Interface a ser implementada em virtude de ser um VSPackage (a `IVsPackage` interface)
 
-- Implementação do comando de interface do usuário (arquivo. vsct e implementação da <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface)
+- Implementação de comando da interface do usuário (arquivo .vsct e implementação da <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> interface)
 
-- Registro do VSPackage com o Visual Studio.
+- Registro do VSPackage com Visual Studio.
 
-O VSPackage de controle do código-fonte deve se comunicar com essas outras entidades do Visual Studio:
+O VSPackage do controle do código-fonte deve se comunicar com essas outras Visual Studio entidades:
 
 - Projetos
 
@@ -48,7 +48,7 @@ O VSPackage de controle do código-fonte deve se comunicar com essas outras enti
 
 - A tabela de documentos em execução
 
-### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Serviços de ambiente do Visual Studio que podem ser consumidos
+### <a name="visual-studio-environment-services-that-may-be-consumed"></a>Visual Studio serviços de ambiente que podem ser consumidos
 
 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>
 
@@ -66,13 +66,13 @@ Serviço SVsRegisterScciProvider
 
 ### <a name="vsip-interfaces-implemented-and-called"></a>Interfaces VSIP implementadas e chamadas
 
-Um pacote de controle do código-fonte é um VSPackage e, portanto, pode interagir diretamente com outros VSPackages registrados com o Visual Studio. Para fornecer a amplitude completa da funcionalidade de controle do código-fonte, um VSPackage de controle do código-fonte pode lidar com interfaces fornecidas por projetos ou pelo shell.
+Um pacote de controle do código-fonte é um VSPackage e, portanto, ele pode interagir diretamente com outros VSPackages registrados com Visual Studio. Para fornecer toda a amplitude da funcionalidade de controle do código-fonte, um VSPackage de controle do código-fonte pode lidar com interfaces fornecidas por projetos ou pelo shell.
 
-Cada projeto do Visual Studio deve implementar <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> para ser reconhecido como um projeto no IDE do Visual Studio. No entanto, essa interface não é especializada o suficiente para controle do código-fonte. Projetos que devem estar sob a implementação do controle do código-fonte <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> . Essa interface é usada pelo VSPackage de controle do código-fonte para consultar um projeto quanto ao seu conteúdo e fornecer glifos e informações de associação (as informações necessárias para estabelecer uma conexão entre o local do servidor e o local do disco de um projeto que está sob controle do código-fonte).
+Todos os projetos Visual Studio devem ser implementados para serem reconhecidos como um <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3> projeto no Visual Studio IDE. No entanto, essa interface não é especializada o suficiente para o controle do código-fonte. Projetos que devem estar sob controle do código-fonte implementam <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProject2> . Essa interface é usada pelo VSPackage do controle do código-fonte para consultar um projeto quanto ao seu conteúdo e para fornecer a ele glifos e informações de associação (as informações necessárias para estabelecer uma conexão entre o local do servidor e o local do disco de um projeto que está sob controle do código-fonte).
 
-O VSPackage de controle do código-fonte implementa <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> , que por sua vez permite que os projetos se registrem para controle do código-fonte e recupere seus glifos de status.
+O VSPackage do controle do código-fonte implementa , que, por sua vez, permite que os projetos se registrem para o controle do código-fonte e recuperem <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2> seus glifos de status.
 
-Para obter uma lista completa das interfaces que um VSPackage de controle do código-fonte deve considerar, consulte [serviços e interfaces relacionadas](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md).
+Para ver uma lista completa das interfaces que um VSPackage de controle do código-fonte deve considerar, consulte [Serviços e interfaces relacionadas.](../../extensibility/internals/related-services-and-interfaces-source-control-vspackage.md)
 
 ## <a name="see-also"></a>Confira também
 

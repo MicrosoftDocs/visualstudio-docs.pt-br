@@ -2,7 +2,7 @@
 description: Essa função recupera uma cópia de um ou mais arquivos para exibição e compilação, mas não para edição.
 title: Função SccGet | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGet
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 172e0ec5fdba4b91c3cf86ea964b4a98a23a5fa8
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 805c19b0c326e8389b4e1905edf370ad042aac92
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060335"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904546"
 ---
 # <a name="sccget-function"></a>Função SccGet
 Essa função recupera uma cópia de um ou mais arquivos para exibição e compilação, mas não para edição. Na maioria dos sistemas, os arquivos são marcados como somente leitura.
@@ -61,7 +61,7 @@ no Sinalizadores de comando ( `SCC_GET_ALL` , `SCC_GET_RECURSIVE` ).
 
 no Opções específicas de plug-ins de controle do código-fonte.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

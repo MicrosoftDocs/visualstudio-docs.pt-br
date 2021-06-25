@@ -3,7 +3,7 @@ title: Persistência do projeto | Microsoft Docs
 description: Saiba mais sobre a persistência no design do seu projeto, incluindo o uso de IPersistFileFormat para manter objetos de projeto com base em arquivo e não em arquivo.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ffaeb6d43597e93586db79c305b654b42bf6dbb
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 17b9fc40a93a926fde5edc28e93f7751b919611c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062792"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903625"
 ---
 # <a name="project-persistence"></a>Persistência de projeto
 A persistência é uma consideração de design importante para seu projeto. A maioria dos projetos usa itens de projeto que representam arquivos; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] também dá suporte a projetos cujos dados não são baseados em arquivo. Os arquivos pertencentes ao projeto e ao arquivo de projeto devem ser persistidos. O IDE instrui o projeto a salvar a si mesmo ou um item de projeto.

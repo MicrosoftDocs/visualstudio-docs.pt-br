@@ -3,7 +3,7 @@ title: Expondo eventos no SDK do Visual Studio | Microsoft Docs
 description: Saiba mais sobre os métodos do SDK do Visual Studio e as entradas do registro que expõem eventos para projetos e itens de projeto.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - events [Visual Studio], exposing
 - automation [Visual Studio SDK], exposing events
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 019efb11d7a31af875425888a1f70423bca76ca9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 99298329b969df3b9d7dbb46a3f4b9e7d4ed7091
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105069797"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898321"
 ---
 # <a name="expose-events-in-the-visual-studio-sdk"></a>Expor eventos no SDK do Visual Studio
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] permite que você origemie eventos usando automação. É recomendável que você retenha eventos de origem para projetos e itens de projeto.
@@ -54,7 +54,7 @@ ms.locfileid: "105069797"
 
  **AutomationProjectItemEvents** = retorna o `AutomationProjectItemsEvents` objeto.
 
-|Nome|Type|Intervalo|Descrição|
+|Nome|Tipo|Intervalo|Descrição|
 |----------|----------|-----------|-----------------|
 |Padrão (@)|REG_SZ|Não usado|Não utilizado. Você pode usar o campo de dados para documentação.|
 |*AutomationProjectsEvents*|REG_SZ|Nome do seu objeto de evento.|Somente o nome da chave é relevante. Você pode usar o campo de dados para documentação.<br /><br /> Este exemplo vem do exemplo de projeto básico.|

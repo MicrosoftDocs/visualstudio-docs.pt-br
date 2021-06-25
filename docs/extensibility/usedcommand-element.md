@@ -3,7 +3,7 @@ title: Elemento UsedCommand | Microsoft Docs
 description: O elemento UsedCommand permite que um VSPackage acesse um comando que é definido em outro arquivo. vsct.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - UsedCommands element (VSCT XML schema)
 - VSCT XML schema elements, UsedCommands
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30ff89cba5dbc1e54afaf51fb659e07c29e53009
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9d120353b9d6191bfcaae38151eb970ab1071b99
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060218"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903041"
 ---
 # <a name="usedcommand-element"></a>Elemento UsedCommand
 Permite que um VSPackage acesse um comando que é definido em outro arquivo. vsct. Por exemplo, se o VSPackage usar o comando de **cópia** padrão, que é definido pelo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] shell, você poderá adicionar o comando a um menu ou barra de ferramentas sem implementá-lo novamente.

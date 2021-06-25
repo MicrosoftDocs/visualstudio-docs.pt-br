@@ -2,7 +2,7 @@
 description: A tarefa foi concluída devido a uma exceção sem tratamento.
 title: Campo de TASK_STATE_FAULTED | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - TASK_STATE_FAULTED field, Task class [.NET Framework debug engines]
 ms.assetid: ced826ae-09a9-4acf-af00-a2343d396bb8
@@ -11,12 +11,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: f01c222686ab2c03acc05dcd08beabd305119300
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 0a3e1bf4fe6a95bd55cf366d1f5b8f56d7ea9c05
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079248"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902833"
 ---
 # <a name="task_state_faulted-field"></a>Campo de TASK_STATE_FAULTED
 A tarefa foi concluída devido a uma exceção sem tratamento.

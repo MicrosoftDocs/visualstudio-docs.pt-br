@@ -1,9 +1,9 @@
 ---
-title: Enumerador de código de status de diretório | Microsoft Docs
-description: O enumerador SccDirStatus contém valores constantes nomeados que especificam o estado de um diretório no sistema de controle do código-fonte e são usados pelo SccDirQueryInfo.
+title: Enumerador de código de status do diretório | Microsoft Docs
+description: O enumerador SccDirStatus contém valores constantes nomeados que especificam o estado de um diretório no sistema de controle do código-fonte e é usado por SccDirQueryInfo.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - directory status code enumerator
 - source control plug-ins, directory status enumeration
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e995fb1dcb879645f59d6d8750852a790c99e90
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: a504c6c080c34b4506cf4078b64465a3bd6c7d97
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105091247"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904224"
 ---
-# <a name="directory-status-code-enumerator"></a>Enumerador de código de status de diretório
-O `SccDirStatus` enumerador contém valores constantes nomeados que especificam o estado de um diretório no sistema de controle do código-fonte. Essa enumeração é usada pelo [SccDirQueryInfo](../extensibility/sccdirqueryinfo-function.md). Isso foi introduzido na versão 1,2 da API de plug-in de controle do código-fonte.
+# <a name="directory-status-code-enumerator"></a>Enumerador de código de status do diretório
+O `SccDirStatus` enumerador contém valores constantes nomeados que especificam o estado de um diretório no sistema de controle do código-fonte. Essa enumeração é usada pelo [SccDirQueryInfo.](../extensibility/sccdirqueryinfo-function.md) Isso foi introduzido na versão 1.2 da API de Plug-in de Controle do Código-Fonte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,13 +35,13 @@ enum SccDirStatus {
 ```
 
 ## <a name="members"></a>Membros
- Não foi possível obter SCC_DIRSTATUS_INVALID status; Não confie nela.
+ SCC_DIRSTATUS_INVALID status não pôde ser obtido; não dependem dele.
 
- SCC_DIRSTATUS_NOTCONTROLLED diretório não está no controle do código-fonte.
+ SCC_DIRSTATUS_NOTCONTROLLED Directory não está sob controle do código-fonte.
 
- SCC_DIRSTATUS_CONTROLLED diretório está sob controle do código-fonte.
+ SCC_DIRSTATUS_CONTROLLED Directory está sob controle do código-fonte.
 
- SCC_DIRSTATUS_EMPTYPROJ projeto correspondente a esse diretório está vazio.
+ SCC_DIRSTATUS_EMPTYPROJ Projeto correspondente a esse diretório está vazio.
 
 ## <a name="see-also"></a>Confira também
 - [Plug-ins de controle do código-fonte](../extensibility/source-control-plug-ins.md)

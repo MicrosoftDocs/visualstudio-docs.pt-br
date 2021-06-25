@@ -3,7 +3,7 @@ title: Funções de retorno de chamada implementadas pelo IDE | Microsoft Docs
 description: Saiba mais sobre as funções de retorno de chamada que o plug-in pode chamar em momentos apropriados durante uma operação de controle do código-fonte para passar informações para o IDE.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, callback functions
 - callback functions, source control plug-ins
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e2e361551fbe03b7f0ef41b19c5d4136aa50472
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 78ce3a9cdd183cff0518ee3c6da9326c63297a85
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068096"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899141"
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>Funções de retorno de chamada implementadas pelo IDE
 Para tornar a integração com o IDE (ambiente de desenvolvimento integrado) o mais simples possível e para fornecer uma experiência unificada do usuário final, o plug-in de controle do código-fonte pode usar funções de retorno de chamada que são implementadas pelo IDE. O plug-in pode chamar essas funções em momentos apropriados durante uma operação de controle do código-fonte para passar informações para o IDE; o IDE pode exibir essas informações como elementos incorporados em sua interface do usuário nativa. O usuário tem uma experiência menos fragmentada nesse cenário do que se o plug-in empregasse sua própria interface do usuário.

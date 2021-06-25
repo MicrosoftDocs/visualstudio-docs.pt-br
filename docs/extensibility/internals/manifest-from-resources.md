@@ -1,24 +1,24 @@
 ---
 title: Manifest from Resources | Microsoft Docs
-description: Saiba como usar a ferramenta de Manifest from Resources para adicionar arquivos. png ou. XAML a um arquivo. imagemanifest para uso com o serviço de imagem do Visual Studio.
+description: Saiba como usar a ferramenta de Manifest from Resources para adicionar arquivos .png ou. XAML a um arquivo. imagemanifest para uso com o serviço de imagem do Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0234109b-5dcb-4d9d-acb9-a63f8bd5699c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42bd932b093ae805e8885bc9fc61324c3cadbe30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: f69a46362b3076025a63625adb1ee4a478622259
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105095167"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903172"
 ---
 # <a name="manifest-from-resources"></a>Manifest from Resources
-A ferramenta de Manifest from Resources é um aplicativo de console que usa uma lista de recursos de imagem (arquivos. png ou. XAML) e gera um arquivo. imagemanifest que permite que essas imagens sejam usadas com o serviço de imagem do Visual Studio. Além disso, essa ferramenta pode ser usada para adicionar imagens a um. imagemanifest existente. Essa ferramenta é útil para adicionar suporte de alto DPI e temas para imagens a uma extensão do Visual Studio. O arquivo. imagemanifest gerado deve ser incluído no e implantado como parte de uma extensão do Visual Studio (. VSIX).
+A ferramenta de Manifest from Resources é um aplicativo de console que usa uma lista de recursos de imagem (arquivos .png ou. XAML) e gera um arquivo. imagemanifest que permite que essas imagens sejam usadas com o serviço de imagem do Visual Studio. Além disso, essa ferramenta pode ser usada para adicionar imagens a um. imagemanifest existente. Essa ferramenta é útil para adicionar suporte de alto DPI e temas para imagens a uma extensão do Visual Studio. O arquivo. imagemanifest gerado deve ser incluído no e implantado como parte de uma extensão do Visual Studio (. VSIX).
 
 ## <a name="how-to-use-the-tool"></a>Como usar a ferramenta
  **Sintaxe**
@@ -29,7 +29,7 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 
 |**Nome do comutador**|**Observações**|**Obrigatório ou opcional**|
 |-|-|-|
-|/resources|Uma lista delimitada por ponto-e-vírgula de imagens ou diretórios. Essa lista deve sempre conter a lista completa de imagens que estarão no manifesto. Se apenas uma lista parcial for fornecida, as entradas não incluídas serão perdidas.<br /><br /> Se um determinado arquivo de recursos for uma faixa de imagens, a ferramenta irá dividi-lo em imagens separadas antes de adicionar cada subimagem ao manifesto.<br /><br /> Se a imagem for um arquivo. png, recomendamos que você formate o nome como este para que a ferramenta possa preencher os atributos corretos para a imagem: \<Name> . \<Width> . \<Height> . png.|Obrigatório|
+|/resources|Uma lista delimitada por ponto-e-vírgula de imagens ou diretórios. Essa lista deve sempre conter a lista completa de imagens que estarão no manifesto. Se apenas uma lista parcial for fornecida, as entradas não incluídas serão perdidas.<br /><br /> Se um determinado arquivo de recursos for uma faixa de imagens, a ferramenta irá dividi-lo em imagens separadas antes de adicionar cada subimagem ao manifesto.<br /><br /> Se a imagem for um arquivo .png, recomendamos que você formate o nome como este para que a ferramenta possa preencher os atributos corretos para a imagem: \<Name> . \<Width> . \<Height>.png.|Obrigatório|
 |/assembly|O nome do assembly gerenciado (não incluindo a extensão) ou o caminho de tempo de execução do assembly nativo que hospeda os recursos (em relação ao local do tempo de execução do manifesto).|Obrigatório|
 |/Manifest|O nome a ser dado ao arquivo. imagemanifest gerado. Isso também pode incluir um caminho absoluto ou relativo para criar o arquivo em um local diferente. O nome padrão corresponde ao nome do assembly.<br /><br /> Padrão: \<Current Directory> \\<assembly \> . imagemanifest|Opcional|
 |/guidName|O nome a ser dado ao símbolo de GUID de todas as imagens no manifesto gerado.<br /><br /> Padrão: AssetsGuid|Opcional|
@@ -50,13 +50,13 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 
 - ManifestFromResources/resources:D:\Images\Image1.png;D: \Images\Image1.xaml/assembly: My. assembly. Name/guidName: myImages/newGuids/newIds
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>Observações
 
-- A ferramenta só dá suporte a arquivos. png e. XAML. Qualquer outra imagem ou tipo de arquivo será ignorado. Um aviso é gerado para todos os tipos sem suporte encontrados durante a análise dos recursos. Se nenhuma imagem com suporte for encontrada quando a ferramenta for concluída com a análise dos recursos, um erro será gerado
+- A ferramenta só dá suporte a arquivos .png e. XAML. Qualquer outra imagem ou tipo de arquivo será ignorado. Um aviso é gerado para todos os tipos sem suporte encontrados durante a análise dos recursos. Se nenhuma imagem com suporte for encontrada quando a ferramenta for concluída com a análise dos recursos, um erro será gerado
 
-- Seguindo o formato sugerido para imagens. png, a ferramenta definirá o valor de tamanho/dimensão para o. png para o tamanho especificado pelo formato, mesmo se ele for diferente do tamanho real da imagem.
+- Seguindo o formato sugerido para imagens de .png, a ferramenta definirá o valor de tamanho/dimensão para o .png para o tamanho especificado pelo formato, mesmo se ele for diferente do tamanho real da imagem.
 
-- O formato de largura/altura pode ser omitido para imagens. png, mas a ferramenta lerá a largura/altura real da imagem e as usará para o valor de tamanho/dimensão da imagem.
+- O formato de largura/altura pode ser omitido para as imagens de .png, mas a ferramenta lerá a largura/altura real da imagem e as usará para o valor de tamanho/dimensão da imagem.
 
 - Executar essa ferramenta na mesma faixa de imagens várias vezes para o mesmo. imagemanifest resultará em entradas de manifesto duplicadas, pois a ferramenta tenta dividir a faixa de imagens em imagens autônomas e adicioná-las ao manifesto existente.
 
@@ -67,7 +67,7 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 ## <a name="sample-output"></a>Saída de exemplo
  **Manifesto de imagem simples**
 
- Um manifesto de imagem será semelhante a este arquivo. xml:
+ Um manifesto de imagem será semelhante a este arquivo de .xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,7 +93,7 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 
  **Manifesto de imagem para uma faixa de imagem**
 
- Um manifesto de imagem para uma faixa de imagem será semelhante a este arquivo. xml:
+ Um manifesto de imagem para uma faixa de imagem será semelhante a este arquivo de .xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -130,7 +130,7 @@ A ferramenta de Manifest from Resources é um aplicativo de console que usa uma 
 
  **Manifesto de imagem para recursos de imagem de assembly nativa**
 
- Um manifesto de imagem para imagens nativas será semelhante a este arquivo. xml:
+ Um manifesto de imagem para imagens nativas será semelhante a este arquivo de .xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

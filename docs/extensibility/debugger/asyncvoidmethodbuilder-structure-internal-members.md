@@ -1,8 +1,8 @@
 ---
-description: Este tópico descreve os membros internos da classe System. Runtime. CompilerServices. AsyncVoidMethodBuilder.
-title: Estrutura AsyncVoidMethodBuilder-membros internos | Microsoft Docs
+description: Este tópico descreve os membros internos da classe System.Runtime.CompilerServices.AsyncVoidMethodBuilder.
+title: Estrutura AsyncVoidMethodBuilder – Membros internos | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, AsyncVoidMethodBuilder structure [.NET Framework]
 - AsyncVoidMethodBuilder structure [.NET Framework debug engines]
@@ -12,21 +12,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4097bce1f7fd90c5b73a3bb450a873561d76d9c1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d6606e26d14ba114ed8346c0cc11a81f8bdd3e8e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055330"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903627"
 ---
-# <a name="asyncvoidmethodbuilder-structure---internal-members"></a>Estrutura AsyncVoidMethodBuilder-membros internos
-Este tópico descreve os membros internos da <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> classe. Para obter informações gerais sobre essa classe, consulte o <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> tópico de referência.
+# <a name="asyncvoidmethodbuilder-structure---internal-members"></a>Estrutura AsyncVoidMethodBuilder – membros internos
+Este tópico descreve os membros internos da <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> classe . Para obter informações gerais sobre essa classe, consulte o <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder> tópico de referência.
 
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Assembly:** mscorlib (no mscorlib.dll)
+ **Assembly:** mscorlib (em mscorlib.dll)
 
- Como você não pode acessar esses membros internos do .NET Framework, a sintaxe a seguir é fornecida em Common Intermediate Language (CIL).
+ Como você não pode acessar esses membros internos do .NET Framework, a sintaxe a seguir é fornecida Common Intermediate Language (CIL).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,8 +41,8 @@ Este tópico descreve os membros internos da <xref:System.Runtime.CompilerServic
 |Nome|Descrição|
 |----------|-----------------|
 |[Propriedade ObjectIdForDebugger](../../extensibility/debugger/asyncvoidmethodbuilder-objectidfordebugger-property.md)|Obtém um objeto que pode ser usado para identificar exclusivamente esse construtor para o depurador.|
-|[campo de m_objectIdForDebugger](../../extensibility/debugger/asyncvoidmethodbuilder-m-objectidfordebugger-field.md)|Representa o objeto inicializado lentamente usado pelo depurador para identificar exclusivamente este construtor.|
+|[m_objectIdForDebugger campo](../../extensibility/debugger/asyncvoidmethodbuilder-m-objectidfordebugger-field.md)|Representa o objeto inicializado com azily usado pelo depurador para identificar exclusivamente esse construtor.|
 
 ## <a name="see-also"></a>Confira também
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [Elementos internos de extensão paralela para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [Internas de extensão paralela para o .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

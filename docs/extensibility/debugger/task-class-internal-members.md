@@ -3,7 +3,7 @@ title: Classe de tarefa-membros internos | Microsoft Docs
 description: Saiba mais sobre os membros internos da classe System. Threading. Tasks. Task que ajudam a implementar um depurador personalizado.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debug engines, Task class [.NET Framework]
 - Task class [.NET Framework debug engines]
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: bfa57329b3f321d2703683639644783be60d651f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 37691714d0168594b61a1a3849f7b65264e9999e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105079365"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902885"
 ---
 # <a name="task-class---internal-members"></a>Classe de tarefa-membros internos
 Este artigo descreve os membros internos da <xref:System.Threading.Tasks.Task?displayProperty=fullName> classe que ajudam a implementar um depurador personalizado. Para obter informações gerais sobre essa classe, consulte o <xref:System.Threading.Tasks.Task> artigo de referência.

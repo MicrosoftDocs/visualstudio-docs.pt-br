@@ -2,7 +2,7 @@
 description: Essa função solicita ao usuário opções avançadas para um determinado comando.
 title: Função SccGetCommandOptions | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetCommandOptions
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6fc53f806989062a306260840a8f324a26d4669
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7972d874668649b8bb86adc15008880c5fc4152e
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068369"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903925"
 ---
 # <a name="sccgetcommandoptions-function"></a>Função SccGetCommandOptions
 Essa função solicita ao usuário opções avançadas para um determinado comando.
@@ -37,49 +37,49 @@ SCCRTN SccGetCommandOptions(
 ### <a name="parameters"></a>Parâmetros
  pvContext
 
-no A estrutura de contexto do plug-in de controle do código-fonte.
+[in] A estrutura de contexto de plug-in do controle do código-fonte.
 
  hWnd
 
-no Um identificador para a janela do IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornecer.
+[in] Um alça para a janela IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornece.
 
- iCommand
+ Icommand
 
-no O comando para o qual as opções avançadas são solicitadas (consulte o [código de comando](../extensibility/command-code-enumerator.md) para obter os valores possíveis).
+[in] O comando para o qual as opções avançadas são solicitadas (consulte [Código de comando](../extensibility/command-code-enumerator.md) para ver os valores possíveis).
 
  ppvOptions
 
-no A estrutura da opção (também pode ser `NULL` ).
+[in] A estrutura de opções (também pode ser `NULL` ).
 
-## <a name="return-value"></a>Retornar valor
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+## <a name="return-value"></a>Valor retornado
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
 |SCC_OK|Sucesso.|
 |SCC_I_ADV_SUPPORT|O plug-in de controle do código-fonte dá suporte a opções avançadas para o comando.|
-|SCC_I_OPERATIONCANCELED|O usuário cancelou a caixa de diálogo **Opções** do plug-in de controle do código-fonte.|
-|SCC_E_OPTNOTSUPPORTED|O plug-in de controle do código-fonte não oferece suporte a esta operação.|
-|SCC_E_ISCHECKEDOUT|Não é possível executar esta operação em um arquivo que está com check-out no momento.|
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção. Uma nova tentativa é recomendada.|
+|SCC_I_OPERATIONCANCELED|O usuário cancelou a caixa de diálogo Opções do plug-in do controle **do** código-fonte.|
+|SCC_E_OPTNOTSUPPORTED|O plug-in de controle do código-fonte não dá suporte a essa operação.|
+|SCC_E_ISCHECKEDOUT|Não é possível executar essa operação em um arquivo que está sendo verificado no momento.|
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou contenção. Uma nova tentativa é recomendada.|
 |SCC_E_NONSPECIFICERROR|Falha não específica.|
 
 ## <a name="remarks"></a>Comentários
- O IDE chama essa função pela primeira vez com o `ppvOptions` = `NULL` para determinar se o plug-in de controle do código-fonte dá suporte ao recurso de opções avançadas para o comando especificado. Se o plug-in oferece suporte ao recurso para esse comando, o IDE chama essa função novamente quando o usuário solicita opções avançadas (geralmente implementadas como um botão **avançado** em uma caixa de diálogo) e fornece um ponteiro não nulo para os `ppvOptions` pontos para um `NULL` ponteiro. O plug-in armazena todas as opções avançadas especificadas pelo usuário em uma estrutura privada e retorna um ponteiro para essa estrutura no `ppvOptions` . Essa estrutura é passada para todas as outras funções da API de plug-in de controle do código-fonte que precisam saber sobre ela, incluindo chamadas subsequentes para a `SccGetCommandOptions` função.
+ O IDE chama essa função pela primeira vez com para determinar se o plug-in de controle do código-fonte dá suporte ao recurso de opções avançadas para `ppvOptions` = `NULL` o comando especificado. Se o plug-in dá suporte ao recurso para esse comando, o IDE chama essa  função novamente quando o usuário solicita opções avançadas (geralmente implementadas como um botão Avançado em uma caixa de diálogo) e fornece um ponteiro não NULL para que aponta para `ppvOptions` um `NULL` ponteiro. O plug-in armazena todas as opções avançadas especificadas pelo usuário em uma estrutura privada e retorna um ponteiro para essa estrutura no `ppvOptions` . Essa estrutura é então passada para todas as outras funções de API de plug-in de controle do código-fonte que precisam saber sobre ela, incluindo chamadas subsequentes para a `SccGetCommandOptions` função.
 
  Um exemplo pode ajudar a esclarecer essa situação.
 
- Um usuário escolhe o comando **Get** e o IDE exibe uma caixa de diálogo **Get** . O IDE chama a `SccGetCommandOptions` função com `iCommand` definido como `SCC_COMMAND_GET` e `ppvOptions` definido como `NULL` . Isso é interpretado pelo plug-in de controle do código-fonte como a pergunta "você tem alguma opção avançada para este comando?" Se o plug-in retornar `SCC_I_ADV_SUPPORT` , o IDE exibirá um botão **avançado** na caixa de diálogo **obter** .
+ Um usuário escolhe o comando **Obter** e o IDE exibe uma caixa **de diálogo** Obter. O IDE chama a `SccGetCommandOptions` função com definido como e definido como `iCommand` `SCC_COMMAND_GET` `ppvOptions` `NULL` . Isso é interpretado pelo plug-in de controle do código-fonte como a pergunta "Você tem opções avançadas para esse comando?" Se o plug-in retornar `SCC_I_ADV_SUPPORT` , o IDE exibirá um **botão** Avançado em sua caixa **de diálogo** Obter.
 
- Na primeira vez que o usuário clica no botão **avançado** , o IDE chama a `SccGetCommandOptions` função novamente, desta vez com um `NULL``ppvOptions` que não aponta para um `NULL` ponteiro. O plug-in exibe sua própria caixa de diálogo de **Opções Get** , solicita informações ao usuário, coloca essas informações em sua própria estrutura e retorna um ponteiro para essa estrutura no `ppvOptions` .
+ Na primeira vez que o usuário clicar no **botão** Avançado, o IDE chamará novamente a função , desta vez com um que não aponta `SccGetCommandOptions` para um `NULL``ppvOptions` `NULL` ponteiro. O plug-in exibe  sua própria caixa de diálogo Obter Opções, solicita informações ao usuário, coloca essas informações em sua própria estrutura e retorna um ponteiro para essa estrutura no `ppvOptions` .
 
- Se o usuário clicar em **avançado** novamente na mesma caixa de diálogo, o IDE chamará a `SccGetCommandOptions` função novamente sem alterar `ppvOptions` , para que a estrutura seja passada de volta para o plug-in. Isso permite que o plug-in reinicialize sua caixa de diálogo para os valores que o usuário definiu anteriormente. O plug-in modifica a estrutura em vigor antes de retornar.
+ Se o usuário clicar em **Avançado** novamente na mesma caixa de diálogo, o IDE chamará a função novamente sem alterar , para que a estrutura seja passada de volta para `SccGetCommandOptions` o `ppvOptions` plug-in. Isso permite que o plug-in reinicializar sua caixa de diálogo para os valores que o usuário definiu anteriormente. O plug-in modifica a estrutura no local antes de retornar.
 
- Por fim, quando o usuário clica em **OK** na caixa de diálogo **Get** do IDE, o IDE chama o [SccGet](../extensibility/sccget-function.md), passando a estrutura retornada no `ppvOptions` que contém as opções avançadas.
+ Por fim, quando o usuário clica em  **OK** na caixa de diálogo Obter do IDE, o IDE chama o [SccGet](../extensibility/sccget-function.md), passando a estrutura retornada em que contém as `ppvOptions` opções avançadas.
 
 > [!NOTE]
-> O comando `SCC_COMMAND_OPTIONS` é usado quando o IDE exibe uma caixa de diálogo **Opções** que permite que o usuário defina as preferências que controlam como a integração funciona. Se o plug-in de controle do código-fonte quiser fornecer sua própria caixa de diálogo de preferências, ele poderá exibi-lo de um botão **avançado** na caixa de diálogo Preferências do IDE. O plug-in é exclusivamente responsável por obter e persistir essas informações; o IDE não o usa ou o modifica.
+> O comando é usado quando o IDE exibe uma caixa de diálogo Opções que permite ao usuário definir preferências que controlam `SCC_COMMAND_OPTIONS` como a integração funciona.  Se o plug-in de controle do código-fonte quiser fornecer suas  próprias preferências, ele poderá exibi-lo de um botão Avançado na caixa de diálogo Preferências do IDE. O plug-in é exclusivamente responsável por obter e persistir essas informações; O IDE não o usa nem o modifica.
 
 ## <a name="see-also"></a>Confira também
-- [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+- [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Código de comando](../extensibility/command-code-enumerator.md)

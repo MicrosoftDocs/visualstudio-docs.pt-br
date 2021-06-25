@@ -1,139 +1,139 @@
 ---
-title: Cores compartilhadas para o Visual Studio | Microsoft Docs
-description: Saiba como usar elementos e temas comuns do shell do Visual Studio para criar sua própria interface do usuário personalizada consistente com o ambiente do Visual Studio.
+title: Cores compartilhadas para Visual Studio | Microsoft Docs
+description: Saiba como usar elementos e temas Visual Studio shell comuns para criar sua própria interface do usuário personalizada consistente com o ambiente Visual Studio aplicativo.
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8edd16744a6c094ece00ee5e4b8239f3d4f5a92e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 262f90fb8d03a9404cdbba8b942e90f6fe6fd3aa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054017"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112903964"
 ---
-# <a name="shared-colors-for-visual-studio"></a>Cores compartilhadas para o Visual Studio
-Quando você está projetando a interface do usuário que usa elementos do shell do Visual Studio comuns ou deseja que seu elemento de interface seja consistente com recursos semelhantes, use nomes de token existentes em arquivos de definição de pacote para escolher e atribuir cores. Isso garante que sua interface do usuário permaneça consistente com o ambiente do Visual Studio geral e que seja atualizada automaticamente quando os temas forem adicionados ou atualizados.
+# <a name="shared-colors-for-visual-studio"></a>Cores compartilhadas para Visual Studio
+Quando você estiver projetando uma interface do usuário que usa elementos comuns do shell Visual Studio ou quiser que o elemento de interface seja consistente com recursos semelhantes, use nomes de token existentes em arquivos de definição de pacote para escolher e atribuir cores. Isso garante que sua interface do usuário permaneça consistente com o ambiente de Visual Studio geral e seja atualizada automaticamente quando os temas são adicionados ou atualizados.
 
-Este artigo descreve os elementos comuns da interface do usuário e os nomes de token que eles usam, que você pode referenciar ao criar uma interface do usuário semelhante. Para obter informações específicas sobre como acessar esses tokens de cor, consulte [o serviço VSColor](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).
+Este artigo descreve os elementos comuns da interface do usuário e os nomes de token que eles usam, que você pode referenciar ao criar uma interface do usuário semelhante. Para obter informações específicas sobre como acessar esses tokens de cor, consulte [O serviço VSColor](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService).
 
-Certifique-se de usar os nomes de token corretamente:
+Certifique-se de usar nomes de token corretamente:
 
-- **Use nomes de token com base na função, não na própria cor.** As cores compartilhadas comuns são associadas a elementos de interface específicos e devem ser usadas apenas para os mesmos ou recursos semelhantes. Por exemplo, não reutilize a cor de uma caixa de combinação pressionada para uma animação de progresso girando apenas porque você gosta da cor. As funções da caixa de combinação e da animação são diferentes e, se a cor associada à caixa de combinação for alterada, ela poderá não ser mais uma cor apropriada para o elemento de animação. O uso consistente da cor ajuda a orientar seus usuários e a evitar confusão.
+- **Use nomes de token com base na função, não na cor em si.** As cores compartilhadas comuns são associadas a elementos de interface específicos e devem ser usadas apenas para os mesmos recursos ou semelhantes. Por exemplo, não reutilizar a cor de uma caixa de combinação pressionada para uma animação de progresso de rotação apenas porque você gosta da cor. As funções da caixa de combinação e da animação são diferentes e, se a cor associada à caixa de combinação mudar, ela poderá não ser mais uma cor apropriada para o elemento de animação. O uso consistente de cores ajuda a orientar seus usuários e evitar confusão.
 
-- **Use cores de plano de fundo e texto na combinação correta.** As cores de plano de fundo que devem ser usadas com texto terão uma cor de texto associada. Não use cores de texto diferentes das especificadas para esse plano de fundo. Se não houver uma cor de texto associada, não use essa cor de plano de fundo para qualquer superfície em que você espera exibir texto. Outras combinações de cores de texto e de plano de fundo podem resultar em uma interface ilegível.
+- **Use as cores da plano de fundo e do texto na combinação correta.** As cores da tela de fundo que devem ser usadas com texto terão uma cor de texto associada. Não use cores de texto diferentes do que é especificado para essa plano de fundo. Se não houver uma cor de texto associada, não use essa cor da tela de fundo para nenhuma superfície na qual você espera exibir texto. Outras combinações de cores de texto e de plano de fundo podem resultar em uma interface ilegível.
 
-- **Use cores de controle apropriadas para seu local.** Em determinados Estados, alguns controles do Visual Studio não têm cores de borda e de plano de fundo separadas. Em vez disso, eles pegam essas cores nas superfícies por trás delas. Certifique-se de sempre usar os nomes de token apropriados para o local onde você está colocando o controle.
+- **Use cores de controle apropriadas para sua localização.** Em determinados estados, alguns Visual Studio controles não têm cores de borda e plano de fundo separadas. Em vez disso, eles escolhem essas cores das superfícies por trás delas. Certifique-se de sempre usar os nomes de token apropriados para o local em que você está colocando o controle.
 
 > [!IMPORTANT]
-> Não use tokens encontrados nas categorias "página inicial" ou "Cider".
+> Não use tokens encontrados nas categorias "Página Inicial" ou "Cider".
 
 ## <a name="common-shared-controls"></a>Controles compartilhados comuns
 
-Ao usar uma barra de comandos padrão do Visual Studio em seu recurso, você terá acesso aos controles de shell com estilo. Você não deve modelar esses controles comuns. No entanto, se você precisar criar uma barra de comandos personalizada, talvez seja necessário também criar controles personalizados. Nesse caso, certifique-se de usar os nomes de token corretos para cada um dos controles a seguir para que sua interface do usuário seja consistente com o restante do Visual Studio.
+Ao usar uma barra de Visual Studio padrão em seu recurso, você terá acesso aos controles de shell estilados. Você não deve re-modelo desses controles comuns. No entanto, se você precisar criar uma barra de comandos personalizada, talvez seja necessário criar controles personalizados também. Nesse caso, use os nomes de token corretos para cada um dos controles a seguir para que sua interface do usuário seja consistente com o restante Visual Studio.
 
 ### <a name="button-controls"></a>Controles de botão
 
-![Redline de controle de botão](../../extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303-155_ButtonControlRedline")
+![Linha vermelha do controle de botão](../../extensibility/ux-guidelines/media/0303-155_buttoncontrolredline.png "0303-155_ButtonControlRedline")
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para os botões no documento bem que você deseja integrar com temas do Visual Studio (claro, escuro, azul ou um tema de Alto Contraste do sistema). | ... para botões que serão exibidos em um plano de fundo personalizado que não faz parte de um tema do Visual Studio. |
+| ... para botões no documento que você deseja integrar com Visual Studio temas (Claro, Escuro, Azul ou um tema Alto Contraste sistema). | ... para botões que serão exibidos em uma tela de fundo personalizada que não faz parte de um Visual Studio. |
 
 **Botão: estado padrão**
 
-![Botão padrão](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03. Button. Standard")<br />Botão padrão
+![Botão Padrão](../../extensibility/ux-guidelines/media/03.03.Button.Standard.png "03.03.Button.Standard")<br />Botão Padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.Button` |
 | Borda do botão | `CommonControls.ButtonBorder` |
 
 **Botão: estado padrão**
 
-![Botão padrão](../../extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03. Button. Default")<br />Botão padrão
+![Botão Padrão](../../extensibility/ux-guidelines/media/03.03.Button.Default.png "03.03.Button.Default")<br />Botão Padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.ButtonDefault` |
 | Borda do botão | `CommonControls.ButtonBorderDefault` |
 
 **Botão: estado desabilitado**
 
-![Botão desabilitado](../../extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03. Button. Disabled")<br />Botão desabilitado
+![Botão Desabilitado](../../extensibility/ux-guidelines/media/03.03.Button.Disabled.png "03.03.Button.Disabled")<br />Botão Desabilitado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.ButtonDisabled` |
 | Borda do botão | `CommonControls.ButtonBorderDisabled` |
 
 **Botão: estado de foco**
 
-![Botão ao focalizar](../../extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03. Button. Hover")<br />Botão ao focalizar
+![Botão ao passar o mouse](../../extensibility/ux-guidelines/media/03.03.Button.hover.png "03.03.Button.hover")<br />Botão ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.ButtonHover` |
 | Borda do botão | `CommonControls.ButtonBorderHover` |
 
 **Botão: estado pressionado**
 
-![Botão pressionado](../../extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03. Button. pressionado")<br />Botão pressionado
+![Botão pressionado](../../extensibility/ux-guidelines/media/03.03.Button.Pressed.png "03.03.Button.Pressed")<br />Botão pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.ButtonPressed` |
 | Borda do botão | `CommonControls.ButtonBorderPressed` |
 
 **Botão: estado focalizado**
 
-![Botão focalizado](../../extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03. Button. concentrou-se")<br />Botão focalizado
+![Botão focalizado](../../extensibility/ux-guidelines/media/03.03.Button.Focused.png "03.03.Button.Focused")<br />Botão focalizado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Botão | `CommonControls.ButtonFocused` |
 | Borda do botão | `CommonControls.ButtonBorderFocused` |
 
-### <a name="check-box-controls"></a>Controles da caixa de seleção
-![Caixa de seleção (Redline)](../../extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />Caixa de seleção (Redline)
+### <a name="check-box-controls"></a>Controles de caixa de seleção
+![Caixa de seleção (linha vermelha)](../../extensibility/ux-guidelines/media/0303-161_checkboxredline.png "0303-161_CheckboxRedline")<br />Caixa de seleção (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para controles de caixa de seleção contidos no documento bem. | ... para qualquer interface do usuário que não seja um controle de caixa de seleção. |
+| ... para controles de caixa de seleção contidos no documento. | ... para qualquer interface do usuário que não seja um controle de caixa de seleção. |
 
 **Caixa de seleção: estado padrão**
 
-![Caixa de seleção](../../extensibility/ux-guidelines/media/0303-162_checkbox.png "0303-162_Checkbox")<br />Caixa de seleção padrão
+![Caixa de seleção](../../extensibility/ux-guidelines/media/0303-162_checkbox.png "0303-162_Checkbox")<br />Caixa de seleção Padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackground` |
+| Tela de fundo | `CommonControls.CheckBoxBackground` |
 | Borda | `CommonControls.CheckBoxBorder` |
 | Texto | `CommonControls.CheckBoxText` |
 | Glifo | `CommonControls.CheckBoxGlyph` |
 
 **Caixa de seleção: estado desabilitado**
 
-![Caixa de seleção desabilitada](../../extensibility/ux-guidelines/media/0303-163_checkboxdisabled.png "0303-163_CheckboxDisabled")<br />Caixa de seleção desabilitada
+![Caixa de seleção Desabilitada](../../extensibility/ux-guidelines/media/0303-163_checkboxdisabled.png "0303-163_CheckboxDisabled")<br />Caixa de seleção Desabilitada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackgroundDisabled` |
+| Tela de fundo | `CommonControls.CheckBoxBackgroundDisabled` |
 | Borda | `CommonControls.CheckBoxBorderDisabled` |
 | Texto | `CommonControls.CheckBoxTextDisabled` |
 | Glifo | `CommonControls.CheckBoxGlyphDisabled` |
 
 **Caixa de seleção: estado de foco**
 
- ![Caixa de seleção ao focalizar](../../extensibility/ux-guidelines/media/0303-164_checkboxhover.png "0303-164_CheckboxHover")<br />Caixa de seleção ao focalizar
+ ![Caixa de seleção ao passar o mouse](../../extensibility/ux-guidelines/media/0303-164_checkboxhover.png "0303-164_CheckboxHover")<br />Caixa de seleção ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackgroundHover` |
+| Tela de fundo | `CommonControls.CheckBoxBackgroundHover` |
 | Borda | `CommonControls.CheckBoxBorderHover` |
 | Texto | `CommonControls.CheckBoxTextHover` |
 | Glifo | `CommonControls.CheckBoxGlyphHover` |
@@ -142,254 +142,254 @@ Ao usar uma barra de comandos padrão do Visual Studio em seu recurso, você ter
 
 ![Caixa de seleção pressionada](../../extensibility/ux-guidelines/media/0303-165_checkboxpressed.png "0303-165_CheckboxPressed")<br />Caixa de seleção pressionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackgroundPressed` |
+| Tela de fundo | `CommonControls.CheckBoxBackgroundPressed` |
 | Borda | `CommonControls.CheckBoxBorderPressed` |
 | Texto | `CommonControls.CheckBoxTextPressed` |
 | Glifo | `CommonControls.CheckBoxGlyphPressed` |
 
 **Caixa de seleção: estado focalizado**
 
-![Caixa de seleção focada](../../extensibility/ux-guidelines/media/0303-166_checkboxfocused.png "0303-166_CheckboxFocused")<br />Caixa de seleção focada
+![Caixa de seleção Focalizada](../../extensibility/ux-guidelines/media/0303-166_checkboxfocused.png "0303-166_CheckboxFocused")<br />Caixa de seleção Focalizada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackgroundFocused` |
+| Tela de fundo | `CommonControls.CheckBoxBackgroundFocused` |
 | Borda | `CommonControls.CheckBoxBorderFocused` |
 | Texto | `CommonControls.CheckBoxTextFocused` |
 | Glifo | `CommonControls.CheckBoxGlyphFocused` |
 
-### <a name="drop-downs-and-combo-boxes"></a>Menus suspensos e caixas de combinação
-![Lista suspensa/caixa de combinação (Redline)](../../extensibility/ux-guidelines/media/0303-167_dropdowncomboboxredline.png "0303-167_DropDownComboBoxRedline")<br />Lista suspensa/caixa de combinação (Redline)
+### <a name="drop-downs-and-combo-boxes"></a>Listadas e caixas de combinação
+![Caixa de combinação/lista listada (linha vermelha)](../../extensibility/ux-guidelines/media/0303-167_dropdowncomboboxredline.png "0303-167_DropDownComboBoxRedline")<br />Caixa de combinação/lista listada (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para menus suspensos e caixas de combinação no documento bem. | ... para qualquer interface do usuário que não seja uma lista suspensa ou uma caixa de combinação. |
-| | ... para menus [suspensos](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown) ou [caixas de combinação](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)da barra de comandos. |
+| ... para listadas e caixas de combinação na caixa de documento. | ... para qualquer interface do usuário que não seja uma caixa de combinação ou lista de combinação. |
+| | ... para as caixas de combinação [ou listadas](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown) [da barra de comandos](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox). |
 
-**Lista suspensa e caixas de combinação: estado padrão**
+**Listadas e caixas de combinação: estado padrão**
 
-![Lista suspensa padrão/caixa de combinação](../../extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />Lista suspensa padrão/caixa de combinação
+![Caixa de combinação/lista de combinação padrão](../../extensibility/ux-guidelines/media/0303-168_dropdowncombobox.png "0303-168_DropDownComboBox")<br />Caixa de combinação/lista de combinação padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxBackground` |
+| Tela de fundo | `CommonControls.ComboBoxBackground` |
 | Borda | `CommonControls.ComboBoxBorder` |
 | Texto | `CommonControls.ComboBoxText` |
 | Separador | `CommonControls.ComboBoxSeparator` |
 | Glifo | `CommonControls.ComboBoxGlyph` |
 | Plano de fundo do glifo | `CommonControls.ComboBoxGlyphBackground` |
 
-**Lista suspensa e caixas de combinação: estado desabilitado**
+**Listadas e caixas de combinação: estado desabilitado**
 
-![Lista suspensa desabilitada/caixa de combinação](../../extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />Lista suspensa desabilitada/caixa de combinação
+![Caixa de combinação/lista de combinação desabilitada](../../extensibility/ux-guidelines/media/0303-169_dropdowncomboboxdisabled.png "0303-169_DropDownComboBoxDisabled")<br />Caixa de combinação/lista de combinação desabilitada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxBackgroundDisabled` |
+| Tela de fundo | `CommonControls.ComboBoxBackgroundDisabled` |
 | Borda | `CommonControls.ComboBoxBorderDisabled` |
 | Texto | `CommonControls.ComboBoxTextDisabled` |
 | Separador | `CommonControls.ComboBoxSeparatorDisabled` |
 | Glifo | `CommonControls.ComboBoxGlyphDisabled` |
 | Plano de fundo do glifo | `CommonControls.ComboBoxGlyphBackgroundDisabled` |
 
-**Lista suspensas e caixas de combinação: estado de foco**
+**Listadas e caixas de combinação: estado de foco**
 
-![Lista suspensa/caixa de combinação ao focalizar](../../extensibility/ux-guidelines/media/0303-170_dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")<br />Lista suspensa/caixa de combinação ao focalizar
+![Caixa de combinação/lista listada ao passar o mouse](../../extensibility/ux-guidelines/media/0303-170_dropdowncomboboxhover.png "0303-170_DropDownComboBoxHover")<br />Caixa de combinação/lista listada ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxBackgroundHover` |
+| Tela de fundo | `CommonControls.ComboBoxBackgroundHover` |
 | Borda | `CommonControls.ComboBoxBorderHover` |
 | Texto | `CommonControls.ComboBoxTextHover` |
 | Separador | `CommonControls.ComboBoxSeparatorHover` |
 | Glifo | `CommonControls.ComboBoxGlyphHover` |
 | Plano de fundo do glifo | `CommonControls.ComboBoxGlyphBackgroundHover` |
 
-**Lista suspensas e caixas de combinação: estado pressionado**
+**Listadas e caixas de combinação: estado pressionado**
 
-![Lista suspensa pressionado/caixa de combinação](../../extensibility/ux-guidelines/media/0303-171_dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")<br />Lista suspensa pressionado/caixa de combinação
+![Caixa de combinação/lista de combinação pressionada](../../extensibility/ux-guidelines/media/0303-171_dropdowncomboboxpressed.png "0303-171_DropDownComboBoxPressed")<br />Caixa de combinação/lista de combinação pressionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxBackgroundPressed` |
+| Tela de fundo | `CommonControls.ComboBoxBackgroundPressed` |
 | Borda | `CommonControls.ComboBoxBorderPressed` |
 | Texto | `CommonControls.ComboBoxTextPressed` |
 | Separador | `CommonControls.ComboBoxSeparatorPressed` |
 | Glifo | `CommonControls.ComboBoxGlyphPressed` |
 | Plano de fundo do glifo | `CommonControls.ComboBoxGlyphBackgroundPressed` |
 
-**Exibição de item de lista suspensas e caixas de combinação: estado pressionado**
+**Exibição de item de lista de caixas de combinação e listas de listas de listas: estado pressionado**
 
- ![Modo de exibição de item lista suspensa pressionado por caixa de combinação](../../extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />Modo de exibição de item lista suspensa pressionado por caixa de combinação
+ ![Exibição de item de lista pressionada/caixa de combinação pressionada](../../extensibility/ux-guidelines/media/0303-174_dropdowncomboboxlistview.png "0303-174_DropDownComboBoxListView")<br />Exibição de item de lista pressionada/caixa de combinação pressionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxListBackground`<br />`CommonControls.ComboBoxListBackgroundHover`<br />`CommonControls.ComboBoxListItemBackgroundPressed`<br />`CommonControls.ComboBoxListItemBackgroundFocused` |
+| Tela de fundo | `CommonControls.ComboBoxListBackground`<br />`CommonControls.ComboBoxListBackgroundHover`<br />`CommonControls.ComboBoxListItemBackgroundPressed`<br />`CommonControls.ComboBoxListItemBackgroundFocused` |
 | Borda | `CommonControls.ComboBoxListBorder`<br />`CommonControls.ComboBoxListBorderHover`<br />`CommonControls.ComboBoxListBorderPressed`<br />`CommonControls.ComboBoxListBorderFocused` |
 | Texto do item | `CommonControls.ComboBoxListItemText`<br /> `CommonControls.ComboBoxListItemTextHover`<br />`CommonControls.ComboBoxListItemTextPressed`<br />`CommonControls.ComboBoxListItemTextFocused` |
-| Sombra em segundo plano | `CommonControls.ComboBoxListBackgroundShadow` |
+| Sombra de plano de fundo | `CommonControls.ComboBoxListBackgroundShadow` |
 
-**Lista suspensas e caixas de combinação: estado focalizado**
+**Listadas e caixas de combinação: estado focalizado**
 
-![Lista suspensa/caixa de combinação com foco](../../extensibility/ux-guidelines/media/0303-172_dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")<br />Lista suspensa/caixa de combinação com foco
+![Caixa de combinação/lista de lista com foco](../../extensibility/ux-guidelines/media/0303-172_dropdowncomboboxfocused.png "0303-172_DropDownComboBoxFocused")<br />Caixa de combinação/lista de lista com foco
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.ComboBoxBackgroundFocused` |
+| Tela de fundo | `CommonControls.ComboBoxBackgroundFocused` |
 | Borda | `CommonControls.ComboBoxBorderFocused` |
 | Texto | `CommonControls.ComboBoxTextFocused` |
 | Separador | `CommonControls.ComboBoxSeparatorFocused` |
 | Glifo | `CommonControls.ComboBoxGlyphFocused` |
 | Plano de fundo do glifo | `CommonControls.ComboBoxGlyphBackgroundFocused` |
 
-**Lista suspensas e caixas de combinação: seleção de entrada de texto**
+**Listadas e caixas de combinação: seleção de entrada de texto**
 
-![Seleção de entrada de texto de caixa suspensa/de combinação](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")<br />Seleção de entrada de texto de caixa suspensa/de combinação
+![Seleção de entrada de texto da caixa de combinação/lista de opções](../../extensibility/ux-guidelines/media/0303-173_dropdowncomboboxtextinput.png "0303-173_DropDownComboBoxTextInput")<br />Seleção de entrada de texto da caixa de combinação/lista de opções
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Realce | `CommonControls.ComboBoxTextInputSelection` |
 
-### <a name="tabular-data-grid-controls"></a>Controles de dados tabulares (grade)
-Controles de dados tabulares, também conhecidos como controles de grade, são controles comuns para o Visual Studio que podem ser usados para apresentar grandes quantidades de dados em várias colunas. Os controles de dados de tabela padrão podem ser encontrados em vários locais no Visual Studio: a janela de ferramentas Lista de Erros, os relatórios do IntelliTrace e a exibição de heap de memória, entre outros. Sempre use os controles de dados tabulares padrão fornecidos. Em algumas instâncias raras, talvez você não tenha acesso aos controles de dados tabulares padrão. Nessas situações, use os nomes de token a seguir para garantir que sua interface do usuário seja consistente com outros controles de dados de tabela no Visual Studio.
+### <a name="tabular-data-grid-controls"></a>Controles de dados tabular (grade)
+Controles de dados tabular, também conhecidos como controles de grade, são controles comuns para Visual Studio que podem ser usados para apresentar grandes quantidades de dados em várias colunas. Os controles de dados tabular padrão podem ser encontrados em vários locais no Visual Studio: a janela da ferramenta Lista de Erros, os relatórios do IntelliTrace e a exibição de heap de memória, entre outros. Sempre use os controles de dados tabular padrão fornecidos. Em algumas instâncias raras, talvez você não tenha acesso aos controles de dados tabular padrão. Nessas situações, use os nomes de token a seguir para garantir que sua interface do usuário seja consistente com outros controles de dados tabular Visual Studio.
 
-![Controle de grade/dados de tabela (Redline)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Controle de grade/dados de tabela (Redline)
+![Controle de dados/grade tabular (linha vermelha)](../../extensibility/ux-guidelines/media/0303-197_tabulardatagridcontrolredline.png "0303-197_TabularDataGridControlRedline")<br />Controle de dados/grade tabular (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para controles de tabela ou de grade. | ... para qualquer interface do usuário que não seja um controle de tabela ou de grade. |
+| ... para controles tabular ou de grade. | ... para qualquer interface do usuário que não seja um controle tabular ou de grade. |
 
 #### <a name="column-headers"></a>Cabeçalhos da coluna
-Os cabeçalhos de coluna consistem em um plano de fundo, uma borda, o texto do título e um glifo opcional geralmente usado quando uma grade é classificada por essa coluna.
+Os títulos de coluna consistem em uma plano de fundo, uma borda, o texto do título e um glifo opcional geralmente usado quando uma grade é classificação por essa coluna.
 
-**Cabeçalho da coluna: estado padrão**
+**Header de coluna: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Header.Default` |
+| Tela de fundo | `Header.Default` |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Primeiro plano (glifo) | `Header.Glyph` |
 | Borda | `Header.SeparatorLine` |
 
-**Cabeçalho da coluna: estado de foco**
+**Header da coluna: estado de foco**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Header.MouseOver` |
+| Tela de fundo | `Header.MouseOver` |
 | Primeiro plano (texto) | `Environment.CommandBarTextHover` |
 | Primeiro plano (glifo) | `Header.MouseOverGlyph` |
 | Borda | `Header.SeparatorLine` |
 
-**Cabeçalho da coluna: estado pressionado**
+**Header da coluna: estado pressionado**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `CommonControls.CheckBoxBackgroundPressed` |
+| Tela de fundo | `CommonControls.CheckBoxBackgroundPressed` |
 | Primeiro plano (texto) | `CommonControls.CheckBoxBorderPressed` |
 | Primeiro plano (glifo) | `CommonControls.CheckBoxTextPressed` |
 | Borda | `CommonControls.CheckBoxGlyphPressed` |
 
 #### <a name="list-view-items"></a>Listar itens de exibição
- Os itens de exibição de lista consistem em um plano de fundo e o conteúdo. O conteúdo pode ser texto, um ícone ou ambos.
+ Os itens de exibição de lista consistem em um plano de fundo e no conteúdo. O conteúdo pode ser texto, ícone ou ambos.
 
 **Itens de exibição de lista: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | Transparente |
+| Tela de fundo | Transparente |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Borda | Nenhum |
 
 **Itens de exibição de lista: estado ativo**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemActive` |
+| Tela de fundo | `TreeView.SelectedItemActive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemActiveText` |
 | Borda | Nenhum |
 
 **Itens de exibição de lista: estado inativo**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemInactive` |
+| Tela de fundo | `TreeView.SelectedItemInactive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemInactiveText` |
 | Borda | Nenhum |
 
 ### <a name="ui-text"></a>Texto da interface do usuário
 
 #### <a name="instructional-text"></a>Texto de instrução
-O texto instrutivo dá uma explicação importante sobre o que fazer em uma página de diálogo ou documento.
+O texto de instrução fornece uma explicação principal importante do que fazer em uma página de diálogo ou documento.
 
 ![Texto de instrução padrão](../../extensibility/ux-guidelines/media/0303_InstructionalText.png "0303_InstructionalText.png")<br />Texto de instrução padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.ControlText` |
 
 #### <a name="secondary-instructional-text"></a>Texto de instrução secundário
-Em páginas de documento com muitos textos e controles, alguns textos instrutivos usam um valor de cor diferente. Isso ajuda a transmitir quais informações são mais importantes e diminuir a densidade geral dos elementos da interface do usuário. (Veja também a seção abaixo sobre o texto de dica.)
+Em páginas de documento com muitos textos e controles, algum texto de instrução usa um valor de cor diferente. Isso ajuda a transmitir quais informações são mais importantes e diminuir a densidade geral dos elementos da interface do usuário. (Consulte também a seção abaixo sobre o texto da dica.)
 
 ![Texto de instrução secundário](../../extensibility/ux-guidelines/media/0303_SecondaryInstructionalText.png "0303_SecondaryInstructionalText.png")<br />Texto de instrução secundário
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.ControlEditHintText` |
 
-#### <a name="hint-text"></a>Texto de dica
-O texto de dica aparece em um controle vazio, abaixo de um controle ou em uma superfície de documento vazia para mostrar ao usuário o que fazer em seguida. Você pode usar o texto de dica com planos de fundo de janela ou de controle.
+#### <a name="hint-text"></a>Texto da dica
+O texto de dica aparece em um controle vazio, abaixo de um controle ou em uma superfície de documento vazia para mostrar ao usuário o que fazer em seguida. Você pode usar texto de dica com janela ou plano de fundo de controle.
 
 **Texto de dica padrão**
 
 ![Texto de dica padrão](../../extensibility/ux-guidelines/media/0303_HintText.png "0303_HintText.png")<br />Texto de dica padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.ControlEditHintText` |
 
-**Texto de dica necessário**
+**Texto da dica necessária**
 
-![Texto de dica necessário](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />Texto de dica necessário
+![Texto da dica necessária](../../extensibility/ux-guidelines/media/0303_RequiredHintText.png "0303_RequiredHintText.png")<br />Texto da dica necessária
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.ControlRequiredHintText` |
-| Segundo plano | `Environment.ControlRequiredBackground` |
+| Tela de fundo | `Environment.ControlRequiredBackground` |
 
 **Texto de controle da caixa de pesquisa**
 
-> Consulte as [caixas de pesquisa](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) para outros tokens de cor relacionados ao controle de pesquisa.
+> Confira [Caixas de pesquisa](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_SearchBoxes) para outros tokens de cor relacionados ao controle Pesquisar.
 
 ![Texto de controle da caixa de pesquisa](../../extensibility/ux-guidelines/media/0303_SearchBoxControl.png "0303_SearchBoxControl.png")<br />Texto de controle da caixa de pesquisa
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `SearchControl.UnfocusedWatermarkText` |
 
 ### <a name="hyperlink"></a>Hyperlink
-O hiperlink é um controle que não tem um par de primeiro plano/segundo plano. Em todos os casos, use a cor do hiperlink de primeiro plano, que será exibida corretamente em planos de fundo escuros, cinzas e brancos. Se você não usar o token de cor para o controle hiperlink, verá a cor padrão do sistema para "pressionado", que piscará vermelho. Esse é o sinal de que o controle não está usando o token de cor de ambiente correto.
+O hiperlink é um controle que não tem um par de primeiro plano/plano de fundo. Em todos os casos, use a cor do hiperlink em primeiro plano, que aparecerá corretamente em telas de fundo escuras, cinzas e brancas. Se você não usar o token de cor para o controle de hiperlink, verá a cor padrão do sistema para "pressionado", que piscará em vermelho. Esse é o sinal de que o controle não está usando o token de cor do ambiente correto.
 
-![Hiperlink (Redline)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303-133_HyperlinkRedline")<br />Hiperlink (Redline)
+![Hiperlink (linha vermelha)](../../extensibility/ux-guidelines/media/0303-133_hyperlinkredline.png "0303-133_HyperlinkRedline")<br />Hiperlink (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... Quando você precisar criar um hiperlink personalizado. | ... para qualquer coisa que não seja um hiperlink. |
+| ... quando você precisa criar um hiperlink personalizado. | ... para qualquer coisa que não seja um hiperlink. |
 
 **Hiperlink: estado padrão**
 
 ![Hiperlink padrão](../../extensibility/ux-guidelines/media/0303-134_hyperlink.png "0303-134_Hyperlink")<br />Hiperlink padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.PanelHyperlink` |
 
 **Hiperlink: estado de foco**
 
-![Hiperlink ao focalizar](../../extensibility/ux-guidelines/media/0303-135_hyperlinkhover.png "0303-135_HyperlinkHover")<br />Hiperlink ao focalizar
+![Hiperlink ao passar o mouse](../../extensibility/ux-guidelines/media/0303-135_hyperlinkhover.png "0303-135_HyperlinkHover")<br />Hiperlink ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.PanelHyperlinkHover` |
 
@@ -397,7 +397,7 @@ O hiperlink é um controle que não tem um par de primeiro plano/segundo plano. 
 
 ![Hiperlink pressionado](../../extensibility/ux-guidelines/media/0303-136_hyperlinkpressed.png "0303-136_HyperlinkPressed")<br />Hiperlink pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.PanelHyperlinkPressed` |
 
@@ -405,200 +405,200 @@ O hiperlink é um controle que não tem um par de primeiro plano/segundo plano. 
 
 ![Hiperlink desabilitado](../../extensibility/ux-guidelines/media/0303-137_hyperlinkdisabled.png "0303-137_HyperlinkDisabled")<br />Hiperlink desabilitado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.PanelHyperlinkDisabled` |
 
-### <a name="infobars"></a>Infobars
-Infobars são usados para fornecer mais informações sobre um determinado contexto e sempre aparecem na parte superior de uma janela de documento ou janela de ferramentas.
+### <a name="infobars"></a>Barras de informações
+As barras de informações são usadas para fornecer mais informações sobre um determinado contexto e sempre aparecem na parte superior de uma janela de documento ou janela de ferramentas.
 
-![Barra de Redline (o)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Barra de Redline (o)
+![Barra de informações (linha vermelha)](../../extensibility/ux-guidelines/media/0303-138_infobarredline.png "0303-138_InfobarRedline")<br />Barra de informações (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... ao criar infobars personalizado. | ... para elementos de interface do usuário que não são semelhantes a uma barra de erro. |
+| ... ao criar barras de informações personalizadas. | ... para elementos de interface do usuário que não são semelhantes a uma barra de informações. |
 
-**Barra de status: estado padrão**
+**Barra de informações: estado padrão**
 
-![Barra de a padrão](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />Barra de a padrão
+![Barra de informações padrão](../../extensibility/ux-guidelines/media/0303-139_infobar.png "0303-139_Infobar")<br />Barra de informações padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.InfoBarBackground` |
+| Tela de fundo | `InfoBar.InfoBarBackground` |
 | Primeiro plano (texto) | `InfoBar.InfoBar` |
 | Borda | `InfoBar.InfoBarBorder` |
 
-**Botão de fechamento da barra de status &times; : estado padrão**
+**Botão Fechar da barra de informações ( &times; ) : estado padrão**
 
-![Botão de fechamento da barra de somente padrão &times;](../../extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Botão de fechamento da barra de somente padrão &times;
+![Botão Fechar ( ) da barra &times; de informações padrão](../../extensibility/ux-guidelines/media/0303_InfobarCloseDefault.png "0303_InfobarCloseDefault.png")<br />Botão Fechar ( ) da barra &times; de informações padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.CloseButton` |
+| Tela de fundo | `InfoBar.CloseButton` |
 | Borda | `InfoBar.CloseButtonBorder` |
 | Glifo | `InfoBar.CloseButtonGlyph` |
 
-**Botão de fechamento da barra de status &times; : estado de foco**
+**Botão Fechar da barra de informações ( &times; ) : estado de foco**
 
-![&times;Botão de fechamento da barra de cursor () ao focalizar](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />&times;Botão de fechamento da barra de cursor () ao focalizar
+![Botão Fechar da barra de informações ( &times; ) ao passar o mouse](../../extensibility/ux-guidelines/media/0303_InfobarCloseHover.png "0303_InfobarCloseHover.png")<br />Botão Fechar da barra de informações ( &times; ) ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.CloseButtonHover` |
+| Tela de fundo | `InfoBar.CloseButtonHover` |
 | Borda | `InfoBar.CloseButtonHoverBorder` |
 | Glifo | `InfoBar.CloseButtonHoverGlyph` |
 
-**Botão de fechamento da barra de status &times; : estado pressionado**
+**Botão Fechar da &times; barra de informações ( ) : estado pressionado**
 
-![Botão fechar da barra de medida ( &times; ) pressionado](../../extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Botão fechar da barra de medida ( &times; ) pressionado
+![Botão Fechar ( ) da barra &times; de informações pressionada](../../extensibility/ux-guidelines/media/0303_InfobarClosePressed.png "0303_InfobarClosePressed.png")<br />Botão Fechar ( ) da barra &times; de informações pressionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.CloseButtonDown` |
+| Tela de fundo | `InfoBar.CloseButtonDown` |
 | Borda | `InfoBar.CloseButtonDownBorder` |
 | Glifo | `InfoBar.CloseButtonDownGlyph` |
 
-**Botão de hiperlink da barra de controle: estado padrão**
+**Botão de hiperlink da barra de informações: estado padrão**
 
-![Botão de hiperlink de barra de somente padrão](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Botão de hiperlink de barra de somente padrão
+![Botão de hiperlink da barra de informações padrão](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Botão de hiperlink da barra de informações padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `InfoBar.Hyperlink` |
 
-**Botão de hiperlink da barra de controle: estado de foco**
+**Botão de hiperlink da barra de informações: estado de foco**
 
-![Botão de hiperlink da barra de do mouse ao focalizar](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Botão de hiperlink da barra de do mouse ao focalizar
+![Botão de hiperlink da barra de informações ao passar o mouse](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonHover.png "0303_InfobarHyperlinkButtonHover.png")<br />Botão de hiperlink da barra de informações ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Infobar.HyperlinkMouseOver`<br />(Com sublinhado) |
 
-**Botão de hiperlink da barra de controle: estado pressionado**
+**Botão de hiperlink da barra de informações: estado pressionado**
 
-![Botão de hiperlink da barra de botões pressionado](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Botão de hiperlink da barra de botões pressionado
+![Botão de hiperlink da barra de informações pressionado](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonPressed.png "0303_InfobarHyperlinkButtonPressed.png")<br />Botão de hiperlink da barra de informações pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Infobar.HyperlinkMouseDown`<br />(Com sublinhado) |
 
-**Hiperlink embutido da barra de controle (dentro de uma sentença): estado padrão**
+**Hiperlink em linha da barra de informações (dentro de uma frase): estado padrão**
 
-![Botão de hiperlink de barra de forma embutida padrão](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Botão de hiperlink de barra de forma embutida padrão
+![Botão de hiperlink da barra de informações em linha padrão](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkButtonDefault.png "0303_InfobarHyperlinkButtonDefault.png")<br />Botão de hiperlink da barra de informações em linha padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `InfoBar.Hyperlink` |
 
-**Hiperlink embutido da barra de controle (dentro de uma sentença): estado de foco**
+**Hiperlink em linha da barra de informações (dentro de uma frase): estado de foco**
 
-![Botão de hiperlink em linha da barra de posição ao focalizar](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />Botão de hiperlink em linha da barra de posição ao focalizar
+![Botão de hiperlink em linha da barra de informações ao passar o mouse](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlineHover.png "0303_InfobarHyperlinkInlineHover.png")<br />Botão de hiperlink em linha da barra de informações ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Infobar.HyperlinkMouseOver`<br />(Com sublinhado) |
 
-**Hiperlink embutido da barra de controle (dentro de uma sentença): estado pressionado**
+**Hiperlink em linha da barra de informações (dentro de uma frase): estado pressionado**
 
-![Botão de hiperlink embutido da barra de linhas pressionado](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />Botão de hiperlink embutido da barra de linhas pressionado
+![Botão de hiperlink em linha da barra de informações pressionado](../../extensibility/ux-guidelines/media/0303_InfobarHyperlinkInlinePressed.png "0303_InfobarHyperlinkInlinePressed.png")<br />Botão de hiperlink em linha da barra de informações pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Infobar.HyperlinkMouseDown`<br />(Com sublinhado) |
 
-**Botão de barra de status: estado padrão**
+**Botão da barra de informações: estado padrão**
 
-![Botão de barra de somente padrão](../../extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />Botão de barra de somente padrão
+![Botão da barra de informações padrão](../../extensibility/ux-guidelines/media/0303_InfobarButtonDefault.png "0303_InfobarButtonDefault.png")<br />Botão da barra de informações padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.Button` |
+| Tela de fundo | `InfoBar.Button` |
 | Primeiro plano (texto) | `InfoBar.Button` |
 | Borda | `InfoBar.ButtonBorder` |
 
-**Botão de barra de status: estado de foco**
+**Botão da barra de informações: estado de foco**
 
-![Botão de barra de somente ao focalizar](../../extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />Botão de barra de somente ao focalizar
+![Botão da barra de informações ao passar o mouse](../../extensibility/ux-guidelines/media/0303_InfobarButtonHover.png "0303_InfobarButtonHover.png")<br />Botão da barra de informações ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.ButtonMouseOver` |
+| Tela de fundo | `InfoBar.ButtonMouseOver` |
 | Primeiro plano (texto) | `InfoBar.ButtonMouseOver` |
 | Borda | `InfoBar.ButtonMouseOverBorder` |
 
-**Botão de barra de status: estado pressionado**
+**Botão da barra de informações: estado pressionado**
 
-![Botão da barra de a pressionado](../../extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />Botão da barra de a pressionado
+![Botão de barra de informações pressionado](../../extensibility/ux-guidelines/media/0303_InfobarButtonPressed.png "0303_InfobarButtonPressed.png")<br />Botão de barra de informações pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.ButtonMouseDown` |
+| Tela de fundo | `InfoBar.ButtonMouseDown` |
 | Primeiro plano (texto) | `InfoBar.ButtonMouseDown` |
 | Borda | `InfoBar.ButtonMouseDownBorder` |
 
-**Botão de barra de status: estado desabilitado**
+**Botão da barra de informações: estado desabilitado**
 
-![Botão de barra de somente desabilitado](../../extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />Botão de barra de somente desabilitado
+![Botão da barra de informações desabilitado](../../extensibility/ux-guidelines/media/0303_InfobarButtonDisabled.png "0303_InfobarButtonDisabled.png")<br />Botão da barra de informações desabilitado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.ButtonDisabled` |
+| Tela de fundo | `InfoBar.ButtonDisabled` |
 | Primeiro plano (texto) | `InfoBar.ButtonDisabled` |
 | Borda | `InfoBar.ButtonDisabledBorder` |
 
-**Botão de barra de visão: estado focalizado**
+**Botão da barra de informações: estado focalizado**
 
-![Botão de barra de visão focalizado](../../extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />Botão de barra de visão focalizado
+![Botão da barra de informações focalizada](../../extensibility/ux-guidelines/media/0303_InfobarButtonFocus.png "0303_InfobarButtonFocus.png")<br />Botão da barra de informações focalizada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `InfoBar.ButtonFocus` |
+| Tela de fundo | `InfoBar.ButtonFocus` |
 | Primeiro plano (texto) | `InfoBar.ButtonFocus` |
 | Borda | `InfoBar.ButtonFocusBorder` |
 
 ### <a name="scroll-bars"></a>Barras de rolagem
-As barras de rolagem são estilizadas pelo ambiente do Visual Studio e não precisam ser modeladas. No entanto, você pode decidir que deseja aproveitar as cores usadas nas barras de rolagem para que sua interface do usuário sempre pareça consistente com essa parte do ambiente do Visual Studio.
+As barras de rolagem são estil Visual Studio ambiente e não precisarão ser temas. No entanto, você pode decidir que deseja aproveitar as cores usadas em barras de rolagem para que sua interface do usuário sempre pareça consistente com essa parte do ambiente Visual Studio ambiente.
 
-![Barra de rolagem (Redline)](../../extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />Barra de rolagem (Redline)
+![Barra de rolagem (linha vermelha)](../../extensibility/ux-guidelines/media/0303-140_scrollbarredline.png "0303-140_ScrollbarRedline")<br />Barra de rolagem (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... Quando você estiver criando a interface do usuário que deseja corresponder às barras de rolagem do Visual Studio. | ... para qualquer coisa que você não queira sempre corresponder à interface do usuário da barra de rolagem. |
+| ... ao criar uma interface do usuário que você deseja corresponder Visual Studio de rolagem. | ... para qualquer coisa que você não queira sempre corresponder à interface do usuário da barra de rolagem. |
 
 **Barra de rolagem: estado padrão**
 
 ![Barra de rolagem padrão](../../extensibility/ux-guidelines/media/0303-141_scrollbar.png "0303-141_Scrollbar")<br />Barra de rolagem padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Barra de rolagem | `Environment.ScrollBarBackground` |
-| Primeiro plano (Thumb) | `Environment.ScrollBarThumbBackground` |
+| Primeiro plano (thumb) | `Environment.ScrollBarThumbBackground` |
 
 **Barra de rolagem: estado de foco**
 
-![Barra de rolagem ao focalizar](../../extensibility/ux-guidelines/media/0303-143_scrollbarhover.png "0303-143_ScrollbarHover")<br />Barra de rolagem ao focalizar
+![Barra de rolagem ao passar o mouse](../../extensibility/ux-guidelines/media/0303-143_scrollbarhover.png "0303-143_ScrollbarHover")<br />Barra de rolagem ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Barra de rolagem | `Environment.ScrollBarBackground` |
-| Primeiro plano (Thumb) | `Environment.ScrollBarThumbMouseOverBackground` |
+| Primeiro plano (thumb) | `Environment.ScrollBarThumbMouseOverBackground` |
 
 *Barra de rolagem: estado pressionado**
 
 ![Barra de rolagem pressionada](../../extensibility/ux-guidelines/media/0303-145_scrollbarpressed.png "0303-145_ScrollbarPressed")<br />Barra de rolagem pressionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Barra de rolagem | `Environment.ScrollBarBackground` |
-| Primeiro plano (Thumb) | `Environment.ScrollBarThumbPressedBackground` |
+| Primeiro plano (thumb) | `Environment.ScrollBarThumbPressedBackground` |
 
 **Seta da barra de rolagem: estado padrão**
 
 ![Seta da barra de rolagem padrão](../../extensibility/ux-guidelines/media/0303-142_scrollbararrow.png "0303-142_ScrollbarArrow")<br />Seta da barra de rolagem padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.ScrollBarArrowBackground`<br />(Defina para a mesma cor que a barra de rolagem.) |
+| Tela de fundo | `Environment.ScrollBarArrowBackground`<br />(Definido como a mesma cor que a barra de rolagem.) |
 | Primeiro plano (glifo) | `Environment.ScrollBarArrowGlyph` |
 
 **Seta da barra de rolagem: estado de foco**
@@ -607,7 +607,7 @@ As barras de rolagem são estilizadas pelo ambiente do Visual Studio e não prec
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ScrollBarArrowMouseOverBackground`<br />(Defina para a mesma cor que a barra de rolagem.) |
+| Tela de fundo | `Environment.ScrollBarArrowMouseOverBackground`<br />(Defina para a mesma cor que a barra de rolagem.) |
 | Primeiro plano (glifo) | `Environment.ScrollBarArrowGlyphMouseOver` |
 
 **Seta da barra de rolagem: estado pressionado**
@@ -616,7 +616,7 @@ As barras de rolagem são estilizadas pelo ambiente do Visual Studio e não prec
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ScrollBarArrowPressedBackground`<br />(Defina para a mesma cor que a barra de rolagem.) |
+| Tela de fundo | `Environment.ScrollBarArrowPressedBackground`<br />(Defina para a mesma cor que a barra de rolagem.) |
 | Primeiro plano (glifo) | `Environment.ScrollBarArrowGlyphPressed` |
 
 ### <a name="search-boxes"></a><a name="BKMK_SearchBoxes"></a>Caixas de pesquisa
@@ -645,7 +645,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `SearchControl.FocusedBackground` |
+| Tela de fundo | `SearchControl.FocusedBackground` |
 | Primeiro plano (texto) | `SearchControl.FocusedBackground` |
 | Borda | `SearchControl.FocusedBorder` |
 | Separador | `SearchControl.FocusedDropDownSeparator` |
@@ -656,7 +656,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `SearchControl.SearchActiveBackground` |
+| Tela de fundo | `SearchControl.SearchActiveBackground` |
 | Primeiro plano (texto) | `SearchControl.SearchActiveBackground` |
 | Borda | `SearchControl.UnfocusedBorder` |
 | Separador | `SearchControl.DropDownSeparator` |
@@ -667,7 +667,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `SearchControl.Unfocused` |
+| Tela de fundo | `SearchControl.Unfocused` |
 | Primeiro plano (texto) | `SearchControl.Unfocused` |
 | Borda | `SearchControl.UnfocusedBorder` |
 | Separador | `SearchControl.DropDownSeparator` |
@@ -678,7 +678,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `SearchControl.Selection` |
+| Tela de fundo | `SearchControl.Selection` |
 | Primeiro plano (texto) | `SearchControl.FocusedBackground` |
 | Borda | Nenhum |
 | Separador | `SearchControl.FocusedDropDownSeparator` |
@@ -689,7 +689,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `SearchControl.Disabled` |
+| Tela de fundo | `SearchControl.Disabled` |
 | Primeiro plano (texto) | `SearchControl.Disabled` |
 | Borda | `SearchControl.DisabledBorder` |
 | Separador | `SearchControl.DropDownSeparator` |
@@ -700,7 +700,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (glifo de pesquisa) | `SearchControl.SearchGlyph` |
 | Primeiro plano (glifo de parada) | `SearchControl.StopGlyph` |
 | Primeiro plano (limpar glifo) | `SearchControl.ClearGlyph` |
@@ -712,7 +712,7 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo de pesquisa) | `SearchControl.SearchGlyph` |
 | Primeiro plano (glifo de parada) | `SearchControl.StopGlyph` |
 | Primeiro plano (limpar glifo) | `SearchControl.ClearGlyph` |
@@ -722,9 +722,9 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 ![Botão de ação de pesquisa pressionado](../../extensibility/ux-guidelines/media/0303-116-1_searchactionbuttonpressed.png "0303-116-1_SearchActionButtonPressed")<br />Botão de ação de pesquisa pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.ActionButtonMouseDown` |
+| Tela de fundo | `SearchControl.ActionButtonMouseDown` |
 | Primeiro plano (glifo) | `SearchControl.ActionButtonMouseDownGlyph` |
 | Borda | `SearchControl.ActionButtonMouseDownBorder` |
 
@@ -732,65 +732,65 @@ Uma caixa de pesquisa pode ser um dos vários Estados, algumas das quais são mu
 
 ![Botão de ação de pesquisa desabilitado](../../extensibility/ux-guidelines/media/0303-122_searchactionbuttondisabled.png "0303-122_SearchActionButtonDisabled")<br />Botão de ação de pesquisa desabilitado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (glifo) | `SearchControl.ActionButtonDisabledGlyph` |
 | Borda | Nenhum |
 
-**Botão suspenso de pesquisa focado**
+**Botão de lista de pesquisa focalizada**
 
-![Botão suspenso de pesquisa focado](../../extensibility/ux-guidelines/media/0303-113_searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br />Botão suspenso de pesquisa focado
+![Botão de lista de pesquisa focalizada](../../extensibility/ux-guidelines/media/0303-113_searchdropdownbuttonfocused.png "0303-113_SearchDropdownButtonFocused")<br />Botão de lista de pesquisa focalizada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.FocusedDropDownButton` |
+| Tela de fundo | `SearchControl.FocusedDropDownButton` |
 | Primeiro plano (glifo) | `SearchControl.FocusedDropDownButtonGlyph` |
 | Borda | `SearchControl.FocusedDropDownButtonBorder` |
 
-**Botão suspenso de pesquisa não focalizado**
+**Botão de lista de pesquisa desfocarada**
 
-![Botão suspenso de pesquisa não focalizado](../../extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />Botão suspenso de pesquisa não focalizado
+![Botão de lista de pesquisa desfocarada](../../extensibility/ux-guidelines/media/0303-116_searchdropdownbuttonunfocused.png "0303-116_SearchDropdownButtonUnfocused")<br />Botão de lista de pesquisa desfocarada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.UnfocusedDropDownButton` |
+| Tela de fundo | `SearchControl.UnfocusedDropDownButton` |
 | Primeiro plano (glifo) | `SearchControl.UnfocusedDropDownButtonGlyph` |
 | Borda | `SearchControl.UnfocusedDropDownButtonBorder` |
 
-**Botão suspenso de pesquisa pressionado**
+**Botão de lista de pesquisa pressionado**
 
-![Botão suspenso de pesquisa pressionado](../../extensibility/ux-guidelines/media/0303-116-2_searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br />Botão suspenso de pesquisa pressionado
+![Botão de lista de pesquisa pressionado](../../extensibility/ux-guidelines/media/0303-116-2_searchdropdownbuttonpressed.png "0303-116-2_SearchDropdownButtonPressed")<br />Botão de lista de pesquisa pressionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.MouseDownDropDownButton` |
+| Tela de fundo | `SearchControl.MouseDownDropDownButton` |
 | Primeiro plano (glifo) | `SearchControl.MouseDownDropDownButtonGlyph` |
 | Borda | `SearchControl.MouseDownDropDownButtonBorder` |
 
-**Botão suspenso de pesquisa desabilitado**
+**Botão de lista de pesquisa desabilitado**
 
-![Botão suspenso de pesquisa desabilitado](../../extensibility/ux-guidelines/media/0303-123_searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br />Botão suspenso de pesquisa desabilitado
+![Botão de lista de pesquisa desabilitado](../../extensibility/ux-guidelines/media/0303-123_searchdropdownbuttondisabled.png "0303-123_SearchDropdownButtonDisabled")<br />Botão de lista de pesquisa desabilitado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (glifo) | `SearchControl.DisabledDownButtonGlyph` |
 | Borda | Nenhum |
 
-#### <a name="search-drop-down-lists"></a>Listas suspensas de pesquisa
-O menu suspenso caixa de pesquisa tem o potencial de ser um pouco mais complexo do que outros menus suspensos no Visual Studio. As seções "pesquisas sugeridas" e "opções de pesquisa" podem aparecer sozinhas ou juntas no menu, e cada uma é colorida separadamente. Uma linha também separa essas duas seções quando elas aparecem juntas e uma borda circunda todo o menu suspenso.
+#### <a name="search-drop-down-lists"></a>Pesquisar listas listadas
+O menu suspenso da caixa de pesquisa tem o potencial de ser um pouco mais complexo do que outros menus suspensos Visual Studio. As seções "pesquisas sugeridas" e "opções de pesquisa" podem aparecer sozinhas ou juntas no menu, e cada uma delas é colorida separadamente. Uma linha também separa essas duas seções quando elas aparecem juntas e uma borda envolve todo o menu suspenso.
 
-![Lista suspensa de pesquisa (Redline)](../../extensibility/ux-guidelines/media/0303-124_searchdropdownredline.png "0303-124_SearchDropdownRedline")<br />Lista suspensa de pesquisa (Redline)
+![Lista de listas de pesquisa (linha vermelha)](../../extensibility/ux-guidelines/media/0303-124_searchdropdownredline.png "0303-124_SearchDropdownRedline")<br />Lista de listas de pesquisa (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... Quando você estiver criando uma lista suspensa de pesquisa personalizada. | ... para listas suspensas que aparecem em outros contextos. |
-| ... os nomes de token corretos para os componentes de lista corretos. | ... em qualquer combinação de plano de fundo/primeiro plano diferente de especificada. |
+| ... quando você estiver criando uma lista de pesquisa personalizada. | ... para listas listadas que aparecem em outros contextos. |
+| ... os nomes de token corretos para os componentes de lista corretos. | ... em qualquer combinação de plano de fundo/primeiro plano diferente do especificado. |
 
-**Pesquisar elementos da lista suspensa**
+**Pesquisar elementos da lista de listas**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Borda | `SearchControl.PopupBorder` |
 | Separador | `SearchControl.PopupSectionHeaderSeparator` |
@@ -798,20 +798,20 @@ O menu suspenso caixa de pesquisa tem o potencial de ser um pouco mais complexo 
 
 **Pesquisas sugeridas: estado padrão**
 
-![Pesquisas padrão sugeridas](../../extensibility/ux-guidelines/media/0303-125_searchsuggested.png "0303-125_SearchSuggested")<br />Pesquisas padrão sugeridas
+![Pesquisas sugeridas padrão](../../extensibility/ux-guidelines/media/0303-125_searchsuggested.png "0303-125_SearchSuggested")<br />Pesquisas sugeridas padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.PopupItemsListBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `SearchControl.PopupItemsListBackgroundGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `SearchControl.PopupItemText` |
 
 **Pesquisas sugeridas: estado de foco**
 
-![Pesquisas sugeridas ao focalizar](../../extensibility/ux-guidelines/media/0303-128_searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br />Pesquisas sugeridas ao focalizar
+![Pesquisas sugeridas ao passar o mouse](../../extensibility/ux-guidelines/media/0303-128_searchsuggestedhover.png "0303-128_SearchSuggestedHover")<br />Pesquisas sugeridas ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `SearchControl.PopupMouseOverItemText` |
 | Borda | `SearchControl.PopupControlMouseOverBorder` |
 
@@ -821,23 +821,23 @@ O menu suspenso caixa de pesquisa tem o potencial de ser um pouco mais complexo 
 
 ![Opções de pesquisa](../../extensibility/ux-guidelines/media/0303-127_searchoptions.png "0303-127_SearchOptions")<br />Opções de pesquisa padrão (link)
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.PopupSectionBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `SearchControl.PopupSectionBackgroundGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto da caixa de seleção) | `SearchControl.PopupCheckboxText` |
 | Primeiro plano (texto do link) | `SearchControl.PopupButtonText` |
-| Plano de fundo do cabeçalho | `SearchControl.PopupSectionHeaderGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
-| Primeiro plano (texto do cabeçalho) | `SearchControl.PopupSectionHeaderText` |
+| Plano de fundo do header | `SearchControl.PopupSectionHeaderGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
+| Primeiro plano (texto do header) | `SearchControl.PopupSectionHeaderText` |
 
 **Opções de pesquisa: estado de foco**
 
-![Opções de pesquisa (caixa de seleção) ao focalizar](../../extensibility/ux-guidelines/media/0303-129_searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br />Opções de pesquisa (caixa de seleção) ao focalizar
+![Opções de pesquisa (caixa de seleção) ao passar o mouse](../../extensibility/ux-guidelines/media/0303-129_searchcheckboxhover.png "0303-129_SearchCheckboxHover")<br />Opções de pesquisa (caixa de seleção) ao passar o mouse
 
-![Opções de pesquisa (link) ao focalizar](../../extensibility/ux-guidelines/media/0303-130_searchoptionshover.png "0303-130_SearchOptionsHover")<br />Opções de pesquisa (link) ao focalizar
+![Opções de pesquisa (link) ao passar o mouse](../../extensibility/ux-guidelines/media/0303-130_searchoptionshover.png "0303-130_SearchOptionsHover")<br />Opções de pesquisa (link) ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `SearchControl.PopupControlMouseOverBackgroundGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto da caixa de seleção) | `SearchControl.PopupCheckboxMouseDownText` |
 | Primeiro plano (texto do link) | `SearchControl.PopupButtonMouseDownText` |
 | Borda | `SearchControl.PopupControlMouseOverBorder` |
@@ -848,205 +848,205 @@ O menu suspenso caixa de pesquisa tem o potencial de ser um pouco mais complexo 
 
 ![Opções de pesquisa pressionadas (link)](../../extensibility/ux-guidelines/media/0303-132_searchoptionspressed.png "0303-132_SearchOptionsPressed")<br />Opções de pesquisa pressionadas (link)
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Plano de fundo da caixa de seleção | `SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br />`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Plano de fundo da caixa de seleção | `SearchControl.PopupControlMouseDownBackgroundGradientBegin`<br />`SearchControl.PopupControlMouseDownBackgroundGradientEnd`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto da caixa de seleção) | `SearchControl.PopupCheckboxMouseDownText` |
-| Vincular plano de fundo | `SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Plano de fundo do link | `SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto do link) | `SearchControl.PopupButtonMouseDownText` |
 
 ### <a name="tree-views"></a><a name="BKMK_TreeView"></a> Exibições de árvore
-Várias janelas de ferramentas, incluindo a Gerenciador de Soluções, Gerenciador de Servidores e Modo de Exibição de Classe, implementam um esquema organizacional hierárquico cujas cores são controladas por nomes de cores na `TreeView` categoria. Todos os itens em um modo de exibição de árvore têm cores de texto e em segundo plano. Os itens que têm elementos filho aninhados também têm glifos que indicam se o item está expandido ou recolhido.
+Várias janelas de ferramentas, incluindo Gerenciador de Soluções, Gerenciador de Servidores e Modo de Exibição de Classe, implementam um esquema organizacional hierárquico cujas cores são controladas por nomes de cores na `TreeView` categoria. Todos os itens em um exibição de árvore têm cores de plano de fundo e texto. Itens que têm elementos filho aninhados também têm glifos que indicam se o item é expandido ou recolhido.
 
-![Modo de exibição de árvore (Redline)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303-147_TreeViewRedline")<br />Modo de exibição de árvore (Redline)
+![Exibição de árvore (linha vermelha)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303-147_TreeViewRedline")<br />Exibição de árvore (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... em qualquer lugar, você precisa implementar uma exibição organizacional hierárquica. | ... para qualquer coisa que não seja semelhante a uma exibição de árvore. |
-| | ... em qualquer combinação de plano de fundo/primeiro plano diferente de especificada. |
+| ... em qualquer lugar em que você precise implementar uma exibição organizacional hierárquica. | ... para qualquer coisa que não seja semelhante a um modo de exibição de árvore. |
+| | ... em qualquer combinação de plano de fundo/primeiro plano diferente do especificado. |
 
 **Item de exibição de árvore: estado padrão**
 
 ![Item de exibição de árvore padrão](../../extensibility/ux-guidelines/media/0303-148_treeview.png "0303-148_TreeView")<br />Item de exibição de árvore padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.Background` |
+| Tela de fundo | `TreeView.Background` |
 | Primeiro plano (texto) | `TreeView.Background` |
 | Primeiro plano (glifo) | `TreeView.Glyph` |
 | Borda | Nenhum |
 
 **Item de exibição de árvore: estado de foco**
 
-![Item de exibição de árvore ao focalizar](../../extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />Item de exibição de árvore ao focalizar
+![Item de exibição de árvore ao passar o mouse](../../extensibility/ux-guidelines/media/0303-149_treeviewhover.png "0303-149_TreeViewHover")<br />Item de exibição de árvore ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.Background` |
+| Tela de fundo | `TreeView.Background` |
 | Primeiro plano (texto) | `TreeView.Background` |
 | Primeiro plano (glifo) | `TreeView.GlyphMouseOver` |
 | Borda | Nenhum |
 
-**Item de exibição de árvore: arraste sobre o estado**
+**Item de exibição de árvore: arrastar sobre o estado**
 
 ![Item de exibição de árvore ao arrastar sobre](../../extensibility/ux-guidelines/media/0303-150_treeviewdragover.png "0303-150_TreeViewDragOver")<br />Item de exibição de árvore ao arrastar sobre
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.DragOverItem` |
+| Tela de fundo | `TreeView.DragOverItem` |
 | Primeiro plano (texto) | `TreeView.DragOverItem` |
 | Primeiro plano (glifo) | `TreeView.DragOverItemGlyph` |
 | Borda | Nenhum |
 
-**Item de modo de exibição de árvore: selecionado, estado focalizado**
+**Item de exibição de árvore: selecionado, estado focalizado**
 
 ![Item de exibição de árvore selecionado e focalizado](../../extensibility/ux-guidelines/media/0303-151_treeviewfocused.png "0303-151_TreeViewFocused")<br />Item de exibição de árvore selecionado e focalizado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemActive` |
+| Tela de fundo | `TreeView.SelectedItemActive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemActive` |
 | Primeiro plano (glifo) | `TreeView.SelectedItemActiveGlyph` |
 | Borda | `TreeView.FocusVisualBorder` |
 
-**Item de modo de exibição de árvore: selecionado, estado não focalizado**
+**Item de exibição de árvore: estado selecionado e desfoco**
 
-![Item de exibição de árvore selecionado e não focalizado](../../extensibility/ux-guidelines/media/0303-152_treeviewunfocused.png "0303-152_TreeViewUnfocused")<br />Item de exibição de árvore selecionado e não focalizado
+![Item de exibição de árvore selecionado e desfoco](../../extensibility/ux-guidelines/media/0303-152_treeviewunfocused.png "0303-152_TreeViewUnfocused")<br />Item de exibição de árvore selecionado e desfoco
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemInactive` |
+| Tela de fundo | `TreeView.SelectedItemInactive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemInactive` |
 | Primeiro plano (glifo) | `TreeView.SelectedItemInactiveGlyph` |
 | Borda | Nenhum |
 
 **Item de exibição de árvore: focalizado, selecionado e estado focalizado**
 
-![Item de exibição de árvore marcada e focalizado ao focalizar](../../extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />Item de exibição de árvore marcada e focalizado ao focalizar
+![Item de exibição de árvore selecionado e focalizado ao focalizar](../../extensibility/ux-guidelines/media/0303-153_treeviewfocusedhover.png "0303-153_TreeViewFocusedHover")<br />Item de exibição de árvore selecionado e focalizado ao focalizar
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemActive` |
+| Tela de fundo | `TreeView.SelectedItemActive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemActive` |
 | Primeiro plano (glifo) | `TreeView.SelectedItemActiveGlyphMouseOver` |
 | Borda | `TreeView.FocusVisualBorder` |
 
-**Item de exibição de árvore: estado focalizado, selecionado e não focalizado**
+**Item de exibição de árvore: estado com foco, selecionado e desfoco**
 
-![Item de exibição de árvore selecionado e não focalizado ao focalizar](../../extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />Item de exibição de árvore selecionado e não focalizado ao focalizar
+![Item de exibição de árvore selecionado e desfoco ao passar o mouse](../../extensibility/ux-guidelines/media/0303-154_treeviewunfocusedhover.png "0303-154_TreeViewUnfocusedHover")<br />Item de exibição de árvore selecionado e desfoco ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemInactive` |
+| Tela de fundo | `TreeView.SelectedItemInactive` |
 | Primeiro plano (texto) | `TreeView.SelectedItemInactive` |
 | Primeiro plano (glifo) | `TreeView.SelectedItemActiveGlyphMouseOver` |
 | Borda | Nenhum |
 
 ## <a name="shell-appearance"></a>Aparência do Shell
 
-### <a name="background"></a>Segundo plano
-O plano de fundo do ambiente consiste em duas camadas. A camada inferior é uma cor sólida que cobre todo o IDE. A camada superior se ajusta na prateleira de comando e entre a janela de ferramentas oculta automaticamente os canais nas bordas esquerda e direita do IDE. As camadas de plano de fundo superior e inferior são definidas com a mesma cor nos temas claro e escuro.
+### <a name="background"></a>Tela de fundo
+O plano de fundo do ambiente consiste em duas camadas. A camada inferior é uma cor sólida que abrange todo o IDE. A camada superior se encaixa na prateleira do comando e entre os canais de ocultação automática da janela de ferramentas nas bordas esquerda e direita do IDE. As camadas de tela de fundo superior e inferior são definidas com a mesma cor nos temas Claro e Escuro.
 
-![Plano de fundo do shell do Visual Studio (Redline)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Plano de fundo do shell do Visual Studio (Redline)
+![Visual Studio plano de fundo do shell (linha vermelha)](../../extensibility/ux-guidelines/media/0303-187_shellbackgroundredline.png "0303-187_ShellBackgroundRedline")<br />Visual Studio plano de fundo do shell (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para locais onde você deseja corresponder ao plano de fundo do ambiente do Visual Studio. | ... como um preenchimento para locais que não são superfícies de segundo plano. |
-| | ... como um plano de fundo no qual inserir elementos de primeiro plano. |
+| ... para locais em que você deseja corresponder à parte de fundo do Visual Studio ambiente. | ... como um preenchimento para locais que não são superfícies de plano de fundo. |
+| | ... como uma plano de fundo para colocar elementos em primeiro plano. |
 
-**Aparência do Shell de camada inferior**
+**Aparência do shell da camada inferior**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.EnvironmentBackground` |
+| Tela de fundo | `Environment.EnvironmentBackground` |
 
-**Aparência do Shell de camada superior**
+**Aparência do shell de camada superior**
 
-> As interrupções de gradiente são definidas com o mesmo valor de cor nos temas Visual Studio 2013 claro e escuro.
+> As paradas de gradiente são definidas com o mesmo valor de cor Visual Studio 2013 temas Claro e Escuro.
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.EnvironmentBackgroundGradientBegin`<br />`Environment.EnvironmentBackgroundGradientEnd`<br />`Environment.EnvironmentBackgroundGradientMiddle1`<br />`Environment.EnvironmentBackgroundGradientMiddle2` |
+| Tela de fundo | `Environment.EnvironmentBackgroundGradientBegin`<br />`Environment.EnvironmentBackgroundGradientEnd`<br />`Environment.EnvironmentBackgroundGradientMiddle1`<br />`Environment.EnvironmentBackgroundGradientMiddle2` |
 
 ### <a name="command-shelf"></a>Prateleira de comando
-Dois conjuntos de nomes de token são usados para os planos de fundo de prateleira de comando: um conjunto para o local em que a barra de menus reside e um para onde as barras de comando ficam. Um grupo de barras de comando individual tem seus próprios valores de cor de plano de fundo, que são discutidos com mais detalhes na seção "barra de comandos". A barra de menus e o texto da barra de comandos são discutidos nas seções do menu e da barra de comandos, respectivamente.
+Dois conjuntos de nomes de token são usados para os bastidores da prateleira de comando: um definido para onde a barra de menus fica e outro para onde as barras de comando ficam. Um grupo de barras de comandos individual tem seus próprios valores de cor da tela de fundo, que são discutidos mais detalhadamente na seção "barra de comandos". O texto da barra de menus e da barra de comandos é discutido nas seções menu e barra de comandos, respectivamente.
 
-![Prateleira de comandos do Visual Studio (Redline)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Prateleira de comandos do Visual Studio (Redline)
+![Visual Studio de comando (linha vermelha)](../../extensibility/ux-guidelines/media/0303-188_commandshelfredline.png "0303-188_CommandShelfRedline")<br />Visual Studio de comando (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
 | ... para áreas em que você coloca menus ou barras de ferramentas. | ... para áreas que não são semelhantes a uma prateleira de comando. |
-|... com a combinação correta de nome de token de segundo plano/primeiro plano. | |
+|... com a combinação correta de nome de token em segundo plano/plano. | |
 
-**Barra de menus da prateleira de comando**
+**Barra de menus da prateleira comando**
 
-> As interrupções de gradiente são definidas com o mesmo valor de cor nos temas Visual Studio 2013 claro e escuro.
+> As paradas de gradiente são definidas com o mesmo valor de cor Visual Studio 2013 temas Claro e Escuro.
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandShelfHighlightGradientBegin`<br /><br />`Environment.CommandShelfHighlightGradientMiddle`<br />`Environment.CommandShelfHighlightGradientEnd` |
+| Tela de fundo | `Environment.CommandShelfHighlightGradientBegin`<br /><br />`Environment.CommandShelfHighlightGradientMiddle`<br />`Environment.CommandShelfHighlightGradientEnd` |
 
-**Barra de comandos da prateleira de comando**
+**Barra de comandos da estante de comandos**
 
-> As interrupções de gradiente são definidas com o mesmo valor de cor nos temas Visual Studio 2013 claro e escuro.
+> As paradas de gradiente são definidas com o mesmo valor de cor Visual Studio 2013 temas Claro e Escuro.
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandShelfBackgroundGradientBegin`<br />`Environment.CommandShelfBackgroundGradientMiddle`<br />`Environment.CommandShelfBackgroundGradientEnd` |
+| Tela de fundo | `Environment.CommandShelfBackgroundGradientBegin`<br />`Environment.CommandShelfBackgroundGradientMiddle`<br />`Environment.CommandShelfBackgroundGradientEnd` |
 
 ## <a name="manifest-designer"></a>Designer de manifesto
-O designer de manifesto foi projetado como uma maneira de facilitar a edição do arquivo de manifesto nos projetos do Windows 8 e do Windows Phone 8. Embora não haja nenhuma estrutura compartilhada disponível para consumo, pode ser apropriado que você corresponda ao layout de design e às cores das guias de orientação/navegação e da estrutura geral. Para obter mais informações sobre detalhes de layout, consulte [layout para Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
+O Designer de Manifesto foi projetado como uma maneira de facilitar a edição do arquivo de manifesto em projetos Windows 8 e Windows Phone 8. Embora não haja nenhuma estrutura compartilhada disponível para consumo, pode ser apropriado corresponder ao layout de design e às cores das guias de orientação/navegação e da estrutura geral. Para obter mais informações sobre detalhes de layout, [consulte Layout para Visual Studio](../../extensibility/ux-guidelines/layout-for-visual-studio.md).
 
-![Designer de manifesto (Redline)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303-175_ManifestDesignerRedline")<br />Designer de manifesto (Redline)
+![Designer de Manifesto (linha vermelha)](../../extensibility/ux-guidelines/media/0303-175_manifestdesignerredline.png "0303-175_ManifestDesignerRedline")<br />Designer de Manifesto (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... para designers semelhantes ao designer de manifesto. | ... Se você tiver mais de seis guias. |
-| ... em vez de usar os controles de guia comuns na parte superior de um editor dentro do bem do documento. | ... para qualquer interface do usuário que não esteja estruturada como o designer de manifesto. |
+| ... para designers semelhantes ao Designer de Manifesto. | ... se você tiver mais de seis guias. |
+| ... em vez de usar controles de tabulação comuns na parte superior de um editor dentro do documento. | ... para qualquer interface do usuário que não seja estruturada como o Designer de Manifesto. |
 
-**Guia selecionada do designer de manifesto: estado padrão**
+**Guia selecionada do Designer de Manifesto: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `ManifestDesigner.TabActive` |
+| Tela de fundo | `ManifestDesigner.TabActive` |
 | Borda | Nenhum |
 
-**Painel de descrição selecionado do designer de manifesto: estado padrão**
+**Painel de descrição selecionado do Designer de Manifesto: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `ManifestDesigner.DescriptionPane` |
+| Tela de fundo | `ManifestDesigner.DescriptionPane` |
 
-**Página de conteúdo selecionada do designer de manifesto: estado padrão**
+**Página de conteúdo selecionada do Designer de Manifesto: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `ManifestDesigner.Background` |
-| Texto auxiliar de diálogo | `ManifestDesigner.WatermarkText`<br />(Esse nome de token não corresponde à sua função.) |
+| Tela de fundo | `ManifestDesigner.Background` |
+| Texto auxiliar da caixa de diálogo | `ManifestDesigner.WatermarkText`<br />(Esse nome de token não combina com sua função.) |
 
-**Guia Designer de manifesto: estado não selecionado**
+**Guia Designer de Manifesto: estado não selecionado**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `ManifestDesigner.Tab.Inactive` |
+| Tela de fundo | `ManifestDesigner.Tab.Inactive` |
 
-**Guia Designer de manifesto: estado de foco**
+**Guia Designer de Manifesto: estado de foco**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `ManifestDesigner.Tab.Mouseover` |
+| Tela de fundo | `ManifestDesigner.Tab.Mouseover` |
 
 ## <a name="command-structures"></a>Estruturas de comando
 
-### <a name="menus"></a><a name="BKMK_CommandMenus"></a> Completos
-Os menus podem ocorrer em vários locais no Visual Studio: a barra de menus principal, inserida em janelas de documentos ou ferramentas, ou clique com o botão direito do mouse em vários locais em todo o IDE. Implementações de menus associados a outros elementos da interface do usuário são discutidas na seção para o respectivo elemento. Você sempre deve usar a implementação de menu padrão fornecida pelo ambiente do Visual Studio. No entanto, em algumas instâncias raras, talvez você não tenha acesso aos menus padrão do Visual Studio. Nessas situações, use os nomes de token a seguir para garantir que sua interface do usuário seja consistente com outros menus do Visual Studio.
+### <a name="menus"></a><a name="BKMK_CommandMenus"></a> Menus
+Os menus podem ocorrer em vários locais no Visual Studio: a barra de menus principal, inserida nas janelas de documentos ou ferramentas ou ao clicar com o botão direito do mouse em vários locais em todo o IDE. Implementações de menus associados a outros elementos da interface do usuário são discutidas na seção para o respectivo elemento. Você sempre deve usar a implementação de menu padrão fornecida pelo Visual Studio ambiente. No entanto, em algumas instâncias raras, talvez você não tenha acesso aos menus Visual Studio padrão. Nessas situações, use os nomes de token a seguir para garantir que sua interface do usuário seja consistente com outros menus Visual Studio.
 
-![Menu do Visual Studio (Redline)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303-000_MenuRedline")<br />Menu do Visual Studio (Redline)
+![Visual Studio menu (linha vermelha)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303-000_MenuRedline")<br />Visual Studio menu (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... Quando você precisar criar um menu personalizado.| ... apenas a cor do plano de fundo. Sempre use a combinação de plano de fundo/primeiro plano como especificado. |
-| ... Quando você tem um novo componente de interface do usuário que deseja corresponder aos menus do Visual Studio.| |
+| ... quando você precisa criar um menu personalizado.| ... a cor da tela de fundo sozinha. Sempre use a combinação de plano de fundo/primeiro plano, conforme especificado. |
+| ... quando você tiver um novo componente de interface do usuário que deseja corresponder aos Visual Studio menus.| |
 
 #### <a name="menu-titles"></a>Títulos de menu
 Os títulos de menu consistem em um plano de fundo, uma borda e o texto do título, bem como um glifo opcional, geralmente quando o menu é encontrado em uma barra de comandos.
@@ -1066,7 +1066,7 @@ Os títulos de menu consistem em um plano de fundo, uma borda e o texto do títu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Primeiro plano (glifo) | `Environment.CommandBarMenuGlyph` |
 | Borda | Nenhum |
@@ -1079,7 +1079,7 @@ Os títulos de menu consistem em um plano de fundo, uma borda e o texto do títu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextHover` |
 | Primeiro plano (glifo) | `Environment.CommandBarMenuMouseOverGlyph` |
 | Borda | `Environment.CommandBarBorder` |
@@ -1092,7 +1092,7 @@ Os títulos de menu consistem em um plano de fundo, uma borda e o texto do títu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMenuBackgroundGradientBegin`<br/>(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMenuBackgroundGradientBegin`<br/>(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Primeiro plano (glifo) | `Environment.CommandBarMenuMouseDownGlyph` |
 | Borda | `Environment.CommandBarMenuBorder`<br />(Somente laterais esquerda, superior e direita.) |
@@ -1103,7 +1103,7 @@ Os títulos de menu consistem em um plano de fundo, uma borda e o texto do títu
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (texto) | `Environment.CommandBarTextInactive` |
 | Primeiro plano (glifo) | `Environment.CommandBarTextInactive` |
 | Borda | Nenhum |
@@ -1124,7 +1124,7 @@ Um item de menu individual consiste no texto do menu e em um ícone opcional, ca
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMenuBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMenuBackgroundGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Primeiro plano (glifo do submenu) | `Environment.CommandBarMenuSubmenuGlyph` |
 | Borda | `Environment.CommandBarMenuBorder` |
@@ -1155,11 +1155,11 @@ Um item de menu individual consiste no texto do menu e em um ícone opcional, ca
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMenuItemMouseOver` |
+| Tela de fundo | `Environment.CommandBarMenuItemMouseOver` |
 | Primeiro plano (texto) | `Environment.CommandBarMenuItemMouseOverText` |
-| Primeiro plano (glifo do submenu) | `Environment.CommandBarMenuMouseOverSubmenuGlyph` |
+| Primeiro plano (glifo de submenu) | `Environment.CommandBarMenuMouseOverSubmenuGlyph` |
 | Marca de seleção | `Environment.CommandBarCheckBoxMouseOver` |
-| Plano de fundo de marca de seleção | `Environment.CommandBarHoverOverSelectedIcon` |
+| Plano de fundo da marca de seleção | `Environment.CommandBarHoverOverSelectedIcon` |
 | Plano de fundo do ícone | `Environment.CommandBarHoverOverSelected` |
 | Borda do ícone | `Environment.CommandBarHoverOverSelectedIconBorder` |
 
@@ -1169,93 +1169,93 @@ Um item de menu individual consiste no texto do menu e em um ícone opcional, ca
 
 ![Menu desabilitado marcado](../../extensibility/ux-guidelines/media/0303-017_menudisabledchecked.png "0303-017_MenuDisabledChecked")<br />Item de menu desabilitado com marca de seleção
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
 | Primeiro plano (texto) | `Environment.CommandBarTextInactive` |
-| Primeiro plano (glifo do submenu) | `Environment.CommandBarMenuSubmenuGlyph` |
+| Primeiro plano (glifo de submenu) | `Environment.CommandBarMenuSubmenuGlyph` |
 | Marca de seleção | `Environment.CommandBarCheckBoxDisabled` |
-| Plano de fundo de marca de seleção | `Environment.CommandBarSelectedIconDisabled` |
+| Plano de fundo da marca de seleção | `Environment.CommandBarSelectedIconDisabled` |
 
 ### <a name="command-bars"></a>Barras de comando
-Uma barra de comandos pode aparecer em vários locais no IDE do Visual Studio, mais notavelmente a prateleira de comandos e incorporada em janelas de ferramentas ou documentos.
+Uma barra de comandos pode aparecer em vários locais no Visual Studio IDE, mais notavelmente na prateleira do comando e inserida nas janelas de ferramentas ou documentos.
 
-Em geral, sempre use a implementação da barra de comandos padrão fornecida pelo ambiente do Visual Studio. O uso do mecanismo padrão garante que todos os detalhes visuais apareçam corretamente e que os elementos interativos se comportem de forma consistente com outros controles de barra de comandos do Visual Studio. No entanto, se for necessário que você crie sua própria barra de comandos, certifique-se de estilizar corretamente usando os nomes de token a seguir.
+Em geral, sempre use a implementação da barra de comandos padrão fornecida pelo Visual Studio ambiente. O uso do mecanismo padrão garante que todos os detalhes visuais apareçam corretamente e que os elementos interativos se comportem consistentemente com outros controles Visual Studio barra de comandos. No entanto, se for necessário criar sua própria barra de comandos, certifique-se de estilizar corretamente usando os nomes de token a seguir.
 
-![Redline da barra de comandos](../../extensibility/ux-guidelines/media/0303-018_commandbarredline.png "0303-018_CommandBarRedline")<br />Barra de comandos (Redline)
+![Linha vermelha da barra de comandos](../../extensibility/ux-guidelines/media/0303-018_commandbarredline.png "0303-018_CommandBarRedline")<br />Barra de comandos (linha vermelha)
 
-![Botão de estouro Redline](../../extensibility/ux-guidelines/media/0303-019_overflowbuttonredline.png "0303-019_OverflowButtonRedline")<br />Botão de estouro (Redline)
+![Linha vermelha do botão estouro](../../extensibility/ux-guidelines/media/0303-019_overflowbuttonredline.png "0303-019_OverflowButtonRedline")<br />Botão Estouro (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... em locais onde você precisa de uma barra de comandos inserida, mas não é possível usar a implementação padrão da barra de comandos do Visual Studio. | ... para elementos de interface do usuário que não são semelhantes a uma barra de comandos. |
-| | ... para componentes da barra de comandos diferentes daqueles para os quais os nomes de token são especificados. |
+| ... em locais em que você precisa de uma barra de comandos inserida, mas não pode usar a implementação da Visual Studio da barra de comandos padrão. | ... para elementos de interface do usuário que não são semelhantes a uma barra de comandos. |
+| | ... para componentes de barra de comandos que não sejam aqueles para os quais os nomes de token são especificados. |
 
-#### <a name="command-bar-groups"></a>Grupos de barras de comandos
-Um grupo de barras de comando consiste em um conjunto relacionado de controles de barra de comandos e pode conter qualquer número de botões, botões de divisão, menus suspensos, caixas de combinação ou menus. As cores desses controles são regulamentadas por nomes de token separados e são discutidas individualmente em outro lugar neste guia. Uma linha separadora é usada para dividir um grupo de barras de comandos em subgrupos relacionados.
+#### <a name="command-bar-groups"></a>Grupos de barras de comando
+Um grupo de barras de comandos consiste em um conjunto relacionado de controles de barra de comandos e pode conter qualquer número de botões, botões divididos, menus suspensos, caixas de combinação ou menus. As cores desses controles são regulamentadas por nomes de token separados e são discutidas individualmente em outro lugar neste guia. Uma linha de separador é usada para dividir um grupo de barras de comando em subgrupos relacionados.
 
-![Grupo de barras de comandos Redline](../../extensibility/ux-guidelines/media/0303-020_commandbargroupredline.png "0303-020_CommandBarGroupRedline")<br />Grupo de barras de comandos (Redline)
+![Linha vermelha do grupo de barras de comando](../../extensibility/ux-guidelines/media/0303-020_commandbargroupredline.png "0303-020_CommandBarGroupRedline")<br />Grupo de barras de comandos (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... em locais onde você precisa de uma barra de comandos inserida, mas não é possível usar a implementação padrão da barra de comandos do Visual Studio. | ... para elementos de interface do usuário que não são semelhantes a uma barra de comandos. |
-| | ... para componentes da barra de comandos diferentes daqueles para os quais os nomes de token são especificados. |
+| ... em locais em que você precisa de uma barra de comandos inserida, mas não pode usar a implementação da Visual Studio da barra de comandos padrão. | ... para elementos de interface do usuário que não são semelhantes a uma barra de comandos. |
+| | ... para componentes de barra de comandos que não sejam aqueles para os quais os nomes de token são especificados. |
 
 **Grupo de barras de comando: estado padrão**
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarGradientBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Borda | `Environment.CommandBarToolBarBorder` |
 | Identificador de arrastar | `Environment.CommandBarDragHandle` |
 | Separador | `Environment.CommandBarToolBarSeparator`<br />`Environment.CommandBarToolBarSeparatorHighlight` |
 
 #### <a name="command-icons"></a>Ícones de comando
-![Ícone de comando Redline](../../extensibility/ux-guidelines/media/0303-021_commandiconredline1.png "0303-021_CommandIconRedline1")<br />Ícone de comando (Redline)
+![Ícone de comando em linha vermelha](../../extensibility/ux-guidelines/media/0303-021_commandiconredline1.png "0303-021_CommandIconRedline1")<br />Ícone de comando (linha vermelha)
 
-![Ícone de comando com texto Redline](../../extensibility/ux-guidelines/media/0303-022_commandiconredline2.png "0303-022_CommandIconRedline2")<br />Ícone de comando com texto (Redline)
+![Ícone de comando com linha vermelha de texto](../../extensibility/ux-guidelines/media/0303-022_commandiconredline2.png "0303-022_CommandIconRedline2")<br />Ícone de comando com texto (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
 | ... para todos os botões que serão colocados em uma barra de comandos. | ... para controles que têm seus próprios nomes de token. |
-| | ... em qualquer combinação de plano de fundo/primeiro plano diferente de especificada. |
+| | ... em qualquer combinação de plano de fundo/primeiro plano diferente do especificado. |
 
 **Ícone de comando: estado padrão**
 
-![Ícone de comando padrão](../../extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />Ícone de comando padrão
+![Padrão do ícone de comando](../../extensibility/ux-guidelines/media/0303-023_commandicondefault.png "0303-023_CommandIconDefault")<br />Ícone de comando padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | N/A (herda do plano de fundo da barra de comandos) |
+| Tela de fundo | N/A (herda do plano de fundo da barra de comandos) |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Borda | N/D |
 
 **Ícone de comando: estado padrão, selecionado**
 
-![Padrão, ícone de comando selecionado](../../extensibility/ux-guidelines/media/0303-024_commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br />Padrão, ícone de comando selecionado
+![Ícone de comando padrão selecionado](../../extensibility/ux-guidelines/media/0303-024_commandicondefaultselected.png "0303-024_CommandIconDefaultSelected")<br />Ícone de comando padrão selecionado
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarSelected` |
+| Tela de fundo | `Environment.CommandBarSelected` |
 | Primeiro plano (texto) | `Environment.CommandBarTextSelected` |
 | Borda | `Environment.CommandBarSelectedBorder` |
 
-**Ícone de comando: Estados de foco ou de foco**
+**Ícone de comando: focalizar ou focalizar estados**
 
 ![Ícone de comando ao focalizar ou focalizar](../../extensibility/ux-guidelines/media/0303-025_commandiconhover.png "0303-025_CommandIconHover")<br />Ícone de comando ao focalizar ou focalizar
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextHover` |
 | Borda | `Environment.CommandBarBorder` |
 
-**Ícone de comando: Estados de foco ou foco, selecionado**
+**Ícone de comando: focalizar ou focalizar estados, selecionado**
 
 ![Ícone de comando selecionado ao focalizar ou focalizar](../../extensibility/ux-guidelines/media/0303-026_commandiconhoverselected.png "0303-026_CommandIconHoverSelected")<br />Ícone de comando selecionado ao focalizar ou focalizar
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarHoverOverSelected` |
+| Tela de fundo | `Environment.CommandBarHoverOverSelected` |
 | Primeiro plano (texto) | `Environment.CommandBarTextHoverOverSelected` |
 | Borda | `Environment.CommandBarHoverOverSelectedIconBorder` |
 
@@ -1265,7 +1265,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextMouseDown` |
 | Borda | `Environment.CommandBarBorder` |
 
@@ -1275,7 +1275,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/A (herda do plano de fundo da barra de comandos) |
+| Tela de fundo | N/A (herda do plano de fundo da barra de comandos) |
 | Primeiro plano (texto) | `Environment.CommandBarTextInactive` |
 | Borda | N/D |
 
@@ -1297,7 +1297,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxBackground` |
+| Tela de fundo | `Environment.ComboBoxBackground` |
 | Primeiro plano (texto) | `Environment.ComboBoxText` |
 | Borda | `Environment.ComboBoxBorder` |
 | Separador | Sem separador |
@@ -1308,7 +1308,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/A (herda do plano de fundo da barra de comandos) |
+| Tela de fundo | N/A (herda do plano de fundo da barra de comandos) |
 | Primeiro plano (glifo) | `Environment.ComboBoxGlyph` |
 
 **Lista suspensa da barra de comandos: estado padrão**
@@ -1317,7 +1317,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxPopupBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.ComboBoxPopupBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.ComboBoxItemText` |
 | Borda | `Environment.ComboBoxPopupBorder` |
 
@@ -1327,7 +1327,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.ComboBoxMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.ComboBoxMouseOverText` |
 | Borda | `Environment.ComboBoxMouseOverBorder` |
 | Separador | `Environment.ComboBoxMouseOverSeparator` |
@@ -1338,7 +1338,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxButtonMouseOverBackground` |
+| Tela de fundo | `Environment.ComboBoxButtonMouseOverBackground` |
 | Primeiro plano (glifo) | `Environment.ComboBoxMouseOverGlyph` |
 
 **Lista suspensa da barra de comandos: estado de foco**
@@ -1357,7 +1357,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxFocusedBackground` |
+| Tela de fundo | `Environment.ComboBoxFocusedBackground` |
 | Primeiro plano (texto) | `Environment.ComboBoxFocusedText` |
 | Borda | `Environment.ComboBoxFocusedBorder` |
 | Separador | `Environment.ComboBoxFocusedButtonSeparator` |
@@ -1368,7 +1368,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxFocusedButtonBackground` |
+| Tela de fundo | `Environment.ComboBoxFocusedButtonBackground` |
 | Primeiro plano (glifo) | `Environment.ComboBoxFocusedGlyph` |
 
  **Campo de entrada da caixa de combinação da barra de comandos: estado pressionado**
@@ -1377,7 +1377,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxMouseDownBackground` |
+| Tela de fundo | `Environment.ComboBoxMouseDownBackground` |
 | Primeiro plano (texto) | `Environment.ComboBoxMouseDownText` |
 | Borda | `Environment.ComboBoxMouseDownBorder` |
 | Separador | `Environment.ComboBoxMouseDownSeparator` |
@@ -1388,7 +1388,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxButtonMouseDownBackground` |
+| Tela de fundo | `Environment.ComboBoxButtonMouseDownBackground` |
 | Primeiro plano (glifo) | `Environment.ComboBoxMouseDownGlyph` |
 
 **Campo de entrada da caixa de combinação da barra de comandos: estado desabilitado**
@@ -1397,7 +1397,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ComboBoxDisabledBackground` |
+| Tela de fundo | `Environment.ComboBoxDisabledBackground` |
 | Primeiro plano (texto) | `Environment.ComboBoxDisabledText` |
 | Borda | `Environment.ComboBoxDisabledBorder` |
 | Separador | Sem separador |
@@ -1408,7 +1408,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (glifo) | `Environment.ComboBoxDisabledGlyph` |
 
 #### <a name="command-bar-drop-downs"></a><a name="BKMK_CommandDropDown"></a> Menus suspensos da barra de comandos
@@ -1429,7 +1429,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownBackground` |
+| Tela de fundo | `Environment.DropDownBackground` |
 | Primeiro plano (texto) | `DropDownText` |
 | Borda | `DropDownBorder` |
 | Separador | Sem separador |
@@ -1440,7 +1440,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (glifo) | `Environment.DropDownGlyph` |
 
 **Lista suspensa da barra de comandos: estado padrão**
@@ -1449,7 +1449,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownPopupBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.DropDownPopupBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.ComboBoxItemText` |
 | Borda | `Environment.DropDownPopupBorder` |
 | Shadow | `Environment.DropShadowBackground` |
@@ -1460,7 +1460,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.DropDownMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.DropDownMouseOverText` |
 | Borda | `Environment.DropDownMouseOverBorder` |
 | Separador | `Environment.DropDownButtonMouseOverSeparator` |
@@ -1471,7 +1471,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownButtonMouseOverBackground` |
+| Tela de fundo | `Environment.DropDownButtonMouseOverBackground` |
 | Primeiro plano (glifo) | `Environment.DropDownMouseOverGlyph` |
 
 **Lista suspensa da barra de comandos: estado de foco**
@@ -1490,7 +1490,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownMouseDownBackground` |
+| Tela de fundo | `Environment.DropDownMouseDownBackground` |
 | Primeiro plano (texto) | `Environment.DropDownMouseDownText` |
 | Borda | `Environment.DropDownMouseDownBorder` |
 | Separador | `Environment.DropDownButtonMouseDownSeparator` |
@@ -1501,7 +1501,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownButtonMouseDownBackground` |
+| Tela de fundo | `Environment.DropDownButtonMouseDownBackground` |
 | Primeiro plano (glifo) | `Environment.DropDownMouseDownGlyph` |
 
 **Campo de seleção suspensa da barra de comandos: estado desabilitado**
@@ -1510,7 +1510,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DropDownDisabledBackground` |
+| Tela de fundo | `Environment.DropDownDisabledBackground` |
 | Primeiro plano (texto) | `Environment.DropDownDisabledText` |
 | Borda | `Environment.DropDownDisabledBorder` |
 | Separador | Sem separador |
@@ -1521,7 +1521,7 @@ Um grupo de barras de comando consiste em um conjunto relacionado de controles d
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo) | `Environment.DropDownDisabledGlyph` |
 
 #### <a name="command-bar-split-buttons"></a>Botões de divisão da barra de comandos
@@ -1540,7 +1540,7 @@ Os botões de divisão compartilham vários nomes de token com outros controles 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Nenhum |
+| Tela de fundo | Nenhum |
 | Primeiro plano (texto) | `Environment.CommandBarTextActive` |
 | Primeiro plano (glifo) | `Environment.CommandBarSplitButtonGlyph` |
 | Borda | N/D |
@@ -1552,7 +1552,7 @@ Os botões de divisão compartilham vários nomes de token com outros controles 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextHover` |
 | Primeiro plano (glifo) | `Environment.CommandBarSplitButtonMouseOverGlyph` |
 | Borda | `Environment.CommandBarBorder` |
@@ -1564,7 +1564,7 @@ Os botões de divisão compartilham vários nomes de token com outros controles 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.CommandBarTextMouseDown` |
 | Primeiro plano (glifo) | `Environment.CommandBarSplitButtonMouseDownGlyph` |
 | Borda | `Environment.CommandBarBorder` |
@@ -1576,7 +1576,7 @@ Os botões de divisão compartilham vários nomes de token com outros controles 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (texto) | `Environment.ComboBoxItemTextInactive` |
 | Primeiro plano (glifo) | `Environment.CommandBarTextInactive` |
 | Borda | N/D |
@@ -1599,7 +1599,7 @@ O botão "mais opções" é usado quando um grupo de barras de comandos é perso
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarOptionsBackground` |
+| Tela de fundo | `Environment.CommandBarOptionsBackground` |
 | Primeiro plano (glifo) | `Environment.CommandBarOptionsGlyph` |
 
 **Botões ' mais opções ' e ' estouro ' da barra de comandos: estado de foco**
@@ -1610,7 +1610,7 @@ O botão "mais opções" é usado quando um grupo de barras de comandos é perso
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarOptionsMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (glifo) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
 **Botões ' mais opções ' e ' estouro ' da barra de comandos: estado pressionado**
@@ -1621,7 +1621,7 @@ O botão "mais opções" é usado quando um grupo de barras de comandos é perso
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.CommandBarOptionsMouseDownBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (glifo) | `Environment.CommandBarOptionsMouseDownGlyph` |
 
 ## <a name="document-windows"></a>Janelas de documentos
@@ -1644,7 +1644,7 @@ As janelas de documentos podem ser encaixadas no IDE ou flutuantes como uma jane
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | Depende do tipo de documento |
+| Tela de fundo | Depende do tipo de documento |
 | Primeiro plano (texto) | Depende do tipo de documento |
 | Borda | `Environment.ToolWindowBorder` |
 
@@ -1654,7 +1654,7 @@ As janelas de documentos podem ser encaixadas no IDE ou flutuantes como uma jane
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowFloatingFrame` |
+| Tela de fundo | `Environment.ToolWindowFloatingFrame` |
 | Primeiro plano (texto) | `Environment.ToolWindowFloatingFrame` |
 | Primeiro plano (glifo) | `Environment.RaftedWindowButtonActiveGlyph` |
 | Borda | `Environment.MainWindowActiveDefaultBorder` |
@@ -1666,7 +1666,7 @@ As janelas de documentos podem ser encaixadas no IDE ou flutuantes como uma jane
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowFloatingFrameInactive` |
+| Tela de fundo | `Environment.ToolWindowFloatingFrameInactive` |
 | Primeiro plano (texto) | `Environment.ToolWindowFloatingFrameInactive` |
 | Primeiro plano (glifo) | `Environment.RaftedWindowButtonInactiveGlyph` |
 | Borda | `Environment.MainWindowInactiveBorder` |
@@ -1703,109 +1703,109 @@ As janelas de documentos podem ser encaixadas no IDE ou flutuantes como uma jane
 | Borda (glifo) | `Environment.RaftedWindowButtonDownBorder` |
 
 ### <a name="document-tabs"></a>Guias de documento
-As guias de documento ficam no canal de guia para indicar quais documentos estão abertos no momento, juntamente com qual deles é o documento atual selecionado ou ativo. As janelas de ferramentas também podem ser encaixadas no canal da guia do documento se o usuário as colocar lá. Nessa situação, eles usam as mesmas cores de guia que as janelas de documentos. Se você estiver criando a interface do usuário que deseja sempre corresponder às cores da janela do documento (incluindo atualizações de tema ou se novos temas estiverem instalados), faça referência a esses tokens de cor.
+As guias de documento ficam no canal de guia para indicar quais documentos estão abertos no momento, juntamente com qual deles é o documento atual selecionado ou ativo. As janelas de ferramentas também podem ser encaixadas no canal da guia do documento se o usuário as colocar lá. Nessa situação, eles usam as mesmas cores de guia que as janelas de documentos. Se você estiver criando uma interface do usuário que deseja sempre corresponder às cores da janela do documento (incluindo atualizações de tema ou se novos temas estão instalados), então, consulte esses tokens de cor.
 
-![Guias de documento (Redline)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303-072_DocumentTabRedline")<br />Guias de documento (Redline)
+![Guias do documento (linha vermelha)](../../extensibility/ux-guidelines/media/0303-072_documenttabredline.png "0303-072_DocumentTabRedline")<br />Guias do documento (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... em qualquer lugar em que você estiver criando a interface do usuário que deseja corresponder às guias de documentos e selecionar automaticamente as atualizações de tema ou novas cores de tema. | ... para qualquer interface do usuário que você não deseja alterar automaticamente quando o Shell tem uma atualização de tema. |
+| ... em qualquer lugar em que você esteja criando uma interface do usuário que você deseja corresponder às guias de documento e escolha automaticamente as atualizações de tema ou as novas cores do tema. | ... para qualquer interface do usuário que você não deseja alterar automaticamente quando o shell tem uma atualização de tema. |
 
 #### <a name="open-document-tabs"></a>Abrir guias de documento
-Cada documento aberto tem uma guia no canal da guia do documento que exibe seu nome. Os documentos podem ser selecionados ou abertos em segundo plano, e suas guias refletem esses Estados:
+Cada documento aberto tem uma guia no canal de guia do documento que exibe seu nome. Os documentos podem ser selecionados ou abertos em segundo plano e suas guias refletem estes estados:
 
-- A guia selecionada representa o documento que está atualmente exibido no documento. Uma guia selecionada tem uma borda de documento que se estende pela borda superior do documento bem.
+- A guia selecionada representa o documento exibido no momento na área do documento. Uma guia selecionada tem uma borda de documento que se estende pela borda superior do documento.
 
-- As guias de segundo plano são guias de documentos que não são a guia selecionada no momento. Depois de clicados, eles se tornam a guia selecionada e adquirem todas as cores de plano de fundo, borda e texto desses nomes de token.
+- As guias em segundo plano são todas as guias de documento que não são a guia selecionada no momento. Depois de clicados, eles se tornam a guia selecionada e adquirem todas as cores de plano de fundo, borda e texto desses nomes de token.
 
-![Abrir a guia documento (Redline)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Abrir a guia documento (Redline)
+![Abrir a guia documento (linha vermelha)](../../extensibility/ux-guidelines/media/0303-073_opendocumenttabredline.png "0303-073_OpenDocumentTabRedline")<br />Abrir a guia documento (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... Quando você estiver criando guias de documento personalizado. | ... para obter as guias provisórios (visualização). |
-| | ... para qualquer interface do usuário que você não deseja alterar automaticamente se o Shell tiver uma atualização de tema. |
+| ... ao criar guias de documento personalizadas. | ... para guias provisórios (versão prévia). |
+| | ... para qualquer interface do usuário que você não deseja alterar automaticamente se o shell tiver uma atualização de tema. |
 
-**Selecionado, guia documento focalizado**
+**Guia de documento selecionada e focada**
 
-![Selecionado, guia documento focalizado](../../extensibility/ux-guidelines/media/0303-074_selectedtabfocused.png "0303-074_SelectedTabFocused")<br />Selecionado, guia documento focalizado
+![Guia de documento selecionada e focada](../../extensibility/ux-guidelines/media/0303-074_selectedtabfocused.png "0303-074_SelectedTabFocused")<br />Guia de documento selecionada e focada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabSelectedGradientTop`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.FileTabSelectedGradientTop`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `Environment.FileTabSelectedText` |
-| Borda | `Environment.FileTabSelectedBorder`<br />(Defina como a mesma cor como plano de fundo.) |
+| Borda | `Environment.FileTabSelectedBorder`<br />(Definido como a mesma cor da tela de fundo.) |
 | Borda do documento | `Environment.FileTabDocumentBorderBackground` |
 
-**Selecionado, guia documento não focalizado**
+**Guia do documento selecionado e desfoco**
 
-![Selecionado, guia documento não focalizado](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br />Selecionado, guia documento não focalizado
+![Guia do documento selecionado e desfoco](../../extensibility/ux-guidelines/media/0303-075_selectedtabunfocused.png "0303-075_SelectedTabUnfocused")<br />Guia do documento selecionado e desfoco
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabInactiveGradientTop`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.FileTabInactiveGradientTop`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `Environment.FileTabInactiveText` |
-| Borda | `Environment.FileTabInactiveBorder`<br />(Defina como a mesma cor como plano de fundo.) |
+| Borda | `Environment.FileTabInactiveBorder`<br />(Definido como a mesma cor da tela de fundo.) |
 | Borda do documento | `Environment.FileTabInactiveDocumentBorderBackground` |
 
-**Guia documento em segundo plano: estado padrão**
+**Guia Documento em segundo plano: estado padrão**
 
-![Guia documento de plano de fundo padrão](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303-076_BackgroundTab")<br />Guia documento de plano de fundo padrão
+![Guia documento em segundo plano padrão](../../extensibility/ux-guidelines/media/0303-076_backgroundtab.png "0303-076_BackgroundTab")<br />Guia documento em segundo plano padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabBackground` |
+| Tela de fundo | `Environment.FileTabBackground` |
 | Primeiro plano (texto) | `Environment.FileTabText` |
-| Borda | `Environment.FileTabBorder`<br />(Defina como a mesma cor como plano de fundo.) |
+| Borda | `Environment.FileTabBorder`<br />(Definido como a mesma cor da tela de fundo.) |
 
-**Guia documento de plano de fundo: estado de foco**
+**Guia documento em segundo plano: estado de foco**
 
-![Guia documento de plano de fundo ao focalizar](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303-077_BackgroundTabHover")<br />Guia documento de plano de fundo ao focalizar
+![Guia documento em segundo plano ao passar o mouse](../../extensibility/ux-guidelines/media/0303-077_backgroundtabhover.png "0303-077_BackgroundTabHover")<br />Guia documento em segundo plano ao passar o mouse
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabHotGradientTop`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.FileTabHotGradientTop`<br />(As paradas de gradiente para esse token não são usadas na interface do usuário com temas.) |
 | Primeiro plano (texto) | `Environment.FileTabHotText` |
-| Borda | `Environment.FileTabHotBorder`<br />(Defina como a mesma cor como plano de fundo.) |
+| Borda | `Environment.FileTabHotBorder`<br />(Definido como a mesma cor da tela de fundo.) |
 
-#### <a name="preview-tab"></a>Guia de visualização
-Também chamada de guia "provisionar". A guia Visualização é exibida no lado direito do canal da guia do documento quando o usuário clica em um item na janela de ferramentas do Gerenciador de Soluções. Ele atua como uma visualização do documento e também dá ao usuário a opção de manter o documento aberto no lado esquerdo do canal da guia do documento. Somente uma guia de visualização aberta pode ser aberta por vez. As guias de visualização têm os Estados de segundo plano e selecionados, como guias abertas e podem ser focadas ou desfocadas em seu estado ativo.
+#### <a name="preview-tab"></a>Guia Visualização
+Também chamada de guia "provisório". A guia visualização aparece no lado direito do canal da guia do documento quando o usuário clica em um item na janela Gerenciador de Soluções ferramenta. Ele atua como uma visualização do documento e também oferece ao usuário a opção de manter o documento aberto no lado esquerdo do canal de guia do documento. Somente uma guia de visualização aberta pode ser aberta por vez. As guias de visualização têm estados selecionados e em segundo plano, como guias abertas, e podem ser focadas ou desfocados em seu estado ativo.
 
-![Guia de visualização (Redline)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303-078_PreviewTabRedline")<br />Guia de visualização (Redline)
+![Guia Visualização (linha vermelha)](../../extensibility/ux-guidelines/media/0303-078_previewtabredline.png "0303-078_PreviewTabRedline")<br />Guia Visualização (linha vermelha)
 
-| Usar... | Não use... |
+| Usar... | Não use ... |
 | --- | --- |
-| ... em qualquer lugar que você esteja criando a visualização provisória e queira que algum elemento corresponda à cor da guia de visualização atual. | ... para qualquer tipo de documento ou guia que não seja provisório (versão prévia). |
-| | ... para qualquer interface do usuário que você não deseja alterar automaticamente se o Shell tiver uma atualização de tema. |
+| ... em qualquer lugar em que você esteja criando uma versão prévia e queira que algum elemento seja igual à cor da guia de visualização atual. | ... para qualquer tipo de documento ou guia que não seja provisório (versão prévia). |
+| | ... para qualquer interface do usuário que você não deseja alterar automaticamente se o shell tiver uma atualização de tema. |
 
-**Com foco, guia de visualização selecionada**
+**Guia De visualização focalizada e selecionada**
 
-![Com foco, guia de visualização selecionada](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303-079_PreviewTabFocused")<br />Com foco, guia de visualização selecionada
+![Guia De visualização focalizada e selecionada](../../extensibility/ux-guidelines/media/0303-079_previewtabfocused.png "0303-079_PreviewTabFocused")<br />Guia De visualização focalizada e selecionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabProvisionalSelectedActive` |
+| Tela de fundo | `Environment.FileTabProvisionalSelectedActive` |
 | Primeiro plano (texto) | `Environment.FileTabProvisionalSelectedActiveForeground` |
-| Borda | `Environment.FileTabProvisionalSelectedActiveBorder`<br />(Defina como a mesma cor como plano de fundo.) |
+| Borda | `Environment.FileTabProvisionalSelectedActiveBorder`<br />(Definido como a mesma cor da tela de fundo.) |
 | Borda do documento | `Environment.FileTabProvisionalSelectedActiveBorder` |
 
-**Não focalizado, guia de visualização selecionada**
+**Guia de visualização não desfocarada e selecionada**
 
-![Não focalizado, guia de visualização selecionada](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Não focalizado, guia de visualização selecionada
+![Guia de visualização não desfocarada e selecionada](../../extensibility/ux-guidelines/media/0303-080_previewtabunfocused.png "0303-080_PreviewTabUnfocused")<br />Guia de visualização não desfocarada e selecionada
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabProvisionalSelectedInactive` |
+| Tela de fundo | `Environment.FileTabProvisionalSelectedInactive` |
 | Primeiro plano (texto) | `Environment.FileTabProvisionalSelectedInactiveForeground` |
 | Borda | `Environment.FileTabProvisionalSelectedInactiveBorder` |
 | Borda do documento | `Environment.FileTabProvisionalSelectedInactiveBorder` |
 
-**Guia de visualização em segundo plano: estado padrão**
+**Guia Visualização em segundo plano: estado padrão**
 
-![Guia de visualização de segundo plano padrão](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br />Guia de visualização de segundo plano padrão
+![Guia de visualização em segundo plano padrão](../../extensibility/ux-guidelines/media/0303-081_previewbackgroundtab.png "0303-081_PreviewBackgroundTab")<br />Guia de visualização em segundo plano padrão
 
-| Elemento | Nome do token: categoria. cor |
+| Elemento | Nome do token: Category.color |
 | --- | --- |
-| Segundo plano | `Environment.FileTabProvisionalInactive` |
+| Tela de fundo | `Environment.FileTabProvisionalInactive` |
 | Primeiro plano (texto) | `Environment.FileTabProvisionalInactiveForeground` |
 | Borda | `Environment.FileTabProvisionalInactiveBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 
@@ -1815,7 +1815,7 @@ Também chamada de guia "provisionar". A guia Visualização é exibida no lado 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.FileTabProvisionalHover` |
+| Tela de fundo | `Environment.FileTabProvisionalHover` |
 | Primeiro plano (texto) | `Environment.FileTabProvisionalHoverForeground` |
 | Borda | `Environment.FileTabProvisionalHoverBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 
@@ -1835,7 +1835,7 @@ O botão de estouro de documento estará presente se houver um ou mais documento
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DocWellOverflowButtonBackground` |
+| Tela de fundo | `Environment.DocWellOverflowButtonBackground` |
 | Primeiro plano (glifo) | `Environment.DocWellOverflowButtonGlyph` |
 | Borda | N/D |
 
@@ -1845,7 +1845,7 @@ O botão de estouro de documento estará presente se houver um ou mais documento
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DocWellOverflowButtonMouseOverBackground` |
+| Tela de fundo | `Environment.DocWellOverflowButtonMouseOverBackground` |
 | Primeiro plano (glifo) | `Environment.DocWellOverflowButtonMouseOverGlyph` |
 | Borda | `Environment.DocWellOverflowButtonMouseOverBorder` |
 
@@ -1855,7 +1855,7 @@ O botão de estouro de documento estará presente se houver um ou mais documento
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.DocWellOverflowButtonMouseDownBackground` |
+| Tela de fundo | `Environment.DocWellOverflowButtonMouseDownBackground` |
 | Primeiro plano (glifo) | `Environment.DocWellOverflowButtonMouseDownGlyph` |
 | Borda | `Environment.DocWellOverflowButtonMouseDownBorder` |
 
@@ -1868,7 +1868,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 | --- | --- |
 | ... para a interface do usuário que dá suporte à marcação. | ... para qualquer outro tipo de interface do usuário. |
 
-#### <a name="tags"></a>Marcações
+#### <a name="tags"></a>Marcas
 
 **Marca: estado padrão**
 
@@ -1876,7 +1876,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.Background` |
+| Tela de fundo | `Tag.Background` |
 | Primeiro plano (texto) | `Tag.Background` |
 
 **Marca: estado de foco**
@@ -1885,7 +1885,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.HoverBackground` |
+| Tela de fundo | `Tag.HoverBackground` |
 | Primeiro plano (texto) | `Tag.HoverBackgroundText` |
 
 **Marca: estado pressionado**
@@ -1894,7 +1894,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.PressedBackground` |
+| Tela de fundo | `Tag.PressedBackground` |
 | Primeiro plano (texto) | `Tag.PressedBackgroundText` |
 
 **Marca: estado selecionado**
@@ -1903,7 +1903,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.SelectedBackground` |
+| Tela de fundo | `Tag.SelectedBackground` |
 | Primeiro plano (texto) | `Tag.SelectedBackgroundText` |
 
 #### <a name="close-times-tag-glyph"></a>Glifo de marca de fechamento ( &times; )
@@ -1914,7 +1914,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo) | `Tag.TagHoverGlyph` |
 
 **Glifo de marca de fechamento ( &times; ): estado de foco**
@@ -1923,7 +1923,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.TagHoverGlyphHoverBackground` |
+| Tela de fundo | `Tag.TagHoverGlyphHoverBackground` |
 | Primeiro plano (glifo) | `Tag.TagHoverGlyphHover` |
 | Borda | `Tag.TagHoverGlyphHoverBorder` |
 
@@ -1933,7 +1933,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.TagHoverGlyphPressedBackground` |
+| Tela de fundo | `Tag.TagHoverGlyphPressedBackground` |
 | Primeiro plano (glifo) | `Tag.TagHoverGlyphPressed` |
 | Borda | `Tag.TagHoverGlyphPressedBorder` |
 
@@ -1943,7 +1943,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo) | `Tag.TagSelectedGlyph` |
 
 **Marca selecionada com glifo de fechamento ( &times; ): estado de foco**
@@ -1952,7 +1952,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.TagSelectedGlyphHoverBackground` |
+| Tela de fundo | `Tag.TagSelectedGlyphHoverBackground` |
 | Primeiro plano (glifo) | `Tag.TagSelectedGlyphHover` |
 | Borda | `Tag.TagSelectedGlyphHoverBorder` |
 
@@ -1962,7 +1962,7 @@ O Visual Studio dá suporte à marcação, que permite que um usuário declare p
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Tag.TagSelectedGlyphPressedBackground` |
+| Tela de fundo | `Tag.TagSelectedGlyphPressedBackground` |
 | Primeiro plano (glifo) | `Tag.TagSelectedGlyphPressed` |
 | Borda | `Tag.TagSelectedGlyphPressedBorder` |
 
@@ -1990,7 +1990,7 @@ Janelas de ferramentas no Visual Studio são usadas para várias tarefas diferen
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowBackground` |
+| Tela de fundo | `Environment.ToolWindowBackground` |
 | Borda | `Environment.ToolWindowBorder` |
 
 **Janela de ferramentas flutuante e focalizada**
@@ -1999,7 +1999,7 @@ Janelas de ferramentas no Visual Studio são usadas para várias tarefas diferen
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowBackground` |
+| Tela de fundo | `Environment.ToolWindowBackground` |
 | Borda | `Environment.MainWindowActiveDefaultBorder` |
 
 **Janela de ferramentas flutuante, desfocada**
@@ -2008,7 +2008,7 @@ Janelas de ferramentas no Visual Studio são usadas para várias tarefas diferen
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowBackground` |
+| Tela de fundo | `Environment.ToolWindowBackground` |
 | Borda | `Environment.MainWindowInactiveBorder` |
 
 ### <a name="toolbox-like-windows"></a>Caixa de ferramentas-como Windows
@@ -2028,8 +2028,8 @@ A caixa de ferramentas é uma das janelas de ferramentas comuns usadas com mais 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolboxContent`<br />Títulos |
-| Segundo plano | `Environment.ToolWindowBackground`<br />(Itens individuais ou janela inteira, se não houver controles disponíveis) |
+| Tela de fundo | `Environment.ToolboxContent`<br />Títulos |
+| Tela de fundo | `Environment.ToolWindowBackground`<br />(Itens individuais ou janela inteira, se não houver controles disponíveis) |
 | Borda | Nenhum |
 | Primeiro plano (glifo) | `Environment.ToolboxContent` |
 | Primeiro plano (texto) | `Environment.ToolboxContent` |
@@ -2040,7 +2040,7 @@ A caixa de ferramentas é uma das janelas de ferramentas comuns usadas com mais 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolboxContentMouseOver`<br />(Somente itens individuais) |
+| Tela de fundo | `Environment.ToolboxContentMouseOver`<br />(Somente itens individuais) |
 | Borda | Nenhum |
 | Primeiro plano (texto) | `Environment.ToolboxContentMouseOver`<br />(Somente itens individuais) |
 
@@ -2052,7 +2052,7 @@ A caixa de ferramentas é uma das janelas de ferramentas comuns usadas com mais 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemActive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Tela de fundo | `TreeView.SelectedItemActive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 | Borda | `TreeView.FocusVisualBorder`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 | Primeiro plano (glifo) | `TreeView.SelectedItemActive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 | Primeiro plano (texto) | `TreeView.SelectedItemActive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
@@ -2065,7 +2065,7 @@ A caixa de ferramentas é uma das janelas de ferramentas comuns usadas com mais 
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `TreeView.SelectedItemInactive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
+| Tela de fundo | `TreeView.SelectedItemInactive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 | Borda | Nenhum |
 | Primeiro plano (glifo) | `TreeView.SelectedItemInactive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
 | Primeiro plano (texto) | `TreeView.SelectedItemInactive`<br />Categoria da [exibição de árvore](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_TreeView) |
@@ -2085,7 +2085,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.TitleBarActiveGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.TitleBarActiveGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.TitleBarActiveText` |
 | Borda | `Environment.TitleBarActiveBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 | Identificador de arrastar | `Environment.TitleBarDragHandleActive` |
@@ -2096,7 +2096,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.TitleBarInactiveGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.TitleBarInactiveGradientBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.TitleBarInactiveText` |
 | Borda | N/D |
 | Identificador de arrastar | `Environment.TitleBarDragHandle` |
@@ -2115,7 +2115,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonActiveGlyph` |
 | Borda | N/D |
 
@@ -2125,7 +2125,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | N/D |
+| Tela de fundo | N/D |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonInactiveGlyph` |
 | Borda | N/D |
 
@@ -2135,7 +2135,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowButtonHoverActive` |
+| Tela de fundo | `Environment.ToolWindowButtonHoverActive` |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonHoverActiveGlyph` |
 | Borda | `Environment.ToolWindowButtonHoverActiveBorder` |
 
@@ -2145,7 +2145,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowButtonHoverInactive` |
+| Tela de fundo | `Environment.ToolWindowButtonHoverInactive` |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonHoverInactiveGlyph` |
 | Borda | `Environment.ToolWindowButtonHoverInactiveBorder` |
 
@@ -2155,7 +2155,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowButtonDown` |
+| Tela de fundo | `Environment.ToolWindowButtonDown` |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonDownActiveGlyph` |
 | Borda | `Environment.ToolWindowButtonDownBorder` |
 
@@ -2165,7 +2165,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowButtonDown` |
+| Tela de fundo | `Environment.ToolWindowButtonDown` |
 | Primeiro plano (glifo) | `Environment.ToolWindowButtonDownInactiveGlyph` |
 | Borda | `Environment.ToolWindowButtonDownBorder` |
 
@@ -2182,7 +2182,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowTabSelectedTab` |
+| Tela de fundo | `Environment.ToolWindowTabSelectedTab` |
 | Primeiro plano (texto) | `Environment.ToolWindowTabSelectedActiveText` |
 | Borda | `Environment.ToolWindowTabSelectedBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 
@@ -2192,7 +2192,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowTabSelectedTab` |
+| Tela de fundo | `Environment.ToolWindowTabSelectedTab` |
 | Primeiro plano (texto) | `Environment.ToolWindowTabSelectedText` |
 | Borda | `Environment.ToolWindowTabSelectedBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 
@@ -2202,7 +2202,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(As interrupções de gradiente são definidas com o mesmo valor de cor em Visual Studio 2013.) |
+| Tela de fundo | `Environment.ToolWindowTabGradientBegin`<br />`Environment.ToolWindowTabGradientEnd`<br />(As interrupções de gradiente são definidas com o mesmo valor de cor em Visual Studio 2013.) |
 | Primeiro plano (texto) | `Environment.ToolWindowTabText` |
 | Borda | `Environment.ToolWindowTabBorder` |
 
@@ -2212,7 +2212,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(As interrupções de gradiente são definidas com o mesmo valor de cor em Visual Studio 2013.) |
+| Tela de fundo | `Environment.ToolWindowTabMouseOverBackgroundBegin`<br />`Environment.ToolWindowTabMouseOverBackgroundEnd`<br />(As interrupções de gradiente são definidas com o mesmo valor de cor em Visual Studio 2013.) |
 | Primeiro plano (texto) | `Environment.ToolWindowTabMouseOverText` |
 | Borda | `Environment.ToolWindowTabMouseOverBorder`<br />(Defina como a mesma cor como plano de fundo.) |
 
@@ -2230,7 +2230,7 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.AutoHideTabBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.AutoHideTabBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.AutoHideTabText` |
 | Borda | `Environment.AutoHideTabBorder` |
 
@@ -2240,6 +2240,6 @@ A borda da barra de título não é uma borda verdadeira, é uma linha espessa n
 
 | Elemento | Nome do token: categoria. cor |
 | --- | --- |
-| Segundo plano | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
+| Tela de fundo | `Environment.AutoHideTabMouseOverBackgroundBegin`<br />(As interrupções de gradiente para esse token não são usadas na interface do usuário com tema.) |
 | Primeiro plano (texto) | `Environment.AutoHideTabMouseOverText` |
 | Borda | `Environment.AutoHideTabMouseOverBorder` |

@@ -2,7 +2,7 @@
 description: Essa função conclui um lote de operações de controle do código-fonte.
 title: Função SccEndBatch | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccEndBatch
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b3bad3604c57661d0e0e091299cef127d9215d56
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 11ff596f19d3a98b929f9346bbf579e0ad1258c5
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090207"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904585"
 ---
 # <a name="sccendbatch-function"></a>Função SccEndBatch
-Essa função conclui um lote de operações de controle do código-fonte. Esses lotes não podem ser aninhados.
+Essa função conclui um lote de operações de controle do código-fonte. Esses lotes podem não estar aninhados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,17 +32,17 @@ SCCRTN SccEndBatch(void);
 ## <a name="parameters"></a>Parâmetros
  Nenhum.
 
-## <a name="return-value"></a>Retornar valor
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+## <a name="return-value"></a>Valor retornado
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|SCC_OK|O lote de operações foi concluído com êxito.|
+|SCC_OK|Lote de operações concluídas com êxito.|
 |SCC_E_UNKNOWNERROR|Falha não específica.|
 
 ## <a name="remarks"></a>Comentários
- Os lotes de controle do código-fonte são usados para executar as mesmas operações de controle do código-fonte em vários projetos ou em vários contextos. Os lotes podem ser usados para eliminar caixas de diálogo redundantes da experiência do usuário durante uma operação em lote. O [SccBeginBatch](../extensibility/sccbeginbatch-function.md) e a `SccEndBatch` função são usados como um par para indicar o início e o fim de uma operação. Eles não podem ser aninhados.
+ Os lotes de controle do código-fonte são usados para executar as mesmas operações de controle do código-fonte em vários projetos ou vários contextos. Os lotes podem ser usados para eliminar caixas de diálogo redundantes da experiência do usuário durante uma operação em lote. O [SccBeginBatch](../extensibility/sccbeginbatch-function.md) e a função são usados como um par para indicar `SccEndBatch` o início e o fim de uma operação. Eles não podem ser aninhados.
 
 ## <a name="see-also"></a>Confira também
-- [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+- [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [SccBeginBatch](../extensibility/sccbeginbatch-function.md)
