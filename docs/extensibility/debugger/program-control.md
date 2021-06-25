@@ -3,7 +3,7 @@ title: Controle de programa | Microsoft Docs
 description: Saiba mais sobre as rotinas na depuração do Visual Studio que ocorrem no nível do programa, como execução, depuração, continuação e suspensão/retomada de threads.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 6be80904-e66c-4cae-8891-1113b799fb01
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d2d869094eff3713a3c9e7ec63a8003bb12a018c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 7b2946309c72fbdddf2794c1da1e773e9a529368
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105094673"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900701"
 ---
 # <a name="program-control"></a>Controle de programa
 Na depuração do Visual Studio, todas as seguintes rotinas de revisão e continuação ocorrem no nível do programa:

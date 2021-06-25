@@ -1,9 +1,9 @@
 ---
-title: Elemento include | Microsoft Docs
-description: O elemento include especifica um arquivo que pode estar localizado no caminho de inclusão fornecido para inserção no arquivo atual.
+title: Incluir elemento | Microsoft Docs
+description: O elemento Include especifica um arquivo que pode ser localizado no caminho de inclusão fornecido para inserção no arquivo atual.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - Include
 helpviewer_keywords:
@@ -15,15 +15,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: fd64f897dc2a089a2e94f5e0c53e3ef116f7b385
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d0005626c7fbb276775661a7cfb73d17f5e20d62
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105082095"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899349"
 ---
-# <a name="include-element"></a>Elemento include
-O elemento include especifica um arquivo que pode estar localizado no caminho de inclusão fornecido para inserção no arquivo atual.  Todos os símbolos e tipos definidos se tornarão parte do resultado compilado.
+# <a name="include-element"></a>Elemento Include
+O elemento Include especifica um arquivo que pode ser localizado no caminho de inclusão fornecido para inserção no arquivo atual.  Todos os símbolos e tipos definidos se tornarão parte do resultado compilado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,8 +38,8 @@ O elemento include especifica um arquivo que pode estar localizado no caminho de
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|href|Obrigatórios. O caminho para o arquivo de cabeçalho:<br /><br /> href = "stdidcmd. h"|
-|Condição|Opcional. Consulte [atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|href|Obrigatórios. O caminho para o arquivo de header:<br /><br /> href="stdidcmd.h"|
+|Condição|Opcional. Consulte [Atributos condicionais](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Elementos filho
 
@@ -51,7 +51,7 @@ O elemento include especifica um arquivo que pode estar localizado no caminho de
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento commandtable](../extensibility/commandtable-element.md)|Define todos os elementos que representam comandos (ou seja, itens de menu, menus, barras de ferramentas e caixas de combinação) que um VSPackage fornece ao IDE.|
+|[Elemento CommandTable](../extensibility/commandtable-element.md)|Define todos os elementos que representam comandos – ou seja, itens de menu, menus, barras de ferramentas e caixas de combinação – que um VSPackage fornece ao IDE.|
 
 ## <a name="example"></a>Exemplo
 
@@ -60,4 +60,4 @@ O elemento include especifica um arquivo que pode estar localizado no caminho de
 ```
 
 ## <a name="see-also"></a>Confira também
-- [Arquivos de tabela de comando do Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio de tabela de comandos (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

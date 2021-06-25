@@ -3,7 +3,7 @@ title: Assistente (. Arquivo de vsz) | Microsoft Docs
 description: Saiba mais sobre os arquivos. vsz que o IDE usa para iniciar os assistentes. Os arquivos contêm informações sobre qual assistente deve ser chamado e o que passar para o assistente.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - .vsz files
 - vsz files
@@ -14,18 +14,18 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2663a6b05780b16d05b419c00aba904ded848796
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: de687dae79fa1613090fb400f73ab658ee5d66cb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074230"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900648"
 ---
 # <a name="wizard-vsz-file"></a>Arquivo do assistente (.Vsz)
 
 O IDE (ambiente de desenvolvimento integrado) usa arquivos. vsz para iniciar os assistentes. Esses arquivos. vsz contêm informações que o IDE usa para determinar qual assistente deve ser chamado e quais informações passar para o assistente.
 
-Um arquivo. vsz é uma versão de um arquivo de texto formatado. ini que não tem seções. As informações conhecidas para o IDE são armazenadas no início do arquivo. Isso fornece um link entre o assistente que o IDE chama e os parâmetros que estão no arquivo. vsz a serem passados para o IDE. O restante do arquivo fornece parâmetros que são específicos para o assistente e que devem ser coletados pelo IDE e passados para o assistente específico.
+Um arquivo. vsz é uma versão de um arquivo de texto formatado .ini que não tem seções. As informações conhecidas para o IDE são armazenadas no início do arquivo. Isso fornece um link entre o assistente que o IDE chama e os parâmetros que estão no arquivo. vsz a serem passados para o IDE. O restante do arquivo fornece parâmetros que são específicos para o assistente e que devem ser coletados pelo IDE e passados para o assistente específico.
 
 O exemplo a seguir mostra o conteúdo de um arquivo. vsz.
 

@@ -3,7 +3,7 @@ title: POPLISTFUNC | Microsoft Docs
 description: Saiba mais sobre a função de retorno de chamada POPLISTFUNC, que é usada pelo plug-in de controle do código-fonte para atualizar uma lista de arquivos ou diretórios.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - POPDIRLISTFUNC
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: aec322d73e49d4aae91956bd8df015a01c922a10
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b52ed40397793b44f8a9c7ed9c36aa5996ae0176
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090233"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900376"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 Esse retorno de chamada é fornecido para o [SccPopulateList](../extensibility/sccpopulatelist-function.md) pelo IDE e é usado pelo plug-in de controle do código-fonte para atualizar uma lista de arquivos ou diretórios (também fornecidos para a `SccPopulateList` função).
@@ -47,7 +47,7 @@ typedef BOOL (*POPLISTFUNC) (
 
  lpFileName caminho completo do diretório do nome do arquivo a ser adicionado ou excluído da lista.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
 
 |Valor|Descrição|
 |-----------|-----------------|

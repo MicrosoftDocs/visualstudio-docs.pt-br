@@ -3,7 +3,7 @@ title: Métodos de Breakpoint-Related | Microsoft Docs
 description: A depuração do Visual Studio dá suporte a pontos de interrupção associados, que são associados com êxito a um local no código e pontos de interrupção pendentes, que ainda não estão associados.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - debugging [Debugging SDK], breakpoint methods
 - breakpoints, methods
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 06494b5ed6c1826e665f42e180ad8c71de596e30
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: ec218cea05dffc1c558cabdef47895da9ad7ba9c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105055227"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901494"
 ---
 # <a name="breakpoint-related-methods"></a>Métodos relacionados ao ponto de interrupção
 Um mecanismo de depuração (DE) deve dar suporte à configuração de pontos de interrupção. A depuração do Visual Studio dá suporte aos seguintes tipos de pontos de interrupção:

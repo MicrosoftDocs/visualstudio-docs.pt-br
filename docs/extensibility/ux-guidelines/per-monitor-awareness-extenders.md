@@ -1,5 +1,5 @@
 ---
-title: Suporte para reconhecimento por monitor para extensores do Visual Studio
+title: Suporte ao reconhecimento de Per-Monitor para extensores do Visual Studio
 titleSuffix: ''
 description: Saiba mais sobre o novo suporte de extensor para reconhecimento por monitor disponível no Visual Studio 2019.
 ms.date: 04/10/2019
@@ -10,18 +10,18 @@ author: rub8n
 ms.author: rurios
 manager: anthc
 monikerRange: vs-2019
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - CSharp
 - CPP
-ms.openlocfilehash: 09ec5d82251fa4598096fca8a59c9a1fd29e3f27
-ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.openlocfilehash: 90ec038e8f27407ba08633bacbb5576bee2a7883
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "69585374"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902040"
 ---
-# <a name="per-monitor-awareness-support-for-visual-studio-extenders"></a>Suporte para reconhecimento por monitor para extensores do Visual Studio
+# <a name="per-monitor-awareness-support-for-visual-studio-extenders"></a>Suporte ao reconhecimento de Per-Monitor para extensores do Visual Studio
 
 As versões anteriores ao Visual Studio 2019 tinham seu contexto de reconhecimento de DPI definido como reconhecimento do sistema, em vez de reconhecimento de DPI por monitor (PMA). A execução no reconhecimento do sistema resultou em uma experiência visual degradada (por exemplo, fontes ou ícones borrados) sempre que o Visual Studio precisasse renderizar monitores com fatores de escala diferentes ou remotos em computadores com configurações de exibição diferentes (por exemplo, dimensionamento diferente do Windows).
 
@@ -72,7 +72,7 @@ O Visual Studio dá suporte oficialmente às estruturas de interface do usuário
 
   Esse cenário ajuda a testar se a interface do usuário está respondendo à alteração dinâmica de DPI do Windows.
 
-Um bom teste preliminar para se sua interface do usuário pode ter problemas é se o código utiliza as classes *Microsoft. VisualStudio. Utilities. dpi. DpiHelper*, *Microsoft. VisualStudio. PlatformUI. DpiHelper*ou *VsUI:: CDpiHelper* . Essas classes antigas DpiHelper dão suporte apenas ao reconhecimento de DPI do sistema e nem sempre funcionarão corretamente quando o processo for PMA.
+Um bom teste preliminar para se sua interface do usuário pode ter problemas é se o código utiliza as classes *Microsoft. VisualStudio. Utilities. dpi. DpiHelper*, *Microsoft. VisualStudio. PlatformUI. DpiHelper* ou *VsUI:: CDpiHelper* . Essas classes antigas DpiHelper dão suporte apenas ao reconhecimento de DPI do sistema e nem sempre funcionarão corretamente quando o processo for PMA.
 
 O uso típico desses DpiHelpers se parecerá com:
 
@@ -196,22 +196,22 @@ As novas classes DpiAwareness e CDpiAwareness oferecem os mesmos auxiliares de c
 
 A classe DpiAwareness gerenciada oferece auxiliares para visuais do WPF, controles de Windows Forms e HWNDs Win32 e HMONITORs (ambos na forma de IntPtrs), enquanto a classe CDpiAwareness nativa oferece auxiliares HWND e HMONITOR.
 
-### <a name="windows-forms-dialogs-windows-or-controls-displayed-in-the-wrong-dpiawarenesscontext"></a>Windows Forms caixas de diálogo, janelas ou controles exibidos no DpiAwarenessContext errado
-Mesmo após um pai bem-sucedido do Windows com DpiAwarenessContextss diferentes (devido ao comportamento padrão do Windows), os usuários ainda podem ver os problemas de dimensionamento como Windows com escala de DpiAwarenessContexts diferente de forma diferente. Como resultado, os usuários podem ver os problemas de texto ou imagem de alinhamento/desfoque na interface do usuário.
+### <a name="windows-forms-dialogs-windows-or-controls-displayed-in-the-wrong-dpiawarenesscontext"></a>Windows Forms diálogos, janelas ou controles exibidos no DpiAwarenessContext errado
+Mesmo após um pai bem-sucedido de janelas com DpiAwarenessContexts diferentes (devido ao comportamento padrão do Windows), os usuários ainda poderão ver problemas de dimensionamento como janelas com diferentes DpiAwarenessContexts dimensionando de maneira diferente. Como resultado, os usuários podem ver problemas de texto de alinhamento/desfocado ou imagem na interface do usuário.
 
-A solução é definir o escopo de DpiAwarenessContext correto para todas as janelas e controles no aplicativo.
+A solução é definir o escopo DpiAwarenessContext correto para todas as janelas e controles no aplicativo.
 
 ### <a name="top-level-mixed-mode-tlmm-dialogs"></a>Caixas de diálogo de modo misto de nível superior (TLMM)
-Ao criar janelas de nível superior, como caixas de diálogo modais, é importante verificar se o thread está no estado correto antes da janela (e seu identificador) ser criado. O thread pode ser colocado no reconhecimento do sistema usando o auxiliar CDpiScope em Native ou o auxiliar DpiAwareness. EnterDpiScope em gerenciado. (TLMM geralmente deve ser usado em caixas de diálogo/janelas não WPF.)
+Ao criar janelas de nível superior, como caixas de diálogo modais, é importante garantir que o thread está no estado correto antes da janela (e seu handle) ser criado. O thread pode ser colocado no Reconhecimento do sistema usando o auxiliar CDpiScope em nativo ou o auxiliar DpiAwareness.EnterDpiScope em gerenciado. (O TLMM geralmente deve ser usado em caixas de diálogo/janelas não WPF.)
 
 ### <a name="child-level-mixed-mode-clmm"></a>Modo misto de nível filho (CLMM)
-Por padrão, o Windows filho recebe o contexto de reconhecimento de DPI de thread atual se criado sem um pai ou o contexto de reconhecimento de DPI do pai quando criado com um pai. Para criar um filho com um contexto de reconhecimento de DPI diferente do seu pai, o thread pode ser colocado no contexto de reconhecimento de DPI desejado. Em seguida, o filho pode ser criado sem um pai e será manualmente repai para a janela pai.
+Por padrão, as janelas filho recebem o contexto de reconhecimento de DPI do thread atual se criados sem um pai ou o contexto de reconhecimento de DPI do pai quando criados com um pai. Para criar um filho com um contexto de reconhecimento de DPI diferente de seu pai, o thread pode ser colocado no contexto de reconhecimento de DPI desejado. Em seguida, o filho pode ser criado sem um pai e manualmente reparentado na janela pai.
 
-#### <a name="clmm-issues"></a>Problemas de CLMM
-A maior parte do trabalho de cálculo da interface do usuário que acontece como parte do loop de mensagens principal ou da cadeia de eventos já deve estar em execução no contexto de reconhecimento de DPI correto. No entanto, se os cálculos de coordenadas ou de dimensionamento forem feitos fora desses fluxos de trabalho principais (por exemplo, durante uma tarefa de tempo ocioso ou fora do thread de interface do usuário, o contexto de reconhecimento de DPI atual poderá estar incorreto, levando a problemas de inatividade de interface de usuário ou de dimensionamento de mis. Colocar o thread no estado correto para o trabalho da interface do usuário geralmente corrige o problema.
+#### <a name="clmm-issues"></a>Problemas do CLMM
+A maioria do trabalho de cálculo da interface do usuário que acontece como parte do loop de mensagens principal ou da cadeia de eventos já deve estar em execução no contexto de reconhecimento de DPI correto. No entanto, se os cálculos de coordenadas ou de tamanho são feitos fora desses fluxos de trabalho principais (como durante uma tarefa de tempo ocioso ou fora do thread de interface do usuário, o contexto de reconhecimento de DPI atual pode estar incorreto, levando a erros de erro de tamanho ou de extração de interface do usuário. Colocar o thread no estado correto para o trabalho da interface do usuário geralmente corrige o problema.
  
-#### <a name="opt-out-of-clmm"></a>Recusar CLMM
-Se uma janela de ferramentas que não seja do WPF estiver sendo migrada para oferecer suporte total ao PMA, será necessário recusar o CLMM. Para fazer isso, uma nova interface precisa ser implementada: IVsDpiAware.
+#### <a name="opt-out-of-clmm"></a>Ressutar o CLMM
+Se uma janela de ferramentas não WPF estiver sendo migrada para dar suporte total ao PMA, ela precisará optar pelo CLMM. Para fazer isso, uma nova interface precisa ser implementada: IVsDpiAware.
 
 ```cs
 [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -230,9 +230,9 @@ IVsDpiAware : public IUnknown
 };
 ```
 
-Para linguagens gerenciadas, o melhor lugar para implementar essa interface está na mesma classe que deriva de *Microsoft. VisualStudio. Shell. ToolWindowPane*. Para o C++, o melhor lugar para implementar essa interface está na mesma classe que implementa *IVsWindowPane* de VSShell. h.
+Para linguagens gerenciadas, o melhor lugar para implementar essa interface é na mesma classe que deriva de *Microsoft.VisualStudio.Shell.ToolWindowPane*. Para C++, o melhor lugar para implementar essa interface é na mesma classe que implementa *IVsWindowPane* de vsshell.h.
 
-O valor retornado pela propriedade Mode na interface é um __VSDPIMODE (e é convertido para um UINT no Managed):
+O valor retornado pela propriedade Mode na interface é um __VSDPIMODE (e é lançado em um uint em gerenciado):
 
 ```cs
 enum __VSDPIMODE
@@ -243,16 +243,16 @@ enum __VSDPIMODE
 }
 ```
 
-- Não sabe que a janela de ferramentas precisa lidar com 96 DPI, o Windows manipulará o dimensionamento para todos os outros DPIs. Fazendo com que o conteúdo seja ligeiramente desfocado.
-- Sistema significa que a janela de ferramentas precisa manipular o DPI para o DPI de vídeo primário. Qualquer exibição com um DPI correspondente parecerá nítida, mas se o DPI for diferente ou for alterado durante a sessão, o Windows manipulará o dimensionamento e será ligeiramente desfocado.
-- Permonitor significa que a janela de ferramentas precisa manipular todos os DPIs em todas as telas e sempre que o DPI é alterado.
+- Não ciente significa que a janela de ferramentas precisa lidar com 96 DPI, o Windows lidará com o dimensionamento para todas as outras DPIs. Resultando em conteúdo um pouco desfocado.
+- O sistema significa que a janela de ferramentas precisa lidar com o DPI para o DPI de exibição primário. Qualquer exibição com um DPI correspondente terá uma aparência nítido, mas se o DPI for diferente ou mudar durante a sessão, o Windows manipulará o dimensionamento e ficará um pouco desfocado.
+- PerMonitor significa que a janela de ferramentas precisa lidar com todas as DPIs em todas as exibições e sempre que o DPI mudar.
 
 > [!NOTE]
-> O Visual Studio dá suporte apenas à conscientização do PerMonitorV2, portanto, o valor de enumeração do permonitor se traduz no valor do Windows de DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2.
+> Visual Studio dá suporte apenas ao reconhecimento de PerMonitorV2, portanto, o valor de enum PerMonitor se traduz no valor do Windows de DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2.
 
 #### <a name="force-a-control-into-a-specific-dpiawarenesscontext"></a>Forçar um controle em um DpiAwarenessContext específico
 
-A interface do usuário herdada que não está sendo atualizada para dar suporte ao modo PMA ainda pode precisar de ajustes secundários para funcionar enquanto o Visual Studio está sendo executado no modo PMA. Uma dessas correções envolve verificar se a interface do usuário está sendo criada no DpiAwarenessContext correto. Para forçar a interface do usuário em um determinado DpiAwarenessContext, você pode inserir um escopo de DPI com o seguinte código:
+A interface do usuário herdado que não está sendo atualizada para dar suporte ao modo PMA ainda pode precisar de pequenos ajustes para funcionar enquanto Visual Studio está em execução no modo PMA. Uma dessas correções envolve garantir que a interface do usuário está sendo criada no DpiAwarenessContext correto. Para forçar sua interface do usuário em um DpiAwarenessContext específico, você pode inserir um escopo de DPI com o seguinte código:
 
 ```cs
 using (DpiAwareness.EnterDpiScope(DpiAwarenessContext.SystemAware))
@@ -271,14 +271,14 @@ void MyClass::ShowDialog()
 ```
 
 > [!NOTE]
-> Forçar o DpiAwarenessContext só funciona em uma interface do usuário não WPF e em caixas de diálogo WPF de nível superior. Ao criar a interface do usuário do WPF que deve ser hospedada dentro de janelas de ferramentas ou designers, assim que o conteúdo é inserido na árvore de interface do usuário do WPF, ele é convertido para o processo atual DpiAwarenessContext.
+> Forçar o DpiAwarenessContext só funciona em caixas de diálogo WPF de nível superior e interface do usuário não WPF. Ao criar uma interface do usuário do WPF que deve ser hospedada dentro de janelas de ferramentas ou designers, assim que o conteúdo é inserido na árvore de interface do usuário do WPF, ele é convertido no processo atual DpiAwarenessContext.
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
 ### <a name="windows-forms"></a>Windows Forms
 
-Para otimizar os novos cenários de modo misto, Windows Forms alterou como ele cria controles e janelas sempre que seu pai não foi definido explicitamente. Anteriormente, os controles sem um pai explícito usavam uma "janela de estacionamento" interna como um pai temporário para o controle ou a janela que está sendo criada. 
+Para otimizar para os novos cenários de modo misto, Windows Forms como ele cria controles e janelas sempre que seu pai não foi definido explicitamente. Anteriormente, os controles sem um pai explícito usavam uma "Janela de Estacionamento" interna como um pai temporário para o controle ou a janela que está sendo criada. 
 
-Antes do .NET 4,8, havia uma única "janela de estacionamento" que obtém seu DpiAwarenessContext do contexto atual de reconhecimento de DPI de thread no tempo de criação da janela. Qualquer controle não pai herda o mesmo DpiAwarenessContext que a janela de estacionamento quando o identificador do controle é criado e é repai para o pai final/esperado pelo desenvolvedor do aplicativo. Isso causaria falhas com base no tempo se a "janela de estacionamento" tivesse um DpiAwarenessContext maior do que a janela pai final.
+Antes do .NET 4.8, havia uma única "Janela de Estacionamento" que obtém seu DpiAwarenessContext do contexto de reconhecimento de DPI do thread atual no momento da criação da janela. Qualquer controle não esparso herda o mesmo DpiAwarenessContext que a Janela de Estacionamento quando o controle é criado e seria reparentado para o pai final/esperado pelo desenvolvedor do aplicativo. Isso causaria falhas baseadas em tempo se a "Janela de Estacionamento" tivesse um DpiAwarenessContext maior do que a janela pai final.
 
-A partir do .NET 4,8, agora há uma "janela de estacionamento" para cada DpiAwarenessContext que foi encontrado. A outra grande diferença é que o DpiAwarenessContext usado para o controle é armazenado em cache quando o controle é criado, não quando o identificador é criado. Isso significa que o comportamento final geral é o mesmo, mas pode transformar o que costumava ser um problema baseado em tempo em um problema consistente. Ele também fornece ao desenvolvedor de aplicativos um comportamento mais determinístico para escrever seu código de interface do usuário e escopor corretamente.
+A partir do .NET 4.8, agora há uma "Janela de Estacionamento" para cada DpiAwarenessContext encontrado. A outra grande diferença é que o DpiAwarenessContext usado para o controle é armazenado em cache quando o controle é criado, não quando o alça é criado. Isso significa que o comportamento de término geral é o mesmo, mas pode transformar o que costumava ser um problema baseado em tempo em um problema consistente. Ele também fornece ao desenvolvedor do aplicativo um comportamento mais determinístico para escrever seu código de interface do usuário e defini-lo de scoping corretamente.

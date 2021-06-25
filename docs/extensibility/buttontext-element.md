@@ -1,9 +1,9 @@
 ---
 title: Elemento ButtonText | Microsoft Docs
-description: O elemento ButtonText permite especificar o texto que aparece em vários menus. O elemento ButtonText não pode ficar em branco mesmo que outros campos de texto sejam especificados.
+description: O elemento ButtonText permite especificar o texto que aparece em vários menus. O elemento ButtonText não poderá ficar em branco mesmo que outros campos de texto sejam especificados.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ButtonText element (VSCT XML schema)
 - VSCT XML schema elements, ButtonText
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fa9ad6aab9d42113f3e01760e191184e168b62d
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cf20a6876dd7ba52413a11f30a3d0130b32e535d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105068109"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900702"
 ---
 # <a name="buttontext-element"></a>Elemento ButtonText
-Esse campo permite que você especifique o texto que aparece em vários menus. Por padrão, o `ButtonText` elemento aparece em controladores de menu. O `ButtonText` elemento também se tornará o padrão se os outros campos de texto estiverem em branco. O `ButtonText` elemento não pode ficar em branco mesmo que os outros campos de texto sejam especificados.
+Esse campo permite especificar o texto que aparece em vários menus. Por padrão, o `ButtonText` elemento aparece nos controladores de menu. O `ButtonText` elemento também se tornará o padrão se os outros campos de texto estão em branco. O `ButtonText` elemento não poderá ficar em branco mesmo que os outros campos de texto sejam especificados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,10 +42,10 @@ Esse campo permite que você especifique o texto que aparece em vários menus. P
 
 |Elemento|Descrição|
 |-------------|-----------------|
-|[Elemento Strings](../extensibility/strings-element.md)|Agrupa elementos de texto, como `ButtonText` e `CommandName` .|
+|[Elemento Strings](../extensibility/strings-element.md)|Grupos de elementos de texto, como `ButtonText` e `CommandName` .|
 
 ## <a name="text-value"></a>Valor de texto
- O valor de texto do `ButtonText` elemento fornece o texto que é exibido para itens de menu, combinações e outros elementos de interface do usuário que têm texto visível.
+ O valor de texto do elemento fornece o texto exibido para itens de menu, combinaçãos e outros elementos de interface do usuário que têm `ButtonText` texto visível.
 
 ## <a name="see-also"></a>Confira também
-- [Arquivos de tabela de comando do Visual Studio (. vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio de tabela de comandos (.vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

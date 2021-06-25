@@ -1,9 +1,9 @@
 ---
-title: Servidores (SDK do Visual Studio) | Microsoft Docs
+title: Servidores (Visual Studio SDK) | Microsoft Docs
 description: Este artigo descreve a definição e a função de um servidor na arquitetura do depurador no Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - servers, debugging
 - debugging [Debugging SDK], servers
@@ -13,21 +13,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: b7bb19262d4ce5fd1b3139f05cd9bbc57131db1c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 99f6c634053df9191ac419c8ee450dc99cf62c7c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105070356"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902118"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servidores (SDK do Visual Studio)
 Na arquitetura do depurador, um *servidor*:
 
-- É um contêiner de portas e fornecedores de porta e comunica portas e fornecedores de porta para o SDM (Gerenciador de depuração de sessão) e os mecanismos de depuração.
+- É um contêiner de portas e fornecedores de porta e comunica portas e fornecedores de porta para o SDM (gerenciador de depuração de sessão) e mecanismos de depuração.
 
 - Pode se identificar por nome e enumerar suas portas e fornecedores de porta.
 
-- É representado por uma interface [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) , que é implementada pelo Visual Studio (uma instância de um servidor para cada instância do Visual Studio em execução).
+- É representado por uma interface [IDebugCoreServer2,](../../extensibility/debugger/reference/idebugcoreserver2.md) que é implementada apenas por Visual Studio (uma instância de um servidor para cada instância do Visual Studio em execução).
 
 ## <a name="see-also"></a>Confira também
 - [Portas](../../extensibility/debugger/ports.md)

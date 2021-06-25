@@ -2,7 +2,7 @@
 description: Essa função faz check-out de arquivos extraídos anteriormente no sistema de controle do código-fonte, armazenando as alterações e criando uma nova versão.
 title: Função SccCheckin | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccCheckin
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6864549c6825092b6ad26be199f8c7b5ea6bab6
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d324c03096df5178decd6f6954928df3f2c6b9aa
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060426"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904741"
 ---
 # <a name="scccheckin-function"></a>Função SccCheckin
 Essa função faz check-out de arquivos extraídos anteriormente no sistema de controle do código-fonte, armazenando as alterações e criando uma nova versão. Essa função é chamada com uma contagem e uma matriz de nomes dos arquivos nos quais será feito o check-in.
@@ -66,7 +66,7 @@ no Sinalizadores de comando, 0 ou `SCC_KEEP_CHECKEDOUT` .
 
 no Opções específicas de plug-in SCC.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

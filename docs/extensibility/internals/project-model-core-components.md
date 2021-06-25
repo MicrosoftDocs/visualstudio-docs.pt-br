@@ -3,7 +3,7 @@ title: Componentes principais do Project Model | Microsoft Docs
 description: Este artigo contém descrições das interfaces e dos serviços identificados no Project Model Core e as interfaces e serviços associados a objetos.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - project models, objects and interfaces
 - project models, services
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae01d149611afe5bf75a6952f19baff7d70f6210
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 88dc53378e7e06d0a7d4ad362f7bb3876e186c80
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062805"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899700"
 ---
 # <a name="project-model-core-components"></a>Componentes principais do projeto modelo
 As tabelas a seguir expandem o modelo de projeto. As tabelas apresentam breves descrições das interfaces e dos serviços identificados no modelo, bem como as interfaces e os serviços associados a objetos específicos. Além disso, as tabelas detalham outras interfaces que são opcionais na criação e manutenção do projeto, dependendo dos requisitos de seu tipo de projeto específico.

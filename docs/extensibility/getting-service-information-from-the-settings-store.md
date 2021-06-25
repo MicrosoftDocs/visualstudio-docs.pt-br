@@ -1,30 +1,30 @@
 ---
-title: Obtendo informações de serviço do repositório de configurações | Microsoft Docs
-description: Saiba como usar o repositório de configurações para localizar todos os serviços disponíveis ou para determinar se um serviço específico está instalado.
+title: Obter informações de serviço do armazenamento de configurações | Microsoft Docs
+description: Saiba como usar o armazenamento de configurações para encontrar todos os serviços disponíveis ou determinar se um serviço específico está instalado.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a39987e13ed3af4bc19c3a80baf0049467daf3a
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cb014803945ea88cd6c2c27eee8c120059014a18
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105057644"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900636"
 ---
-# <a name="get-service-information-from-the-settings-store"></a>Obter informações de serviço do repositório de configurações
-Você pode usar o repositório de configurações para localizar todos os serviços disponíveis ou para determinar se um serviço específico está instalado. Você deve saber o tipo da classe de serviço.
+# <a name="get-service-information-from-the-settings-store"></a>Obter informações de serviço do armazenamento de configurações
+Você pode usar o armazenamento de configurações para encontrar todos os serviços disponíveis ou determinar se um serviço específico está instalado. Você deve saber o tipo da classe de serviço.
 
 ## <a name="to-list-the-available-services"></a>Para listar os serviços disponíveis
 
-1. Crie um projeto VSIX chamado `FindServicesExtension` e, em seguida, adicione um comando personalizado chamado `FindServicesCommand` . Para obter mais informações sobre como criar um comando personalizado, consulte [criar uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. Crie um projeto VSIX chamado `FindServicesExtension` e adicione um comando personalizado chamado `FindServicesCommand` . Para obter mais informações sobre como criar um comando personalizado, consulte [Criar uma extensão com um comando de menu](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-2. No *FindServicesCommand. cs*, adicione as seguintes diretivas using:
+2. Em *FindServicesCommand.cs,* adicione as seguintes diretivas using:
 
     ```csharp
     using System.Collections.Generic;
@@ -33,7 +33,7 @@ Você pode usar o repositório de configurações para localizar todos os servi�
     using System.Windows.Forms;
     ```
 
-3. Obtenha o repositório de definições de configuração e, em seguida, localize a subcoleção denominada serviços. Essa coleção inclui todos os serviços disponíveis. No `MenuItemCommand` método, remova o código existente e substitua-o pelo seguinte:
+3. Obter o armazenamento de definições de configuração e, em seguida, encontrar a subcoleção chamada Serviços. Essa coleção inclui todos os serviços disponíveis. No método `MenuItemCommand` , remova o código existente e substitua-o pelo seguinte:
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -54,16 +54,16 @@ Você pode usar o repositório de configurações para localizar todos os servi�
 
 4. Compile o projeto e comece a depuração. A instância experimental é exibida.
 
-5. Na instância experimental, no menu **ferramentas** , clique em **invocar FindServicesCommand**.
+5. Na instância experimental, no menu **Ferramentas,** clique em **Invocar FindServicesCommand**.
 
      Você deverá ver uma caixa de mensagem listando todos os serviços.
 
-     Para verificar essas configurações, você pode usar o editor do registro.
+     Para verificar essas configurações, você pode usar o editor do Registro.
 
-## <a name="find-a-specific-service"></a>Localizar um serviço específico
+## <a name="find-a-specific-service"></a>Encontrar um serviço específico
  Você também pode usar o <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> método para determinar se um serviço específico está instalado. Você deve saber o tipo da classe de serviço.
 
-1. No MenuItemCallback do projeto que você criou no procedimento anterior, pesquise o repositório de definições de configuração para a `Services` coleção que tem a subcoleção denominada pelo GUID do serviço. Nesse caso, procuraremos o serviço de ajuda.
+1. No MenuItemCallback do projeto que você criou no procedimento anterior, pesquise o armazenamento de definições de configuração para a coleção que tem a subcoleção nomeada pelo GUID do `Services` serviço. Nesse caso, procuraremos o serviço de Ajuda.
 
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)
@@ -80,6 +80,6 @@ Você pode usar o repositório de configurações para localizar todos os servi�
 
 2. Compile o projeto e comece a depuração.
 
-3. Na instância experimental, no menu **ferramentas** , clique em **invocar FindServicesCommand**.
+3. Na instância experimental, no menu **Ferramentas,** clique em **Invocar FindServicesCommand**.
 
-     Você verá uma mensagem com o serviço de **ajuda de texto disponível:**  seguido por **true** ou **false**. Para verificar essa configuração, você pode usar um editor do registro, conforme mostrado nas etapas anteriores.
+     Você deverá ver uma mensagem com o texto **Serviço de Ajuda Disponível: seguido** por **True** ou **False.** Para verificar essa configuração, você pode usar um editor do Registro, conforme mostrado nas etapas anteriores.

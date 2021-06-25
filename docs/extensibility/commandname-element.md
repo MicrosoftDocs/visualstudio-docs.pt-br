@@ -3,7 +3,7 @@ title: Elemento CommandName | Microsoft Docs
 description: O elemento CommandName especifica o texto que aparece na categoria teclado na caixa de diálogo opções e na lista comandos na caixa de diálogo Personalizar.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CommandName element (VSCT XML schema)
 - VSCT XML schema elements, CommandName
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ba74c0a61ddf01407f2af6ebb8053e2f1e4fe6ac
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 193e97880fbc543568636e1979a847877e42db14
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089622"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902001"
 ---
 # <a name="commandname-element"></a>Elemento CommandName
 O `CommandName` elemento Especifica o texto que aparece na categoria teclado na caixa de diálogo **Opções** e na lista **comandos** na caixa de diálogo **Personalizar** .

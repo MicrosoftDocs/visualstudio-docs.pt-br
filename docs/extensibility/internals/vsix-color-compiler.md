@@ -3,19 +3,19 @@ title: Compilador de cores do VSIX | Microsoft Docs
 description: Saiba mais sobre a ferramenta de compilador de cores de extensão do Visual Studio, que é um aplicativo de console que reverte as cores nos temas do Visual Studio para um arquivo. pkgdef.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 92914703ea4b293ac054c841251b37886bbc1d5a
-ms.sourcegitcommit: 3fe04d5b931ae459a802a1b965f84186757cbc08
+ms.openlocfilehash: 2f7277299d3cedd2ea0db49a44109d8a0441ebd0
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2021
-ms.locfileid: "111588456"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901754"
 ---
 # <a name="vsix-color-compiler"></a>Compilador de cores do VSIX
 A ferramenta de compilador de cores de extensão do Visual Studio é um aplicativo de console que usa um arquivo de .xml que representa cores para temas existentes do Visual Studio e o faz em um arquivo. pkgdef para que essas cores possam ser usadas no Visual Studio. Como é fácil comparar as diferenças entre .xml arquivos, essa ferramenta é útil para gerenciar cores personalizadas no controle do código-fonte. Ele também pode ser conectado a ambientes de compilação para que a saída da compilação seja um arquivo. pkgdef válido.
@@ -151,14 +151,14 @@ A ferramenta de compilador de cores de extensão do Visual Studio é um aplicati
 
 ## <a name="notes"></a>Observações
 
-- Essa ferramenta requer que a versão mais recente do tempo de execução do VC + + seja instalada.
+- Essa ferramenta requer que a versão mais recente do runtime do VC++ seja instalada.
 
-- Somente arquivos únicos têm suporte. Não há suporte para conversão em massa via caminhos de pasta.
+- Há suporte apenas para arquivos únicos. Não há suporte para conversão em massa por meio de caminhos de pasta.
 
 - A ferramenta pode ser encontrada em `<VS Install Path>\VSSDK\VisualStudioIntegration\Tools\Bin\`
 
 ## <a name="sample-output"></a>Saída de exemplo
- O arquivo. pkgdef gerado pela ferramenta será semelhante às chaves abaixo:
+ O arquivo .pkgdef gerado pela ferramenta será semelhante às chaves abaixo:
 
 ```
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\Environment]

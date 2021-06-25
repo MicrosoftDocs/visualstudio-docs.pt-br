@@ -1,8 +1,8 @@
 ---
-description: Essa função adiciona uma lista de arquivos do controle do código-fonte ao projeto atualmente aberto.
+description: Essa função adiciona uma lista de arquivos do controle do código-fonte ao projeto aberto no momento.
 title: Função SccAddFilesFromSCC | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccAddFilesFromSCC
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 056e918642e75bbd74c310499544cb2500428646
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6fa08ec93383fa661d1e2dd055b3139b2ba90f34
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060465"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904858"
 ---
 # <a name="sccaddfilesfromscc-function"></a>Função SccAddFilesFromSCC
-Essa função adiciona uma lista de arquivos do controle do código-fonte ao projeto atualmente aberto.
+Essa função adiciona uma lista de arquivos do controle do código-fonte ao projeto aberto no momento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,50 +42,50 @@ SCCRTN SccAddFilesFromSCC(
 ### <a name="parameters"></a>Parâmetros
  pContext
 
-no O ponteiro de contexto do plug-in de controle do código-fonte.
+[in] O ponteiro de contexto do plug-in do controle do código-fonte.
 
  hWnd
 
-no Um identificador para a janela do IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornecer.
+[in] Um alça para a janela IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornece.
 
  lpUser
 
-[entrada, saída] O nome de usuário (até SCC_USER_SIZE, incluindo o terminador nulo).
+[in, out] O nome de usuário (até SCC_USER_SIZE, incluindo o terminador nulo).
 
- lpAuxProjPath
+ lp LpProjPath
 
-[entrada, saída] Cadeia de caracteres auxiliar que identifica o projeto (até `SCC_PRJPATH_` o tamanho, incluindo o terminador nulo).
+[in, out] Cadeia de caracteres auxiliar que identifica o projeto (até `SCC_PRJPATH_` SIZE, incluindo o terminador nulo).
 
- recfiles
+ cFiles
 
-no Número de arquivos fornecidos pelo `lpFilePaths` .
+[in] Número de arquivos determinados por `lpFilePaths` .
 
  lpFilePaths
 
-[entrada, saída] Matriz de nomes de arquivos a serem adicionados ao projeto atual.
+[in, out] Matriz de nomes de arquivo a adicionar ao projeto atual.
 
  lpDestination
 
-no O caminho de destino onde os arquivos devem ser gravados.
+[in] O caminho de destino em que os arquivos devem ser gravados.
 
  lpComment
 
-no O comentário a ser aplicado a cada um dos arquivos que estão sendo adicionados.
+[in] O comentário a ser aplicado a cada um dos arquivos que estão sendo adicionados.
 
  pbResults
 
-[entrada, saída] Matriz de sinalizadores que são definidos para indicar êxito (diferente de zero ou verdadeiro) ou falha (zero ou falso) para cada arquivo (o tamanho da matriz deve ser pelo menos `cFiles` longo).
+[in, out] Matriz de sinalizadores que são definidos para indicar êxito (não zero ou TRUE) ou falha (zero ou FALSE) para cada arquivo (o tamanho da matriz deve ser pelo menos `cFiles` longo).
 
-## <a name="return-value"></a>Retornar valor
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+## <a name="return-value"></a>Valor retornado
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|O projeto não está aberto.|
-|SCC_E_OPNOTPERFORMED|A conexão não é do mesmo projeto especificado por `lpAuxProjPath.`|
+|SCC_E_OPNOTPERFORMED|A conexão não é para o mesmo projeto especificado por `lpAuxProjPath.`|
 |SCC_E_NOTAUTHORIZED|O usuário não está autorizado a atualizar o banco de dados.|
 |SCC_E_NONSPECIFICERROR|Erro desconhecido.|
 |SCC_I_RELOADFILE|Um arquivo ou projeto precisa ser recarregado.|
 
 ## <a name="see-also"></a>Confira também
-- [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+- [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

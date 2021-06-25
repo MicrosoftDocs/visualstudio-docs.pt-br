@@ -3,7 +3,7 @@ title: POPDIRLISTFUNC | Microsoft Docs
 description: Saiba mais sobre a função de retorno de chamada POPDIRLISTFUNC, que é passada para diretórios de atualização para descobrir quais estão sob controle do código-fonte.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - POPLISTFUNC
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f8cde3e6835a7d3262bbb89fed13e0dbc8e540e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8c98b35d9f915e16072333c72df2e1e045850f5d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090246"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900389"
 ---
 # <a name="popdirlistfunc"></a>POPDIRLISTFUNC
 Essa é uma função de retorno de chamada fornecida para a função [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) para atualizar uma coleção de diretórios e (opcionalmente) nomes de arquivos para descobrir quais estão sob controle do código-fonte.
@@ -49,7 +49,7 @@ no Valor de usuário fornecido a [SccPopulateDirList](../extensibility/sccpopula
 
 no Caminho local completo para um diretório ou nome de arquivo que está sob controle do código-fonte.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
  O IDE retorna um código de erro apropriado:
 
 |Valor|Descrição|

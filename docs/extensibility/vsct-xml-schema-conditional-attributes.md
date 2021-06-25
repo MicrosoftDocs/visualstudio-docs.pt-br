@@ -1,9 +1,9 @@
 ---
-title: Atributos condicionais de esquema XML VSCT | Microsoft Docs
-description: Saiba como aplicar atributos condicionais a listas e itens de esquema XML do VSCT. Os atributos são avaliados como true ou false, controlando a saída resultante.
+title: Atributos condicionais de esquema XML do VSCT | Microsoft Docs
+description: Saiba como aplicar atributos condicionais a listas e itens de esquema XML do VSCT. Os atributos são avaliadas como true ou false, controlando a saída resultante.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, conditional attributes
 - conditional attributes (VSCT XML schema)
@@ -13,21 +13,21 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bc1bcb9d80474b467e90de6262e797087589065
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e91207016ed6e1baab80b323680d10a40e0331d8
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062350"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905248"
 ---
-# <a name="vsct-xml-schema-conditional-attributes"></a>Atributos condicionais de esquema XML VSCT
-Você pode aplicar atributos condicionais a todas as listas e itens. Os operadores lógicos e as expressões de expansão de símbolo são avaliados como verdadeiro ou falso. Se for true, a lista ou o item associado será incluído na saída resultante.
+# <a name="vsct-xml-schema-conditional-attributes"></a>Atributos condicionais do esquema XML do VSCT
+Você pode aplicar atributos condicionais a todas as listas e itens. Operadores lógicos e expressões de expansão de símbolo são avaliadas como true ou false. Se true, a lista ou o item associado será incluído na saída resultante.
 
- Você pode testar expansões de token em relação a outras expansões ou constantes de token. A função `Defined()` testa se um nome específico foi definido, mesmo se não tiver nenhum valor.
+ Você pode testar expansões de token em relação a outras expansões de token ou constantes. A função `Defined()` testa se um nome específico foi definido, mesmo que não tenha nenhum valor.
 
- Quando um atributo Condition é aplicado a uma lista, a condição é aplicada a todos os elementos filho na lista. Se um elemento filho contiver um atributo Condition, sua condição será combinada com a expressão pai por uma operação AND.
+ Quando um atributo Condition é aplicado a uma lista, a condição é aplicada a cada elemento filho na lista. Se um elemento filho contiver um atributo Condition, sua condição será combinada com a expressão pai por uma operação AND.
 
- Os valores 1, ' 1 ' e ' verdadeiro ' são avaliados como verdadeiros, e 0, ' 0 ' e ' falso ' são avaliados como falso.
+ Os valores 1, '1' e 'true' são avaliados como true e 0, '0' e 'false' são avaliados como false.
 
 ## <a name="operators"></a>Operadores
  Use os operadores a seguir para avaliar expressões condicionais.
@@ -36,7 +36,7 @@ Você pode aplicar atributos condicionais a todas as listas e itens. Os operador
 |--------------|----------------|
 |(,)|Agrupamento|
 |!|Não lógico|
-|\<, >, \<=, >=, ==, !=|Relacional e igualdade|
+|\<, >, \<=, >=, ==, !=|Igualdade e relacional|
 |e|Boolean|
 |ou|Boolean|
 
@@ -72,4 +72,4 @@ and !Defined(DEBUG)">
 ```
 
 ## <a name="see-also"></a>Confira também
-- [Tabela de comandos do Visual Studio (. Arquivos de vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio de comando (. Arquivos vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -3,7 +3,7 @@ title: Obtendo propriedades locais | Microsoft Docs
 description: Saiba como o Visual Studio usa o EnumChildren para obter propriedades locais com estes exemplos de código gerenciado e não gerenciado.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - expression evaluation, getting local properties
 - debugging [Debugging SDK], local properties
@@ -14,12 +14,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1be593d14736a6526cc951bbc01460ce7bdb83f4
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: c45933c6340836fac889f1309c14a71feed31791
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105054797"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900727"
 ---
 # <a name="get-local-properties"></a>Obter propriedades locais
 > [!IMPORTANT]

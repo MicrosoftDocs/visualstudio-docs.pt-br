@@ -1,9 +1,9 @@
 ---
 title: OPTNAMECHANGEPFN | Microsoft Docs
-description: Saiba mais sobre a função de retorno de chamada OPTNAMECHANGEPFN, que comunica alterações de nome do plug-in de controle do código-fonte no IDE do Visual Studio.
+description: Saiba mais sobre a função de retorno de chamada OPTNAMECHANGEPFN, que comunica alterações de nome do plug-in de controle do código-fonte para o Visual Studio IDE.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - OPTNAMECHANGEPFN
 helpviewer_keywords:
@@ -14,15 +14,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4e6cb58aebbe76eff5c66dc29ecfad8c77c8717c
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 340012663ad7d21c0b5c2ef81283f5d780d6011c
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090363"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901520"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-Essa é uma função de retorno de chamada especificada em uma ligação para o [SccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_NAMECHANGEPFN` ) e é usada para comunicar alterações de nome feitas pelo plug-in de controle do código-fonte de volta para o IDE.
+Essa é uma função de retorno de chamada especificada em uma chamada para [sccSetOption](../extensibility/sccsetoption-function.md) (usando a opção ) e é usada para comunicar as alterações de nome feitas pelo plug-in de controle do código-fonte de volta para o `SCC_OPT_NAMECHANGEPFN` IDE.
 
 ## <a name="signature"></a>Assinatura
 
@@ -37,23 +37,23 @@ typedef void (*OPTNAMECHANGEPFN)(
 ## <a name="parameters"></a>Parâmetros
  pvCallerData
 
-no Valor de usuário especificado em uma chamada anterior para o [SccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_USERDATA` ).
+[in] Valor do usuário especificado em uma chamada anterior para [sccSetOption](../extensibility/sccsetoption-function.md) (usando a opção `SCC_OPT_USERDATA` ).
 
  pszOldName
 
-no O nome original do arquivo.
+[in] O nome original do arquivo.
 
  pszNewName
 
-no O nome para o qual o arquivo foi renomeado.
+[in] O nome para o que o arquivo foi renomeado.
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
  Nenhum.
 
 ## <a name="remarks"></a>Comentários
- Se um arquivo for renomeado durante uma operação de controle de origem, o plug-in de controle do código-fonte poderá notificar o IDE sobre a alteração do nome por meio desse retorno de chamada.
+ Se um arquivo for renomeado durante uma operação de controle do código-fonte, o plug-in de controle do código-fonte poderá notificar o IDE sobre a alteração de nome por meio desse retorno de chamada.
 
- Se o IDE não oferecer suporte a esse retorno de chamada, ele não chamará o [SccSetOption](../extensibility/sccsetoption-function.md) para especificá-lo. Se o plug-in não oferecer suporte a esse retorno de chamada, ele retornará `SCC_E_OPNOTSUPPORTED` da `SccSetOption` função quando o IDE tentar definir o retorno de chamada.
+ Se o IDE não dá suporte a esse retorno de chamada, ele não chamará [o SccSetOption](../extensibility/sccsetoption-function.md) para especificá-lo. Se o plug-in não dá suporte a esse retorno de chamada, ele retornará da função quando o `SCC_E_OPNOTSUPPORTED` `SccSetOption` IDE tentar definir o retorno de chamada.
 
 ## <a name="see-also"></a>Confira também
 - [Funções de retorno de chamada implementadas pelo IDE](../extensibility/callback-functions-implemented-by-the-ide.md)

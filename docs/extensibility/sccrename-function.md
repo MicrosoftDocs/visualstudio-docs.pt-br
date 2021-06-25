@@ -2,7 +2,7 @@
 description: Essa função renomeia um arquivo no sistema de controle do código-fonte.
 title: Função SccRename | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccRename
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9d42e796f1ec2176e9de79ca392aab070581324
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fb3fa392cd4ed31d907fe5913f8d7965a20df05b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105073827"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900454"
 ---
 # <a name="sccrename-function"></a>Função SccRename
 Essa função renomeia um arquivo no sistema de controle do código-fonte.
@@ -37,30 +37,30 @@ SCCRTN SccRename(
 #### <a name="parameters"></a>Parâmetros
  pvContext
 
-no A estrutura de contexto do plug-in de controle do código-fonte.
+[in] A estrutura de contexto de plug-in do controle do código-fonte.
 
  hWnd
 
-no Um identificador para a janela do IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornecer.
+[in] Um alça para a janela IDE que o plug-in de controle do código-fonte pode usar como um pai para qualquer caixa de diálogo que ele fornece.
 
- lpFileName
+ Lpfilename
 
-no O nome de arquivo totalmente qualificado do arquivo que está sendo renomeado.
+[in] O nome de arquivo totalmente qualificado do arquivo que está sendo renomeado.
 
  lpNewName
 
-no O novo nome totalmente qualificado. Se o caminho do diretório for diferente, o arquivo terá sido movido de um subdiretório para outro.
+[in] O novo nome totalmente qualificado. Se o caminho do diretório for diferente, o arquivo foi movido de um subdiretório para outro.
 
 ## <a name="return-value"></a>Valor Retornado
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
 |SCC_OK|A operação de renomeação foi concluída com êxito.|
 |SCC_E_PROJNOTOPEN|O projeto não está aberto sob controle do código-fonte.|
-|SCC_E_FILENOTCONTROLLED|O arquivo não está no controle do código-fonte.|
-|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou de contenção.|
-|SCC_E_NOTAUTHORIZED|O usuário não está autorizado a concluir esta operação.|
+|SCC_E_FILENOTCONTROLLED|O arquivo não está sob controle do código-fonte.|
+|SCC_E_ACCESSFAILURE|Houve um problema ao acessar o sistema de controle do código-fonte, provavelmente devido a problemas de rede ou contenção.|
+|SCC_E_NOTAUTHORIZED|O usuário não está autorizado a concluir essa operação.|
 |SCC_E_COULDNOTCREATEPROJECT|Não foi possível criar o projeto como parte do processo de renomeação.|
 |SCC_E_OPNOTPERFORMED|A operação não foi executada.|
 |SCC_E_NONSPECIFICERROR|Ocorreu um erro não especificado ou geral.|

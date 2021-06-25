@@ -3,19 +3,19 @@ title: Referência de esquema de manifesto de modelo do Visual Studio | Microsof
 description: Esta referência de esquema descreve o formato dos arquivos de manifesto do modelo do Visual Studio que são gerados para modelos de projeto ou item do Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: bc7d0a81-0df5-41a9-a912-1b30e5da1d13
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 033e735b93a534164d96cf47d6412c609525ad8f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 259d2dd050f4681053f331bfd4ec39dd7b214059
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062493"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905378"
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Referência de esquema de manifesto de modelo do Visual Studio
 Este esquema descreve o formato dos arquivos de manifesto do modelo do Visual Studio (*. vstman*) que são gerados para modelos de projeto ou item do Visual Studio. O esquema também descreve o local e outras informações relevantes sobre o modelo.
@@ -51,7 +51,7 @@ Este esquema descreve o formato dos arquivos de manifesto do modelo do Visual St
 
 ### <a name="child-elements"></a>Elementos filho
 
-- **RelativePathOnDisk**: o caminho relativo do arquivo de modelo no disco. Esse local também define o posicionamento do modelo na árvore de modelos mostrada na caixa de diálogo **novo projeto** ou **novo item** . Para modelos implantados como um diretório e arquivos individuais, esse caminho refere-se ao diretório que contém os arquivos de modelo. Para modelos implantados como um arquivo *. zip* , esse caminho deve ser o caminho para o arquivo *. zip* .
+- **RelativePathOnDisk**: o caminho relativo do arquivo de modelo no disco. Esse local também define o posicionamento do modelo na árvore de modelos mostrada na caixa de diálogo **novo projeto** ou **novo item** . Para modelos implantados como um diretório e arquivos individuais, esse caminho refere-se ao diretório que contém os arquivos de modelo. Para modelos implantados como um arquivo de *.zip* , esse caminho deve ser o caminho para o arquivo de *.zip* .
 
 - * * VSTemplateHeader: um elemento [TemplateData](../extensibility/templatedata-element-visual-studio-templates.md) que descreve o cabeçalho.
 

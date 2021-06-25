@@ -3,7 +3,7 @@ title: Referência do esquema de extensão do VSIX 2,0 | Microsoft Docs
 description: O esquema de extensão do VSIX 2,0 define o formato de arquivo para um arquivo de manifesto de implantação do VSIX, que descreve o conteúdo de um pacote do VSIX.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - vsix
 - extension schema
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1b94c7b2cacb7ad78031721156bdd90cb666c4f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 66393bbe6383fcc6cae942a3d7e86f1d701a9634
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062285"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905235"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>Referência do esquema de extensão do VSIX 2,0
 Um arquivo de manifesto de implantação do VSIX descreve o conteúdo de um pacote do VSIX. O formato de arquivo é regido por um esquema. A versão 2,0 deste esquema dá suporte à adição de tipos e atributos personalizados.  O esquema do manifesto é extensível. O carregador de manifesto ignora elementos e atributos XML que ele não entende.
@@ -61,9 +61,9 @@ Um arquivo de manifesto de implantação do VSIX descreve o conteúdo de um paco
 
 - `<MoreInfo>` -Este elemento opcional é uma URL para uma página online que contém uma descrição completa deste pacote. O protocolo deve ser especificado como http.
 
-- `<License>` -Esse elemento opcional é um caminho relativo para um arquivo de licença (. txt,. rtf) contido no pacote.
+- `<License>` -Esse elemento opcional é um caminho relativo para um arquivo de licença (.txt,. rtf) contido no pacote.
 
-- `<ReleaseNotes>` -Esse elemento opcional é um caminho relativo para um arquivo de notas de versão contido no pacote (. txt,. rtf) ou outra URL para um site que exibe as notas de versão.
+- `<ReleaseNotes>` -Esse elemento opcional é um caminho relativo para um arquivo de notas de versão contido no pacote (.txt,. rtf) ou outra URL para um site que exibe as notas de versão.
 
 - `<Icon>` -Esse elemento opcional é um caminho relativo para um arquivo de imagem (png, BMP, JPEG, ico) contido no pacote. A imagem do ícone deve ter 32x32 pixels (ou será reduzida a esse tamanho) e aparece na interface do usuário do ListView. Se nenhum `Icon` elemento for especificado, a interface do usuário usará um padrão.
 
@@ -112,86 +112,86 @@ Um arquivo de manifesto de implantação do VSIX descreve o conteúdo de um paco
 
     - Microsoft. VisualStudio. VSWinExpress
 
-    - Microsoft. VisualStudio. VSLS
+    - Microsoft.VisualStudio.VSLS
 
     - My.Shell.App
 
-  - `Version` -Este atributo especifica um intervalo de versão com as versões mínima e máxima com suporte deste SKU. Um pacote pode detalhar as versões dos SKUs aos quais ele dá suporte. A notação do intervalo de versões é [10,0-11,0], em que
+  - `Version` – Esse atributo especifica um intervalo de versão com as versões mínima e máxima com suporte deste SKU. Um pacote pode detalhar as versões das SKUs compatíveis. A notação de intervalo de versão é [10.0 - 11.0], em que
 
-    - [-versão mínima inclusiva.
+    - [ - versão mínima inclusiva.
 
     - ] – versão máxima inclusiva.
 
-    - (-versão mínima exclusiva.
+    - ( – versão mínima exclusiva.
 
-    - )-versão máxima exclusiva.
+    - ) – versão máxima exclusiva.
 
-    - Única versão #-somente a versão especificada.
+    - Versão única # – somente a versão especificada.
 
     > [!IMPORTANT]
-    > A versão 2,0 do esquema VSIX foi introduzida no Visual Studio 2012. Para usar este esquema, você deve ter o Visual Studio 2012 ou posterior instalado no computador e usar o VSIXInstaller.exe que faz parte desse produto. Você pode direcionar versões anteriores do Visual Studio com um Visual Studio 2012 ou VSIXInstaller posterior, mas apenas usando as versões posteriores do instalador.
+    > A versão 2.0 do esquema VSIX foi introduzida no Visual Studio 2012. Para usar esse esquema, você deve ter Visual Studio 2012 ou posterior instalado no computador e usar o VSIXInstaller.exe que faz parte desse produto. Você pode direcionar versões anteriores do Visual Studio com um Visual Studio 2012 ou posterior VSIXInstaller, mas apenas usando as versões posteriores do instalador.
 
-    Os números de versão do Visual Studio 2017 podem ser encontrados em [números de compilação do Visual Studio e datas de lançamento](../install/visual-studio-build-numbers-and-release-dates.md).
+    Visual Studio números de versão 2017 podem ser encontrados em Visual Studio números de build e [datas de lançamento.](../install/visual-studio-build-numbers-and-release-dates.md)
 
-    Ao expressar a versão para versões do Visual Studio 2017, a versão secundária deve ser sempre **0**. Por exemplo, o Visual Studio 2017 versão 15.3.26730.0 deve ser expresso como [15.0.26730.0, 16.0). Isso só é necessário para o Visual Studio 2017 e números de versão posteriores.
+    Ao expressar a versão para Visual Studio 2017, a versão secundária sempre deve ser **0**. Por exemplo, Visual Studio 2017 versão 15.3.26730.0 deve ser expressa como [15.0.26730.0,16.0). Isso só é necessário para Visual Studio 2017 e números de versão posteriores.
 
-  - `AnyAttribute*` -O `<InstallationTarget>` elemento permite um conjunto de atributos encerrado que é exposto em tempo de execução como um dicionário de pares nome-valor.
+  - `AnyAttribute*` - O elemento permite um conjunto aberto de atributos que é exposto em tempo de operação `<InstallationTarget>` como um dicionário de pares nome-valor.
 
 ### <a name="dependencies-element"></a>Elemento Dependencies
- Esse elemento contém uma lista de dependências que esse pacote declara. Se qualquer dependência for especificada, esses pacotes (identificados por seu `Id` ) deverão ter sido instalados antes.
+ Esse elemento contém uma lista de dependências que esse pacote declara. Se alguma dependência for especificada, esses pacotes (identificados por `Id` seu ) deverão ter sido instalados antes.
 
-- `<Dependency>` elemento-esse elemento filho tem os seguintes atributos:
+- `<Dependency>` elemento – esse elemento filho tem os seguintes atributos:
 
-  - `Id` -Esse atributo deve ser uma ID exclusiva para o pacote dependente. Esse valor de identidade deve corresponder ao `<Metadata><Identity>Id` atributo de um pacote no qual este pacote é dependente. O `Id` atributo segue a Convenção de namespace: Company.Product.Feature.Name. O atributo pode conter apenas caracteres alfanuméricos e é limitado a 100 caracteres.
+  - `Id` - Esse atributo deve ser uma ID exclusiva para o pacote dependente. Esse valor de identidade deve corresponder `<Metadata><Identity>Id` ao atributo de um pacote do que esse pacote depende. O `Id` atributo segue a convenção de namespace: Company.Product.Feature.Name. O atributo pode conter apenas caracteres alfanuméricos e é limitado a 100 caracteres.
 
-  - `Version` -Este atributo especifica um intervalo de versão com as versões mínima e máxima com suporte deste SKU. Um pacote pode detalhar as versões dos SKUs aos quais ele dá suporte. A notação do intervalo de versão é [12,0, 13,0], em que:
+  - `Version` – Esse atributo especifica um intervalo de versão com as versões mínima e máxima com suporte deste SKU. Um pacote pode detalhar as versões das SKUs compatíveis. A notação de intervalo de versão é [12.0, 13.0], em que:
 
-    - [-versão mínima inclusiva.
+    - [ - versão mínima inclusiva.
 
     - ] – versão máxima inclusiva.
 
-    - (-versão mínima exclusiva.
+    - ( – versão mínima exclusiva.
 
-    - )-versão máxima exclusiva.
+    - ) – versão máxima exclusiva.
 
-    - Única versão #-somente a versão especificada.
+    - Versão única # – somente a versão especificada.
 
-  - `DisplayName` -Esse atributo é o nome de exibição do pacote dependente, que é usado em elementos de interface do usuário, como caixas de diálogo e mensagens de erro. O atributo é opcional, a menos que o pacote dependente seja instalado pelo MSI.
+  - `DisplayName` - Esse atributo é o nome de exibição do pacote dependente, que é usado em elementos da interface do usuário, como caixas de diálogo e mensagens de erro. O atributo é opcional, a menos que o pacote dependente seja instalado pelo MSI.
 
-  - `Location` -Esse atributo opcional especifica o caminho relativo dentro desse VSIX para um pacote VSIX aninhado ou uma URL para o local de download da dependência. Esse atributo é usado para ajudar o usuário a localizar o pacote de pré-requisito.
+  - `Location` – Esse atributo opcional especifica o caminho relativo dentro desse VSIX para um pacote VSIX aninhado ou uma URL para o local de download da dependência. Esse atributo é usado para ajudar o usuário a localizar o pacote de pré-requisitos.
 
-  - `AnyAttribute*` -O `Dependency` elemento aceita um conjunto de atributos encerrado que será exposto em tempo de execução como um dicionário de pares nome-valor.
+  - `AnyAttribute*` - O elemento aceita um conjunto aberto de atributos que serão expostos em tempo de executar como um dicionário de pares `Dependency` nome-valor.
 
-### <a name="assets-element"></a>Elemento de ativos
- Esse elemento contém uma lista de `<Asset>` marcas para cada elemento de extensão ou de conteúdo na superfície deste pacote.
+### <a name="assets-element"></a>Elemento Assets
+ Esse elemento contém uma lista de `<Asset>` marcas para cada extensão ou elemento de conteúdo que este pacote apresenta.
 
-- `<Asset>` -Este elemento contém os seguintes atributos e elementos:
+- `<Asset>` - Esse elemento contém os seguintes atributos e elementos:
 
-  - `Type` -Tipo de extensão ou conteúdo representado por este elemento. Cada `<Asset>` elemento deve ter um único `Type` , mas vários `<Asset>` elementos podem ter o mesmo `Type` . Esse atributo deve ser representado como um nome totalmente qualificado, de acordo com as convenções de namespace. Os tipos conhecidos são:
+  - `Type` - Tipo de extensão ou conteúdo representado por esse elemento. Cada `<Asset>` elemento deve ter um único , mas vários elementos podem ter o mesmo `Type` `<Asset>` `Type` . Esse atributo deve ser representado como um nome totalmente qualificado, de acordo com as convenções de namespace. Os tipos conhecidos são:
 
-    1. Microsoft. VisualStudio. VsPackage
+    1. Microsoft.VisualStudio.VsPackage
 
-    2. Microsoft. VisualStudio. MefComponent
+    2. Microsoft.VisualStudio.MefComponent
 
-    3. Microsoft. VisualStudio. ToolboxControl
+    3. Microsoft.VisualStudio.ToolboxControl
 
-    4. Microsoft. VisualStudio. Samples
+    4. Microsoft.VisualStudio.Samples
 
-    5. Microsoft. VisualStudio. ProjectTemplate
+    5. Microsoft.VisualStudio.ProjectTemplate
 
-    6. Microsoft. VisualStudio. ItemTemplate
+    6. Microsoft.VisualStudio.ItemTemplate
 
-    7. Microsoft. VisualStudio. assembly
+    7. Microsoft.VisualStudio.Assembly
 
-       Você pode criar seus próprios tipos e dar a eles nomes exclusivos. Em tempo de execução dentro do Visual Studio, seu código pode enumerar e acessar esses tipos personalizados por meio da API do Gerenciador de extensões.
+       Você pode criar seus próprios tipos e dar a eles nomes exclusivos. No tempo de Visual Studio, seu código pode enumerar e acessar esses tipos personalizados por meio da API do Gerenciador de Extensões.
 
-  - `Path` -o caminho relativo para o arquivo ou a pasta dentro do pacote que contém o ativo.
+  - `Path` - o caminho relativo para o arquivo ou pasta dentro do pacote que contém o ativo.
 
-  - `TargetVersion` -o intervalo de versão ao qual o ativo fornecido se aplica. Usado para enviar várias versões de ativos para versões diferentes do Visual Studio. Requer que o Visual Studio 2017,3 ou mais recente tenha efeito.
+  - `TargetVersion` - o intervalo de versão ao qual o ativo determinado se aplica. Usado para enviar várias versões de ativos para diferentes versões do Visual Studio. Requer Visual Studio 2017.3 ou mais novo para ter efeito.
 
-  - `AnyAttribute*` -Um conjunto de atributos encerrado que é exposto em tempo de execução como um dicionário de pares nome-valor.
+  - `AnyAttribute*` - Um conjunto aberto de atributos que é exposto em tempo de executar como um dicionário de pares nome-valor.
 
-    `<AnyElement>*` -Qualquer conteúdo estruturado é permitido entre uma `<Asset>` marca de início e de fim. Todos os elementos são expostos como uma lista de objetos XmlElement. As extensões do VSIX podem definir metadados específicos de tipo estruturados no arquivo de manifesto e enumerá-los em tempo de execução.
+    `<AnyElement>*` - Qualquer conteúdo estruturado é permitido entre uma `<Asset>` marca de início e de término. Todos os elementos são expostos como uma lista de objetos XmlElement. As extensões VSIX podem definir metadados específicos do tipo estruturado no arquivo de manifesto e enumerá-los em tempo de operação.
 
 ### <a name="sample-manifest"></a>Exemplo de manifesto
 
@@ -223,4 +223,4 @@ Um arquivo de manifesto de implantação do VSIX descreve o conteúdo de um paco
 
 ## <a name="see-also"></a>Confira também
 
-- [Enviar extensões do Visual Studio](../extensibility/shipping-visual-studio-extensions.md)
+- [Enviar Visual Studio extensões](../extensibility/shipping-visual-studio-extensions.md)
