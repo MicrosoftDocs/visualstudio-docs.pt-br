@@ -2,7 +2,7 @@
 description: Essa função retorna recursos adicionais com suporte pelo plug-in de controle do código-fonte.
 title: Função SccGetExtendedCapabilities | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccGetExtendedCapabilities
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca2f2f77c586c5c71658a8f0cab32385eb3f73d3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: cc047fee2c92f47c181aef455b8175a4e7998176
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072995"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905586"
 ---
 # <a name="sccgetextendedcapabilities-function"></a>Função SccGetExtendedCapabilities
 Essa função retorna recursos adicionais com suporte pelo plug-in de controle do código-fonte.
@@ -36,28 +36,28 @@ SCCRTN SccGetExtendedCapabilities(
 ### <a name="parameters"></a>Parâmetros
  pContext
 
-no O ponteiro de contexto do plug-in de controle do código-fonte.
+[in] O ponteiro de contexto do plug-in do controle do código-fonte.
 
  lSccExCaps
 
-no Um sinalizador que especifica um recurso estendido para testar (consulte a tabela de código de funcionalidade estendida em [sinalizadores de capacidade](../extensibility/capability-flags.md) para os possíveis sinalizadores).
+[in] Um sinalizador que especifica uma funcionalidade estendida para a qual testar (consulte a tabela Código de Funcionalidade Estendida em Sinalizadores de funcionalidade [para](../extensibility/capability-flags.md) os possíveis sinalizadores).
 
  pbSupported
 
-fora Retorna um valor diferente de zero ( `TRUE` ) se houver suporte para o recurso especificado; caso contrário, retornará zero ( `FALSE` ).
+[out] Retornará diferente de zero ( ) se a funcionalidade especificada tiver `TRUE` suporte; caso contrário, retornará zero ( `FALSE` ).
 
-## <a name="return-value"></a>Retornar valor
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+## <a name="return-value"></a>Valor retornado
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|SCC_OK|A operação obter funcionalidade foi concluída com êxito.|
-|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Ocorreu um erro desconhecido ou não especificado.|
+|SCC_OK|A operação get capability foi concluída com êxito.|
+|SCC_E_UNKNOWNERROR<br /><br /> SCC_E_NONSPECIFICERROR|Erro desconhecido ou não especificado.|
 
 ## <a name="remarks"></a>Comentários
- Esse método é chamado sob demanda; ou seja, quando um recurso precisa ser testado, esse método é chamado para determinar se há suporte para esse recurso. Apenas um sinalizador por vez é especificado.
+ Esse método é chamado sob demanda; ou seja, quando uma funcionalidade precisa ser testada, esse método é chamado para determinar se há suporte para essa funcionalidade. Apenas um sinalizador de cada vez é especificado.
 
 ## <a name="see-also"></a>Confira também
-- [Funções da API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
+- [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)
 - [Códigos de erro](../extensibility/error-codes.md)
-- [Sinalizadores de capacidade](../extensibility/capability-flags.md)
+- [Sinalizadores de funcionalidade](../extensibility/capability-flags.md)

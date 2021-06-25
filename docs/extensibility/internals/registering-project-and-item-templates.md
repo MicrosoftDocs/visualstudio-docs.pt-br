@@ -3,7 +3,7 @@ title: Registrando modelos de projeto e item | Microsoft Docs
 description: Saiba como o Visual Studio usa informações de registro para seus tipos de projeto para determinar o que mostrar nas caixas de diálogo Adicionar novo projeto e adicionar novo item.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
 - registry, Add New Item dialog box
@@ -16,12 +16,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6f4abe3a8632f4fe9208922aee1ccd92da3dab5
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 8b60022c6adf65d0b0d60d32b4ad7ae72067726d
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062688"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905625"
 ---
 # <a name="registering-project-and-item-templates"></a>Registrando modelos de projeto e item
 Os tipos de projeto devem registrar os diretórios em que os modelos de projeto e de item de projeto estão localizados. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] usa as informações de registro associadas aos tipos de projeto para determinar o que mostrar nas caixas de diálogo **Adicionar novo projeto** e **Adicionar novo item** .
@@ -39,7 +39,7 @@ Os tipos de projeto devem registrar os diretórios em que os modelos de projeto 
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"
 ```
 
-|Nome|Type|Descrição|
+|Nome|Tipo|Descrição|
 |----------|----------|-----------------|
 |@|REG_SZ|Nome padrão dos projetos deste tipo.|
 |DisplayName|REG_SZ|ID de recurso do nome a ser recuperado da DLL satélite registrada em pacotes.|
@@ -57,7 +57,7 @@ Os tipos de projeto devem registrar os diretórios em que os modelos de projeto 
 "SortPriority"=dword:00000064
 ```
 
-| Nome | Type | Descrição |
+| Nome | Tipo | Descrição |
 |--------------------------|-----------| - |
 | @ | REG_SZ | ID do recurso para adicionar modelos de item. |
 | TemplatesDir | REG_SZ | Caminho dos itens de projeto exibidos na caixa de diálogo para o assistente **Adicionar novo item** . |
@@ -84,7 +84,7 @@ Os tipos de projeto devem registrar os diretórios em que os modelos de projeto 
 "SortPriority"=dword:00000064
 ```
 
-|Nome|Type|Descrição|
+|Nome|Tipo|Descrição|
 |----------|----------|-----------------|
 |CommonFindFilesFilter|REG_DWORD|Torna o filtro um dos filtros comuns na caixa de diálogo **localizar nos arquivos** . Os filtros comuns são listados na lista filtro antes dos filtros não marcados como comuns.|
 |CommonOpenFilesFilter|REG_DWORD|Torna o filtro um dos filtros comuns na caixa de diálogo **Abrir arquivo** . Os filtros comuns são listados na lista filtro antes dos filtros não marcados como comuns.|

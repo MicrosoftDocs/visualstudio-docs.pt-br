@@ -2,7 +2,7 @@
 description: Essa função examina uma lista de diretórios totalmente qualificados para seu status atual.
 title: Função SccDirQueryInfo | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccDirQueryInfo
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81087d4f4da3435fb7bc80ec4a965394c7d6c7f3
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 9a3e65fa03c7fc2b6a8ce83ba2bb39250547aadb
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105060322"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904611"
 ---
 # <a name="sccdirqueryinfo-function"></a>Função SccDirQueryInfo
 Essa função examina uma lista de diretórios totalmente qualificados para seu status atual.
@@ -51,7 +51,7 @@ no Uma matriz de caminhos totalmente qualificados dos diretórios a serem consul
 
 [entrada, saída] Uma estrutura de matriz para o plug-in de controle do código-fonte para retornar os sinalizadores de status (consulte o [código de status do diretório](../extensibility/directory-status-code-enumerator.md) para obter detalhes).
 
-## <a name="return-value"></a>Retornar valor
+## <a name="return-value"></a>Valor retornado
  Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|

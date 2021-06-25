@@ -3,19 +3,19 @@ title: Cores e estilo do Visual Studio | Microsoft Docs
 description: Saiba como a experiência do usuário do Visual Studio usa a cor como uma ferramenta de comunicação, em vez de por motivos puramente estéticos.
 ms.custom: SEO-VS-2020
 ms.date: 07/31/2017
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 0e384ea1-4d9e-4307-8884-6e183900732c
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc98e3c2717b14ac1933e5b41269af1efb8e932f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 307a4013c06258524c60619c6eff40e4d64740b6
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089908"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112904481"
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>Cores e estilo para Visual Studio
 
@@ -174,7 +174,7 @@ Você pode associar as cores do Visual Studio por meio de valores exportados par
 
 Para código gerenciado, a biblioteca de estrutura de pacote gerenciada do Shell ( `Microsoft.VisualStudio.Shell.12.0.dll` ) contém algumas classes auxiliares que facilitam o uso de cores com tema.
 
-Os métodos auxiliares na `Microsoft.VisualStudio.Shell.VsColors` classe no MPF incluem `GetThemedGDIColor()` e `GetThemedWPFColor()` . Esses métodos auxiliares retornam o valor de cor de uma entrada de tema como `System.Drawing.Color` ou `System.Windows.Media.Color` , a ser usado em WinForms ou na interface do usuário do WPF.
+Os métodos auxiliares na `Microsoft.VisualStudio.Shell.VsColors` classe no MPF incluem `GetThemedGDIColor()` e `GetThemedWPFColor()` . Esses métodos auxiliares retornam o valor de cor de uma entrada de tema como ou , a ser usado `System.Drawing.Color` `System.Windows.Media.Color` no WinForms ou na interface do usuário do WPF.
 
 ```csharp
 IVsUIShell5 shell5;
@@ -223,14 +223,14 @@ public static System.Windows.Media.Color GetThemedWPFColor(this IVsUIShell5 vsUI
 }
 ```
 
-A classe também pode ser usada para obter identificadores de VSCOLOR para uma determinada chave de recurso de cor do WPF ou vice-versa.
+A classe também pode ser usada para obter identificadores VSCOLOR para uma determinada chave de recurso de cor do WPF ou vice-versa.
 
 ```csharp
 public static string GetColorBaseKey(int vsSysColor);
 public static bool TryGetColorIDFromBaseKey(string baseKey, out int vsSysColor);
 ```
 
-Os métodos da `VsColors` classe consultam o serviço VSColor para retornar o valor de cor a cada vez que eles são chamados. Para obter um valor de cor como `System.Drawing.Color` , uma alternativa com melhor desempenho é usar os métodos da `Microsoft.VisualStudio.PlatformUI.VSThemeColor` classe, que armazena em cache os valores de cor obtidos do serviço VSColor. A classe assina internamente os eventos de mensagens de difusão do Shell e descarta o valor em cache quando ocorre um evento de alteração de tema. Além disso, a classe fornece um. Evento amigável de rede para assinar alterações de tema. Use o `ThemeChanged` evento para adicionar um novo manipulador e use o `GetThemedColor()` método para obter valores de cor para o `ThemeResourceKeys` de interesse. Um código de exemplo poderia ser assim:
+Os métodos de classe `VsColors` consultam o serviço VSColor para retornar o valor de cor sempre que são invocados. Para obter um valor de cor como , uma alternativa com melhor desempenho é usar os métodos da classe , que armazena em cache os valores de cor obtidos do `System.Drawing.Color` `Microsoft.VisualStudio.PlatformUI.VSThemeColor` serviço VSColor. A classe assina internamente eventos de mensagens de difusão de shell e descarta o valor armazenado em cache quando ocorre um evento de alteração de tema. Além disso, a classe fornece um . Evento amigável do NET para assinar alterações de tema. Use o evento para adicionar um novo manipulador e use o método `ThemeChanged` para obter valores de cor para o de `GetThemedColor()` `ThemeResourceKeys` interesse. Um código de exemplo pode ter esta aparência:
 
 ```csharp
 public MyWindowPanel()
@@ -269,126 +269,126 @@ protected override void Dispose(bool disposing)
 }
 ```
 
-## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a> Escolhendo cores de Alto Contraste
+## <a name="choosing-high-contrast-colors"></a><a name="BKMK_ChoosingHighContrastColors"></a> Escolhendo Alto Contraste cores
 
 ### <a name="overview"></a>Visão geral
 
-O Windows usa vários temas de nível de sistema de alto contraste que aumentam o contraste de cores de texto, planos de fundo e imagens, tornando os elementos aparentemente mais distintos na tela. Por motivos de acessibilidade, é importante que os elementos de interface do Visual Studio respondam corretamente quando os usuários mudarem para um tema de Alto Contraste.
+O Windows usa vários temas de alto contraste no nível do sistema que aumentam o contraste de cores de texto, telas de fundo e imagens, fazendo com que os elementos apareçam mais distintos na tela. Por motivos de acessibilidade, é importante que Visual Studio de interface responda corretamente quando os usuários alternam para um Alto Contraste tema.
 
-Apenas algumas cores do sistema podem ser usadas para Alto Contraste temas. Ao escolher os nomes das cores do sistema, lembre-se das seguintes dicas:
+Apenas algumas cores do sistema podem ser usadas para Alto Contraste temas. Ao escolher os nomes de cores do sistema, lembre-se das seguintes dicas:
 
-- **Escolha as cores do sistema que têm o mesmo significado semântico** do elemento que você está colorando. Por exemplo, se você estiver escolhendo uma cor de alto contraste para texto em uma janela, use WindowText e não ControlText.
+- **Escolha cores do sistema que têm o mesmo significado semântico** que o elemento que você está colorindo. Por exemplo, se você estiver escolhendo uma cor de alto contraste para texto em uma janela, use WindowText e não ControlText.
 
-- **Escolha pares em primeiro plano/plano de fundo** ou você não terá certeza de que sua escolha de cor funcionará em todos os temas de alto contraste.
+- **Escolha os pares de primeiro plano/plano** de fundo juntos ou você não terá certeza de que sua escolha de cor funcionará em todos os Alto Contraste temas.
 
-- **Determine quais partes da sua interface do usuário são as mais importantes e certifique-se de que as áreas de conteúdo irão se destacar.** Você perderá muitos detalhes de que as diferenças sutis no matiz de cor normalmente diferenciam, de modo que o uso de cores de borda forte é comum para definir áreas de conteúdo, pois não há variantes de cor para áreas de conteúdo diferentes.
+- **Determine quais partes da interface do usuário são as mais importantes e verifique se as áreas de conteúdo se destacarão.** Você perderá muitos detalhes que diferenças sutis no matiz de cores normalmente distinguiriam, portanto, o uso de cores de borda fortes é comum para definir áreas de conteúdo, pois não há variantes de cores para diferentes áreas de conteúdo.
 
 ### <a name="system-color-set"></a>Conjunto de cores do sistema
 
-A tabela no [blog da equipe do WPF: referência de SystemColors](/archive/blogs/wpf/systemcolors-reference) indica o conjunto completo de nomes de cores do sistema e o matiz correspondente exibido em cada tema.
+A tabela no Blog da Equipe do [WPF: Referência de SystemColors](/archive/blogs/wpf/systemcolors-reference) indica o conjunto completo de nomes de cores do sistema e os matizs correspondentes exibidos em cada tema.
 
-Ao aplicar esse conjunto limitado de cores à sua interface do usuário, *espera-se que você perca detalhes sutis que estavam presentes nos temas "normais"*. Aqui está um exemplo de interface do usuário com cores de cinza sutis que são usadas para distinguir áreas dentro de uma janela de ferramentas. Quando emparelhado com a mesma janela exibida no modo de Alto Contraste, você pode ver que todos os planos de fundo são o mesmo matiz e as bordas dessas áreas são indicadas por borda sozinha:
+Ao aplicar esse conjunto limitado de cores à interface do usuário, espera-se que você perca detalhes sutis que estavam presentes nos *temas "normais".* Aqui está um exemplo de interface do usuário com cores cinza sutis que são usadas para distinguir áreas dentro de uma janela de ferramentas. Quando emparelhadas com a mesma janela exibida no modo Alto Contraste, você pode ver que todas as telas de fundo são do mesmo matiz e as bordas dessas áreas são indicadas apenas pela borda:
 
-![Exemplo de como os detalhes sutis são perdidos no Alto Contraste](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />Exemplo de como os detalhes sutis são perdidos no Alto Contraste
+![Exemplo de como detalhes sutis são perdidos Alto Contraste](../../extensibility/ux-guidelines/media/030303-a_propertieswindow.png "030303-a_PropertiesWindow")<br />Exemplo de como detalhes sutis são perdidos Alto Contraste
 
 #### <a name="choosing-text-colors-in-an-editor"></a>Escolhendo cores de texto em um editor
 
-O texto colorido é usado em um editor ou em uma superfície de design para indicar o significado, como permitir a fácil identificação de grupos de itens semelhantes. No entanto, em um tema de Alto Contraste, você não tem a capacidade de diferenciar entre mais de três cores de texto. WindowText, GrayText e HotTrackText são as únicas cores disponíveis em superfícies de WindowBackground. Como não é possível usar mais de três cores, escolha cuidadosamente as diferenças mais importantes que você deseja exibir quando estiver no modo de Alto Contraste.
+O texto colorido é usado em um editor ou em uma superfície de design para indicar significado, como permitir a fácil identificação de grupos de itens semelhantes. Em um Alto Contraste, no entanto, você não tem a capacidade de diferenciar entre mais de três cores de texto. WindowText, GrayText e HotTrackText são as únicas cores disponíveis nas superfícies WindowBackground. Como você não pode usar mais de três cores, escolha cuidadosamente as diferenças mais importantes que você deseja exibir quando estiver Alto Contraste modo.
 
-Matizes para cada um dos nomes de token permitidos em uma superfície de editor, como aparecem em cada tema de Alto Contraste:
+Matizes para cada um dos nomes de token permitidos em uma superfície do editor, conforme eles aparecem em cada Alto Contraste tema:
 
-![Comparação do editor de Alto Contraste](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303-b_HCEditorComparison")<br />Comparação do editor de Alto Contraste
+![Alto Contraste do editor](../../extensibility/ux-guidelines/media/030303-b_hceditorcomparison.png "030303-b_HCEditorComparison")<br />Alto Contraste do editor
 
-Exemplos da superfície do editor no tema azul:
+Exemplos da superfície do editor no tema Azul:
 
-![Editor em tema azul](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Editor em tema azul
+![Tema do Editor em Azul](../../extensibility/ux-guidelines/media/030303-c_editorblue.png "030303-c_EditorBlue")<br />Tema do Editor em Azul
 
-![Editor no tema do #1 Alto Contraste](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Editor no tema do #1 Alto Contraste
+![Editor no Alto Contraste #1 tema](../../extensibility/ux-guidelines/media/030303-d_editorhc1.png "030303-d_EditorHC1")<br />Editor no Alto Contraste #1 tema
 
 ### <a name="usage-patterns"></a>Padrões de uso
 
-Muitos elementos comuns da interface do usuário já têm Alto Contraste cores definidas. Você pode fazer referência a esses padrões de uso ao escolher seus próprios nomes de cores do sistema, para que os elementos da interface do usuário sejam consistentes com componentes semelhantes.
+Muitos elementos comuns da interface do usuário já têm Alto Contraste cores definidas. Você pode referenciar esses padrões de uso ao escolher seus próprios nomes de cores do sistema, para que os elementos da interface do usuário sejam consistentes com componentes semelhantes.
 
 | Cor do sistema | Uso |
 | --- | --- |
-| ActiveCaption | -Glifos de botão de janela rafted e IDE ativos ao focalizar e pressionar<br />-Plano de fundo da barra de título para Windows IDE e rafted<br />-Plano de fundo da barra de status padrão |
-| ActiveCaptionText | -IDE ativo e janelas rafted para o primeiro plano da barra de título (texto e glifos)<br />-Plano de fundo e borda de botões de janela ativas ao focalizar e pressionar |
-| Control | -Caixa de combinação, lista suspensa e controle da pesquisa padrão e plano de fundo desabilitado, incluindo o botão suspenso<br />-Plano de fundo do botão de destino do Dock<br />-Plano de fundo da barra de comandos<br />-Plano de fundo da janela de ferramentas |
-| ControlDark | -Segundo plano do IDE<br />-Menus e separadores de barra de comandos<br />-Borda da barra de comandos<br />-Sombras do menu<br />-Borda da janela de ferramentas padrão e separador e separador<br />-Plano de fundo do botão de estouro de documento<br />-Borda de glifo de destino de Dock |
-| ControlDarkDark |-Sem foco, janela da guia do documento selecionada |
-| ControlLight |-Ocultar borda da Tabulação automaticamente<br />-Borda da lista suspensa e caixa de combinação<br />-Borda e plano de fundo de destino |
-| ControlLightLight | -Borda provisionada, selecionada e focada |
-| ControlText | -Glifo da lista suspensa e caixa de combinação<br />-Texto da guia desmarcado da janela de ferramentas |
-| GrayText |-Caixa de combinação e lista suspensa borda desabilitada, glifo suspenso, texto e item de menu de texto<br />-Texto de menu desabilitado<br />-Texto do cabeçalho ' opções de pesquisa ' do controle de pesquisa<br />-Separador de seção de controle de pesquisa |
-| Realce | -Todos os planos de fundo e bordas em foco e pressionado, exceto a caixa suspensa de botão de combinação e a borda do botão de estouro de documento<br />-Planos de fundo do item selecionado |
-| HighlightText | -Todos os planos de fundo em foco e pressionados (texto e glifos)<br />-Janela de ferramentas focadas e janela de controle do documento<br />-Borda da barra de título da janela de ferramentas focada<br />-Primeiro plano de guia provisório selecionado e com foco<br />-Borda do botão de estouro de documento bem ao focalizar e pressionar<br />-Borda do ícone selecionado|
-| HotTrack | -Plano de fundo do polegar da barra de rolagem e borda ao pressionar<br />-Glifo da seta da barra de rolagem ao pressionar |
-| InactiveCaption | -Glifos de botão de janela rafted e IDE inativo em foco<br />-Plano de fundo da barra de título para Windows IDE e rafted<br />-Plano de fundo de controle de pesquisa desabilitado |
-| InactiveCaptionText | -Rafted de fundo de barra de título do IDE inativo e do Windows (texto e glifos)<br />-Plano de fundo e borda de botões de janela inativos em foco<br />-Plano de fundo e borda do botão da janela de ferramentas sem foco<br />-Primeiro plano de controle de pesquisa desabilitado |
-| Menu | -Plano de fundo do menu suspenso<br />-Plano de fundo de marca de seleção marcado e desabilitado |
-| MenuText | -Borda do menu suspenso<br />-Marcas de seleção<br />-Glifos de menu<br />-Texto do menu suspenso<br />-Borda do ícone selecionado |
-| Rolagem | -Barra de rolagem e tela de fundo da seta de rolagem, todos os Estados |
-| Janela | -Ocultar plano de fundo da guia automaticamente<br />-Plano de fundo de barra de menus e de prateleira de comandos<br />-Plano de fundo da guia da janela do documento desfocado ou não selecionado, para guias aberta e provisória<br />-Plano de fundo da barra de título da janela de ferramentas sem foco<br />-Plano de fundo da guia janela da ferramenta, selecionado e não selecionado |
-| WindowFrame | -Borda do IDE |
-| WindowText | -Primeiro plano de tabulação de ocultar automaticamente<br />-Primeiro plano da guia da janela de ferramentas selecionado<br />-Guia de janela do documento desfocada e o primeiro plano de tabulação não focalizado ou não selecionado<br />-Árvore de exibição padrão de primeiro plano e passar o mouse sobre o glifo não selecionado<br />-Borda da guia selecionada da janela de ferramentas<br />-Plano de fundo, borda e glifo da barra de rolagem |
+| Activecaption | – IDE ativo e glifos de botão de janela remada ao passar o mouse e pressionar<br />– Plano de fundo da barra de título para IDE e janelas remadas<br />– Plano de fundo da barra de status padrão |
+| Activecaptiontext | - IDE ativo e janelas remadas para primeiro plano da barra de título (texto e glifos)<br />– Plano de fundo e borda dos botões de janela ativos ao passar o mouse e pressionar |
+| Control | - Caixa de combinação, lista de listas listadas e padrão do controle de pesquisa e plano de fundo desabilitado, incluindo o botão de lista de listas<br />– Plano de fundo do botão de destino de encaixe<br />- Plano de fundo da barra de comandos<br />– Plano de fundo da janela de ferramentas |
+| Controldark | - Plano de fundo do IDE<br />– Separadores de menu e barra de comandos<br />- Borda da barra de comandos<br />– Sombras de menu<br />– Padrão da guia janela de ferramentas e borda de foco e separador<br />– Plano de fundo do botão de estouro do documento<br />- Encaixe da borda do glifo de destino |
+| Controldarkdark |- Janela de guia do documento não desfocedida e selecionada |
+| Controllight |- Ocultar automaticamente a borda da guia<br />– Caixa de combinação e borda da lista de listas listada<br />– Plano de fundo e borda de destino de encaixe |
+| Controllightlight | – Borda selecionada e focada |
+| Controltext | – Caixa de combinação e glifo de lista de listas listada<br />– Texto de guia não selecionado da janela de ferramentas |
+| Graytext |- Caixa de combinação e lista de menus desabilitados borda, glifo suspenso, texto e texto do item de menu<br />- Texto do menu desabilitado<br />- Texto do controle de pesquisa 'opções de pesquisa'<br />– Separador de seção de controle de pesquisa |
+| Realce | - Todas as bordas e plano de fundo pressionados e de foco, exceto o plano de fundo do botão de combinação e a borda do botão de estouro da caixa de combinação<br />– Plano de fundo do item selecionado |
+| Highlighttext | - Todos os focos e primeiro plano pressionados (texto e glifos)<br />– Janela de ferramentas focalizada e primeiro plano do controle de janela da guia do documento<br />– Borda da barra de título da janela de ferramentas voltada<br />– Primeiro plano da guia focalizada selecionada<br />– Documentar a borda do botão de estouro ao passar o mouse e pressionar<br />– Borda do ícone selecionado|
+| Hottrack | – Tela de fundo e borda da barra de rolagem pressionada<br />– Glifo de seta da barra de rolagem ao pressionar |
+| Inactivecaption | – IDE inativo e glifos de botão de janela remada ao passar o mouse<br />– Plano de fundo da barra de título para IDE e janelas remadas<br />– Plano de fundo do controle de pesquisa desabilitado |
+| Inactivecaptiontext | - IDE inativo e primeiro plano da barra de título de janelas remadas (texto e glifos)<br />– Plano de fundo e borda dos botões de janela inativos ao passar o mouse<br />– Plano de fundo e borda do botão da janela de ferramentas desfocados<br />– Primeiro plano do controle de pesquisa desabilitado |
+| Menu | - Plano de fundo do menu suspenso<br />– Plano de fundo da marca de seleção marcada e desabilitada |
+| Menutext | - Borda do menu suspenso<br />– Marcas de verificação<br />- Glifos de menu<br />- Texto do menu suspenso<br />– Borda do ícone selecionado |
+| Scrollbar | – Tela de fundo da seta da barra de rolagem e da barra de rolagem, todos os estados |
+| Janela | - Ocultar automaticamente a plano de fundo da guia<br />- Barra de menus e plano de fundo da prateleira do comando<br />– Plano de fundo da guia da janela de documentos não selecionado ou desfocado e borda do documento, para guias abertas e provisoriamente<br />– Plano de fundo da barra de título da janela de ferramentas desfocado<br />– Plano de fundo da guia janela de ferramentas, selecionado e não selecionado |
+| Windowframe | - Borda do IDE |
+| Windowtext | - Primeiro plano da guia ocultar automaticamente<br />– Primeiro plano da guia da janela de ferramentas selecionada<br />- Guia da janela de documentos desfoque e primeiro plano da guia desfoques ou não selecionados<br />- Primeiro plano padrão do modo de exibição de árvore e passe o mouse sobre o glifo não selecionado<br />– Borda da guia selecionada da janela de ferramentas<br />– Tela de fundo, borda e glifo da barra de rolagem |
 
 ## <a name="exposing-colors-for-end-users"></a><a name="BKMK_ExposingColorsForEndUsers"></a> Expondo cores para usuários finais
 
 ### <a name="overview"></a>Visão geral
 
-Às vezes, você desejará permitir que o usuário final Personalize sua interface do usuário, como quando você está criando um editor de código ou uma superfície de design. A maneira mais comum de fazer isso é usando a caixa de diálogo **&gt; Opções de ferramentas** . A menos que você tenha uma interface do usuário altamente especializada que exija controles especiais, a maneira mais fácil de apresentar a personalização é por meio da página **fontes e cores** na seção **ambiente** da caixa de diálogo. Para cada elemento que você expõe para personalização, o usuário pode optar por alterar a cor do primeiro plano, a cor do plano de fundo ou ambos.
+Às vezes, você deseja permitir que o usuário final personalize sua interface do usuário, como quando você está criando um editor de código ou uma superfície de design. A maneira mais comum de fazer isso é usando a caixa de **diálogo Opções &gt; de** Ferramentas. A menos que você tenha uma interface do usuário altamente especializada que exija **controles**  especiais, a maneira mais fácil de apresentar a personalização é por meio da página Fontes e Cores na seção Ambiente da caixa de diálogo. Para cada elemento que você expõe para personalização, o usuário pode optar por alterar a cor de primeiro plano, a cor da tela de fundo ou ambos.
 
 ### <a name="building-a-vspackage-for-your-customizable-colors"></a>Criando um VSPackage para suas cores personalizáveis
 
-Um VSPackage pode controlar as fontes e cores por meio de categorias personalizadas e exibir itens na página de propriedades fontes e cores. Ao usar esse mecanismo, o VSPackages deve implementar a interface [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) e suas interfaces associadas.
+Um VSPackage pode controlar as fontes e cores por meio de categorias personalizadas e exibir itens na página de propriedades Fontes e Cores. Ao usar esse mecanismo, o VSPackages deve implementar a interface [IVsFontAndColorDefaultsProvider](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider) e suas interfaces associadas.
 
-Em princípio, esse mecanismo pode ser usado para modificar todos os itens de exibição existentes e as categorias que os contêm. No entanto, ele não deve ser usado para modificar a categoria do editor de texto ou seus itens de exibição. Para obter mais informações sobre a categoria editor de texto, consulte [visão geral de fonte e cor](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015).
+Em princípio, esse mecanismo pode ser usado para modificar todos os itens de exibição existentes e as categorias que os contêm. No entanto, ele não deve ser usado para modificar a categoria editor de texto ou seus itens de exibição. Para obter mais informações sobre a categoria Editor de Texto, consulte [Visão geral de fonte e cor.](/previous-versions/visualstudio/visual-studio-2015/extensibility/font-and-color-overview?preserve-view=true&view=vs-2015)
 
-Para implementar categorias personalizadas ou itens de exibição, um VSPackage deve:
+Para implementar categorias personalizadas ou exibir Itens, um VSPackage deve:
 
-- **Crie ou identifique categorias no registro.** A implementação do IDE da página de propriedades **fontes e cores** usa essas informações para consultar corretamente o serviço que dá suporte a uma determinada categoria.
+- **Crie ou identifique categorias no Registro.** A implementação do IDE da página de propriedades **Fontes** e Cores usa essas informações para consultar corretamente o serviço que dá suporte a uma determinada categoria.
 
-- **Criar ou identificar grupos no registro (opcional).** Pode ser útil definir um grupo, que representa a União de duas ou mais categorias. Se um grupo for definido, o IDE mesclará automaticamente subcategorias e distribuirá itens de exibição dentro do grupo.
+- **Criar ou identificar grupos no Registro (opcional).** Pode ser útil definir um grupo, que representa a união de duas ou mais categorias. Se um grupo for definido, o IDE mesclará automaticamente subcategorias e distribuirá itens de exibição dentro do grupo.
 
-- **Implemente o suporte a IDE.**
+- **Implemente o suporte ao IDE.**
 
-- **Lide com alterações de fontes e cores.**
+- **Manipular alterações de fonte e cor.**
 
 #### <a name="to-create-or-identify-categories"></a>Para criar ou identificar categorias
 
-Construa um tipo especial de entrada de registro de categoria em `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]` onde `<Category>` é o nome não localizado da categoria.
+Construa um tipo especial de entrada de registro de categoria em em que é o nome `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<Category\>]` `<Category>` não localizado da categoria.
 
-Preencha o registro com dois valores:
+Preencha o Registro com dois valores:
 
-| Nome | Type | Dados | Descrição |
+| Nome | Tipo | Dados | Descrição |
 | --- | --- | --- | --- |
 | Categoria | REG_SZ | GUID | Um GUID criado para identificar a categoria |
 | Pacote | REG_SZ | GUID | O GUID do serviço VSPackage que dá suporte à categoria |
 
- O serviço especificado no registro deve fornecer uma implementação de [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) para a categoria correspondente.
+ O serviço especificado no Registro deve fornecer uma implementação [de IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) para a categoria correspondente.
 
 #### <a name="to-create-or-identify-groups"></a>Para criar ou identificar grupos
 
-Construa um tipo especial de entrada de registro de categoria em `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]` onde `<group>` é o nome não localizado do grupo.
+Construa um tipo especial de entrada de registro de categoria em em que é o nome `[HKLM\SOFTWARE\Microsoft \Visual Studio\\<Visual Studio version\>\FontAndColors\\<group\>]` `<group>` não localizado do grupo.
 
-Preencha o registro com dois valores:
+Preencha o Registro com dois valores:
 
-| Nome | Type | Dados | Descrição |
+| Nome | Tipo | Dados | Descrição |
 |--- | --- | --- | --- |
 | Categoria | REG_SZ | GUID | Um GUID criado para identificar a categoria |
 | Pacote | REG_SZ | GUID | O GUID do serviço VSPackage que dá suporte à categoria |
 
-O serviço especificado no registro deve fornecer uma implementação de <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> para o grupo correspondente.
+O serviço especificado no Registro deve fornecer uma implementação de <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> para o grupo correspondente.
 
 ![Implementação de IVsFontAndColorGroup](../../extensibility/ux-guidelines/media/0304-a_fontandcolorgroup.png "0304-a_FontAndColorGroup")<br />Implementação de `IVsFontAndColorGroup`
 
-### <a name="to-implement-ide-support"></a>Para implementar o suporte a IDE
+### <a name="to-implement-ide-support"></a>Para implementar o suporte ao IDE
 
-Implemente [GetObject](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject), que retorna uma interface [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) ou uma <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> interface para o IDE para cada GUID de categoria ou grupo fornecido.
+Implemente [GetObject](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaultsprovider.getobject), que retorna uma interface [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) ou uma interface para o IDE para cada categoria ou <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> GUID de grupo fornecido.
 
-Para cada categoria com suporte, um VSPackage implementa uma instância separada da interface [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) .
+Para cada categoria compatível, um VSPackage implementa uma instância separada da interface [IVsFontAndColorDefaults.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults)
 
-Os métodos implementados por meio de [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) devem fornecer o IDE com:
+Os métodos implementados por [meio de IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) devem fornecer o IDE com:
 
 - Listas de itens de exibição na categoria
 
@@ -399,40 +399,40 @@ Os métodos implementados por meio de [IVsFontAndColorDefaults](/dotnet/api/micr
 > [!NOTE]
 > Cada categoria deve conter pelo menos um item de exibição.
 
-O IDE usa a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> interface para definir uma União de várias categorias.
+O IDE usa a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> interface para definir uma união de várias categorias.
 
 Sua implementação fornece o IDE com:
 
-- Uma lista das categorias que compõem um determinado grupo
+- Uma lista das categorias que comem um determinado grupo
 
-- Acesso a instâncias do [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) que dão suporte a cada categoria dentro do grupo
+- Acesso a instâncias de [IVsFontAndColorDefaults](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolordefaults) que suportam cada Categoria dentro do grupo
 
 - Nomes de grupo localizáveis
 
 #### <a name="updating-the-ide"></a>Atualizando o IDE
 
-O IDE armazena em cache informações sobre as configurações de fonte e cor. Portanto, após qualquer modificação da configuração de fonte e cor do IDE, garantir que o cache esteja atualizado é uma prática recomendada.
+O IDE armazena em cache informações sobre as configurações de Fonte e Cor. Portanto, após qualquer modificação da configuração de Fonte e Cor do IDE, garantir que o cache está atualizado é uma melhor prática.
 
 A atualização do cache é feita por meio da interface [IvsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) e pode ser executada globalmente ou apenas em itens selecionados.
 
-### <a name="handling-font-and-color-changes"></a>Manipulando alterações de fontes e cores
+### <a name="handling-font-and-color-changes"></a>Manipulando alterações de fonte e cor
 
-Para dar suporte adequado à colorização do texto que um VSPackage exibe, o serviço de colorização que dá suporte ao VSPackage deve responder às alterações iniciadas pelo usuário feitas por meio da página de propriedades de fontes e cores.
+Para dar suporte corretamente à colorização do texto que um VSPackage exibe, o serviço de colorização que suporta o VSPackage deve responder às alterações iniciadas pelo usuário feitas por meio da página de propriedades Fontes e Cores.
 
 Para fazer isso, um VSPackage deve:
 
-- **manipule eventos gerados pelo IDE** implementando a interface [IVsFontAndColorEvents](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) . O IDE chama o método apropriado após as modificações de usuário da página fontes e cores. Por exemplo, ele chamará o método [OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) se uma nova fonte for selecionada.
+- **manipular eventos gerados pelo IDE** implementando a interface [IVsFontAndColorEvents.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents) O IDE chama o método apropriado após as modificações do usuário da página Fontes e Cores. Por exemplo, ele chamará o [método OnFontChanged](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorevents.onfontchanged) se uma nova fonte for selecionada.
 
   **OR**
 
-- **sondar o IDE em busca de alterações**. Isso pode ser feito por meio da interface [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) implementada pelo sistema. Embora principalmente o suporte à persistência, o método [GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) pode obter informações de fonte e cor para itens de exibição. Para obter mais informações sobre as configurações de fonte e cor, consulte o artigo do MSDN [acessando configurações de fonte e cor armazenadas](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015).
+- **sondar o IDE em busca de alterações.** Isso pode ser feito por meio da interface [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) implementada pelo sistema. Embora principalmente para suporte de persistência, o [método GetItem](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage.getitem) pode obter informações de fonte e cor para Itens de Exibição. Para obter mais informações sobre as configurações de fonte e cor, consulte o artigo do MSDN Acessando configurações de fonte e [cor armazenadas.](/previous-versions/visualstudio/visual-studio-2015/extensibility/accessing-stored-font-and-color-settings?preserve-view=true&view=vs-2015)
 
 > [!NOTE]
-> Para garantir que os resultados de sondagem estejam corretos, use a interface [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) para determinar se uma liberação e atualização de cache são necessárias antes de chamar os métodos de recuperação da interface [IVsFontAndColorStorage](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage) .
+> Para garantir que os resultados da sondagem estão corretos, use a interface [IVsFontAndColorCacheManager](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorcachemanager) para determinar se uma liberação e atualização de cache são necessárias antes de chamar os métodos de recuperação da interface [IVsFontAndColorStorage.](/dotnet/api/microsoft.visualstudio.shell.interop.ivsfontandcolorstorage)
 
-#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Registrando a categoria de fonte e cor personalizadas sem implementar interfaces
+#### <a name="registering-custom-font-and-color-category-without-implementing-interfaces"></a>Registrando a fonte personalizada e a categoria de cores sem implementar interfaces
 
-O exemplo de código a seguir demonstra como registrar a fonte personalizada e a categoria de cor sem implementar interfaces:
+O exemplo de código a seguir demonstra como registrar a fonte personalizada e a categoria de cores sem implementar interfaces:
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp Tool Window]
@@ -445,13 +445,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\FontAndColors\CSharp T
 
 Para este exemplo de código:
 
-- `"NameID"` = a ID de recurso do nome da categoria localizada em seu pacote
+- `"NameID"` = a ID do recurso do nome da categoria localizada em seu pacote
 - `"ToolWindowPackage"` = GUID do pacote
 - `"Category"="{9FF46859-A47E-47bf-8AC5-EC3DBE69D1FE}"` é apenas um exemplo e o valor real pode ser um novo GUID fornecido pelo implementador.
 
-### <a name="set-the-font-and-color-property-category-guid"></a>Definir o GUID da categoria de propriedade de fonte e cor
+### <a name="set-the-font-and-color-property-category-guid"></a>Definir o GUID da categoria de propriedade Fonte e Cor
 
-O exemplo de código a seguir demonstra a definição de GUIDs de categoria.
+O exemplo de código a seguir demonstra a configuração de GUIDs de categoria.
 
 ```csharp
 // m_pView is your IVsTextView

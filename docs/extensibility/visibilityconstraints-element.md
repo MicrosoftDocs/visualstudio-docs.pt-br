@@ -3,7 +3,7 @@ title: Elemento VisibilityConstraints | Microsoft Docs
 description: O elemento VisibilityConstraints determina a visibilidade estática de grupos de comandos e barras de ferramentas.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VisibilityConstraints
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: d97f72e7a29f3cbb23c775df8454952f5ffac928
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 160a3950e31567aafc2d675971fd7263adb2ad5b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062558"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905456"
 ---
 # <a name="visibilityconstraints-element"></a>Elemento VisibilityConstraints
 O elemento VisibilityConstraints determina a visibilidade estática de grupos de comandos e barras de ferramentas. A visibilidade é primeiro controlada pelo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE (ambiente de desenvolvimento integrado) sem carregar o VSPackage.

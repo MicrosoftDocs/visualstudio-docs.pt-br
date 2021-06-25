@@ -1,9 +1,9 @@
 ---
-title: Verificando subtipos de um projeto em tempo de execução | Microsoft Docs
-description: Saiba como fazer seu VSPackage verificar a presença de um subtipo de projeto personalizado especificado do qual ele depende.
+title: Verificando subtipos de um projeto em tempo de | Microsoft Docs
+description: Saiba como fazer com que o VSPackage verifique a presença de um subtipo de projeto personalizado especificado do qual ele depende.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project subtypes
 - check subtypes
@@ -13,19 +13,19 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: c52d3297ce4903cb8f8e7cb2f9ab5169d21ac94e
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 621a40e1857d7c78ec4c5be08a3b7c3808a0d48b
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105062597"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112905467"
 ---
-# <a name="verify-subtypes-of-a-project-at-run-time"></a>Verificar subtipos de um projeto em tempo de execução
-Um VSPackage que depende de um subtipo de projeto personalizado deve incluir a lógica para procurar esse subtipo, de modo que ele possa falhar normalmente se o subtipo não estiver presente. O procedimento a seguir mostra como verificar a presença de um subtipo especificado.
+# <a name="verify-subtypes-of-a-project-at-run-time"></a>Verificar subtipos de um projeto em tempo de executar
+Um VSPackage que depende de um subtipo de projeto personalizado deve incluir lógica para procurar esse subtipo para que ele possa falhar normalmente se o subtipo não estiver presente. O procedimento a seguir mostra como verificar a presença de um subtipo especificado.
 
 ### <a name="to-verify-the-presence-of-a-subtype"></a>Para verificar a presença de um subtipo
 
-1. Obtenha a hierarquia do projeto do projeto e dos objetos de solução como um <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objeto adicionando o código a seguir ao seu VSPackage.
+1. Obter a hierarquia de projeto dos objetos de projeto e solução como um objeto adicionando o código a <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> seguir ao VSPackage.
 
     ```csharp
     EnvDTE.DTE dte;
@@ -42,7 +42,7 @@ Um VSPackage que depende de um subtipo de projeto personalizado deve incluir a l
 
     ```
 
-2. Converta a hierarquia na <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> interface.
+2. Caste a hierarquia para a <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> interface .
 
     ```csharp
     IVsAggregatableProjectCorrected AP;
@@ -50,14 +50,14 @@ Um VSPackage que depende de um subtipo de projeto personalizado deve incluir a l
 
     ```
 
-3. Obtenha a lista de GUIDs de tipo de projeto invocando o <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A> .
+3. Obter a lista de GUIDs do tipo de projeto invocando o <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A> .
 
     ```csharp
     string projTypeGuids = AP.GetAggregateProjectTypeGuids().ToUpper();
 
     ```
 
-4. Verifique a lista do GUID do subtipo especificado.
+4. Verifique a lista para o GUID do subtipo especificado.
 
     ```csharp
     // Replace the string "MyGUID" with the GUID of the subtype.
