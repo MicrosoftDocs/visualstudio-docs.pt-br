@@ -3,19 +3,19 @@ title: Ferramentas de avaliação para Visual Studio | Microsoft Docs
 description: Use esta lista de verificação para avaliar a qualidade da experiência do usuário para Visual e detalhes de interação para novos recursos que você projeta para o Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f23521763e73ef65b9c5a2f17acb54b85b71d63
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: baee9f3e2eaefcd659f8428bd566711949d0fe90
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105089882"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900753"
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Ferramentas de avaliação para Visual Studio
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Lista de verificação do habilidade para Visual Studio
@@ -81,7 +81,7 @@ ms.locfileid: "105089882"
 
 - Verifique se não há bugs de recorte devido a fontes ampliadas. As fontes que são recortadas são provavelmente o resultado de controles de altura fixa ou contêineres de altura fixa.
 
-### <a name="dialogs"></a>Caixas de diálogo
+### <a name="dialogs"></a>Diálogos
 
 - Verifique se o título da caixa de diálogo é igual ao comando que o iniciou.
 

@@ -3,19 +3,19 @@ title: Layout do Visual Studio | Microsoft Docs
 description: Saiba mais sobre layout para caixas de diálogo do Visual Studio, incluindo caixas de diálogo desnecessários e novas caixas de diálogo que têm uma aparência com tema.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c15b7458bfd18314015bbb9228c212a06fcd82f
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e52b7b3fd620080b73e8d3de80672003ecb8fcf7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105072969"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900519"
 ---
 # <a name="layout-for-visual-studio"></a>Layout para Visual Studio
 A maioria das caixas de diálogo do Visual Studio são o [layout da caixa de diálogo do utilitário](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), que são as caixas de diálogo destinadas que seguem princípios padrão de layout de caixa de diálogo do [Windows Desktop](/windows/desktop/uxguide/win-dialog-box). À medida que o Visual Studio muda para atualizar sua interface do usuário, algumas das caixas de diálogo mais proeminentes têm um novo design que as estabelece como experiências de definição de produto. Esse [layout de caixa de diálogo com tema](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) tem uma aparência com tema.
@@ -152,9 +152,9 @@ A maioria das caixas de diálogo do Visual Studio são o [layout da caixa de di�
 
  **Figura 8, 1-j: caixa de diálogo com tema-fontes**
 
- ![Cores da caixa de diálogo com tema](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801-k_ThemedDialogColors")
+ ![Cores da caixa de diálogo com temas](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801-k_ThemedDialogColors")
 
- **Figura 8, 1-k: caixa de diálogo com tema – cores**
+ **Figura 08.01-k: caixa de diálogo com temas – Cores**
 
 ## <a name="see-also"></a>Confira também
 - [Padrões de aplicativo para Visual Studio](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)

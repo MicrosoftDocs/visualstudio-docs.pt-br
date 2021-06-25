@@ -1,8 +1,8 @@
 ---
-description: Essa função determina quais diretórios e (opcionalmente) os arquivos são armazenados no controle do código-fonte, dadas uma lista de diretórios a serem examinados.
+description: Essa função determina quais diretórios e (opcionalmente) arquivos são armazenados no controle do código-fonte, considerando uma lista de diretórios a examinar.
 title: Função SccPopulateDirList | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SccPopulateDirList
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d04fc7796db57dedcf8af495c67876cd4974ab1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: bf2620ff42106be7c858c5104dbf9cb2521252ab
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105063741"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112902352"
 ---
 # <a name="sccpopulatedirlist-function"></a>Função SccPopulateDirList
-Essa função determina quais diretórios e (opcionalmente) os arquivos são armazenados no controle do código-fonte, dadas uma lista de diretórios a serem examinados.
+Essa função determina quais diretórios e (opcionalmente) arquivos são armazenados no controle do código-fonte, considerando uma lista de diretórios a examinar.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,38 +39,38 @@ SCCRTN SccPopulateDirList(
 #### <a name="parameters"></a>Parâmetros
  pContext
 
-no O ponteiro de contexto do plug-in de controle do código-fonte.
+[in] O ponteiro de contexto do plug-in do controle do código-fonte.
 
  nDirs
 
-no Número de caminhos de diretório na `lpDirPaths` matriz.
+[in] Número de caminhos de diretório na `lpDirPaths` matriz.
 
  lpDirPaths
 
-no Matriz de caminhos de diretório a serem examinados.
+[in] Matriz de caminhos de diretório a examinar.
 
  pfnPopulate
 
-no Função de retorno de chamada para chamar cada caminho de diretório e (opcionalmente) nome de arquivo em `lpDirPaths` (consulte [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) para obter detalhes).
+[in] Função de retorno de chamada para chamar para cada caminho de diretório e (opcionalmente) nome de arquivo em `lpDirPaths` (consulte [POPDIRLISTFUNC para](../extensibility/popdirlistfunc.md) obter detalhes).
 
  pvCallerData
 
-no Valor que deve ser passado inalterado para a função de retorno de chamada.
+[in] Valor que deve ser passado inalterado para a função de retorno de chamada.
 
  fOptions
 
-no Uma combinação de valores que controlam como os diretórios são processados (consulte a seção "sinalizadores de PopulateDirList" do [Bitflags usado por comandos específicos](../extensibility/bitflags-used-by-specific-commands.md) para os valores possíveis).
+[in] Uma combinação de valores que controlam como os diretórios são processados (consulte a seção "PopulateDirList flags" de [Bitflags Used by Specific Commands](../extensibility/bitflags-used-by-specific-commands.md) para ver os valores possíveis).
 
 ## <a name="return-value"></a>Valor Retornado
- Espera-se que a implementação de plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
+ Espera-se que a implementação do plug-in de controle do código-fonte dessa função retorne um dos seguintes valores:
 
 |Valor|Descrição|
 |-----------|-----------------|
-|SCC_OK|Operação concluída com êxito.|
+|SCC_OK|Operação concluída com sucesso.|
 |SCC_E_UNKNOWNERROR|Ocorreu um erro.|
 
 ## <a name="remarks"></a>Comentários
- Somente os diretórios e (opcionalmente) os nomes de arquivo que estão na verdade no repositório do controle do código-fonte são passados para a função de retorno de chamada.
+ Somente os diretórios e (opcionalmente) nomes de arquivo que estão realmente no repositório de controle do código-fonte são passados para a função de retorno de chamada.
 
 ## <a name="see-also"></a>Confira também
 - [Funções de API de plug-in de controle do código-fonte](../extensibility/source-control-plug-in-api-functions.md)

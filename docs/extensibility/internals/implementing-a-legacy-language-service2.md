@@ -3,7 +3,7 @@ title: Implementando uma linguagem herdada Service2 | Microsoft Docs
 description: Saiba como implementar um serviço de linguagem herdado que dá suporte a recursos de serviço de linguagem estendida, usando o MPF (estrutura de pacote gerenciada). Parte 2 de 2.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - language services [managed package framework], implementing
 ms.assetid: 5bcafdc5-f922-48f6-a12e-6c8507a79a05
@@ -12,12 +12,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bdb0d05faaa139b808d8d117125c5208da470e9
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: fca2548ddb0c8281241b14de0ec470cfe22db1a1
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105085813"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112900116"
 ---
 # <a name="implementing-a-legacy-language-service-2"></a>Implementando um serviço de linguagem herdada 2
 Para implementar um serviço de linguagem usando a MPF (estrutura de pacote gerenciada), você deve derivar uma classe da <xref:Microsoft.VisualStudio.Package.LanguageService> classe e implementar os seguintes métodos e propriedades abstratos:

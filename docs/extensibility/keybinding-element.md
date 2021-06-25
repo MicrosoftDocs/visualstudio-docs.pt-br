@@ -3,7 +3,7 @@ title: Elemento keybind | Microsoft Docs
 description: O elemento KeyBinding especifica atalhos de teclado para os comandos. Os comandos podem ter associações de chave única e dupla associadas a eles.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - VSCT XML schema elements, KeyBindings
 - KeyBinding element (VSCT XML schema)
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9162d9b21c54577e48f4dced6ddddd7138c9de66
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: 6afd0a9658f088b66f2c18c632ffcd7b9a09f555
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105074087"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112898855"
 ---
 # <a name="keybinding-element"></a>Elemento keybind
 O elemento KeyBinding especifica atalhos de teclado para os comandos.

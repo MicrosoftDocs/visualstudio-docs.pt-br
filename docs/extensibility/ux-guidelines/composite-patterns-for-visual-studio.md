@@ -3,19 +3,19 @@ title: Padrões de composição para o Visual Studio | Microsoft Docs
 description: Saiba mais sobre padrões de composição importantes para consistência no Visual Studio. Padrões de composição combinam elementos de interação e design.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 author: leslierichardson95
 ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0c6f609842f2531fe39158e871a330e136603433
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: b8b84baa7be7449b8edb6241e415fc90c9acd594
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090051"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112901416"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Padrões de composição para Visual Studio
 Padrões de composição combinam elementos de interação e design em configurações distintas. Alguns dos padrões de composição mais importantes no Visual Studio em relação à consistência incluem:
@@ -70,7 +70,7 @@ Padrões de composição combinam elementos de interação e design em configura
 
 ### <a name="other-charting-considerations"></a>Outras considerações sobre gráficos
 
-#### <a name="color"></a>Color
+#### <a name="color"></a>Cor
  Há uma paleta específica de cores de gráfico definida para uso no Visual Studio. A paleta pode ser acessada para os principais tipos de cegueira de cor e as cores podem ser diferenciadas mesmo quando usadas como fatias muito estreitas de cor. Você pode usar essas cores em qualquer combinação para qualquer tipo de gráfico ou grafo na sua interface do usuário. Você não precisará usar todas as sete cores se não precisar de muitas cores distintas. Essas cores não foram projetadas para serem usadas com elementos de primeiro plano, portanto, não coloque texto nem glifos sobre essas cores. Esses matizes devem ser embutidos em código e expostos à personalização do usuário em **ferramentas > opções** (consulte [expondo cores para usuários finais](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)).
 
 |Essas|Hex|RGB|
@@ -117,21 +117,21 @@ Padrões de composição combinam elementos de interação e design em configura
 #### <a name="design-details"></a>Detalhes do design
  Depois de determinar que a interface do usuário no objeto é a escolha certa, há quatro considerações de design principais:
 
-1. **Persistência:** o conteúdo é esperado como durável ou transitório?
-   Os usuários desejarão manter as informações visíveis para se referirem ou interagirem? Ou os usuários desejarão rapidamente dar uma olhada nas informações e continuar com a tarefa principal?
+1. **Persistência:** o conteúdo deve ser durável ou transitório?
+   Os usuários querem manter as informações visíveis para se referirem ou interagirem? Ou os usuários querem ver rapidamente as informações e continuar com sua tarefa principal?
 
-2. **Tipo de conteúdo:** o conteúdo será informativo, acionável ou de navegação?
-   O usuário precisa de mais detalhes sobre o conteúdo mestre? O usuário precisa concluir uma tarefa que afeta o conteúdo mestre? Ou o usuário precisa ser direcionado para outro recurso?
+2. **Tipo de conteúdo:** o conteúdo será informacional, a actionable ou de navegação?
+   O usuário precisa de detalhes adicionais sobre o conteúdo mestre? O usuário precisa concluir uma tarefa que afeta o conteúdo mestre? Ou o usuário precisa ser direcionado para outro recurso?
 
 3. **Tipo de indicador:** um indicador de ambiente faz sentido?
    As informações podem ser resumidas de uma maneira útil e exibidas sem sobrecarregar o conteúdo mestre?
 
-4. **Gestos:** quais gestos serão usados para invocar e ignorar a interface do usuário?
-   Como o usuário abrirá o conteúdo detalhado e o enviará de longe? Há algum valor na adição de um gesto, como fixação para alternar entre Estados transitórios e duráveis?
+4. **Gestos:** quais gestos serão usados para invocar e descartar a interface do usuário?
+   Como o usuário abrirá o conteúdo de detalhes e o enviará embora? Há valor para adicionar um gesto, como fixar para alternar entre estados transitórios e duráveis?
 
    Cada um desses quatro pontos de decisão terá um impacto sobre os principais componentes da interface do usuário no objeto.
 
-### <a name="on-object-ui-components"></a>Componentes da interface do usuário no objeto
+### <a name="on-object-ui-components"></a>Componentes de interface do usuário no objeto
 
 1. Tipo de contêiner (apresentador de conteúdo)
 
@@ -141,9 +141,9 @@ Padrões de composição combinam elementos de interação e design em configura
 
 2. Tipo de conteúdo
 
-    - Informativo: dados que podem ser estáticos ou dinâmicos
+    - Informacional: dados que podem ser estáticos ou dinâmicos
 
-    - Acionável: comandos que alteram o conteúdo mestre
+    - A ação: comandos que alteram o conteúdo mestre
 
     - Navegação: links que levam o usuário para outra janela ou aplicativo, como o MSDN
 
@@ -151,13 +151,13 @@ Padrões de composição combinam elementos de interação e design em configura
 
     - Invocação
 
-    - Exoneração
+    - Demissão
 
     - Fixação
 
     - Outras interações
 
-4. Modelo de persistência e confirmação
+4. Persistência e modelo de commit
 
     - Transitório
 
@@ -169,94 +169,94 @@ Padrões de composição combinam elementos de interação e design em configura
 
 5. Indicadores de ambiente (opcional)
 
-    - Sublinhado ondulado
+    - Sublinhado de alternância
 
-    - Ícone de marca inteligente
+    - Ícone de marcação inteligente
 
     - Outros indicadores de ambiente
 
 #### <a name="container-content-presenter-type"></a>Tipo de contêiner (apresentador de conteúdo)
- Há duas opções principais disponíveis para apresentar o conteúdo no ponto de atenção:
+ Há duas opções principais disponíveis para apresentar conteúdo no ponto de atenção:
 
-1. **Inline:** um apresentador embutido, como o modo de exibição de inspeção que foi introduzido no editor de código Visual Studio 2013, torna o espaço para o novo conteúdo, alterando o conteúdo existente.
+1. **Em linha:** um apresentador em linha, como a exibição de espiar que foi introduzida no Editor de Código Visual Studio 2013, abre espaço para o novo conteúdo, deslocando o conteúdo existente.
 
-    - **Prefira** apresentadores embutidos se você espera que os usuários desejam gastar um tempo significativo se referindo ou interagindo com o conteúdo que você apresenta.
+    - **Prefira** os apresentadores em linha se você espera que os usuários deem uma quantidade significativa de tempo referindo-se ou interagindo com o conteúdo que você apresenta.
 
-    - **Evite** apresentadores embutidos se você espera que os usuários desejam dar uma olhada nas informações que você apresenta e continuar com a tarefa principal com interrupção mínima.
+    - **Evite** os apresentadores em linha se você espera que os usuários quiserem dar uma olhada nas informações presentes e, em seguida, continuar com sua tarefa principal com interrupção mínima.
 
 2. **Flutuante:** um apresentador flutuante é posicionado o mais próximo possível do conteúdo selecionado, mas não altera o layout do conteúdo existente. Várias estratégias podem ser empregadas, como exibir um painel de conteúdo flutuante sobre o espaço em branco mais próximo disponível para o símbolo selecionado.
 
-    - **Prefira** apresentadores flutuantes se você esperar que os usuários desejam dar uma olhada nas informações que você apresenta e, em seguida, continuar com a tarefa principal com interrupção mínima.
+    - **Prefira** os presentadores flutuantes se você espera que os usuários quiserem dar uma olhada nas informações presentes e, em seguida, continuar com sua tarefa principal com interrupção mínima.
 
-    - **Evite** apresentadores flutuantes se você espera que os usuários desejam gastar um tempo significativo se referindo ou interagindo com o conteúdo que você apresenta.
+    - **Evite** os presentadores flutuantes se você espera que os usuários deem uma quantidade significativa de tempo referindo-se ou interagindo com o conteúdo que você apresenta.
 
 #### <a name="content-type"></a>Tipo de conteúdo
  Há três tipos principais de conteúdo que podem ser exibidos dentro de qualquer contêiner de interface do usuário no objeto. Qualquer combinação desses tipos de informações pode ser mostrada. Os três tipos são:
 
-1. **Informativo:** a maioria dos contêineres de interface do usuário no objeto exibirá algum tipo de conteúdo informativo. O conteúdo pode representar informações sobre o estado atual do ambiente ou pode representar informações sobre um potencial estado futuro do ambiente. Por exemplo, ele pode ser usado para mostrar o efeito de um comando específico, como uma refatoração, no código existente.
+1. **Informativo: a** maioria dos contêineres de interface do usuário no objeto exibirá algum tipo de conteúdo informativo. O conteúdo pode representar informações sobre o estado atual do ambiente ou pode representar informações sobre um possível estado futuro do ambiente. Por exemplo, ele pode ser usado para mostrar o efeito de um comando específico, como uma refactoring, no código existente.
 
-    - **Sempre** use a representação canônica das informações exibidas. Por exemplo, o código deve ser semelhante a um código, completo com realce de sintaxe e deve respeitar qualquer fonte e outras configurações de ambiente definidas pelo usuário.
+    - **Sempre** use a representação canônica das informações exibidas. Por exemplo, o código deve ser parecido com código, completo com realce de sintaxe e deve respeitar qualquer fonte e outras configurações de ambiente definidas pelo usuário.
 
-    - **Sempre** considere o suporte a qualquer ação no conteúdo informativo que seria possível se essa mesma informação fosse apresentada como conteúdo mestre. Por exemplo, se estiver apresentando o código existente dentro de um contêiner de interface do usuário no objeto, leve em consideração o suporte à capacidade de procurar e modificar esse código.
+    - **Sempre** considere dar suporte a qualquer ação sobre o conteúdo informacional que seria possível se essas mesmas informações são apresentadas como conteúdo mestre. Por exemplo, se estiver apresentando código existente dentro de um contêiner de interface do usuário no objeto, considere fortemente dar suporte à capacidade de procurar e modificar esse código.
 
-    - **Sempre** considere usar uma cor de plano de fundo diferente se apresentar conteúdo informativo que representa um estado futuro potencial.
+    - **Sempre** considere usar uma cor da tela de fundo diferente se apresentar conteúdo informativo que representa um possível estado futuro.
 
-2. Acionável: alguns contêineres de interface do usuário no objeto fornecerão a capacidade de executar alguma ação no conteúdo mestre, como a execução de uma operação de refatoração.
+2. A ação: alguns contêineres de interface do usuário no objeto fornecerão a capacidade de executar alguma ação sobre o conteúdo mestre, como executar uma operação de refactoring.
 
-    - **Sempre** Posicione comandos acionáveis separadamente do conteúdo informativo.
+    - **Sempre** posicione comandos acionáveis separadamente do conteúdo informacional.
 
-    - **Sempre** habilite e desabilite ações quando apropriado.
+    - **Sempre** habilita e desabilita ações quando apropriado.
 
     - **Sempre** consulte as diretrizes padrão para representar comandos dentro das caixas de diálogo.
 
-    - **Sempre** Mantenha o número de ações que são expostas em um contêiner de interface do usuário no objeto para um mínimo absoluto. Interagir com a interface do usuário no objeto deve ser uma experiência leve e rápida. O usuário não deve ter que gastar energia no gerenciamento do próprio contêiner da interface do usuário no objeto.
+    - **Sempre** mantenha o número de ações expostas em um contêiner de interface do usuário no objeto para um mínimo absoluto. Interagir com a interface do usuário no objeto deve ser uma experiência leve e rápida. O usuário não deve ter que gastar energia para gerenciar o próprio contêiner de interface do usuário no objeto.
 
-    - **Sempre** considere como e quando um contêiner de interface do usuário no objeto será fechado ou descartado. Como prática recomendada, qualquer ação que conclua a caixa de diálogo entre o conteúdo mestre e de detalhes também deve fechar o contêiner da interface do usuário do objeto quando essa ação é chamada.
+    - **Sempre** considere como e quando um contêiner de interface do usuário no objeto será fechado ou ignorado. Como melhor prática, qualquer ação que conclua a caixa de diálogo entre o conteúdo mestre e detalhado também deve fechar o contêiner de interface do usuário no objeto quando essa ação for invocada.
 
-3. **Navegação:** alguns contêineres de interface do usuário no objeto incluem links que levam o usuário para outra janela ou aplicativo, como abrir um artigo do MSDN no navegador da Web do usuário.
+3. **Navegação: alguns** contêineres de interface do usuário no objeto incluem links que levam o usuário para outra janela ou aplicativo, como abrir um artigo do MSDN no navegador da Web do usuário.
 
-    - **Sempre** preceder qualquer link de navegação com "aberto" para que os usuários não se surpreendam com a navegação para algum outro conteúdo.
+    - **Sempre** preenda qualquer link de navegação com "Abrir" para que os usuários não se desempenhem ao serem navegados para algum outro conteúdo.
 
-    - **Sempre** separe os links de navegação de links acionáveis.
+    - **Sempre** separe links de navegação de links a ação.
 
 #### <a name="ambient-indicators-optional"></a>Indicadores de ambiente (opcional)
- Os indicadores de ambiente podem ser sutis, incluindo o texto apresentado em uma cor de contraste do restante do código ou óbvio, incluindo símbolos tickler, como sublinhados ondulados e ícones de marca inteligente. Os indicadores de ambiente comunicam a disponibilidade de informações adicionais e relevantes. O ideal é que eles forneçam informações úteis mesmo sem exigir que o usuário interaja com eles.
+ Os indicadores de ambiente podem ser sutis, incluindo o texto apresentado em uma cor contrastada do restante do código ou óbvios, incluindo símbolos de cor mais simples, como sublinhados de alternância e ícones de marca inteligente. Os indicadores de ambiente comunicam a disponibilidade de informações adicionais e relevantes. O ideal é que eles forneçam informações úteis mesmo sem exigir que o usuário interaja com eles.
 
-- **Sempre** Posicione um indicador de ambiente para que ele não distraia ou sobrecarregue o usuário. Se for impossível posicionar um indicador de ambiente de forma tão importante, considere outra solução.
+- **Sempre** posicione um indicador de ambiente para que ele não a distração nem sobrecarregar o usuário. Se for impossível posicionar um indicador de ambiente dessa maneira, considere outra solução.
 
-- **Sempre** Posicione o indicador de ambiente o mais próximo possível do conteúdo ao qual ele está relacionado.
+- **Sempre** posicione o indicador de ambiente o mais próximo possível do conteúdo ao que ele está relacionado.
 
-- **Sempre** tente criar um indicador que resuma as informações disponibilizadas. Considere fornecer uma contagem do número de itens de dados disponíveis (por exemplo, "3 referências" em vez de simplesmente "referências") ou pense em alguma outra maneira de resumir os dados.
+- **Sempre** tente criar um indicador que resume as informações disponibilizadas. Considere fornecer uma contagem do número de itens de dados disponíveis (por exemplo, "3 referências" em vez de simplesmente "Referências") ou pensar em alguma outra maneira de resumir os dados.
 
-  - Nos casos em que os dados de um indicador nem sempre podem ser computados e exibidos, considere imediatamente fornecer comentários progressivos à medida que os valores são computados. Por exemplo, considere a animação de alterações que refletem atualizações para os dados disponíveis, de forma semelhante à maneira como o bloco de emails dinâmicos no Windows Phone é atualizado à medida que o número de emails não lidos aumenta.
+  - Nos casos em que os dados de um indicador não podem sempre ser computados e exibidos, considere imediatamente fornecer comentários progressivos à medida que os valores são computados. Por exemplo, considere animar alterações que refletem atualizações nos dados disponíveis, semelhante à maneira como o email ao vivo no Windows Phone é atualizado à medida que o número de emails não lidos aumenta.
 
-- **Nunca** adicione mais indicadores do que um usuário pode usar razoavelmente para um determinado conteúdo. Os indicadores de ambiente devem ser úteis sem a necessidade de qualquer interação do usuário. Os indicadores perdem seus Ambience se exigirem um estouro e outros controles de gerenciamento para colocá-los em exibição.
+- **Nunca** adicione mais indicadores do que um usuário pode aceitar razoavelmente para uma determinada parte do conteúdo. Os indicadores de ambiente devem ser úteis sem a necessidade de interação do usuário. Os indicadores perderão a ambiência se exigirem estouro e outros controles de gerenciamento para exibi-los.
 
 #### <a name="gestures"></a>Gestos
- Um aspecto importante de permitir que o usuário Mantenha o foco no conteúdo mestre é dar suporte aos gestos certos para abrir e ignorar o conteúdo adicional de detalhes.
+ Um aspecto importante de permitir que o usuário mantenha o foco no conteúdo mestre é dar suporte aos gestos certos para abrir e descartar o conteúdo de detalhes adicional.
 
-- **Sempre** exija que o usuário execute algum gesto explícito para abrir o conteúdo adicional. Os gestos de abertura comuns incluem:
+- **Sempre** exigir que o usuário execute algum gesto explícito para abrir o conteúdo adicional. Os gestos abertos comuns incluem:
 
-  - **Hover:** dicas de ferramenta ou conteúdo informativo não interativo
+  - **Passar o mouse:** dicas de ferramenta ou conteúdo informacional não interativo
 
-  - **Comando explícito:** apresentador embutido
+  - **Comando explícito:** apresentador em linha
 
-  - **Clique duas vezes no indicador ambiente:** Janela pop-up CodeLens
+  - **Clique duas vezes no indicador de ambiente:** Janela pop-up do CodeLens
 
-- **Sempre** ignore o conteúdo de detalhes sempre que o usuário pressionar a tecla ESC.
+- **Sempre** descarte o conteúdo de detalhes sempre que o usuário pressionar a tecla Esc.
 
-- **Sempre** considere o contexto da interface do usuário no objeto. Para os apresentadores de conteúdo que permitem a interação dentro do contêiner, considere atentamente se as informações adicionais devem ser exibidas ao focalizar, o que provavelmente causem interrupções no fluxo de trabalho do usuário.
+- **Sempre** considere o contexto da interface do usuário no objeto. Para os presentadores de conteúdo que permitem a interação dentro do contêiner, considere cuidadosamente se é preciso mostrar informações adicionais sobre o foco, o que provavelmente poderá ser uma interrupção para o fluxo de trabalho do usuário.
 
-- **Nunca** exibir conteúdo em foco que pareça ser editável ou convidar a interação do usuário. Esse comportamento pode frustrar os usuários se eles tentarem mover o cursor sobre o conteúdo de detalhes, uma vez que o comportamento padrão de uma dica de ferramenta é descartar imediatamente quando o cursor não estiver mais sobre o conteúdo mestre que o produziu.
+- **Nunca** exibir conteúdo ao passar o mouse que parece ser editável ou convida a interação do usuário. Esse comportamento pode frustrar os usuários se tentarem mover o cursor sobre o conteúdo de detalhes, pois o comportamento padrão de uma dica de ferramenta é descartar imediatamente quando o cursor não estiver mais sobre o conteúdo mestre que o produziu.
 
 ## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a> Modelos de seleção
 
 ### <a name="overview"></a>Visão geral
- Um modelo de seleção é o mecanismo usado para indicar e confirmar operações em um ou mais objetos de interesse na interface do usuário. Este tópico discute os padrões de interação de seleção nos editores de documento do Visual Studio: editores de texto, superfícies de design e superfícies de modelagem.
+ Um modelo de seleção é o mecanismo usado para indicar e confirmar operações em um ou mais objetos de interesse na interface do usuário. Este tópico discute os padrões de interação de seleção Visual Studio editores de documentos: editores de texto, superfícies de design e superfícies de modelagem.
 
- Os usuários devem ter uma maneira de indicar ao Visual Studio o que eles estão trabalhando, e o Visual Studio deve responder de forma previsível com os comentários para os usuários sobre o que está operando. As diferenças ou uma comunicação insuficiente entre o usuário e a interface do usuário podem fazer com que o usuário não perceba uma ação, o que pode ter consequências indesejadas. Geralmente, o erro fica desnotado até que o usuário veja que algo está ausente ou foi alterado. Os modelos de seleção são, portanto, uma das partes mais importantes do design da interface do usuário. Embora os modelos de seleção no Visual Studio sejam consistentes com o Windows, há pequenas variações.
+ Os usuários devem ter uma maneira de indicar Visual Studio no que estão trabalhando e Visual Studio devem responder de forma previsível com comentários aos usuários sobre o que ele está operando. Diferenças ou um erro de comunicação entre o usuário e a interface do usuário podem fazer com que o usuário não perceba uma ação, o que pode ter consequências não intencionais. Geralmente, o erro passa despercebido até que o usuário veja que algo está ausente ou foi alterado. Os modelos de seleção são, portanto, uma das partes mais críticas do design de interface do usuário. Embora os modelos de seleção Visual Studio sejam consistentes com o Windows, há pequenas variações.
 
- No Visual Studio, como no Windows, os modelos de seleção diferem de acordo com o contexto no qual ocorre a interação. As seleções podem ocorrer em quatro tipos de objetos:
+ No Visual Studio, como no Windows, os modelos de seleção diferem dependendo do contexto no qual a interação ocorre. As seleções podem ocorrer em quatro tipos de objetos:
 
 - Texto
 
@@ -266,142 +266,142 @@ Padrões de composição combinam elementos de interação e design em configura
 
 - Grades
 
-  Nesses objetos, há três tipos de seleções:
+  Dentro desses objetos, há três tipos de seleções:
 
-- Vizinha
+- Contíguo
 
-- Não contíguo
+- Separado
 
 - Região
 
 #### <a name="scope"></a>Escopo
- O componente mais importante da seleção é garantir que o usuário saiba em qual janela ele está trabalhando (ativação) e onde o foco está localizado (seleção). O Visual Studio estende a funcionalidade de gerenciamento de janelas no Windows, mas o esquema de ativação é o mesmo: interagir com uma janela leva o foco para a janela. O Visual Studio tem dois indicadores para ativação: um para janelas de documentos e outro para janelas de ferramentas.
+ O componente mais importante da seleção é garantir que o usuário saiba em qual janela ele está trabalhando (ativação) e onde o foco está localizado (seleção). Visual Studio estende a funcionalidade de gerenciamento de janelas no Windows, mas o esquema de ativação é o mesmo: interagir com uma janela traz o foco para a janela. Visual Studio tem dois indicadores para ativação: um para janelas de documentos e outro para janelas de ferramentas.
 
- Para janelas de documentos, a janela ativa é indicada por uma guia de janela de documento chegando à frente e alterando sua cor de fundo:
+ Para janelas de documentos, a janela ativa é indicada por uma guia da janela do documento que chega à frente e altera sua cor da tela de fundo:
 
- ![Seleção de guia ativa no Visual Studio](../../extensibility/ux-guidelines/media/0713-01_activetab.png "0713-01_ActiveTab")
+ ![Seleção de guias ativas Visual Studio](../../extensibility/ux-guidelines/media/0713-01_activetab.png "0713-01_ActiveTab")
 
  **Seleção de guia ativa**
 
  Para janelas de ferramentas, a janela ativa é indicada por uma alteração na cor da área da barra de título da janela de ferramentas:
 
- ![Seleção da janela da ferramenta ativa no Visual Studio](../../extensibility/ux-guidelines/media/0713-02_activetoolwindow.png "0713-02_ActiveToolWindow")
+ ![Seleção de janela de ferramentas ativa Visual Studio](../../extensibility/ux-guidelines/media/0713-02_activetoolwindow.png "0713-02_ActiveToolWindow")
 
- **Janela de ferramenta ativa mostrando a seleção primária de um nó**
+ **Janela de ferramentas ativa mostrando a seleção primária de um nó**
 
- ![Seleção de janela de ferramenta inativa no Visual Studio](../../extensibility/ux-guidelines/media/0713-03_inactivetoolwindow.png "0713-03_InactiveToolWindow")
+ ![Seleção de janela de ferramentas inativas Visual Studio](../../extensibility/ux-guidelines/media/0713-03_inactivetoolwindow.png "0713-03_InactiveToolWindow")
 
- **Janela de ferramentas inativas, mostrando a seleção latente do nó**
+ **Janela de ferramentas inativa, mostrando a seleção latente do nó**
 
- Quando uma janela estiver ativa, seu foco será indicado de acordo com os modelos de seleção descritos nesta seção de diretrizes.
+ Quando uma janela está ativa, seu foco é indicado de acordo com os modelos de seleção descritos nesta seção das diretrizes.
 
 #### <a name="context"></a>Contexto
- O Visual Studio foi projetado para manter um conceito forte de contexto, mantendo o controle de onde o usuário está trabalhando. Somente uma janela está ativa, seja uma ferramenta ou janela de documento. No entanto, a janela do documento na extremidade superior sempre retém uma seleção latente. Embora o foco possa estar em uma janela de ferramentas, a janela do documento que foi ativada pela última vez exibe uma seleção, mesmo em um estado inativo. Isso é feito para manter o contexto do usuário no documento que eles estavam editando, mostrando que o Visual Studio manteve seu estado para que eles possam retornar e mudar diretamente entre janelas de ferramentas e janelas de documentos.
+ Visual Studio foi projetado para manter um conceito forte de contexto, mantendo o controle de onde o usuário está trabalhando. Apenas uma janela está ativa, seja uma janela de ferramenta ou de documento. No entanto, a janela de documentos mais alta sempre retém uma seleção latente. Embora o foco possa estar em uma janela de ferramentas, a janela do documento que estava ativa pela última vez exibe uma seleção, mesmo em um estado inativo. Isso é feito para manter o contexto do usuário no documento que ele estava editando, mostrando que o Visual Studio retém seu estado para que ele possa retornar e mudar perfeitamente entre janelas de ferramentas e janelas de documentos.
 
 ### <a name="text-selection"></a>Seleção de texto
- Os editores do Visual Studio que são estritamente textuais, como o editor de texto interno, usam o mesmo modelo de seleção de texto e a aparência descritas na página [mouse e ponteiros](/windows/desktop/uxguide/inter-mouse) das diretrizes de interação da experiência do usuário do Windows no msdn. O foco de entrada no editor de texto é indicado por uma barra vertical chamada ponto de inserção. O ponto de inserção é um único pixel espesso e colorido como o inverso do que aparece por trás dele. Ele pisca de acordo com a taxa definida pela configuração de **taxa de intermitência do cursor** na guia **velocidade** do applet do **teclado** no painel de controle.
+ Visual Studio editores que são estritamente textuais, como o editor de texto integrado, usam o mesmo modelo de seleção de texto e aparência descritos na página Mouse e [Ponteiros](/windows/desktop/uxguide/inter-mouse) das Diretrizes de Interação do Usuário do Windows no MSDN. O foco de entrada no editor de texto é indicado por uma barra vertical chamada ponto de inserção. O ponto de inserção é um único pixel espesso e colorido como o inverso de tudo o que aparece atrás dele. Ele pisca de acordo com a taxa definida pela  configuração de taxa de piscar **cursor** na guia Velocidade do **applet** Teclado no Painel de Controle.
 
-#### <a name="contiguous-and-disjoint-selection"></a>Seleção contígua e não contíguo
- A seleção dentro do editor de texto é apenas contígua. As seleções de texto não são permitidas, mas devem ser abordadas em editores de objeto gráfico. Quando o ponteiro do mouse do usuário está sobre uma área de texto, o cursor muda para um feixe. Um único clique coloca o ponto de inserção no editor de texto no local do clique. Pressionar o botão do mouse para baixo inicia um realce de seleção e soltar o botão do mouse termina o realce da seleção.
+#### <a name="contiguous-and-disjoint-selection"></a>Seleção contígua e não contígua
+ A seleção no editor de texto é somente contígua. As seleções de texto não são permitidas, mas devem ser abordadas em editores de objetos gráficos. Quando o ponteiro do mouse do usuário está sobre uma área de texto, o cursor muda para um raio I. Um único clique coloca o ponto de inserção no editor de texto no local do clique. Manter o botão do mouse pressionado inicia um realçamento de seleção e a liberação do botão do mouse encerra o realçamento da seleção.
 
 #### <a name="region-selection-box-selection"></a>Seleção de região (seleção de caixa)
- O Visual Studio dá suporte a seleções de região no editor de texto, e isso é chamado de seleção de caixa. A seleção de caixa permite que o usuário selecione uma região de texto que não segue o fluxo de texto regular. Assim como acontece com a seleção de texto padrão, a seleção deve ser contígua. A seleção de caixa é iniciada mantendo a tecla Alt pressionada enquanto arrasta com o mouse. A seleção de caixa também pode ser iniciada mantendo as teclas ALT e SHIFT pressionadas ao usar as teclas de direção para indicar a região de seleção. A seleção de caixa usa o realce de seleção normal e mostra o cursor de ponto de inserção piscando no final da área de seleção.
+ Visual Studio dá suporte a seleções de região no editor de texto e isso é chamado de seleção de caixa. A seleção de caixa permite que o usuário selecione uma região de texto que não segue o fluxo de texto normal. Assim como na seleção de texto padrão, a seleção deve ser contígua. A seleção de caixa é iniciada mantendo a tecla Alt para baixo ao arrastar com o mouse. A seleção de caixa também pode ser iniciada mantendo as teclas Alt e Shift ao usar as teclas de seta para indicar a região da seleção. A seleção de caixa usa o realçamento de seleção normal e mostra o cursor do ponto de inserção piscando no final da área de seleção.
 
- ![Caixa de &#40;regional&#41; seleção no Visual Studio](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713-04_BoxSelection")
+ ![Caixa &#40;caixa&#41; seleção no Visual Studio](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713-04_BoxSelection")
 
- **Seleção de região (caixa) no Visual Studio**
+ **Seleção de região (caixa) Visual Studio**
 
 #### <a name="text-selection-appearance"></a>Aparência da seleção de texto
- As cores usadas para seleção ativa e inativa no editor podem ser personalizadas. Para personalizar a aparência visual do editor, um usuário pode ir para **ferramentas > opções** e, em seguida, examinar o **ambiente > fontes e cores > editor de texto**.
+ As cores usadas para seleção ativa e inativa no editor podem ser personalizadas. Para personalizar a aparência visual do editor, um usuário pode ir para Ferramentas **> Opções** e, em seguida, procurar Em Ambiente **> Fontes** e Cores > Editor de Texto .
 
 ### <a name="graphical-selection"></a>Seleção gráfica
 
 #### <a name="interaction"></a>Interação
  A seleção de objeto gráfico pode ser complexa e depende de vários fatores:
 
-- **O modelo de seleção principal do editor.** Os editores que contêm objetos gráficos também podem ser usados para editar texto ou grades. Por exemplo, o editor pode ser um editor baseado em texto que também dá suporte ao posicionamento de objetos gráficos, como o Visual Studio XAML designer. O suporte a vários tipos de objeto pode afetar a forma como o usuário seleciona grupos compostos de diferentes tipos de objetos.
+- **O modelo de seleção principal do editor.** Editores que contêm objetos gráficos também podem ser usados para editar texto ou grades. Por exemplo, o editor pode ser um editor baseado em texto que também dá suporte ao posicionamento de objetos gráficos, como o designer Visual Studio XAML. O suporte a vários tipos de objeto pode afetar a maneira como o usuário seleciona grupos de diferentes tipos de objetos.
 
-- **Suporte para Estados de seleção primário e secundário.** Um editor pode fornecer Estados de seleção primários e secundários para que os objetos possam ser editados de forma não ativa, alinhados entre si, redimensionados juntos e assim por diante.
+- **Suporte para estados de seleção primária e secundária.** Um editor pode fornecer estados de seleção primária e secundária para que os objetos possam ser editados em uníson, alinhados entre si, reorganizados juntos e assim por diante.
 
-- **Suporte à edição in-loco.** Os editores também podem permitir que o conteúdo de seus objetos gráficos seja editado. Por exemplo, uma forma de retângulo também pode conter texto no interior que pode ser alterado pelo usuário. Além disso, esse texto pode ser centralizado ou justificado. A edição in-loco envolve um nível mais detalhado de interação do usuário e, portanto, requer um conjunto apropriado de indicações visuais para apresentar informações de estado ao usuário.
+- **Suporte à edição in-in-place.** Os editores também podem permitir que o conteúdo de seus objetos gráficos seja editado. Por exemplo, uma forma de retângulo também pode conter texto no interior que pode ser alterado pelo usuário. Além disso, esse texto pode ser centralizado ou justificado. A edição in-locar envolve um nível mais detalhado de interação do usuário e, portanto, requer um conjunto apropriado de responsabilidades visuais para apresentar informações de estado ao usuário.
 
-#### <a name="mouse-interaction"></a>Interação com o mouse
+#### <a name="mouse-interaction"></a>Interação do mouse
 
 |Entrada|Resultado|
 |-----------|------------|
-|Clique em um objeto não selecionado|Seleciona o objeto e exibe uma linha tracejada e alças de seleção, se o objeto for redimensionável.|
-|Clique em um objeto selecionado|Ativa a edição in-loco se o objeto der suporte a ele. Clicar fora do objeto desativa o modo de edição in-loco.|
+|Clique em um objeto não selecionado|Seleciona o objeto e exibe uma linha tracejada e identificador de seleção, se o objeto for resizável.|
+|Clique em um objeto selecionado|Ativa a edição in-locar se o objeto dá suporte a ela. Clicar fora do objeto desativa o modo de edição in-place.|
 |Clique duas vezes em um objeto|Abre o código por trás do objeto para edição e pode inserir um manipulador de eventos padrão, se apropriado.|
-|Apontar para um objeto|Altera o ponteiro para o cursor de movimentação. A aparência do objeto, como sua luminosidade ou cor, pode ser alterada.|
-|Apontar para uma alça de seleção|Altera o ponteiro para o cursor de redimensionamento. Para objetos que dão suporte à rotação, alguns identificadores de seleção podem alterar o ponteiro para um cursor de rotação à medida que o ponteiro é posicionado de forma diferente (por exemplo, movido para fora) em relação à alça de seleção.|
-|Arrastar|Mesmo que o objeto não esteja selecionado anteriormente, o altera o ponteiro para o cursor de movimentação e move o objeto.|
-|O editor perde o foco|Desativa o modo de edição in-loco, embora o objeto retenha o conteúdo e a aparência que ele tinha durante seu último estado de operação/seleção.|
-|Seleção de objeto|Indicado por uma borda, linha pontilhada ou outro tratamento visualmente distinto para realçar o limite do objeto.|
-|Redimensionar um objeto selecionado|Indicado por alças de seleção.<br /><br /> Um objeto redimensionável tem oito identificadores, representando cada direção na qual ele pode ser redimensionado. Menos identificadores poderão ser usados se o objeto só puder ser redimensionado em determinadas direções. Quando o usuário dimensiona um objeto para onde oito identificadores não seriam interativos, então quatro identificadores podem ser usados. Os tamanhos de identificador devem ser vinculados à borda da janela e às métricas de borda com a função de API **GetSystemMetrics** para dimensionar em proporção à resolução de vídeo.<br /><br /> ![Alças de redimensionamentos](../../extensibility/ux-guidelines/media/0713-05_resizehandles.png "0713-05_ResizeHandles")|
-|Girar um objeto selecionado|![Alças de rotação](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713-06_Rotate")|
+|Apontar para um objeto|Altera o ponteiro para o cursor de movimentação. A aparência do objeto, como sua luminosidade ou cor, pode mudar.|
+|Apontar para um alça de seleção|Altera o ponteiro para o cursor de resize. Para objetos que suportam a rotação, alguns alças de seleção podem alterar o ponteiro para um cursor de rotação, pois o ponteiro é posicionado de forma diferente (por exemplo, movido para mais longe) em relação à alça de seleção.|
+|Arrastar|Mesmo que o objeto não seja selecionado anteriormente, altera o ponteiro para o cursor de movimentação e move o objeto.|
+|O editor perde o foco|Desativa o modo de edição in-loco, embora o objeto mantenha o conteúdo e a aparência que tinha durante seu último estado de operação/seleção.|
+|Seleção de objeto|Indicado por uma borda, linha pontilhada ou outro tratamento visualmente distinto para realça o limite do objeto.|
+|Resize um objeto selecionado|Indicado por alças de seleção.<br /><br /> Um objeto reizável tem oito identificador, representando cada direção na qual ele pode ser reessado. Menos identificador podem ser usados se o objeto só puder ser resized em determinadas direções. Quando o usuário tamanho um objeto para baixo até onde oito identificador não seriam interativos, quatro identificador podem ser usados. Os tamanhos de alça devem ser vinculados às métricas de borda e borda da janela com a função da API **GetSystemMetrics** para o tamanho proporcional à resolução de exibição.<br /><br /> ![Alças de redimensionamentos](../../extensibility/ux-guidelines/media/0713-05_resizehandles.png "0713-05_ResizeHandles")|
+|Girar um objeto selecionado|![Girar alças](../../extensibility/ux-guidelines/media/0713-06_rotate.png "0713-06_Rotate")|
 
 #### <a name="keyboard-interaction"></a>Interação do teclado
 
 |Entrada|Resultado|
 |-----------|------------|
-|Tab|Move o indicador de foco entre a ordem lógica dos objetos no editor. Isso pode ser da esquerda para a direita ou de cima para baixo, dependendo do valor da propriedade **TabIndex** (ou equivalente), da ordem de criação do objeto e da finalidade geral do editor. Shift + Tab inverte a direção do indicador de foco.|
-|Barra de espaços|Ativa o modo panorâmico enquanto a tecla é mantida. A entrada adicional do mouse é necessária para deslocar a posição do visor.|
-|Ctrl+Barra de espaços|Ativa o modo de zoom enquanto a tecla é mantida. A entrada adicional do mouse é necessária para aumentar e diminuir o fator de zoom.|
-|CTRL + ALT + sinal de subtração|Diminui o fator de zoom em um nível.|
-|CTRL + ALT + sinal de adição|Aumenta o fator de zoom em um nível.|
-|Shift ou CTRL|Adiciona o objeto ao grupo de seleção. CTRL também permite remover objetos individualmente do grupo de seleção.|
-|Digite|Executa o comando padrão para o objeto (geralmente aberto ou Edit).|
-|F2|Ativa a edição in-loco para o objeto.|
-|Teclas de direção|Move os objetos selecionados na direção da tecla de direção pressionada, em pequenos incrementos (por exemplo, 1 pixel por vez)|
-|CTRL + teclas de direção|Move os objetos selecionados na direção da tecla de direção pressionada, em incrementos maiores (por exemplo, 10 pixels de cada vez)|
-|Shift + teclas de direção|Redimensiona os objetos selecionados na respectiva direção, em pequenos incrementos (por exemplo, 1 pixel por vez)|
-|Ctrl + Shift + teclas de direção|Redimensiona os objetos selecionados na respectiva direção, em incrementos maiores (por exemplo, 10 pixels de cada vez)|
+|Tab|Move o indicador de foco entre a ordem lógica dos objetos no editor. Isso pode ser da esquerda para a direita ou de cima para baixo, dependendo do valor da propriedade **TabIndex** (ou equivalente), da ordem de criação do objeto e da finalidade geral do editor. Shift+Tab inverte a direção do indicador de foco.|
+|Barra de espaços|Ativa o modo de panorâmico enquanto o controle de teclas é mantido. A entrada adicional do mouse é necessária para panorcar a posição do viewport.|
+|Ctrl+Barra de espaços|Ativa o modo de zoom enquanto o controle de teclas é mantido. A entrada adicional do mouse é necessária para aumentar e diminuir o fator de zoom.|
+|Ctrl+Alt+Sinal de subtração|Diminui o fator de zoom em um nível.|
+|Ctrl+Alt+Sinal de adição|Aumenta o fator de zoom em um nível.|
+|Shift OR Ctrl|Adiciona o objeto ao grupo de seleção. Ctrl também permite remover objetos individualmente do grupo de seleção.|
+|Digite|Executa o comando padrão para o objeto (geralmente Abrir ou Editar).|
+|F2|Ativa a edição in-place para o objeto .|
+|Teclas de direção|Move os objetos selecionados na direção da tecla de direção pressionada, em incrementos pequenos (por exemplo, 1 pixel por vez)|
+|Teclas ctrl+seta|Move os objetos selecionados na direção da tecla de direção pressionada, em incrementos maiores (por exemplo, 10 pixels por vez)|
+|Shift+teclas de direção|Resize os objetos selecionados na respectiva direção, em incrementos pequenos (por exemplo, 1 pixel por vez)|
+|Teclas Ctrl+Shift+seta|Resize os objetos selecionados na respectiva direção, em incrementos maiores (por exemplo, 10 pixels por vez)|
 
- Quando os usuários editam controles em vigor, pode fazer sentido que os objetos sejam redimensionados automaticamente com a entrada do usuário. Por exemplo, se o usuário editar um controle rótulo, o rótulo deverá aumentar para exibir o texto que o usuário acabou de digitar. Se isso não for feito, o usuário deverá redimensionar o controle manualmente depois de editar o texto. Se o usuário tiver muitos controles, isso se tornará uma tarefa atividades rotineiras e não-técnica.
+ Quando os usuários editam controles no local, pode fazer sentido que os objetos reizem automaticamente com a entrada do usuário. Por exemplo, se o usuário editar um controle de rótulo, o rótulo deverá aumentar para exibir o texto que o usuário acabou de digitar. Se isso não for feito, o usuário deverá reorganizar o controle manualmente depois de editar o texto. Se o usuário tiver muitos controles, isso se tornará uma tarefa roteável e não produtiva.
 
 #### <a name="graphical-containers"></a>Contêineres gráficos
- Em alguns casos, os editores gráficos fornecem contêineres para outros objetos gráficos, como o controle de painel de Windows Forms ou o controle de layout de grade no designer de HTML. Se o seu editor fornece contêineres para outros objetos gráficos, o modelo de seleção a seguir deve ser usado somente para o contêiner (os objetos dentro do contêiner seguem o modelo padrão, conforme descrito acima):
+ Em alguns casos, os editores gráficos fornecem contêineres para outros objetos gráficos, como o controle painel Windows Forms ou o controle Layout de Grade no designer HTML. Se o editor fornece contêineres para outros objetos gráficos, o modelo de seleção a seguir deve ser usado somente para o contêiner (os objetos dentro do contêiner seguem o modelo padrão, conforme descrito acima):
 
 |Entrada|Resultado|
 |-----------|------------|
-|Clique uma vez no contêiner|Seleciona o objeto de contêiner sem selecionar diretamente nenhum dos objetos contidos. O contêiner pode ser movido e/ou redimensionado com a entrada padrão do mouse e do teclado (conforme descrito acima). Os objetos contidos são movidos em relação ao contêiner, mas os objetos contidos não são redimensionados, a menos que também sejam selecionados diretamente.|
+|Clique com um único clique no contêiner|Seleciona o objeto de contêiner sem selecionar diretamente nenhum dos objetos contidos. O contêiner pode ser movido e/ou reorganizado com entrada padrão de mouse e teclado (conforme descrito acima). Os objetos contidos são movidos em relação ao contêiner, mas os objetos contidos não são resized, a menos que também sejam selecionados diretamente.|
 |Passe o mouse sobre a região de limite do contêiner|Transforma o mouse no cursor de movimentação, indicando que o contêiner pode ser movido.|
-|Arraste a região de limite do contêiner|Altera o mouse para o cursor de movimentação e move o contêiner (e os objetos contidos dentro). O contêiner não pode ser movido sem ser selecionado primeiro com um único clique.|
-|Clique uma vez em um objeto dentro do contêiner|Anula a seleção do contêiner (se selecionado) e seleciona apenas o objeto clicado.|
-|Shift + clique ou CTRL + clique em um objeto e/ou contêiner contido|Adiciona o objeto clicado a uma seleção ou grupo de seleção existente. Se o objeto clicado já for um membro do grupo de seleção, ele será removido do grupo de seleção.|
+|Arrastar a região de limite do contêiner|Altera o mouse para o cursor de movimentação e move o contêiner (e os objetos contidos dentro). O contêiner não pode ser movido sem primeiro ser selecionado com um único clique.|
+|Clique com um único clique em um objeto dentro do contêiner|Desmarca o contêiner (se selecionado) e seleciona apenas o objeto clicado.|
+|Shift+clique em OU Ctrl+clique em um objeto contido e/ou contêiner|Adiciona o objeto clicado a um grupo de seleção ou seleção existente. Se o objeto clicado já for um membro do grupo de seleção, ele será removido do grupo de seleção.|
 
- Os objetos contidos devem aderir ao modelo de seleção básico, conforme descrito na seção anterior. Do teste de usabilidade do designer de Windows Forms, os usuários esperavam acesso contínuo aos objetos contidos sem etapas intermediárias (impostas pelo objeto de confinamento).
+ Os objetos contidos devem aderir ao modelo de seleção básico, conforme descrito na seção anterior. Do teste de usabilidade do designer Windows Forms, os usuários esperaram acesso contínuo aos objetos contidos sem intervir em etapas (impostas pelo objeto de contenção).
 
-#### <a name="disjoint-and-region-selections"></a>Seleções de separação e de região
- Os editores de objeto gráfico devem dar suporte a seleções não junção. Observe que esse gráfico não mostra a aparência do controle do Visual Studio. Consulte [aparência da seleção de objeto gráfico](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) para obter especificações visuais detalhadas.
+#### <a name="disjoint-and-region-selections"></a>Seleções de regiões e não adjacentes
+ Os editores de objetos gráficos devem dar suporte a seleções não adjacentes. Observe que este gráfico não mostra a aparência do controle para Visual Studio. Confira [Aparência de seleção de objeto gráfico](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_GraphicalObjectSelectionAppearance) para ver especificações visuais detalhadas.
 
- ![Seletores de região e não contíguos](../../extensibility/ux-guidelines/media/0713-07_disjointregionselectors.png "0713-07_DisjointRegionSelectors")
+ ![Seletores de região e desaconsuletores](../../extensibility/ux-guidelines/media/0713-07_disjointregionselectors.png "0713-07_DisjointRegionSelectors")
 
- **Seleção não contíguo**
+ **Seleção desconsint**
 
- Os editores gráficos também devem fornecer seleções de região com um indicador de seleção de tipo de letreiro. Se o editor gráfico oferecer suporte a outros tipos de objeto (como texto), as seleções de região poderão não ser possíveis dependendo das restrições desses outros tipos de objeto.
+ Os editores gráficos também devem fornecer seleções de região com um indicador de seleção de tipo de letreiro. Se o editor gráfico for compatível com outros tipos de objeto (como texto), as seleções de região poderão não ser possíveis dependendo das restrições desses outros tipos de objeto.
 
  ![Seleção de letreiro](../../extensibility/ux-guidelines/media/0713-08_marqueeselection.png "0713-08_MarqueeSelection")
 
  **Seleção de letreiro**
 
 #### <a name="primary-and-secondary-selections"></a>Seleções primárias e secundárias
- Alguns editores de objeto gráfico permitem que o usuário edite ou alinhe objetos em grupos. Nesse caso, o conceito de seleções primárias e secundárias precisa ser introduzido. A seleção principal é o objeto ao qual todos os outros objetos respondem para operações de grupo. O objeto que o usuário seleciona primeiro se torna o controle principal e as seleções subsequentes se tornam as seleções secundárias. A seleção principal tem um tratamento visual distinto das seleções secundárias para indicar qual objeto é primário:
+ Alguns editores de objetos gráficos permitem que o usuário edite ou alinhe objetos em grupos. Nesse caso, o conceito de seleções primárias e secundárias precisa ser introduzido. A seleção primária é o objeto ao qual todos os outros objetos respondem para operações de grupo. O objeto que o usuário seleciona primeiro se torna o controle primário e as seleções subsequentes se tornam as seleções secundárias. A seleção primária tem um tratamento visual distinto das seleções secundárias para indicar qual objeto é primário:
 
  ![Seleção primária e secundária](../../extensibility/ux-guidelines/media/0713-09_primarysecondary.png "0713-09_PrimarySecondary")
 
  **Seleção primária com duas seleções secundárias**
 
 #### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Aparência da seleção de objeto gráfico
- As alças de seleção são quadrados desenhados em um padrão retangular ao redor da caixa delimitadora do objeto. O gráfico a seguir mostra exemplos dos vários Estados que um objeto gráfico pode ter com identificador, dimensionamento e aparência de edição in-loco. O tamanho dos identificadores deve ser vinculado à borda da janela e às métricas de borda usando a API **GetSystemMetrics** .
+ As alças de seleção são quadrados desenhados em um padrão retangular em torno da caixa delimitada do objeto. O gráfico a seguir mostra exemplos dos vários estados que um objeto gráfico pode ter com a aparência de edição no local, o tamanho e o identificador. O tamanho dos alças deve ser vinculado às métricas de borda e borda da janela usando a API **GetSystemMetrics.**
 
 | Estado | Aparência | Detalhes visuais |
 |-------------------------|---------------| - |
 | **Não selecionado** | Padrão | ![Estado do botão padrão](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713-10_DefaultState") |
-| **Seleção primária** | Redimensionável | ![Seleção primária com alças de redimensionamento](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize") |
-| **Seleção primária** | Não redimensionável | ![Seleção primária sem identificadores de redimensionamento](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize") |
+| **Seleção primária** | Redimensionável | ![Seleção primária com alças de reeslização](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713-11_PrimaryResize") |
+| **Seleção primária** | Não reizável | ![Seleção primária sem alças de reeslização](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713-13_PrimaryNoResize") |
 | **Seleção primária** | Bloqueado | ![Seleção primária bloqueada](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713-15_PrimaryLocked") |
-| **Seleção secundária** | Redimensionável | ![Seleção secundária com alças de redimensionamento](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize") |
+| **Seleção secundária** | Redimensionável | ![Seleção secundária com alças de reeslização](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713-17_SecondaryResize") |
 | **Seleção secundária** | Não redimensionável | ![Seleção secundária sem identificadores de redimensionamento](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713-19_SecondaryNoResize") |
 | **Seleção secundária** | Bloqueado | ![Seleção secundária bloqueada](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713-21_SecondaryLocked") |
 | **IU ativa** | Padrão | ![Estado ativo da interface do usuário](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713-23_UIActive") |
@@ -482,13 +482,13 @@ Padrões de composição combinam elementos de interação e design em configura
 |------------|------------------|------------------|-------------------|
 |Objeto selecionável (por exemplo, uma linha de código)|Um ponto de interrupção em uma linha de código<br /><br /> Um atalho de usuário associado à linha de código|Quando o projeto é salvo|O arquivo de **Opções do usuário (. suo)** para o projeto|
 |caixa de diálogo|O local da caixa de diálogo, se tiver sido movido<br /><br /> A exibição que o usuário usou pela última vez na caixa de diálogo|Quando a caixa de diálogo fechar<br /><br /> Quando a sessão do Visual Studio termina|Na memória<br /><br /> Registro no **HKEY_CURRENT_USER**|
-|Janela|O tamanho e o local da janela|Quando a janela for fechada<br /><br /> Quando o modo do Visual Studio é alterado<br /><br /> Quando a sessão do Visual Studio termina|O arquivo de **Opções do usuário (. suo)** para o projeto<br /><br /> Arquivo de opções personalizadas para configurações de janela|
-|Documento|A seleção atual no documento<br /><br /> A exibição do documento<br /><br /> Os últimos vários locais que o usuário visitou|Quando o documento é salvo|O arquivo de **Opções do usuário (. suo)** para o projeto|
+|Janela|O tamanho e o local da janela|Quando a janela é fechada<br /><br /> Quando o modo de Visual Studio é muda<br /><br /> Quando a sessão Visual Studio termina|O **arquivo de opções do usuário (.suo)** para o projeto<br /><br /> Arquivo de opções personalizadas para configurações de janela|
+|Documento|A seleção atual no documento<br /><br /> A exibição do documento<br /><br /> Os últimos lugares que o usuário visitou|Quando o documento é salvo|O **arquivo de opções do usuário (.suo)** para o projeto|
 |Project|Referências a arquivos<br /><br /> Referências a diretórios em disco<br /><br /> Referências a outros softwares<br /><br /> Componentes<br /><br /> Informações de estado sobre o projeto em si|Quando o projeto é salvo|O arquivo de projeto|
-|Solução|Referências a projetos<br /><br /> Referências a arquivos|Quando o projeto ou a solução é salva|O arquivo da **solução (. sln)**|
-|Configurações em **ferramentas > opções**|Personalizações do teclado<br /><br /> Personalizações da barra de ferramentas<br /><br /> Esquemas de cor|Quando a caixa de diálogo **ferramentas > opções** for fechada<br /><br /> Quando a sessão do Visual Studio termina|Registro no **HKEY_CURRENT_USER**|
+|Solução|Referências a projetos<br /><br /> Referências a arquivos|Quando o projeto ou a solução é salvo|O **arquivo de solução (.sln)**|
+|Configurações em **Ferramentas > Opções**|Personalizações de teclado<br /><br /> Personalizações da barra de ferramentas<br /><br /> Esquemas de cor|Quando a **caixa de diálogo > Ferramentas é** fechado<br /><br /> Quando a sessão Visual Studio termina|Registro no **HKEY_Current_User**|
 
- O que o usuário está fazendo e quando eles estão fazendo isso, determina se uma configuração está sendo salva na memória (durante a sessão), salva em disco (entre sessões como uma configuração de registro), como parte do próprio arquivo de projeto ou de solução, como parte do arquivo de **Opções de solução (. suo)** ou como um arquivo de configurações personalizado que só esse componente de software sabe. A tabela acima mostra vários eventos em que as configurações podem ser salvas. No entanto, há outras ocasiões em que você talvez queira salvar o estado:
+ O que o usuário está fazendo e quando ele está fazendo isso determina se uma configuração está sendo salva na memória (durante a sessão), salva no disco (entre sessões como uma configuração do Registro), como parte do próprio arquivo de projeto ou solução, como parte do arquivo de opções de solução **(.suo)** ou como um arquivo de configurações personalizadas que apenas esse componente de software conhece. A tabela acima mostra vários eventos nos quais as configurações podem ser salvas. No entanto, há outras vezes em que talvez você queira salvar o estado:
 
 - Quando o usuário altera o local dentro de uma caixa de diálogo ou janela
 
@@ -496,39 +496,39 @@ Padrões de composição combinam elementos de interação e design em configura
 
 - Quando o usuário alterna do design para o modo de depuração
 
-- Quando o usuário faz logoff de sua conta
+- Quando o usuário faz o logs de sua conta
 
 - Quando o computador entra em hibernação ou é desligado
 
-- Quando o computador/disco rígido está prestes a ser reformatado e configurado novamente
+- Quando o computador/disco rígido estiver prestes a ser reformatado e configurar novamente
 
 ### <a name="window-configurations"></a>Configurações de janela
- Uma configuração de janela é a apresentação básica do ambiente de desenvolvimento – é um esquema que consiste na lista de janelas de ferramentas presente e no modo como elas são organizadas. Para o Windows gerenciado pelo IDE (IDE Windows), as informações de layout são persistidas por usuário, portanto, quando um usuário inicia o IDE, o layout da janela é exibido da mesma forma que quando o Visual Studio foi encerrado pela última vez. O estado e a posição de janelas do IDE são persistidos em um arquivo de opções personalizado em formato XML. As janelas de ferramentas criadas por pacotes carregados no IDE persistem suas informações de estado no registro e podem ou não ser por usuário.
+ Uma configuração de janela é a apresentação básica do ambiente de desenvolvimento – é um esquema que consiste na lista de janelas de ferramentas presentes e na maneira como elas são organizadas. Para janelas gerenciadas pelo IDE (janelas IDE), as informações de layout são persistidas por usuário, portanto, quando um usuário inicia o IDE, o layout da janela aparece igual ao da última vez que saiu do Visual Studio. O estado e a posição das janelas IDE são persistentes em um arquivo de opções personalizado no formato XML. As janelas de ferramentas criadas por pacotes carregados no IDE persistem suas informações de estado no Registro e podem ou não ser por usuário.
 
-#### <a name="profile-specific-layouts"></a>Layouts específicos de perfil
- Cada perfil inclui layouts de janela de ferramentas, organizados de uma maneira familiar a pessoas de desenvolvedor específicas (Visual C++ os desenvolvedores esperam ver a **Gerenciador de soluções** no lado esquerdo do IDE, enquanto os desenvolvedores de C# esperam ver a **Gerenciador de soluções** à direita). Layouts de janela específicos de perfil são carregados depois que o usuário escolhe um perfil na inicialização. Um autor de pacote deve determinar o layout da janela mais adequado para a experiência do cliente, sabendo que as alterações feitas pelo usuário para a configuração da janela serão persistidas.
+#### <a name="profile-specific-layouts"></a>Layouts específicos do perfil
+ Cada perfil inclui layouts de janela de ferramentas, organizados de maneira familiar a personas específicas do desenvolvedor (os desenvolvedores Visual C++ esperam ver o **Gerenciador de Soluções** no lado esquerdo do IDE, enquanto os desenvolvedores de C# esperam ver o **Gerenciador de Soluções** à direita). Os layouts de janela específicos do perfil são carregados depois que o usuário escolhe um perfil na inicialização. Um autor do pacote deve determinar o layout da janela mais adequado para a experiência do cliente, sabendo que as alterações feitas pelo usuário na configuração da janela serão persistida.
 
-## <a name="touch-input"></a><a name="BKMK_TouchInput"></a> Entrada por toque
- Os usuários estão cada vez mais usando produtos de desenvolvimento da Microsoft em dispositivos de toque. No entanto, há barreiras que dificultam o uso de ferramentas de desenvolvimento em dispositivos sensíveis ao toque. Os usuários esperam que nossos produtos forneçam uma experiência de toque confiável e precisa. A intenção dessas diretrizes é informar as decisões sobre quais recursos de toque incorporar e incentivar uma experiência de toque consistente no Visual Studio e em produtos relacionados.
+## <a name="touch-input"></a><a name="BKMK_TouchInput"></a> Entrada de toque
+ Os usuários estão cada vez mais usando produtos de desenvolvimento da Microsoft em dispositivos touch. No entanto, há barreiras que dificultam o uso de ferramentas de desenvolvimento em dispositivos de toque. Os usuários esperarão que nossos produtos forneçam uma experiência de toque confiável e precisa. A intenção dessas diretrizes é informar as decisões sobre quais recursos de toque incorporar e incentivar uma experiência de toque consistente entre Visual Studio produtos relacionados.
 
 ### <a name="levels-of-experience"></a>Níveis de experiência
  Os níveis de experiência a seguir destinam-se a servir como um guia para ajudar as equipes a decidir quais recursos de toque oferecer com base no nível desejado de interesse de investimento em contato.
 
-- A **experiência básica** é para as equipes que desejam fornecer recursos de toque para que não haja nenhum inatividade em todo o trabalho.
+- A **experiência básica é** para equipes que querem fornecer funcionalidades de toque para que não haja nenhum dead ends em todo o trabalho.
 
-- A **experiência otimizada** é para as equipes que desejam fornecer os recursos de toque mais comuns (por exemplo, aqueles normalmente disponíveis em aplicativos de navegador da Internet).
+- A **experiência otimizada é** para equipes que querem fornecer as funcionalidades de toque mais comuns (por exemplo, aquelas normalmente disponíveis em aplicativos de navegador da Internet).
 
-- A **experiência elevada** é para as equipes que desejam adicionar recursos como gestos ou outros recursos opcionais que podem tornar seu aplicativo amigável para o toque primeiro.
+- A **experiência elevada é para** equipes que querem adicionar funcionalidades como gestos ou outros recursos opcionais que podem tornar seu aplicativo amigável.
 
 ||Experiência básica|Experiência otimizada|Experiência elevada|
 |-|----------------------|--------------------------|-------------------------|
-|**Permite que os usuários...**|Corrigir a leitura de código e de solução/nível de projeto sem inatividade|Executar tarefas de manutenção, refactores e navegação|Opere em uma experiência consistente, intuitiva e fluida com confiança|
-|**Editor**|Panorâmica e seleção de toque<br /><br /> Toque de ScrollBar para saltar e pressione + arrastar|Pinçar zoom<br /><br /> Rolagem rápida<br /><br /> Seleção<br /><br /> Fácil utilização do menu de contexto||
-|**Principais janelas de ferramentas**|Listar movimento panorâmico<br /><br /> Seleção de item<br /><br /> Toque de ScrollBar para saltar e pressione + arrastar|Fácil rolagem e seleção de itens||
-|**Windowing**||Redimensionar janela<br /><br /> Acesso rápido||
-|**Bem-documento**||Navegação fácil entre arquivos abertos||
-|**Gestos**||Garantir que os gestos comuns funcionem pelo IDE|Ações baseadas em gestos<br /><br /> Suporte a arrastar e soltar e designers|
-|**Outras considerações**|||Teclado personalizado na tela|
+|**Permite que os usuários...**|Corrigir a leitura em nível de código e solução/projeto sem dead ends|Executar tarefas de manutenção, de refactors e de navegação|Operar em uma experiência consistente, intuitiva e fluida com confiança|
+|**Editor**|Seleção e panorâmico de toque<br /><br /> Toque na barra de rolagem para pular e pressionar +arrastar|Zoom de pinçar<br /><br /> Rolagem rápida<br /><br /> Seleção<br /><br /> Fácil uso do menu de contexto||
+|**Principais janelas de ferramentas**|Panorâmico de lista<br /><br /> Seleção de item<br /><br /> Toque na barra de rolagem para pular e pressionar +arrastar|Rolagem e seleção de itens fáceis||
+|**Windowing**||Janela Resize<br /><br /> Acesso rápido||
+|**Documentar bem**||Navegação fácil entre arquivos abertos||
+|**Gestos**||Garantir que os gestos comuns funcionem no IDE|Ações baseadas em gesto<br /><br /> Suporte a designers e arrastar e soltar|
+|**Outras considerações**|||Teclado na tela personalizado|
 
 #### <a name="gestures"></a>Gestos
- Os gestos fornecem aos usuários um atalho para comandos que, de outra forma, poderiam exigir uma interação mais complicada. Consulte as diretrizes do Windows sobre [gestos de toque comuns para aplicativos de área de trabalho](/windows/desktop/wintouch/windows-touch-gestures-overview)e siga estas diretrizes para a maioria dos gestos, incluindo gestos simples, como movimento panorâmico e zoom.
+ Gestos fornecem aos usuários um atalho para comandos que, de outra forma, podem exigir uma interação mais complicada. Consulte as diretrizes do Windows sobre gestos de toque comuns para [aplicativos](/windows/desktop/wintouch/windows-touch-gestures-overview)da área de trabalho e siga estas diretrizes para a maioria dos gestos, incluindo gestos simples, como panorâmico e zoom.

@@ -3,7 +3,7 @@ title: MSSCCPRJ. Arquivo SCC | Microsoft Docs
 description: Saiba mais sobre o MSSCCPRJ. O arquivo SCC, que é um arquivo local do lado do cliente usado pelo plug-in de controle do código-fonte, que funciona com o SDK do Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - source control plug-ins, MSSCCPRJ.SCC file
 - MSSCCPRJ.SCC file
@@ -13,12 +13,12 @@ ms.author: lerich
 manager: jmartens
 ms.workload:
 - vssdk
-ms.openlocfilehash: 945d1a4d1acde0ac3fef9918123f963cf27127f1
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: e006e4462522f4c464f40e0656dcef4d32c85fb7
+ms.sourcegitcommit: bab002936a9a642e45af407d652345c113a9c467
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105090545"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112899245"
 ---
 # <a name="mssccprjscc-file"></a>MSSCCPRJ. Arquivo SCC
 Quando você coloca uma solução ou projeto do Visual Studio no controle do código-fonte usando o IDE, o IDE recebe duas partes principais de informações. As informações são provenientes do plug-in de controle do código-fonte na forma de cadeias de caracteres. Essas cadeias de caracteres, "AuxPath" e "ProjName", são opacas para o IDE, mas elas são usadas pelo plug-in para localizar a solução ou o projeto no controle de versão. Normalmente, o IDE obtém essas cadeias de caracteres pela primeira vez chamando [SccGetProjPath](../extensibility/sccgetprojpath-function.md)e, em seguida, salva-as no arquivo da solução ou do projeto para chamadas futuras para o [SccOpenProject](../extensibility/sccopenproject-function.md). Quando inseridos na solução e nos arquivos de projeto, as cadeias de caracteres "AuxPath" e "ProjName" não são atualizadas automaticamente quando um usuário ramifica, bifurca ou copia arquivos de solução e de projeto que estão no controle de versão. Para garantir que os arquivos de solução e de projeto apontem para o local correto no controle de versão, os usuários devem atualizar manualmente as cadeias de caracteres. Como as cadeias de caracteres são destinadas a serem opacas, talvez nem sempre fique claro como elas devem ser atualizadas.
