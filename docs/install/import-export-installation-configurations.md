@@ -4,8 +4,6 @@ titleSuffix: ''
 description: Saiba como exportar sua configuração de instalação para um arquivo .vsconfig para compartilhar com outras pessoas e como importá-lo para clonar.
 ms.date: 05/18/2019
 ms.topic: how-to
-f1_keywords:
-- vs.about
 helpviewer_keywords:
 - import installation configuration
 - export installation configuration
@@ -18,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1fc4b181436b5e214300b334163b9257af0d0d35
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 33ee25da51d5243daa67be53f68c50ede76219b2
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112307460"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925222"
 ---
 # <a name="import-or-export-installation-configurations"></a>Importar ou exportar configurações de instalação
 
@@ -70,7 +68,7 @@ Quando estiver pronto para importar um arquivo de configuração de instalação
 
 ## <a name="automatically-install-missing-components"></a>Instalar automaticamente os componentes ausentes
 
-Novidade no **Visual Studio 2019:** quando você salva um arquivo .vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão ausentes e solicita que você os instale.
+**Novo no Visual Studio 2019**: quando você salva um arquivo. vsconfig no diretório raiz da solução e, em seguida, abre uma solução, o Visual Studio detecta automaticamente quais componentes estão ausentes e solicita que você os instale.
 
 ![O Gerenciador de Soluções sugere os componentes adicionais](../install/media/vs-2019/solution-explorer-config-file.png)
 
@@ -78,7 +76,7 @@ Você também pode gerar um arquivo .vsconfig diretamente no Gerenciador de Solu
 
 1. Clique com botão direito do mouse no seu arquivo de solução.
 
-1. Escolha **Adicionar Arquivo** de > **Configuração de Instalação**.
+1. Escolha **Adicionar** > **arquivo de configuração de instalação**.
 
 1. Confirme o local no qual deseja salvar o arquivo .vsconfig e escolha **Revisar detalhes**.
 

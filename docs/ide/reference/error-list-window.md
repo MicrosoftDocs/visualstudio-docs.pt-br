@@ -4,8 +4,6 @@ description: Saiba mais sobre a janela de Lista de Erros e como usá-la para exe
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- VS.ErrorList
 helpviewer_keywords:
 - Task List
 - build errors
@@ -17,12 +15,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: df8d9545ce8179451530e2eb30bef7f98ba365d4
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 90d3f8f95cb4b6aef3b2538a26226f5bad40f33b
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99907554"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924936"
 ---
 # <a name="error-list-window"></a>Janela Lista de Erros
 
@@ -78,7 +76,7 @@ Use a caixa de texto **Pesquisar Lista de Erros** no lado direito da barra de fe
 
 ## <a name="ui-element-list"></a>Lista de elementos da interface de usuário
 
-Severity
+Gravidade
 
 Exibe os diferentes tipos da entrada **Lista de Erros** (**Erro**, **Mensagem**, **Aviso**, **Aviso [ativo]**, **Aviso [inativo]**).
 

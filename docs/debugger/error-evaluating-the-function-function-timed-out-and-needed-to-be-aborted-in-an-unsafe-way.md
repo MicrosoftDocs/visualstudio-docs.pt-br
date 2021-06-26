@@ -3,6 +3,7 @@ title: Avaliar a função &apos; de função &apos; tempou e precisava ser anula
 description: "Texto completo da mensagem: a avaliação da função 'função' tempou e precisava ser anulada de maneira não segura."
 ms.date: 06/18/2021
 ms.topic: error-reference
+ms.custom: contperf-fy21q4
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 author: mikejo5000
@@ -10,12 +11,12 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: e928bb0ebae1e644729fcaf4f47b7dd461399be6
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 94c308e9ec960f744a98f0f930999df36afff475
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112386664"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925001"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Erro: avaliar a função &#39;função&#39; o tempo foi e precisava ser anulada de maneira não segura
 

@@ -1,12 +1,11 @@
 ---
 title: Usar janelas de ferramentas para exibir a estrutura de código
-description: Saiba como usar as janelas de ferramentas Modo de Exibição de Classe, hierarquia de chamadas, pesquisador de objetos e definição de código (somente C++) para examinar classes e seus membros no Visual Studio.
+description: Saiba como usar as janelas de ferramentas Modo de Exibição de Classe, Hierarquia de Chamada, Pesquisador de Objetos e Definição de Código (somente C++) para examinar classes e seus membros Visual Studio.
 ms.custom: SEO-VS-2020
 ms.date: 09/19/2019
 ms.topic: reference
 f1_keywords:
 - vs.documentoutline.window
-- vs.objectbrowser
 - vs.classview
 - VS.CodeDefinitionView
 - VS.CodeDefinitionWindow
@@ -27,14 +26,14 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 63344b28026579e4b3e99b513a99c99d14617a64
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 41c11025e22c1288387862fa138b35efbbca8557
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99902777"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112924949"
 ---
-# <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Exibir a estrutura do código usando diferentes janelas de ferramentas
+# <a name="view-the-structure-of-code-by-using-different-tool-windows"></a>Exibir a estrutura do código usando janelas de ferramentas diferentes
 
 Você pode examinar as classes e seus membros no Visual Studio usando várias janelas de ferramentas, incluindo **Modo de Exibição de Classe**, **Hierarquia de Chamadas**, **Pesquisador de Objetos** e **Definição de Código** (somente C++). Essas janelas de ferramentas podem examinar o código em projetos do Visual Studio, componentes .NET, componentes COM, DLL (bibliotecas de vínculo dinâmico) e TLB (bibliotecas de tipos).
 
@@ -54,18 +53,18 @@ Caso tenha sido realizado o check-in do seu projeto para controle do código-fon
 
 ### <a name="class-view-toolbar"></a>Barra de Ferramentas Modo de Exibição de Classe
 
-A barra de ferramentas **modo de exibição de classe** contém os seguintes comandos:
+A **Modo de Exibição de Classe** de ferramentas contém os seguintes comandos:
 
 |Nome|Descrição|
 |-|-|
-|**Nova Pasta**|Cria uma pasta ou subpasta virtual na qual você pode organizar os elementos usados com frequência. Eles são salvos no arquivo de solução ativa (*. suo*). Após você renomear ou excluir um elemento em seu código, ele pode aparecer em uma pasta virtual como um nó de erro. Para corrigir esse problema, exclua o nó de erro. Se tiver renomeado um elemento, você pode movê-lo da hierarquia do projeto para a pasta novamente.|
+|**Nova Pasta**|Cria uma pasta ou subpasta virtual na qual você pode organizar os elementos usados com frequência. Eles são salvos no arquivo de solução ativa (*.suo*). Após você renomear ou excluir um elemento em seu código, ele pode aparecer em uma pasta virtual como um nó de erro. Para corrigir esse problema, exclua o nó de erro. Se tiver renomeado um elemento, você pode movê-lo da hierarquia do projeto para a pasta novamente.|
 |**Voltar**|Navega para o item selecionado anteriormente.|
 |**Encaminhar**|Navega para o item selecionado seguinte.|
 |**Exibir em Diagrama de Classe** (somente em projetos de código gerenciado)|É disponibilizado quando você seleciona um namespace ou tipo no **Modo de Exibição de Classe**. Quando um namespace é selecionado, o diagrama de classe mostra todos os tipos contidos nele. Quando um tipo é selecionado, o diagrama de classe mostra apenas esse tipo.|
 
 ### <a name="class-view-settings"></a>Configurações do Modo de Exibição de Classe
 
-O botão **configurações de modo de exibição de classe** na barra de ferramentas tem as seguintes configurações:
+O **Modo de Exibição de Classe configurações na** barra de ferramentas tem as seguintes configurações:
 
 |Nome|Descrição|
 |-|-|
@@ -80,14 +79,14 @@ O botão **configurações de modo de exibição de classe** na barra de ferrame
 
 ### <a name="class-view-shortcut-menu"></a>Menu de atalho do Modo de Exibição de Classe
 
-O menu de atalho (ou clique com o botão direito do mouse) no **modo de exibição de classe** pode conter os seguintes comandos, dependendo do tipo de projeto selecionado:
+O menu de atalho (ou clique com o botão direito do mouse) **Modo de Exibição de Classe** pode conter os seguintes comandos, dependendo do tipo de projeto selecionado:
 
 |Nome|Descrição|
 |-|-|
 |**Ir para Definição**|Localiza a definição do elemento no código-fonte ou no **Pesquisador de Objetos** se o elemento não estiver definido no projeto aberto.|
 |**Procurar definição**|Exibe o item selecionado no **Pesquisador de Objetos**.|
-|**Localizar todas as referências**|Localiza o item do objeto selecionado e exibe os resultados em uma janela **Localizar Resultados**.|
-|**Filtrar por Tipo** (somente código gerenciado)|Exibe apenas o namespace ou o tipo selecionado. Você pode remover o filtro escolhendo o botão **limpar localizar** (**X**) ao lado da caixa **Localizar** .|
+|**Encontrar todas as referências**|Localiza o item do objeto selecionado e exibe os resultados em uma janela **Localizar Resultados**.|
+|**Filtrar por Tipo** (somente código gerenciado)|Exibe apenas o namespace ou o tipo selecionado. Você pode remover o filtro escolhendo o botão **Limpar Encontrar** (**X**) ao lado da **caixa** Encontrar.|
 |**Copy**|Copia o nome totalmente qualificado do item.|
 |**Classificar em Ordem Alfabética**|Lista tipos e membros em ordem alfabética por nome.|
 |**Classificar por Tipo de Membro**|Lista tipos e membros ordenados segundo o tipo (de forma que classes precedam interfaces, interfaces precedam representantes e métodos precedam propriedades).|
@@ -112,14 +111,14 @@ O painel principal exibe as chamadas do método e para ele, e o painel **Chamar 
 
 A janela **Hierarquia de Chamada** não encontra referências do grupo do método, que incluem os locais nos quais um método é adicionado como um manipulador de eventos ou é atribuído a um delegado. Para localizar essas referências, use o comando **Localizar todas as referências**.
 
-O menu de atalho na janela **hierarquia de chamadas** contém os seguintes comandos:
+O menu de atalho na **janela Hierarquia de** Chamada contém os seguintes comandos:
 
 |Nome|Descrição|
 |-|-|
 |**Adicionar como Nova Raiz**|Adiciona o nó selecionado como um novo nó raiz.|
 |**Remover Raiz**|Remove o nó raiz selecionado do painel do modo de exibição de árvore.|
-|**Ir para definição**|Navega para a definição original de um método.|
-|**Localizar todas as referências**|Localiza no projeto todas as referências ao método selecionado.|
+|**Ir para Definição**|Navega para a definição original de um método.|
+|**Encontrar todas as referências**|Localiza no projeto todas as referências ao método selecionado.|
 |**Copy**|Copia o nó selecionado (mas não seus subnós).|
 |**Atualizar**|Atualiza as informações.|
 
@@ -127,7 +126,7 @@ O menu de atalho na janela **hierarquia de chamadas** contém os seguintes coman
 
 A janela **Pesquisador de Objetos** exibe descrições do código em seus projetos.
 
-Você pode filtrar os componentes que deseja exibir usando a lista suspensa na parte superior da janela. Os componentes personalizados podem incluir executáveis de código gerenciado, assemblies de biblioteca, bibliotecas de tipos e arquivos *. ocx* . Não é possível adicionar componentes personalizados C++.
+Você pode filtrar os componentes que deseja exibir usando a lista suspensa na parte superior da janela. Os componentes personalizados podem incluir executáveis de código gerenciado, assemblies de biblioteca, bibliotecas de tipos e *arquivos .ocx.* Não é possível adicionar componentes personalizados C++.
 
 ::: moniker range="vs-2017"
 
@@ -143,7 +142,7 @@ As configurações personalizadas são salvas no diretório de aplicativos do us
 
 O painel esquerdo do **Pesquisador de Objetos** mostra assemblies. É possível expandir os assemblies para exibir os namespaces que eles contêm e, em seguida, expandir os namespaces para exibir os tipos que eles contêm. Quando você seleciona um tipo, seus membros (como propriedades e métodos) são listados no painel direito. O painel inferior direito exibe informações detalhadas sobre o item selecionado.
 
-Você pode pesquisar um item específico usando a caixa **Pesquisar** na parte superior da janela. As pesquisas não diferenciam maiúsculas de minúsculas. Os resultados da pesquisa são exibidos no painel esquerdo. Para limpar uma pesquisa, escolha o botão **Limpar pesquisa** (**X**) ao lado da caixa de **pesquisa** .
+Você pode pesquisar um item específico usando a caixa **Pesquisar** na parte superior da janela. As pesquisas não diferenciam maiúsculas de minúsculas. Os resultados da pesquisa são exibidos no painel esquerdo. Para limpar uma pesquisa, escolha o **botão Limpar Pesquisa** (**X**) ao lado da **caixa Pesquisar.**
 
 O **Pesquisador de Objetos** mantém controle das seleções feitas, e você pode navegar entre suas seleções usando os botões **Avançar** e **Voltar** na barra de ferramentas.
 
@@ -151,7 +150,7 @@ O **Pesquisador de Objetos** mantém controle das seleções feitas, e você pod
 
 ### <a name="object-browser-settings"></a>Configurações do Pesquisador de Objetos
 
-Usando o botão **configurações do pesquisador de objetos** na barra de ferramentas, você pode especificar uma das seguintes exibições:
+Usando o botão **Configurações do Pesquisador de** Objetos na barra de ferramentas, você pode especificar uma das seguintes exibições:
 
 |Nome|Descrição|
 |-|-|
@@ -168,12 +167,12 @@ Usando o botão **configurações do pesquisador de objetos** na barra de ferram
 
 ### <a name="object-browser-shortcut-menu-commands"></a>Comandos do menu de atalho do Pesquisador de Objetos
 
-O menu de atalho (ou clique com o botão direito do mouse) no **pesquisador de objetos** pode conter os seguintes comandos, dependendo do tipo de item selecionado:
+O menu de atalho (ou clique com o botão direito do mouse) no **Pesquisador** de Objetos pode conter os seguintes comandos, dependendo do tipo de item selecionado:
 
 |Nome|Descrição|
 |-|-|
 |**Procurar definição**|Mostra o nó principal do item selecionado.|
-|**Localizar todas as referências**|Localiza o item do objeto selecionado e exibe os resultados em uma janela **Localizar Resultados**.|
+|**Encontrar todas as referências**|Localiza o item do objeto selecionado e exibe os resultados em uma janela **Localizar Resultados**.|
 |**Filtrar Por Tipo**|Exibe apenas o namespace ou o tipo selecionado. É possível remover o filtro escolhendo o botão **Limpar Pesquisa**.|
 |**Copy**|Copia o nome totalmente qualificado do item.|
 |**Remover**|Se o escopo for um conjunto de componentes personalizado, remove o componente selecionado do escopo.|
@@ -193,32 +192,32 @@ A Janela de **Definição de Código** exibe a definição de um membro ou tipo 
 Embora essa janela seja somente leitura, você pode definir pontos de interrupção ou indicadores nela. Para modificar a definição exibida, escolha **Editar Definição** no menu de atalho. Isso abre o arquivo de origem no editor de códigos e move o ponto de inserção para a linha em que a definição começa.
 
 > [!NOTE]
-> A partir do Visual Studio 2015, a janela de **definição de código** só pode ser usada com código C++.
+> A partir do Visual Studio 2015, **a** janela Definição de Código só pode ser usada com o código C++.
 
 ### <a name="code-definition-shortcut-menu"></a>Menu de atalho de Definição de Código
 
-O menu de atalho (ou clique com o botão direito do mouse) na janela de **definição de código** pode conter os seguintes comandos:
+O menu de atalho (ou clique com o botão direito do mouse) na janela **Definição de** Código pode conter os seguintes comandos:
 
 |Nome|Descrição|
 |-|-|
 |**Ações e Refatorações Rápidas**||
 |**Renomear**||
 |**Gerar Grafo de Arquivos de Inclusão**||
-|**Inspecionar definição**||
+|**Espiar definição**||
 |**Ir para Definição**|Localiza a definição (ou definições, para classes parciais) e as exibe em uma janela **Localizar Resultados**.|
-|**Ir para a declaração**||
-|**Localizar todas as referências**|Localiza as referências ao tipo ou membro na solução.|
+|**Ir para Declaração**||
+|**Encontrar todas as referências**|Localiza as referências ao tipo ou membro na solução.|
 |**Exibir Hierarquia de Chamada**|Exibe o método na janela **Hierarquia de Chamada**.|
 |**Alternar Cabeçalho/Arquivo de Códigos**||
 |**Executar testes**|Se houver testes de unidade no projeto, execute os testes para o código selecionado.|
 |**Depurar testes**||
 |**Ponto de interrupção**|Insere um ponto de interrupção (ou um tracepoint).|
-|**Executar até o cursor**|Executa o programa em modo de depuração até o local do cursor.|
+|**Executar para o cursor**|Executa o programa em modo de depuração até o local do cursor.|
 |**Snippet**||
 |**Recortar**, **Copiar**, **Colar**||
 |**Anotação**||
 |**Estrutura de tópicos**|Comandos de estrutura de tópicos padrão.|
-|**Examinar novamente**||
+|**Rescan**||
 |**Editar Definição**|Move o ponto de inserção para a definição na janela de código.|
 |**Escolher Codificação**|Abre a janela **Codificação** para que você possa definir uma codificação para o arquivo.|
 

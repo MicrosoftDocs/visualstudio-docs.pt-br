@@ -3,19 +3,17 @@ title: Executar testes de unidade com o Gerenciador de Testes
 description: Saiba como executar testes com o Gerenciador de Testes no Visual Studio. Este tópico aborda como habilitar execuções de teste automáticas após a compilação, exibir resultados de teste, agrupar e filtrar a lista de testes, criar listas de reprodução e usar atalhos de teste.
 ms.date: 07/14/2020
 ms.topic: how-to
-f1_keywords:
-- vs.unittesting.testexplorer.overview
 author: mikejo5000
 ms.author: mikejo
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 05a850b0c88a39366805ff892fb698f637b3bbe1
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 26dbed25f42f40614597075ad26c855398b56025
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99836326"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925118"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Executar testes de unidade com o Gerenciador de Testes
 
@@ -166,8 +164,8 @@ Você pode definir seus próprios níveis de hierarquia e de grupo por **Estado*
 ::: moniker range=">=vs-2019"
 |Grupo|Descrição|
 |-|-----------------|
-|**Duration**|Agrupa testes por tempo de execução: **rápido**, **médio** e **lento**.|
-|**State**|Agrupa testes por resultados de execução: **testes com falha**, **testes ignorados**, **testes aprovados**, **não executados**|
+|**Duration**|Grupos de testes por tempo de execução: **Rápido,** **Médio** e **Lento.**|
+|**State**|Grupos de testes por resultados de execução: **testes com falha,** **testes ignorados,** **testes aprovados,** **não executados**|
 |**Estrutura de Destino** | Agrupa testes pela estrutura de seus projetos de destino |
 |**Namespace**|Agrupa testes pelo namespace contido.|
 |**Projeto**|Agrupa testes pelo projeto contido.|
@@ -201,40 +199,40 @@ Consulte [Como usar o Microsoft Unit Testing Framework para C++](how-to-use-micr
 
 ![Escolher uma playlist](../test/media/ute_playlist.png)
 
-**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu do clique com o botão direito do mouse, escolha **Adicionar à lista de reprodução**  >  **NewPlaylist**. Salve o arquivo com o nome e local que você especificar na caixa de diálogo **Criar nova lista de reprodução**.
+**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de clique com o botão direito do mouse, **escolha Adicionar à Playlist**  >  **NewPlaylist**. Salve o arquivo com o nome e local que você especificar na caixa de diálogo **Criar nova lista de reprodução**.
 
 **Para adicionar testes a uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu do clique com o botão direito, escolha **Adicionar à Lista de Reprodução** e, em seguida, escolha a lista de reprodução à qual deseja adicionar os testes.
 
-**Para abrir uma playlist**, escolha **Teste** > **Playlist** no menu do Visual Studio e escolha uma opção na lista de playlists usadas recentemente ou escolha **Abrir Playlist** para especificar o nome e o local da playlist.
+Para abrir uma  **playlist,** escolha Testar Playlist no menu Visual Studio e escolha na lista de playlists usadas recentemente ou escolha Abrir Playlist para especificar o nome e o local da >  playlist. 
 
-Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o ![Captura de tela do botão de alternância de execução de teste paralelo na barra de ferramentas do Gerenciador de testes do Visual Studio.](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
+Se os testes individuais não tiverem dependências que os impeçam de serem executados em qualquer ordem, ative a execução de teste em paralelo com o ![Captura de tela do botão de alternância Execução de teste paralela na barra Visual Studio de ferramentas do Test Explorer.](../test/media/ute_parallelicon-small.png) botão de alternância na barra de ferramentas. Isso pode reduzir consideravelmente o tempo necessário para executar todos os testes.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-É possível criar e salvar uma lista de teste que você deseje executar ou exibir como um grupo. Quando você seleciona uma playlist, os testes na lista são exibidos em uma nova guia do Gerenciador de testes. Você pode adicionar um teste a mais de uma lista de reprodução.
+É possível criar e salvar uma lista de teste que você deseje executar ou exibir como um grupo. Quando você seleciona uma playlist, os testes na lista são exibidos em uma nova guia do Explorador de Testes. Você pode adicionar um teste a mais de uma playlist.
 
-**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu do clique com o botão direito do mouse, escolha **Adicionar à lista de** reprodução nova lista de reprodução  >  .
+**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. No menu de clique com o botão direito do mouse, **escolha Adicionar à Playlist** Nova  >  **Playlist**.
 
 ![Criar uma playlist](../test/media/vs-2019/test-explorer-playlist-16-2.png)
 
-A lista de reprodução é aberta em uma nova guia do Gerenciador de testes. Você pode usar essa playlist uma vez e descartá-la, ou pode clicar no botão **salvar** na barra de ferramentas da janela da lista de reprodução e, em seguida, selecionar um nome e um local para salvar a lista de reprodução.
+A playlist é aberta em uma nova guia do Explorador de Testes. Você pode usar essa playlist uma vez e,  em seguida, descartá-la ou clicar no botão Salvar na barra de ferramentas da janela de playlist e, em seguida, selecionar um nome e um local para salvar a playlist.
 
 ![A playlist é aberta em uma guia separada do Gerenciador de Testes](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
-**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. Clique com o botão direito do mouse e escolha **Adicionar à lista de** reprodução nova lista de reprodução  >  .
+**Para criar uma lista de reprodução**, escolha um ou mais testes no Gerenciador de Testes. Clique com o botão direito do mouse **e escolha Adicionar à Playlist** Nova  >  **playlist**.
 
 **Para abrir uma playlist**, escolha o ícone da playlist na barra de ferramentas do Visual Studio e selecione no menu um arquivo de playlist salvo anteriormente.
 
-**Para editar uma lista de reprodução**, você pode clicar com o botão direito do mouse em qualquer teste e usar as opções de menu para adicioná-lo ou removê-lo de uma lista de reprodução.
+**Para editar uma playlist**, você pode clicar com o botão direito do mouse em qualquer teste e usar as opções de menu para adicioná-la ou removê-la de uma playlist.
 
-A partir do Visual Studio 2019 versão 16,7, você pode escolher o botão **Editar** na barra de ferramentas. As caixas de seleção serão exibidas ao lado de seus testes mostrando quais testes são incluídos e excluídos na playlist. Edite os grupos conforme desejado.
+Começando na Visual Studio 2019 versão 16.7, você pode escolher o **botão** Editar na barra de ferramentas. As caixas de seleção serão exibidas ao lado de seus testes mostrando quais testes estão incluídos e excluídos na playlist. Edite os grupos conforme desejado.
 
-![Botão Editar playlist](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
+![Botão Editar Playlist](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
 
-Você também pode marcar ou desmarcar as caixas dos grupos pai na hierarquia. Essa ação cria uma lista de reprodução dinâmica que sempre atualiza a lista de reprodução com base nos testes que estão nesse grupo. Por exemplo, se você posicionar uma marca de seleção ao lado de uma classe, qualquer teste adicionado dessa classe se tornará parte dessa lista de reprodução. Se você excluir um teste dessa classe, ele será removido da lista de reprodução. Você pode saber mais sobre as regras salvando a lista de reprodução com o botão salvar na barra de ferramentas e abrindo o arquivo *. playlist* criado no disco. Esse arquivo lista todas as regras e testes individuais que compõem uma lista de reprodução.
+Você também pode verificar ou desmarcar as caixas dos grupos pai na hierarquia. Essa ação cria uma playlist dinâmica que sempre atualiza a playlist com base nos testes que estão nesse grupo. Por exemplo, se você colocar uma marca de seleção ao lado de uma classe, qualquer teste adicionado dessa classe se tornará parte dessa playlist. Se você excluir um teste dessa classe, ele será removido da playlist. Você pode saber mais sobre as regras salvando a playlist com o botão Salvar na barra de ferramentas e abrindo o *arquivo .playlist* criado no disco. Esse arquivo lista todas as regras e testes individuais que comem uma playlist.
 
-![Arquivo XML de playlist](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
+![Arquivo xml de playlist](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 
-Se você quiser fazer uma lista de reprodução para características, use o formato a seguir para MSTest.
+Se você quiser criar uma playlist para características, use o formato a seguir para MSTest.
 ```xml
 <Playlist Version="2.0">
     <Rule Name="Includes" Match="Any">
@@ -243,7 +241,7 @@ Se você quiser fazer uma lista de reprodução para características, use o for
 </Playlist>
 ```
 
-Use o formato a seguir para xUnit. Verifique se há um espaço entre o seu `TestCategory` nome e o `[Value]` .
+Use o formato a seguir para xUnit. Certifique-se de que haja um espaço entre `TestCategory` seu nome e o `[Value]` .
 ```xml
 <Playlist Version="2.0">
   <Rule Name="Includes" Match="Any">
@@ -264,7 +262,7 @@ Use o formato a seguir para xUnit. Verifique se há um espaço entre o seu `Test
 
 Os [grupos](#test-explorer-groups) também estão disponíveis como colunas no Gerenciador de Testes, com a Característica, Rastreamento de Pilha, Mensagem de Erro e Nome Totalmente Qualificado. A maioria das colunas não fica visível por padrão, e você pode personalizar quais colunas verá e a ordem de exibição.
 
-![Captura de tela do Visual Studio Test Explorer mostrando um menu com colunas selecionadas e um submenu com duração, características e mensagem de erro selecionada.](../test/media/vs-2019/test-explorer-columns-16-2.png)
+![Captura de tela do Visual Studio Test Explorer mostrando um menu com Colunas selecionado e um sub menu com Duração, Características e Mensagem de Erro selecionada.](../test/media/vs-2019/test-explorer-columns-16-2.png)
 
 ### <a name="filter-sort-and-rearrange-test-columns"></a>Filtrar, classificar e reorganizar colunas de testes
 
@@ -355,7 +353,7 @@ Para executar a cobertura de código para métodos de teste em uma solução:
 
 ::: moniker range=">=vs-2019"
 
-* Clique com o botão direito do mouse no Gerenciador de testes e selecione **analisar cobertura de código para testes selecionados**
+* Clique com o botão direito do mouse no Explorador de Testes e **selecione Analisar Cobertura de Código para Testes selecionados**
 
 ::: moniker-end
 
@@ -365,31 +363,31 @@ Para obter mais informações, confira [Usar a cobertura de código para determi
 
 ## <a name="test-shortcuts"></a>Atalhos de teste
 
-Os testes podem ser executados no Gerenciador de testes clicando com o botão direito do mouse no editor de código em um teste e selecionando **Executar teste** ou usando os atalhos padrão do [Gerenciador de testes](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) no Visual Studio. Alguns dos atalhos são baseados em contexto. Isso significa que eles executam ou [depuram testes](../test/debug-unit-tests-with-test-explorer.md) com base em onde o cursor está no editor de códigos. Se o cursor estiver dentro de um método de teste, esse método de teste será executado. Se o cursor estiver no nível de classe, todos os testes na classe serão executados. O mesmo vale para o nível do namespace.
+Os testes podem ser executados no Explorador de Testes clicando  com o botão direito do mouse no editor de código em um teste e selecionando Executar teste ou usando os [atalhos](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) padrão do Test Explorer Visual Studio. Alguns dos atalhos são baseados em contexto. Isso significa que eles são executados ou [depuram testes](../test/debug-unit-tests-with-test-explorer.md) com base em onde o cursor está no editor de código. Se o cursor estiver dentro de um método de teste, esse método de teste será executado. Se o cursor estiver no nível de classe, todos os testes na classe serão executados. O mesmo vale para o nível do namespace.
 
 |Comandos frequentes| Atalhos do teclado|
 |-|------------------------|
-|TestExplorer.DebugAllTestsInContext|**Ctrl** + **R**, **Ctrl** + **T**|
-|TestExplorer.RunAllTestsInContext|**Ctrl** + **R**, **T**|
-|TestExplorer.RunAllTests|**Ctrl** + **R**, **A**|
-|TestExplorer.RepeatLastRun|**Ctrl** + **R**, **L**|
+|TestExplorer.DebugAllTestsInContext|**Ctrl** + **R,** **Ctrl** + **T**|
+|TestExplorer.RunAllTestsInContext|**Ctrl** + **R,** **T**|
+|TestExplorer.RunAllTests|**Ctrl** + **R,** **A**|
+|TestExplorer.RepeatLastRun|**Ctrl** + **R,** **L**|
 
 > [!NOTE]
 > Não é possível executar um teste em uma classe abstrata, porque os testes são apenas definidos nas classes abstratas e não instanciados. Para executar testes em classes abstratas, crie uma classe que deriva da classe abstrata.
 
 ::: moniker range=">=vs-2019"
-## <a name="test-audio-cue"></a>Dica de áudio de teste
-O Gerenciador de testes pode tocar um som quando a execução de teste é concluída. Há dois sons: um som para indicar que a execução de teste foi bem-sucedida com todos os testes de passagem e um segundo som para indicar a execução de teste concluída com pelo menos um teste com falha. Você pode configurar esses sons na caixa de diálogo de som padrão do Windows 10. Esse recurso está disponível a partir do Visual Studio 2019 atualização 16,9 Preview 3.
+## <a name="test-audio-cue"></a>Testar a indicação de áudio
+O Explorador de Testes pode reproduzir um som quando uma executar um teste é concluída. Há dois sons: um som para indicar que a executar o teste foi bem-sucedida com todos os testes aprovados e um segundo som para indicar que a executar o teste foi concluída com pelo menos um teste com falha. Você pode configurar esses sons na caixa de diálogo Windows 10 som padrão. Esse recurso está disponível a partir do Visual Studio Atualização 16.9 versão prévia 3 de 2019.
 
-1. Abra a caixa de diálogo de som padrão do Windows 10.
-2. Navegue até a guia **sons** .
-3. Localize a categoria de **Microsoft Visual Studio** . Escolha a **execução de teste com êxito** ou sons de **execução de teste com falha** para selecionar os sons predefinidos ou navegue até seu próprio arquivo de áudio.  
-![Caixa de diálogo som do Windows 10](../test/media/default-windows-10-sound-dialog.png)
+1. Abra a caixa de Windows 10 de som padrão.
+2. Navegue até a **guia Sons.**
+3. Encontre a **Microsoft Visual Studio** de dados. Escolha os **sons Executar teste bem-sucedidos** ou **Falha** na Executar Teste para selecionar os sons predefinidos ou navegar até seu próprio arquivo de áudio.  
+![Windows 10 de som](../test/media/default-windows-10-sound-dialog.png)
 
 ::: moniker-end
 ## <a name="see-also"></a>Confira também
 
-- [Teste de unidade em seu código](../test/unit-test-your-code.md)
+- [Realizar teste de unidade do seu código](../test/unit-test-your-code.md)
 - [Depurar testes de unidade com o Gerenciador de Testes](../test/debug-unit-tests-with-test-explorer.md)
 - [Executar um teste de unidade como um processo de 64 bits](../test/run-a-unit-test-as-a-64-bit-process.md)
 - [Perguntas Frequentes sobre o Gerenciador de Testes](test-explorer-faq.md)

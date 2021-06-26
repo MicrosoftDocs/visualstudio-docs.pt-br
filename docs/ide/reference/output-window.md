@@ -1,13 +1,12 @@
 ---
 title: Janela de saída
-description: Saiba mais sobre a janela de saída e como ela exibe mensagens de status para vários recursos no IDE.
+description: Saiba mais sobre a janela Saída e como ela exibe mensagens de status para vários recursos no IDE.
 ms.custom: SEO-VS-2020
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - vs.build.output
 - vs.debug.output
-- vs.output
 helpviewer_keywords:
 - Output window, about Output window
 - Output window
@@ -18,12 +17,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bdbaf79a3700a1ba1c0574e345093af25608e39
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: bbc6f33c439a812d7153f48d7f20d7e1d9dd3cb1
+ms.sourcegitcommit: d3658667e768d7516cbf4461ec47bf24c8fcb7e6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99932040"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112925157"
 ---
 # <a name="output-window"></a>janela Saída
 
@@ -73,11 +72,11 @@ No C++, é possível criar etapas de build e eventos de build personalizados cuj
 
 ## <a name="scroll-behavior"></a>Comportamento de rolagem
 
-Se você usar a rolagem automática na Janela de **Saída** e, em seguida, navegar usando o mouse ou as teclas de seta, a rolagem automática será interrompida. Para retomar a rolagem, pressione **Ctrl** + **end**.
+Se você usar a rolagem automática na Janela de **Saída** e, em seguida, navegar usando o mouse ou as teclas de seta, a rolagem automática será interrompida. Para retomar o registro automático, pressione **Ctrl** + **End.**
 
 ## <a name="see-also"></a>Confira também
 
-- [Mensagens de diagnóstico na janela de saída](../../debugger/diagnostic-messages-in-the-output-window.md)
+- [Mensagens de diagnóstico na janela Saída](../../debugger/diagnostic-messages-in-the-output-window.md)
 - [Como controlar a Janela de Saída](/previous-versions/ht6z4e28(v=vs.140))
 - [Compilar e criar](../../ide/compiling-and-building-in-visual-studio.md)
 - [Noções sobre configurações de build](../../ide/understanding-build-configurations.md)
