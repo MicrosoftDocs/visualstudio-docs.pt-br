@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 4686a6459f62fceeebe202cf52d7c30cf99f6fc3
-ms.sourcegitcommit: f33ca1fc99f5d9372166431cefd0e0e639d20719
+ms.openlocfilehash: a1a3aa2ace6279211c27847b8b9cc46d71b0d9ad
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102221243"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038597"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identificar e personalizar atalhos de teclado no Visual Studio
 
@@ -35,7 +35,7 @@ Você pode identificar atalhos de teclado para comandos do Visual Studio, person
 
 - Em que contexto você está quando escolhe o atalho. Por exemplo, o atalho **F2** invocará o comando `Edit.EditCell` se você estiver usando o **Designer de Configurações** e o comando `File.Rename` se você estiver usando o **Team Explorer**.
 
-Independentemente das configurações, da personalização e do contexto, você sempre pode localizar e alterar um atalho de teclado na caixa de diálogo **Opções**. Você também pode procurar os atalhos de teclado padrão de dezenas de comandos em [Atalhos de teclado populares](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md). Para obter uma lista completa de todos os atalhos padrão (com base nas configurações **Desenvolvimento Geral**), confira [Todos os atalhos de teclado](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Independentemente das configurações, da personalização e do contexto, você sempre pode localizar e alterar um atalho de teclado na caixa de diálogo **Opções**. Você também pode procurar os atalhos de teclado padrão de dezenas de comandos em [Atalhos de teclado populares](../ide/default-keyboard-shortcuts-in-visual-studio.md#most-popular-keyboard-shortcuts). Para obter uma lista completa de todos os atalhos padrão (com base nas configurações **Desenvolvimento Geral**), confira [Todos os atalhos de teclado](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 Se um atalho for atribuído a um comando no contexto *Global* e em mais nenhum outro contexto, esse atalho sempre invocará o comando em questão. Porém, um atalho pode ser atribuído a um comando no contexto Global e a um comando diferente em um contexto específico. Se você usar tal atalho quando estiver no contexto específico, o atalho invocará o comando para o contexto específico, e não para o contexto Global.
 

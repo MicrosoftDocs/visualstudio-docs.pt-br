@@ -7,12 +7,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: ab67a81d761f2e17c82b75fb59a201188cf80986
-ms.sourcegitcommit: b770b99034e65c91b29bea87bc6f5fa02348515b
+ms.openlocfilehash: f95542c79e6f8cde83866caa082b8e025b069589
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "112997625"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038571"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Acessando máquinas virtuais do Azure por meio do Gerenciador de Servidores
 
@@ -26,7 +26,7 @@ ms.locfileid: "112997625"
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=vs-2019"
 
 Se tiver máquinas virtuais hospedadas pelo Azure, você pode acessá-las no Gerenciador de Servidores. Você primeiro deve entrar sua assinatura do Azure para exibir os serviços móveis. Por exemplo, no Gerenciador de Servidores, você pode abrir o menu de atalho do nó do Azure e escolher **Conectar ao Microsoft Azure**.
 

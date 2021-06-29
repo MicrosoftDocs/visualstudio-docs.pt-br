@@ -10,12 +10,12 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6de31ed1b649f226ac47161fdadfe44d434289b9
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 09a33db9df8e1309792cd6a3722bb82333348d84
+ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112308513"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113038649"
 ---
 # <a name="visual-studio-productivity-guide-for-c-developers"></a>Guia de produtividade do Visual Studio para desenvolvedores de C#
 
@@ -64,7 +64,7 @@ Estes são os atalhos populares do Visual Studio:
 > [!NOTE]
 > Algumas extensões desassociam as associações de teclas padrão do Visual Studio. Para usar os comandos acima, restaure suas Visual Studio para os padrões do Visual Studio, indo para Ferramentas Importar e Exportar Configurações Redefinir todas as configurações ou Opções de Ferramentas Redefinir Teclado  >    >     >    >    >  .
 
-Para saber mais sobre os comandos e atalhos de teclado, confira [Atalhos de produtividade](../ide/productivity-shortcuts.md) e [Atalhos comuns de teclado](default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md).
+Para saber mais sobre os comandos e atalhos de teclado, confira [Atalhos de produtividade](../ide/productivity-shortcuts.md) e [Atalhos comuns de teclado](default-keyboard-shortcuts-in-visual-studio.md).
 
 ## <a name="navigate-quickly-to-files-or-types"></a>Navegar rapidamente para arquivos ou tipos
 
