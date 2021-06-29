@@ -7,14 +7,28 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 532195bad81fc9162b854493d5aca9bb2fa7f600
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 08ccab99df40247390894aa53d5073a3aff0c561
+ms.sourcegitcommit: b770b99034e65c91b29bea87bc6f5fa02348515b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843937"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112997651"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Gerenciar os recursos associados com suas contas do Azure no Visual Studio Cloud Explorer
+
+::: moniker range=">=vs-2022"
+> [!Important]
+> O Cloud Explorer foi Visual Studio 2022. Em vez disso, você pode usar as seguintes alternativas:
+> - O [Gerenciador de Armazenamento do Microsoft Azure](/azure/vs-azure-tools-storage-manage-with-storage-explorer) é um aplicativo autônomo gratuito da Microsoft. Você pode usá-lo para trabalhar visualmente com dados do Armazenamento do Azure no Linux, no Windows e no macOS.
+> - O [console Kudu](https://github.com/projectkudu/kudu/wiki/Kudu-console) fornece acesso de linha de comando com privilégios elevados e direto para o servidor do Serviço de Aplicativo e seu sistema de arquivos. Isso é uma ferramenta valiosa de depuração e também permite operações de CLI, como instalação de pacotes.
+>
+> Se necessário, você pode usar o Portal do Azure ou continuar a usar o nó do Azure Gerenciador de Servidores em versões anteriores do Visual Studio.
+>
+> Para obter mais informações sobre Visual Studio 2022, consulte nossas notas [de versão](/visualstudio/releases/2022/release-notes-preview/).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 O Cloud Explorer permite exibir os recursos e grupos de recursos do Azure, inspecionar suas propriedades e executar ações chave de diagnóstico do desenvolvedor de dentro do Visual Studio.
 
@@ -26,13 +40,13 @@ O Cloud Explorer é criado na pilha do Azure Resource Manager, assim como o [Por
 * Conta do Microsoft Azure – se não tiver uma conta do Azure, você poderá [inscrever-se para uma avaliação gratuita](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) ou [ativar seus benefícios de assinante do Visual Studio](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Para exibir o Cloud Explorer, pressione **Ctrl** + **Q** para ativar a caixa de pesquisa e, em seguida, insira **Cloud Explorer**.
+> Para exibir o Cloud Explorer, pressione **Ctrl** Q para ativar a caixa de pesquisa e +  insira **Cloud Explorer**.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Adicionar uma conta do Azure ao Cloud Explorer
 
-Para exibir os recursos associados a uma conta do Azure, você deve primeiro adicionar a conta ao **Cloud Explorer**.
+Para exibir os recursos associados a uma conta do Azure, primeiro você deve adicionar a conta ao **Cloud Explorer.**
 
-1. No **Cloud Explorer**, selecione o botão **Gerenciamento de conta** .
+1. No **Cloud Explorer,** selecione o **botão Gerenciamento de** Conta.
 
    ![Ícone de configurações de conta do Azure do Cloud Explorer](./media/vs-azure-tools-resources-managing-with-cloud-explorer/azure-account-settings.png)
 
@@ -46,7 +60,7 @@ Para exibir os recursos associados a uma conta do Azure, você deve primeiro adi
 
    ![Cloud Explorer: selecione as assinaturas do Azure para exibir](./media/vs-azure-tools-resources-managing-with-cloud-explorer/select-subscriptions.png)
 
-1. Depois de selecionar as assinaturas cujos recursos você deseja procurar, essas assinaturas e recursos são exibidos no **Cloud Explorer**.
+1. Depois de selecionar as assinaturas cujos recursos você deseja procurar, essas assinaturas e recursos serão exibidos no **Cloud Explorer.**
 
    ![Listagem de recursos do Cloud Explorer para uma conta do Azure](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-listed.png)
 
@@ -99,8 +113,10 @@ Valores da propriedade e ações adicionais também podem aparecer de acordo com
 
 ## <a name="find-resources-in-cloud-explorer"></a>Localizar recursos no Cloud Explorer
 
-Para localizar recursos com um nome específico em suas assinaturas de conta do Azure, insira o nome na caixa de **pesquisa** no **Cloud Explorer**.
+Para localizar recursos com um nome específico em suas assinaturas  de conta do Azure, insira o nome na caixa Pesquisar no **Cloud Explorer.**
 
   ![Localizando recursos no Cloud Explorer](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 
 Conforme você insere caracteres na caixa **Pesquisa**, apenas os recursos que correspondem a esses caracteres são exibidos na árvore de recursos.
+
+::: moniker-end

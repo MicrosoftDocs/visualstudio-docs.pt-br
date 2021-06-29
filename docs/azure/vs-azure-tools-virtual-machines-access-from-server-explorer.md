@@ -7,14 +7,26 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 8/31/2017
 ms.author: ghogen
-ms.openlocfilehash: a40434845187490ee4f8437f8e15963bddd1998f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ab67a81d761f2e17c82b75fb59a201188cf80986
+ms.sourcegitcommit: b770b99034e65c91b29bea87bc6f5fa02348515b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99843781"
+ms.lasthandoff: 06/28/2021
+ms.locfileid: "112997625"
 ---
 # <a name="accessing-azure-virtual-machines-from-server-explorer"></a>Acessando máquinas virtuais do Azure por meio do Gerenciador de Servidores
+
+::: moniker range=">=vs-2022"
+> [!Important]
+> O nó do Azure de Gerenciador de Servidores foi desativado no Visual Studio 2022. Você pode usar o portal do Azure ou continuar a usar o nó do Azure de Gerenciador de Servidores em versões anteriores do Visual Studio.
+>
+> Além disso, [Gerenciador de armazenamento do Microsoft Azure](/azure/vs-azure-tools-storage-manage-with-storage-explorer) é um aplicativo autônomo e gratuito da Microsoft. Você pode usá-lo para trabalhar visualmente com dados do Armazenamento do Azure no Linux, no Windows e no macOS.
+>
+> Para obter mais informações sobre o Visual Studio 2022, consulte nossas [notas de versão](/visualstudio/releases/2022/release-notes-preview/).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Se tiver máquinas virtuais hospedadas pelo Azure, você pode acessá-las no Gerenciador de Servidores. Você primeiro deve entrar sua assinatura do Azure para exibir os serviços móveis. Por exemplo, no Gerenciador de Servidores, você pode abrir o menu de atalho do nó do Azure e escolher **Conectar ao Microsoft Azure**.
 
@@ -39,3 +51,5 @@ Se tiver máquinas virtuais hospedadas pelo Azure, você pode acessá-las no Ger
    | Porta privada |A porta para acesso à rede interna para o seu aplicativo. |
    | Protocolo |O protocolo de camada de transporte que este ponto de extremidade usa: TCP ou UDP. |
    | Porta pública |A porta usada para acesso público ao seu aplicativo. |
+
+::: moniker-end
