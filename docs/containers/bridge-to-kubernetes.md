@@ -1,31 +1,40 @@
 ---
-title: Usar o Bridge to Kubernetes com o Visual Studio
-titleSuffix: ''
+title: 'Tutorial: conectar computadores de desenvolvimento com o Bridge ao kubernetes'
 ms.technology: vs-azure
 ms.date: 03/24/2021
-ms.topic: quickstart
-description: Saiba como usar o Bridge para kubernetes com o Visual Studio para conectar seu computador de desenvolvimento a um cluster kubernetes
+ms.topic: tutorial
+description: Conecte seu computador de desenvolvimento a um cluster kubernetes com ponte para kubernetes com o Visual Studio.
 keywords: Ponte para kubernetes, Azure Dev Spaces, espaços de desenvolvimento, Docker, kubernetes, Azure, contêineres
 monikerRange: '>=vs-2019'
 ms.author: ghogen
 author: ghogen
 manager: jmartens
-ms.openlocfilehash: fdcf31d062fe2be72709979f0892e6a7f535024a
-ms.sourcegitcommit: 2049ec99f1439ec91d002853226934b067b1ee70
+ms.openlocfilehash: b8d6c98d2e2146ad57871b74cd2d522ed2b04259
+ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2021
-ms.locfileid: "105635015"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113046112"
 ---
-# <a name="use-bridge-to-kubernetes"></a>Usar ponte para kubernetes
+# <a name="tutorial-use-bridge-to-kubernetes-to-connect-your-clusters-and-your-development-computers"></a>Tutorial: usar o Bridge para kubernetes para conectar seus clusters e seus computadores de desenvolvimento
 
-Você pode usar o Bridge para kubernetes para redirecionar o tráfego entre o cluster do kubernetes e o código em execução no seu computador de desenvolvimento. Este guia também fornece um script para implantar um aplicativo de exemplo grande com vários microserviços em um cluster kubernetes.
+Neste tutorial, você aprenderá a usar o Bridge para kubernetes para redirecionar o tráfego entre o cluster do kubernetes e o código em execução no seu computador de desenvolvimento. 
 
-## <a name="before-you-begin"></a>Antes de começar
+Este guia também fornece um script para implantar um aplicativo de exemplo grande com vários microserviços em um cluster kubernetes.
 
-Este guia usa o [aplicativo de exemplo de aplicativo todo][todo-app-github] para demonstrar a conexão de seu computador de desenvolvimento a um cluster kubernetes. Se você já tiver seu próprio aplicativo em execução em um cluster kubernetes, ainda poderá seguir as etapas abaixo e usar os nomes dos seus próprios serviços.
+Saiba mais sobre o Bridge para kubernetes com o artigo [como funciona a ponte para o kubernetes](overview-bridge-to-kubernetes.md).
 
-Este exemplo ilustra como o Bridge to kubernetes pode ser usado para desenvolver uma versão de microatendimento de um aplicativo de tarefas simples em qualquer cluster kubernetes. Este exemplo, usando o Visual Studio, foi adaptado do código fornecido pelo [TodoMVC](http://todomvc.com). Essas etapas devem funcionar com qualquer cluster kubernetes.
+## <a name="prerequisites"></a>Pré-requisitos
+
+- Um cluster kubernetes
+- [Visual Studio 2019][visual-studio] versão 16,7 Preview 4 ou superior em execução no Windows 10.
+- [Ponte para a extensão kubernetes instalada][btk-extension]
+
+## <a name="about-the-data"></a>Sobre os dados
+
+Este tutorial usa o Bridge para kubernetes para desenvolver uma versão de microatendimento de um aplicativo de exemplo simples TODO em qualquer cluster kubernetes. Este [aplicativo de exemplo de aplicativo todo][todo-app-github], usando o Visual Studio, foi adaptado do código fornecido pelo [TodoMVC](http://todomvc.com). 
+
+ Essas etapas devem funcionar com qualquer cluster kubernetes. Portanto, se você já tiver seu próprio aplicativo em execução em um cluster kubernetes, ainda poderá seguir as etapas abaixo e usar os nomes dos seus próprios serviços.
 
 O exemplo de aplicativo TODO é composto de um frontend e um back-end que fornece armazenamento persistente. Esse exemplo estendido adiciona um componente de estatísticas e divide o aplicativo em vários microserviços, especificamente:
 
@@ -37,15 +46,10 @@ O exemplo de aplicativo TODO é composto de um frontend e um back-end que fornec
 
 De todo, esse aplicativo estendido TODO é composto por seis componentes inter-relacionados.
 
-### <a name="prerequisites"></a>Pré-requisitos
-
-- um cluster kubernetes
-- [Visual Studio 2019][visual-studio] versão 16,7 Preview 4 ou superior em execução no Windows 10.
-- [Ponte para a extensão kubernetes instalada][btk-extension].
 
 ## <a name="check-the-cluster"></a>Verificar o cluster
 
-Abra um prompt de comando e verifique se o kubectl está instalado e no caminho, se o cluster que você deseja usar está disponível e pronto e defina o contexto para esse cluster.
+Abra um prompt de comando e verifique se o `kubectl` está instalado e no caminho, se o cluster que você deseja usar está disponível e pronto e defina o contexto para esse cluster.
 
 ```cmd
 kubectl cluster-info
