@@ -1,17 +1,17 @@
 ---
-ms.date: 05/28/2021
+ms.date: 06/29/2021
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
 ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: 128a09500aaa326fad717efcade9040496452963
-ms.sourcegitcommit: 5fb4a67a8208707e79dc09601e8db70b16ba7192
+ms.openlocfilehash: 452549030d77b90049b12716087544bdd1288a3f
+ms.sourcegitcommit: 7393a37ce77c5b80312ce787baa060c91d41d959
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112361879"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113113656"
 ---
 O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inicialização criativo que você pode usar para editar, depurar e compilar o código e, em seguida, publicar um aplicativo. Um IDE (ambiente de desenvolvimento integrado) é um programa repleto de recursos que pode ser usado por muitos aspectos do desenvolvimento de software. Além do editor e do depurador padrão fornecidos pela maioria dos IDEs, o Visual Studio inclui compiladores, ferramentas de preenchimento de código, designers gráficos e muitos outros recursos para facilitar o processo de desenvolvimento de software.
 
@@ -23,13 +23,13 @@ O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inici
 
 ::: moniker range=">=vs-2019"
 
-:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="Uma captura de tela do Visual Studio IDE, que inclui explicações que indicam onde estão localizados os principais recursos e funcionalidades." lightbox="../media/vs-2019/ide-overview.png":::
+:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="Uma captura de tela do IDE do Visual Studio, que inclui textos explicativos que indicam onde os principais recursos e funcionalidades estão localizados." lightbox="../media/vs-2019/ide-overview.png":::
 
 ::: moniker-end
 
 Esta imagem mostra o Visual Studio com um projeto aberto e várias importantes janelas de ferramentas que você provavelmente usará:
 
-- O [Gerenciador de Soluções](../../ide/solutions-and-projects-in-visual-studio.md) (parte superior direita) permite exibir, navegar e gerenciar os arquivos de código. **Gerenciador de Soluções** pode ajudar a organizar seu código agrupando os arquivos em [soluções e projetos](../tutorial-projects-solutions.md).
+- O [Gerenciador de Soluções](../../ide/use-solution-explorer.md) (parte superior direita) permite exibir, navegar e gerenciar os arquivos de código. **Gerenciador de soluções** pode ajudar a organizar seu código agrupando os arquivos em [soluções e projetos](../../ide/use-solution-explorer.md).
 
 - A [janela do editor](../../ide/writing-code-in-the-code-and-text-editor.md) (parte central), na qual você provavelmente passará a maior parte do tempo, exibe o conteúdo do arquivo. É nela em que você pode editar o código ou criar uma interface do usuário, como uma janela com botões e caixas de texto.
 
@@ -39,7 +39,7 @@ Esta imagem mostra o Visual Studio com um projeto aberto e várias importantes j
 
 ::: moniker-end
 
-- [As alterações do Git](/visualstudio/version-control/) (inferior direito) permitem que você acompanhe itens de trabalho e compartilhe código com outras pessoas usando tecnologias de controle de versão, como [Git](https://git-scm.com/) e [GitHub.](https://docs.github.com/github)
+- [Alterações de git](/visualstudio/version-control/) (canto inferior direito) permitem que você acompanhe itens de trabalho e compartilhe código com outras pessoas usando tecnologias de controle de versão, como [git](https://git-scm.com/) e [GitHub](https://docs.github.com/github).
 
 ## <a name="editions"></a>Edições
 
@@ -47,7 +47,7 @@ Esta imagem mostra o Visual Studio com um projeto aberto e várias importantes j
 
 O Visual Studio está disponível para Windows e Mac. O [Visual Studio para Mac](/visualstudio/mac/) tem muitas das mesmas funcionalidades do Visual Studio 2017 e é otimizado para o desenvolvimento de aplicativos móveis e multiplataforma. Este artigo concentra-se na versão do Visual Studio 2017 para Windows.
 
-Há três edições do Visual Studio: Community, Professional e Enterprise. Confira [Comparar Visual Studio edições para](https://visualstudio.microsoft.com/vs/compare/) saber quais recursos têm suporte em cada edição.
+Há três edições do Visual Studio: Community, Professional e Enterprise. Consulte [comparar edições do Visual Studio](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Há três edições do Visual Studio: Community, Professional e Enterprise. Conf
 
 O Visual Studio está disponível para Windows e Mac. O [Visual Studio para Mac](/visualstudio/mac/) tem muitas das mesmas funcionalidades do Visual Studio 2019 e é otimizado para o desenvolvimento de aplicativos móveis e multiplataforma. Este artigo concentra-se na versão do Visual Studio 2019 para Windows.
 
-Há três edições do Visual Studio 2019: Community, Professional e Enterprise. Confira [Comparar Visual Studio edições para](https://visualstudio.microsoft.com/vs/compare/) saber quais recursos têm suporte em cada edição.
+Há três edições do Visual Studio 2019: Community, Professional e Enterprise. Consulte [comparar edições do Visual Studio](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
 
 ::: moniker-end
 
@@ -93,7 +93,7 @@ Alguns dos recursos populares no Visual Studio que ajudam você a ser mais produ
 
 - [Pesquisa do Visual Studio](../../ide/visual-studio-search.md)
 
-   O Visual Studio pode parecer assustador, às vezes, com tantas propriedades, opções e menus. Visual Studio pesquisa (**Ctrl** Q ) é uma ótima maneira de encontrar rapidamente os recursos e o + código do IDE em um único lugar.
+   O Visual Studio pode parecer assustador, às vezes, com tantas propriedades, opções e menus. O Visual Studio Search (**Ctrl** + **Q**) é uma ótima maneira de localizar rapidamente os recursos e o código do IDE em um único lugar.
 
    ::: moniker range="vs-2017"
 
@@ -107,7 +107,7 @@ Alguns dos recursos populares no Visual Studio que ajudam você a ser mais produ
 
    ![Caixa de pesquisa no Visual Studio 2019](../media/vs-2019/quick-launch-nuget.png)
 
-    Para obter informações e dicas de produtividade, [consulte How to use Visual Studio search](../../ide/visual-studio-search.md).
+    Para obter informações e dicas de produtividade, consulte [como usar a pesquisa do Visual Studio](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 
@@ -133,7 +133,7 @@ Alguns dos recursos populares no Visual Studio que ajudam você a ser mais produ
 
    ![Ir para Definição](../media/go-to-definition-menu.png)
 
-- [Espiar definição](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [Inspecionar definição](../../ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
 
    A janela **Espiar Definição** mostra a definição de um método ou um tipo sem, na verdade, abrir um arquivo separado.
 
@@ -167,11 +167,11 @@ Vamos nos aprofundar e criar um programa simples.
 
 1. Abra o Visual Studio.
 
-1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto**.
+1. Na barra de menus, escolha **arquivo** > **novo** > **projeto**.
 
    ![Arquivo > Novo projeto na barra de menus](../media/file-new-project-menu.png)
 
-   A **caixa de diálogo** Novo Projeto mostra vários modelos de *projeto.* Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
+   A caixa de diálogo **novo projeto** mostra vários *modelos* de projeto. Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
 
 1. Escolha a categoria de modelo **.NET Core** em **Visual C#** e escolha o modelo **Aplicativo de Console (.NET Core)**. Na caixa de texto **Nome**, digite **HelloWorld** e, em seguida, selecione o botão **OK**.
 
@@ -372,7 +372,7 @@ Primeiro, vamos renomear a variável `name`:
 
 10. Execute o programa novamente pressionando **Ctrl** + **F5**. A saída é parecida com esta:
 
-    ! Captura de tela da janela do console cmd.exe mostrando o prompt para um nome, a entrada e a saída ' Olá Georgette! Dia do ano: 151 '.] (.. overview-console-final.png/Media/)
+    ! Captura de tela da cmd.exe do console mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 151'.] (.. /media/overview-console-final.png)
 
 ::: moniker-end
 
@@ -380,7 +380,7 @@ Primeiro, vamos renomear a variável `name`:
 
 10. Execute o programa novamente pressionando **Ctrl** + **F5**. A saída é parecida com esta:
 
-    ![Captura de tela da janela do console de depuração Microsoft Visual Studio mostrando o prompt para um nome, a entrada e a saída ' Olá Georgette! Dia do ano: 43 '.](../media/vs-2019/overview-console-final.png)
+    ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 43'.](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 
@@ -396,7 +396,7 @@ Vamos definir um ponto de interrupção para ver o valor da variável `username`
 
    ![Ponto de interrupção na linha de código no Visual Studio](../media/breakpoint.png)
 
-1. Inicie a depuração selecionando **depurar**  >  **Iniciar Depuração** ou pressionando **F5**.
+1. Inicie a depuração selecionando **Depurar**  >  **Iniciar Depuração** ou pressionando **F5**.
 
 1. Quando a janela do console for exibida e solicitar seu nome, digite-o e pressione **Enter**.
 
@@ -414,11 +414,11 @@ Para obter mais detalhes sobre a depuração no Visual Studio, consulte [Tour do
 
 Personalize a interface do usuário do Visual Studio, incluindo a alteração do tema de cores padrão. Para alterar para o tema **Escuro**:
 
-1. Na barra de menus, escolha **ferramentas**  >  **Opções** para abrir a caixa de diálogo **Opções** .
+1. Na barra de menus, escolha **Opções**  >  **de Ferramentas** para abrir a caixa de **diálogo** Opções.
 
 ::: moniker range="vs-2017"
 
-2. Na  > página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e, em seguida, escolha **OK**.
+2. Na página **de opções** > **Ambiente Geral,** altere a seleção **Tema de** cores para Escuro e, em seguida, escolha **OK.**
 
    O tema de cores para todo o IDE é alterado para **Escuro**.
 
@@ -428,7 +428,7 @@ Personalize a interface do usuário do Visual Studio, incluindo a alteração do
 
 ::: moniker range=">=vs-2019"
 
-2. Na  > página opções **gerais** do ambiente, altere a seleção de **tema de cores** para **escuro** e, em seguida, escolha **OK**.
+2. Na página **de opções** > **Ambiente Geral,** altere a seleção **Tema de** cores para Escuro e, em seguida, escolha **OK.**
 
    O tema de cores para todo o IDE é alterado para **Escuro**.
 
