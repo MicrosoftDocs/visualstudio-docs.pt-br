@@ -1,44 +1,43 @@
 ---
-title: 'Tutorial do Docker-parte 3: compartilhar seu aplicativo'
-description: Descreve como compartilhar imagens do Docker usando o registro do Hub do Docker.
+title: 'Tutorial do Docker – Parte 3: Compartilhar seu aplicativo'
+description: Descreve como compartilhar imagens do Docker usando o Docker Hub registro.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: ad9f7d329bf00e3fadd665cefea22a2301fdf695
-ms.sourcegitcommit: f2916d8fd296b92cc402597d1d1eecda4f6cccbf
+ms.openlocfilehash: d64d10c7abefc14f31c39c3b8397e95cec67e9f4
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105061778"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222780"
 ---
 # <a name="share-your-app"></a>Compartilhar seu aplicativo
 
-Agora que criamos uma imagem, vamos compartilhar! Para compartilhar imagens do Docker, você precisa usar um registro do Docker. O registro padrão é o Hub do Docker e é onde vêm todas as imagens que usamos.
+Agora que fizemos uma imagem, vamos compartilhá-la! Para compartilhar imagens do Docker, você precisa usar um registro do Docker. O registro padrão é Docker Hub e é de onde todas as imagens usadas foram fornecidas.
 
-## <a name="create-a-repo"></a>Criar um repositório
+## <a name="create-a-repo"></a>Criar um repo
 
-Para enviar uma imagem por push, primeiro, você precisa criar um repositório no Hub do Docker.
+Para fazer push de uma imagem, primeiro, você precisa criar um Docker Hub.
 
-1. Vá para o [Hub do Docker](https://hub.docker.com/signup/msftedge?utm_source=msftedge) e faça logon se necessário.
+1. Vá para [Docker Hub](https://hub.docker.com/signup/msftedge?utm_source=msftedge) e faça logoff, se necessário.
 
-1. Clique no botão **criar repositório** .
+1. Clique no **botão Criar Repositório.**
 
-1. Para o nome do repositório, use `getting-started` . Verifique se a visibilidade é `Public` .
+1. Para o nome do repo, use `getting-started` . Certifique-se de que a Visibilidade seja `Public` .
 
-1. Clique no botão **criar** !
+1. Clique no **botão** Criar!
 
-Se você olhar o lado direito da página, verá uma seção chamada **comandos do Docker**. Isso fornece um comando de exemplo que será necessário executar para enviar por push para este repositório.
+Se você procurar no lado direito da página, verá uma seção chamada **Comandos do Docker**. Isso fornece um exemplo de comando que você precisará executar para fazer push para esse repo.
 
-![Comando Docker com exemplo de push](media/push-command.png)
+![Comando do Docker com exemplo de push](media/push-command.png)
 
 ## <a name="push-the-image"></a>Enviar a imagem por push
 
-1. Na linha de comando, tente executar o comando push que você vê no Hub do Docker. Observe que o comando usará o namespace, não o "Docker".
+1. Na linha de comando, tente executar o comando push que você vê no Docker Hub. Observe que o comando estará usando seu namespace, não "docker".
 
     ```plaintext
     $ docker push docker/getting-started
@@ -46,39 +45,39 @@ Se você olhar o lado direito da página, verá uma seção chamada **comandos d
     An image does not exist locally with the tag: docker/getting-started
     ```
 
-    Por que houve falha? O comando Push estava procurando uma imagem chamada Docker/Getting-Started, mas não encontrou uma. Se você executar `docker image ls` o, não verá um.
+    Por que ele falhou? O comando push estava procurando uma imagem chamada docker/getting-started, mas não encontrou uma. Se você `docker image ls` executar , também não verá um.
 
-    Para corrigir isso, você precisa "marcar" sua imagem existente que criamos para dar outro nome.
+    Para corrigir isso, você precisa "marcar" sua imagem existente criada para dar a ela outro nome.
 
-1. Entre no Hub do Docker usando o comando `docker login -u <username>` .
+1. Entre no Docker Hub usando o comando `docker login -u <username>` .
 
-1. Use o `docker tag` comando para dar `getting-started` um novo nome à imagem. Não deixe de alternar `<username>` com a ID do Docker.
+1. Use o `docker tag` comando para dar um novo nome à `getting-started` imagem. Certifique-se de trocar `<username>` com sua ID do Docker.
 
     ```bash
     docker tag getting-started <username>/getting-started
     ```
 
-1. Agora, tente o comando Push novamente. Se você estiver copiando o valor do Hub do Docker, poderá descartar a `tagname` parte, pois não adicionou uma marca ao nome da imagem. Se você não especificar uma marca, o Docker usará uma marca chamada `latest` .
+1. Agora, tente o comando push novamente. Se você estiver copiando o valor de Docker Hub, poderá soltar a parte, pois não adicionou uma `tagname` marca ao nome da imagem. Se você não especificar uma marca, o Docker usará uma marca chamada `latest` .
 
     ```bash
     docker push <username>/getting-started
     ```
 
-    Em vez da linha de comando, você também pode clicar com o botão direito do mouse na marca da imagem na seção **imagens** do modo de exibição do Docker e escolher **enviar por push...** e, em seguida, escolher **conectar registro...** e Hub do **Docker**.
+    Em vez da linha de comando, você também pode  clicar com o botão direito do mouse na marca de imagem na seção Imagens da exibição do Docker e escolher **Push...** e, em seguida, escolher **Conexão Registro...** e, em **seguida,** Docker Hub .
 
 ## <a name="run-the-image-on-a-new-instance"></a>Executar a imagem em uma nova instância
 
-Agora que sua imagem foi criada e enviada por push para um registro, tente executar o aplicativo em uma nova instância do que nunca viu essa imagem de contêiner! Para fazer isso, você usará o play com o Docker.
+Agora que sua imagem foi criada e esguia em um registro, tente executar o aplicativo em uma nova instância que nunca viu essa imagem de contêiner! Para fazer isso, você usará o Play with Docker.
 
-1. Abra o navegador para [brincar com o Docker](http://play-with-docker.com).
+1. Abra o navegador para [Reproduzir com o Docker.](http://play-with-docker.com)
 
-1. Entre com sua conta do Hub do Docker.
+1. Entre com sua conta Docker Hub conta.
 
-1. Quando você estiver conectado, clique no link "+ Adicionar nova instância" na barra do lado esquerdo. (Se você não o vir, torne seu navegador um pouco mais largo.) Depois de alguns segundos, uma janela de terminal será aberta no navegador.
+1. Quando você estiver conectado, clique no link "+ ADICIONAR NOVA INSTÂNCIA" na barra do lado esquerdo. (Se você não o vir, faça com que seu navegador seja um pouco mais amplo.) Após alguns segundos, uma janela de terminal será aberta no navegador.
 
-    ![Reproduzir com o Docker Adicionar nova instância](media/pwd-add-new-instance.png)
+    ![Reproduzir com o Docker adicionar nova instância](media/pwd-add-new-instance.png)
 
-1. No terminal, inicie seu aplicativo enviado por push recentemente.
+1. No terminal, inicie seu aplicativo recém-pressionado.
 
     ```bash
     docker run -dp 3000:3000 <username>/getting-started
@@ -86,17 +85,17 @@ Agora que sua imagem foi criada e enviada por push para um registro, tente execu
 
     Você deve ver a imagem ser retirada e, eventualmente, iniciar!
 
-1. Clique na notificação 3000 quando ela aparecer e você deverá ver o aplicativo com suas modificações! Alegria! Se o emblema 3000 não aparecer, você poderá clicar no botão **abrir porta** e digitar 3000.
+1. Clique no selo 3000 quando ele aparecer e você deverá ver o aplicativo com suas modificações! Viva! Se o selo 3000 não aparecer, você  poderá clicar no botão Abrir Porta e digitar 3000.
 
 ## <a name="recap"></a>Recapitulação
 
-Nesta seção, você aprendeu a compartilhar imagens enviando-as por push para um registro. Em seguida, você passou para uma instância totalmente nova e conseguiu executar a imagem enviada por push recentemente. Isso é muito comum em pipelines de CI, em que o pipeline criará a imagem e a enviará por push para um registro e, em seguida, o ambiente de produção poderá usar a versão mais recente da imagem.
+Nesta seção, você aprendeu a compartilhar imagens e a esvasá-las para um registro. Em seguida, você foi para uma nova instância e conseguiu executar a imagem recém-pressionada. Isso é muito comum em pipelines de CI, em que o pipeline criará a imagem e a por pushá para um registro e, em seguida, o ambiente de produção poderá usar a versão mais recente da imagem.
 
-Agora que isso foi descoberto, lembre-se de que no final da última seção, quando você reiniciou o aplicativo, perdeu todos os itens da lista de tarefas. Obviamente, isso não é uma excelente experiência do usuário, então você aprenderá a seguir como você pode manter os dados entre as reinicializações!
+Agora que você descobriu isso, lembre-se de que, no final da última seção, ao reiniciar o aplicativo, você perdeu todos os itens da lista de itens de todo o trabalho. Obviamente, essa não é uma ótima experiência do usuário, portanto, você aprenderá a seguir como persistir os dados entre as reinicializações!
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Continue com o tutorial!
 
 > [!div class="nextstepaction"]
-> [Persistindo seu banco de dados](persist-your-data.md)
+> [Persistir seu banco de dados](persist-your-data.md)

@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 9ee4109c888888d2dee36804a178f7db8d41753f
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: c9408e099caaef097be3fc4eea26cee2b1889e8e
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841764"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222897"
 ---
 # <a name="persist-your-data"></a> Manter seus dados
 
@@ -36,9 +35,9 @@ Para ver isso em ação, você vai iniciar dois contêineres e criar um arquivo 
 
     Caso esteja curioso sobre o comando, você está iniciando um shell bash e invocando dois comandos (por que ele tem o `&&` ). A primeira parte escolhe um único número aleatório e grava-o em `/data.txt` . O segundo comando está simplesmente assistindo a um arquivo para manter o contêiner em execução.
 
-1. Validar você pode ver a saída usando `exec` para entrar no contêiner. Para fazer isso, abra a extensão VS Code e clique na opção **anexar Shell** . Isso usará `exec` para abrir um shell no contêiner dentro do vs Code terminal.
+1. Validar você pode ver a saída usando `exec` para entrar no contêiner. para fazer isso, abra a extensão VS Code e clique na opção **anexar Shell** . isso usará `exec` para abrir um shell no contêiner dentro do VS Code terminal.
 
-    ![VS Code abrir a CLI no contêiner do Ubuntu](media/attach_shell.png)
+    ![VS Code abrir a CLI no contêiner do ubuntu](media/attach_shell.png)
 
     Você verá um terminal que está executando um shell no contêiner do Ubuntu. Execute o comando a seguir para ver o conteúdo do `/data.txt` arquivo. Feche este terminal mais tarde.
 

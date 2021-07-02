@@ -5,28 +5,27 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 3bcf3a69dcf8053851e3d8519a25f61fe23ae7e3
-ms.sourcegitcommit: 155d5f0fd54ac1d20df2f5b0245365924faa3565
+ms.openlocfilehash: 645d168aefe05040193d564d5c158acfb6688c11
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106082559"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222741"
 ---
 # <a name="use-docker-compose"></a>Como usar o Docker Compose
 
 [Docker Compose](https://docs.docker.com/compose/) é uma ferramenta desenvolvida para ajudar a definir e compartilhar aplicativos com vários contêineres. Com o Compose, você pode criar um arquivo YAML para definir os serviços e com um único comando, pode girar tudo ou desmontar tudo isso.
 
-A *grande* vantagem de usar o Compose é que você pode definir a pilha de aplicativos em um arquivo, mantê-lo na raiz do seu repositório de projetos (agora é controlado por versão) e permitir que outra pessoa contribua com facilidade para o seu projeto. Alguém precisaria apenas clonar seu repositório e iniciar o aplicativo de composição. Na verdade, você pode ver alguns projetos no GitHub/GitLab fazendo exatamente isso agora.
+A *grande* vantagem de usar o Compose é que você pode definir a pilha de aplicativos em um arquivo, mantê-lo na raiz do seu repositório de projetos (agora é controlado por versão) e permitir que outra pessoa contribua com facilidade para o seu projeto. Alguém precisaria apenas clonar seu repositório e iniciar o aplicativo de composição. na verdade, você pode ver alguns projetos em GitHub/GitLab fazendo exatamente isso agora.
 
 Então, como começar?
 
 ## <a name="install-docker-compose"></a>Instalar o Docker Compose
 
-Se você instalou o Docker desktop para Windows ou Mac, você já tem Docker Compose! As instâncias de Play com Docker já têm o Docker Compose instalado também. Se você estiver em um computador Linux, será necessário instalar Docker Compose usando [as instruções aqui](https://docs.docker.com/compose/install/).
+se você instalou o docker Desktop para Windows ou Mac, você já tem Docker Compose! As instâncias de Play com Docker já têm o Docker Compose instalado também. Se você estiver em um computador Linux, será necessário instalar Docker Compose usando [as instruções aqui](https://docs.docker.com/compose/install/).
 
 Após a instalação, você deve ser capaz de executar o seguinte e ver as informações de versão.
 
@@ -56,7 +55,7 @@ E agora, você começará a migrar um serviço por vez para o arquivo de composi
 
 ## <a name="define-the-app-service"></a>Definir o serviço de aplicativo
 
-Para se lembrar, esse foi o comando usado para definir o contêiner do aplicativo (substitua os ` \ ` caracteres por `` ` `` no Windows PowerShell).
+Para se lembrar, esse foi o comando usado para definir o contêiner do aplicativo (substitua os ` \ ` caracteres por `` ` `` em Windows PowerShell).
 
 ```bash
 docker run -dp 3000:3000 \
@@ -145,7 +144,7 @@ docker run -dp 3000:3000 \
 
 ### <a name="define-the-mysql-service"></a>Definir o serviço MySQL
 
-Agora, é hora de definir o serviço MySQL. O comando que você usou para esse contêiner foi o seguinte (substitua os ` \ ` caracteres por `` ` `` no Windows PowerShell):
+Agora, é hora de definir o serviço MySQL. O comando que você usou para esse contêiner foi o seguinte (substitua os ` \ ` caracteres por `` ` `` em Windows PowerShell):
 
 ```bash
 docker run -d \
@@ -243,7 +242,7 @@ Agora que você tem o `docker-compose.yml` arquivo, você pode iniciá-lo!
 
 1. Primeiro, certifique-se de que nenhuma outra cópia do aplicativo e do banco de dados esteja em execução ( `docker ps` e `docker rm -f <ids>` ).
 
-1. Inicie a pilha de aplicativos usando o `docker-compose up` comando. Adicione o `-d` sinalizador para executar tudo em segundo plano. Como alternativa, você pode clicar com o botão direito do mouse no arquivo de composição e selecionar a opção **compor** para a barra lateral de vs Code. 
+1. Inicie a pilha de aplicativos usando o `docker-compose up` comando. Adicione o `-d` sinalizador para executar tudo em segundo plano. como alternativa, você pode clicar com o botão direito do mouse no arquivo de composição e selecionar a opção **compor** para a barra lateral de VS Code. 
 
     ```bash
     docker-compose up -d
@@ -280,7 +279,7 @@ Agora que você tem o `docker-compose.yml` arquivo, você pode iniciá-lo!
 
 ## <a name="see-the-app-stack-in-the-docker-extension"></a>Consulte a pilha de aplicativos na extensão do Docker
 
-Se você examinar a extensão do Docker, poderá alterar as opções de agrupamento usando ' engrenagem ' e ' Group by '. Nessa instância, você deseja ver os contêineres agrupados por nome do projeto de composição:
+Se você examinar a extensão do Docker, poderá alterar as opções de agrupamento usando ' engrenagem ' e ' Group by '. nessa instância, você deseja ver os contêineres agrupados por nome de Project de composição:
 
 ![Extensão VS com Compose](media/vs-app-project-collapsed.png)
 
@@ -290,7 +289,7 @@ Se você torcer a rede, verá os dois contêineres que você definiu no arquivo 
 
 ## <a name="tear-it-all-down"></a>Desmontar tudo
 
-Quando estiver pronto para desmontar tudo, basta executar `docker-compose down` ou clicar com o botão direito do mouse no aplicativo na lista contêineres na extensão vs Code Docker e selecionar **compor**. Os contêineres serão interrompidos e a rede será removida.
+quando estiver pronto para desmontar tudo, basta executar `docker-compose down` ou clicar com o botão direito do mouse no aplicativo na lista contêineres na extensão VS Code docker e selecionar **compor**. Os contêineres serão interrompidos e a rede será removida.
 
 > [!WARNING]
 > **Removendo volumes** Por padrão, os volumes nomeados no arquivo de composição não são removidos durante a execução `docker-compose down` . Se você quiser remover os volumes, será necessário adicionar o `--volumes` sinalizador.

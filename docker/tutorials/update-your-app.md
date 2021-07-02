@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: df2102c38250aa5c1bda52b4324cba808501db3a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 43034ff2e65564cc8af2710b796b76996f21f4c8
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841738"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222767"
 ---
 # <a name="update-the-app"></a>Atualizar o aplicativo
 
@@ -84,7 +83,7 @@ Para remover um contêiner, primeiro ele precisa ser parado. Depois que ele for 
 
 ### <a name="remove-a-container-using-the-docker-view"></a>Remover um contêiner usando o modo de exibição do Docker
 
-Se você abrir a extensão VS Code, poderá remover um contêiner com dois cliques! Certamente é muito mais fácil do que ter de Pesquisar a ID do contêiner e removê-la.
+se você abrir a extensão VS Code, poderá remover um contêiner com dois cliques! Certamente é muito mais fácil do que ter de Pesquisar a ID do contêiner e removê-la.
 
 1. Com a extensão aberta, navegue até o contêiner e clique com o botão direito do mouse.
 

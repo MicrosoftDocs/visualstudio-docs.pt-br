@@ -1,32 +1,31 @@
 ---
-title: 'Tutorial do Docker-parte 8: camadas de imagem'
+title: 'Tutorial do Docker – Parte 8: Camadas de imagem'
 description: Como examinar e gerenciar camadas de imagem em imagens do Docker.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8913c558c2860599fbfaaba03fa466d11931a528
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 8f669baf6f3275f54c7e4a6ff2b31f9c260b2bb9
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837951"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222663"
 ---
 # <a name="image-layering"></a>Camadas de imagem
 
-Você sabia que pode examinar o que compõe uma imagem? Usando o `docker image history` comando, você pode ver o comando que foi usado para criar cada camada em uma imagem.
+Você sabia que pode ver o que com torna uma imagem? Usando o `docker image history` comando , você pode ver o comando que foi usado para criar cada camada em uma imagem.
 
-1. Use o `docker image history` comando para ver as camadas na `getting-started` imagem que você criou anteriormente no tutorial.
+1. Use o `docker image history` comando para ver as camadas na imagem criada `getting-started` anteriormente no tutorial.
 
     ```bash
     docker image history getting-started
     ```
 
-    Você deve obter uma saída semelhante a esta (datas/IDs podem ser diferentes).
+    Você deve obter uma saída parecida com esta (datas/IDs podem ser diferentes).
 
     ```plaintext
     IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
@@ -45,9 +44,9 @@ Você sabia que pode examinar o que compõe uma imagem? Usando o `docker image h
     <missing>           13 days ago         /bin/sh -c #(nop) ADD file:e69d441d729412d24…   5.59MB   
     ```
 
-    Cada uma das linhas representa uma camada na imagem. A exibição aqui mostra a base na parte inferior com a camada mais nova na parte superior. Usando isso, você também pode ver rapidamente o tamanho de cada camada, ajudando a diagnosticar imagens grandes.
+    Cada uma das linhas representa uma camada na imagem. A exibição aqui mostra a base na parte inferior com a camada mais recente na parte superior. Usando isso, você também pode ver rapidamente o tamanho de cada camada, ajudando a diagnosticar imagens grandes.
 
-1. Você observará que várias das linhas estão truncadas. Se você adicionar o `--no-trunc` sinalizador, obterá a saída completa (Sim, usará um sinalizador truncado para obter uma saída não truncada).
+1. Você observará que várias das linhas estão truncadas. Se você adicionar o sinalizador, obterá a saída completa (sim, você usará um sinalizador truncado para obter `--no-trunc` uma saída não truncada).
 
     ```bash
     docker image history --no-trunc getting-started
@@ -55,11 +54,11 @@ Você sabia que pode examinar o que compõe uma imagem? Usando o `docker image h
 
 ## <a name="layer-caching"></a>Cache de camada
 
-Agora que você viu a disposição em camadas em ação, há uma lição importante para aprender a reduzir os tempos de compilação para suas imagens de contêiner.
+Agora que você viu a camada em ação, há uma lição importante para aprender a ajudar a diminuir os tempos de build para suas imagens de contêiner.
 
-> Quando uma camada é alterada, todas as camadas de downstream também devem ser recriadas
+> Depois que uma camada é muda, todas as camadas downstream também devem ser recriadas
 
-Vamos examinar o Dockerfile que você estava usando mais uma vez...
+Vamos ver o Dockerfile que você estava usando mais uma vez...
 
 ```dockerfile
 FROM node:12-alpine
@@ -69,11 +68,11 @@ RUN yarn install --production
 CMD ["node", "/app/src/index.js"]
 ```
 
-Voltando para a saída do histórico de imagens, você verá que cada comando no Dockerfile se torna uma nova camada na imagem. Você pode se lembrar de que, quando fez uma alteração na imagem, as dependências de yarn tinham que ser reinstaladas. Há uma maneira de corrigir isso? Não faz muito sentido enviar as mesmas dependências toda vez que você cria, certo?
+Voltando para a saída do histórico de imagens, você verá que cada comando no Dockerfile se torna uma nova camada na imagem. Você pode se lembrar de que, quando você fez uma alteração na imagem, as dependências do yarn precisaram ser reinstaladas. Há uma maneira de corrigir isso? Não faz muito sentido enviar as mesmas dependências sempre que você cria, certo?
 
-Para corrigir isso, você pode reestruturar seu Dockerfile para ajudar a dar suporte ao cache das dependências. Para aplicativos baseados em nó, essas dependências são definidas no `package.json` arquivo. Então, e se você tiver copiado apenas esse arquivo primeiro, instalar as dependências e *, em seguida* , copiar em todo o resto? Em seguida, você recriará as dependências yarn se houvesse uma alteração no `package.json` . Faz sentido?
+Para corrigir isso, você pode reestruturar seu Dockerfile para ajudar a dar suporte ao cache das dependências. Para aplicativos baseados em Nó, essas dependências são definidas no `package.json` arquivo . Então, e se você copiou apenas esse arquivo em primeiro lugar, instalar as dependências *e,* em seguida, copiar em todo o resto? Em seguida, você só recriará as dependências do yarn se houver uma alteração no `package.json` . Faz sentido?
 
-1. Atualize o Dockerfile para copiar no `package.json` primeiro, instale as dependências e, em seguida, copie tudo o mais no.
+1. Atualize o Dockerfile para copiar na `package.json` primeira, instale as dependências e copie todo o resto.
 
     ```dockerfile hl_lines="3 4 5"
     FROM node:12-alpine
@@ -90,7 +89,7 @@ Para corrigir isso, você pode reestruturar seu Dockerfile para ajudar a dar sup
     docker build -t getting-started .
     ```
 
-    Você deve ver uma saída como esta...
+    Você deverá ver uma saída como esta...
 
     ```plaintext
     Sending build context to Docker daemon  219.1kB
@@ -123,11 +122,11 @@ Para corrigir isso, você pode reestruturar seu Dockerfile para ajudar a dar sup
     Successfully tagged getting-started:latest
     ```
 
-    Você verá que todas as camadas foram recriadas. Perfeitamente bem, uma vez que você alterou o Dockerfile um pouco.
+    Você verá que todas as camadas foram refeitas. Perfeitamente bem, já que você alterou bastante o Dockerfile.
 
-1. Agora, faça uma alteração no `src/static/index.html` arquivo (como alterar o `<title>` para dizer "o aplicativo de todo incrível").
+1. Agora, faça uma alteração no `src/static/index.html` arquivo (como alterar o `<title>` para dizer "The Awesome Todo App").
 
-1. Crie a imagem do Docker agora usando `docker build` novamente. Desta vez, sua saída deve parecer um pouco diferente.
+1. Crie a imagem do Docker agora usando `docker build` novamente. Desta vez, a saída deve parecer um pouco diferente.
 
     ```plaintext hl_lines="5 8 11"
     Sending build context to Docker daemon  219.1kB
@@ -152,19 +151,19 @@ Para corrigir isso, você pode reestruturar seu Dockerfile para ajudar a dar sup
     Successfully tagged getting-started:latest
     ```
 
-    Primeiro, você deve observar que a compilação foi muito mais rápida! E você verá que todas as etapas de 1-4 têm `Using cache` . Então, alegria! Você está usando o cache de compilação. Enviar e extrair essa imagem e atualizar para ela também será muito mais rápido. Alegria!
+    Primeiro, você deve observar que o build foi muito mais rápido! E você verá que todas as etapas de 1 a 4 têm `Using cache` . Portanto, hooray! Você está usando o cache de build. Efetuar o e efetuar o estivar essa imagem e atualizá-la também será muito mais rápido. Viva!
 
-## <a name="multi-stage-builds"></a>Compilações de vários estágios
+## <a name="multi-stage-builds"></a>Builds de vários estágios
 
-Embora não vamos nos aprofundar muito neste tutorial, as compilações de vários estágios são uma ferramenta incrivelmente poderosa para ajudar a usar vários estágios para criar uma imagem. Há várias vantagens para eles:
+Embora não nos aprobamos muito neste tutorial, os builds de vários estágios são uma ferramenta incrivelmente poderosa para ajudar a usar vários estágios para criar uma imagem. Há várias vantagens para eles:
 
-- Dependências de tempo de compilação separadas das dependências de tempo de execução
+- Separar dependências de tempo de build de dependências de runtime
 - Reduzir o tamanho geral da imagem enviando *apenas* o que seu aplicativo precisa executar
 
-### <a name="maventomcat-example"></a>Exemplo do Maven/Tomcat
+### <a name="maventomcat-example"></a>Exemplo de Maven/Tomcat
 
-Durante a criação de aplicativos baseados em Java, um JDK é necessário para compilar o código-fonte para códigos de bytes Java. No entanto, esse JDK não é necessário na produção. Além disso, você pode estar usando ferramentas como Maven ou gradle para ajudar a criar o aplicativo.
-Eles também não são necessários na imagem final. Ajuda de builds de vários estágios.
+Ao criar aplicativos baseados em Java, um JDK é necessário para compilar o código-fonte para o código de byte Java. No entanto, esse JDK não é necessário na produção. Além disso, você pode estar usando ferramentas como Maven ou Gradle para ajudar a criar o aplicativo.
+Eles também não são necessários em sua imagem final. Ajuda de builds de vários estágios.
 
 ```dockerfile
 FROM maven AS build
@@ -176,11 +175,11 @@ FROM tomcat
 COPY --from=build /app/target/file.war /usr/local/tomcat/webapps 
 ```
 
-Este exemplo usa um estágio (chamado `build` ) para executar a compilação Java real usando o Maven. O segundo estágio (a partir de `FROM tomcat` ) copia em arquivos do `build` estágio. A imagem final é apenas o último estágio que está sendo criado (o que pode ser substituído usando o `--target` sinalizador).
+Este exemplo usa um estágio (chamado `build` ) para executar o build java real usando o Maven. O segundo estágio (começando em `FROM tomcat` ) copia em arquivos do `build` estágio. A imagem final é apenas o último estágio que está sendo criado (que pode ser substituído usando o `--target` sinalizador ).
 
-### <a name="react-example"></a>Exemplo de reagir
+### <a name="react-example"></a>React exemplo
 
-Ao criar aplicativos reagir, você precisa de um ambiente de nó para compilar o código JS (normalmente JSX), as folhas de estilo do SASS e muito mais em HTML, JS e CSS estáticos. Se você não estiver fazendo renderização no lado do servidor, nem precisará de um ambiente de nó para a compilação de produção. Por que não enviar os recursos estáticos em um contêiner Nginx estático?
+Ao criar React aplicativos, você precisa de um ambiente node para compilar o código JS (normalmente JSX), folhas de estilos DE SASS e muito mais em HTML estático, JS e CSS. Se você não estiver fazendo a renderização do lado do servidor, nem precisa de um ambiente node para o build de produção. Por que não enviar os recursos estáticos em um contêiner nginx estático?
 
 ```dockerfile
 FROM node:12 AS build
@@ -195,11 +194,11 @@ FROM nginx:alpine
 COPY --from=build /app/build /usr/share/nginx/html
 ```
 
-Aqui, você está usando uma `node:12` imagem para executar a compilação (maximizando o cache de camada) e, em seguida, copiando a saída em um contêiner nginx. Legal, não?
+Aqui, você está usando uma imagem para executar o build (maximizando o cache de camada) e copiando a saída `node:12` para um contêiner nginx. Legal, não é?
 
 ## <a name="recap"></a>Recapitulação
 
-Ao entender um pouco sobre como as imagens são estruturadas, você pode criar imagens com mais rapidez e enviar menos alterações. Compilações de vários estágios também ajudam a reduzir o tamanho geral da imagem e a aumentar a segurança do contêiner separando as dependências de tempo de compilação de dependências de tempo de execução
+Ao entender um pouco sobre como as imagens são estruturadas, você pode criar imagens mais rapidamente e enviar menos alterações. Os builds de vários estágios também ajudam a reduzir o tamanho geral da imagem e aumentar a segurança final do contêiner separando as dependências de tempo de build das dependências de runtime.
 
 ## <a name="next-steps"></a>Próximas etapas
 

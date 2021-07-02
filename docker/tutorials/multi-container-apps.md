@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 0c8c9fb4072da071ba06d5dc371e85db8291353a
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: d23d1f5d94729741630ee76263fd5b32041e9cfd
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841777"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222910"
 ---
 # <a name="multi-container-apps"></a>Aplicativos com vários contêineres
 
@@ -46,7 +45,7 @@ Há duas maneiras de colocar um contêiner em uma rede: atribuí-lo em iniciar o
     docker network create todo-app
     ```
 
-1. Inicie um contêiner do MySQL e anexe-o à rede. Também vamos definir algumas variáveis de ambiente que o banco de dados usará para inicializar o banco de dados (consulte a seção "variáveis de ambiente" na [listagem do Hub do Docker do MySQL](https://hub.docker.com/_/mysql/)) (substitua os ` \ ` caracteres por `` ` `` no Windows PowerShell).
+1. Inicie um contêiner do MySQL e anexe-o à rede. Também vamos definir algumas variáveis de ambiente que o banco de dados usará para inicializar o banco de dados (consulte a seção "variáveis de ambiente" na [listagem do Hub do Docker do MySQL](https://hub.docker.com/_/mysql/)) (substitua os ` \ ` caracteres por `` ` `` em Windows PowerShell).
 
     ```bash
     docker run -d \
@@ -136,7 +135,7 @@ Para descobrir, você usará o contêiner [nicolaka/netacertar](https://github.c
 
 ## <a name="run-your-app-with-mysql"></a>Executar seu aplicativo com o MySQL
 
-O aplicativo todo oferece suporte à configuração de algumas variáveis de ambiente para especificar as configurações de conexão do MySQL. Eles são:
+O aplicativo todo oferece suporte à configuração de algumas variáveis de ambiente para especificar as configurações de conexão do MySQL. São eles:
 
 - `MYSQL_HOST` -o nome do host para o servidor MySQL em execução
 - `MYSQL_USER` -o nome de usuário a ser usado para a conexão
@@ -144,13 +143,13 @@ O aplicativo todo oferece suporte à configuração de algumas variáveis de amb
 - `MYSQL_DB` -o banco de dados a ser usado uma vez conectado
 
 > [!WARNING]
-> **Definindo configurações de conexão por meio de variáveis de ambiente** Embora o uso de variáveis de ambiente para definir as configurações de conexão seja geralmente um problema para o desenvolvimento, ele é altamente desencorajado durante a execução de aplicativos em produção. Para entender o porquê, veja [por que você não deve usar variáveis de ambiente para dados secretos](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/).
+> **definindo Configurações de conexão por meio de variáveis de ambiente** Embora o uso de variáveis de ambiente para definir as configurações de conexão seja geralmente um problema para o desenvolvimento, ele é altamente desencorajado durante a execução de aplicativos em produção. Para entender o porquê, veja [por que você não deve usar variáveis de ambiente para dados secretos](https://diogomonica.com/2017/03/27/why-you-shouldnt-use-env-variables-for-secret-data/).
 > Um mecanismo mais seguro é usar o suporte de segredo fornecido pela estrutura de orquestração de contêiner. Na maioria dos casos, esses segredos são montados como arquivos no contêiner em execução. Você verá que muitos aplicativos (incluindo a imagem do MySQL e o aplicativo de tarefas) também dão suporte a env VARs com um `_FILE` sufixo para apontar para um arquivo que contém o arquivo.
 > Por exemplo, definir o `MYSQL_PASSWORD_FILE` var fará com que o aplicativo use o conteúdo do arquivo referenciado como a senha de conexão. O Docker não faz nada para dar suporte a esses VARs de env. Seu aplicativo precisará saber procurar a variável e obter o conteúdo do arquivo.
 
 Com tudo isso explicado, inicie seu contêiner pronto para desenvolvimento!
 
-1. Especifique cada uma das variáveis de ambiente acima e conecte o contêiner à sua rede de aplicativos (substitua os ` \ ` caracteres por `` ` `` no Windows PowerShell).
+1. Especifique cada uma das variáveis de ambiente acima e conecte o contêiner à sua rede de aplicativos (substitua os ` \ ` caracteres por `` ` `` em Windows PowerShell).
 
     ```bash hl_lines="3 4 5 6 7"
     docker run -dp 3000:3000 \
@@ -179,7 +178,7 @@ Com tudo isso explicado, inicie seu contêiner pronto para desenvolvimento!
 
 1. Abra o aplicativo em seu navegador e adicione alguns itens à sua lista de tarefas pendentes.
 
-1. Conecte-se ao banco de dados MySQL e comprove que os itens estão sendo gravados no banco de dados. Lembre-se de que a senha é **secreta**.
+1. Conexão ao banco de dados MySQL e provar que os itens estão sendo gravados no banco de dados. Lembre-se de que a senha é **secreta**.
 
     ```bash
     docker exec -ti <mysql-container-id> mysql -p todos

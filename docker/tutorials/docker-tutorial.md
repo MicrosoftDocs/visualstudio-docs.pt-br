@@ -1,21 +1,20 @@
 ---
-title: Tutorial do Docker-introdução ao Docker
+title: 'Tutorial: introdução ao Docker & Visual Studio Code'
 description: Um tutorial de várias etapas que aborda as noções básicas de como trabalhar com o Docker com o Visual Studio Code.
 ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
-ms.topic: conceptual
+ms.topic: tutorial
 ms.workload:
 - azure
 next_page: app.md
-ms.openlocfilehash: 554badf01122b6c41d89c00b740574d28185e35e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 75a51f478e4e58700f6025dd6a87fcc38439ed87
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99837964"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222650"
 ---
 # <a name="tutorial-get-started-with-docker"></a>Tutorial: introdução ao Docker
 
@@ -43,9 +42,9 @@ Você observará alguns sinalizadores sendo usados. Veja mais algumas informaç�
 > docker run -dp 80:80 docker/getting-started
 > ```
 
-## <a name="the-vs-code-extension"></a>A extensão VS Code
+## <a name="the-vs-code-extension"></a>a extensão VS Code
 
-Antes de ir muito, desejamos realçar a extensão de VS Code do Docker, que fornece uma exibição rápida dos contêineres em execução em seu computador. Ele fornece acesso rápido aos logs de contêiner, permite que você obtenha um shell dentro do contêiner e permite gerenciar facilmente o ciclo de vida do contêiner (parar, remover e assim por diante).
+antes de ir muito, desejamos realçar a extensão de VS Code do docker, que fornece uma exibição rápida dos contêineres em execução em seu computador. Ele fornece acesso rápido aos logs de contêiner, permite que você obtenha um shell dentro do contêiner e permite gerenciar facilmente o ciclo de vida do contêiner (parar, remover e assim por diante).
 
 Para acessar a extensão, siga as instruções [aqui](https://code.visualstudio.com/docs/containers/overview). Use o ícone do Docker à esquerda para abrir o modo de exibição do Docker. Se você abrir a extensão agora, verá este tutorial em execução! O nome do contêiner ( `angry_taussig` abaixo) é um nome criado aleatoriamente. Portanto, você provavelmente terá um nome diferente.
 

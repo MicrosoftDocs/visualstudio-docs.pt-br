@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 8ca68b2eba710037535b4bd76c744e7c029a53e9
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: e777d80f44c9a11e4d2a893c968d33e348ca442a
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99841647"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222689"
 ---
 # <a name="whats-next"></a>O que vem a seguir
 
@@ -35,9 +34,9 @@ Portanto, se você for novo no panorama do contêiner e no desenvolvimento de ap
 
 ## <a name="working-with-docker-in-vs-code"></a>Trabalhando com o Docker no VS Code
 
-Saiba mais sobre como usar a extensão VS Code Docker:
+saiba mais sobre como usar a extensão VS Code docker:
 
-- [Visão geral da extensão do Docker VS Code](https://code.visualstudio.com/docs/containers/overview)
+- [VS Code Visão geral da extensão do Docker](https://code.visualstudio.com/docs/containers/overview)
 - [Introdução ao Node.js](https://code.visualstudio.com/docs/containers/quickstart-node)
 - [Introdução ao Python](https://code.visualstudio.com/docs/containers/quickstart-python)
 - [Introdução ao .NET Core](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)

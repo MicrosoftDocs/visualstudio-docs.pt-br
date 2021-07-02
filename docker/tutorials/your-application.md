@@ -5,16 +5,15 @@ ms.date: 08/04/2020
 author: nebuk89
 ms.author: ghogen
 manager: jmartens
-ms.technology: vs-azure
 ms.topic: conceptual
 ms.workload:
 - azure
-ms.openlocfilehash: 00eb3a7cff3ffeaac783b929a000d9258fae7e63
-ms.sourcegitcommit: 4b2b6068846425f6964c1fd867370863fc4993ce
+ms.openlocfilehash: 9229c3717b686a3f08ef49e7912ac0515864d793
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2021
-ms.locfileid: "112042932"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222806"
 ---
 # <a name="build-and-run-the-todo-sample-app"></a>Compilar e executar o aplicativo de exemplo todo
 
@@ -28,15 +27,15 @@ Neste ponto, sua equipe de desenvolvimento é bem pequena e você está simplesm
 
 Antes de executar o aplicativo, você precisa obter o código-fonte do aplicativo em seu computador. Para projetos reais, você normalmente clonará o repositório. Mas, para este tutorial, criamos um arquivo ZIP que contém o aplicativo.
 
-1. Verifique se você tem o Docker for Windows ou a Community Edition do Docker instalado no computador local. Consulte [Docker for Windows documentação de instalação](https://docs.docker.com/docker-for-windows/install/). O processo de instalação torna o arquivo ZIP contendo o exemplo disponível no endereço localhost.
+1. verifique se você tem o Docker for Windows ou o docker Community Edition instalado no computador local. consulte [Docker for Windows documentação de instalação](https://docs.docker.com/docker-for-windows/install/). O processo de instalação torna o arquivo ZIP contendo o exemplo disponível no endereço localhost.
 
 1. Baixe a origem do aplicativo do repositório do [Docker](https://github.com/docker/getting-started) . Você pode baixar o arquivo ZIP para o repositório. Para baixar o arquivo ZIP, use o botão **código** verde e escolha **baixar zip**. Abra o arquivo ZIP e Extraia todos para extrair a origem do aplicativo da pasta do *aplicativo* para uma pasta no disco rígido.
 
    ![Captura de tela mostrando o botão de código verde e a opção de baixar ZIP](media/download-zip.png)
 
-1. Depois de extraído, use seu editor de código favorito para abrir o projeto. Se você for precisar de um editor, poderá usar [Visual Studio Code](https://code.visualstudio.com/). Você deve ver o `package.json` e dois subdiretórios ( `src` e `spec` ).
+1. Depois de extraído, use seu editor de código favorito para abrir o projeto. se você for precisar de um editor, poderá usar [Visual Studio Code](https://code.visualstudio.com/). Você deve ver o `package.json` e dois subdiretórios ( `src` e `spec` ).
 
-    ![Captura de tela de Visual Studio Code aberta com o aplicativo carregado](media/ide-screenshot.png)
+    ![captura de tela de Visual Studio Code aberta com o aplicativo carregado](media/ide-screenshot.png)
 
 ## <a name="building-the-apps-container-image"></a>Criando a imagem de contêiner do aplicativo
 
@@ -91,7 +90,7 @@ Agora que você tem uma imagem, execute o aplicativo! Para fazer isso, use o `do
 
 Neste ponto, você deve ter um gerente de lista de tarefas em execução com alguns itens, todos criados por você! Agora, vamos fazer algumas alterações e aprender sobre o gerenciamento de seus contêineres.
 
-Se você olhar rapidamente a extensão de VS Code, verá que os dois contêineres estão em execução agora (este tutorial e seu contêiner de aplicativo iniciado recentemente)!
+se você olhar rapidamente a extensão de VS Code, verá que os dois contêineres estão em execução agora (este tutorial e seu contêiner de aplicativo iniciado recentemente)!
 
 ![Extensão do Docker com tutorial e contêineres de aplicativo em execução](media/vs-two-containers.png)
 

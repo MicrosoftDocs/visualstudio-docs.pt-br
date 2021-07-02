@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: a5f8c3f6e96e8e593fe74fd58b3e8bafab0ad88e
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: ac4757464d720ca50632833b3911f0d594e1becb
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99950608"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113222975"
 ---
 # <a name="add-tags-to-project-templates"></a>Adicionar marcas aos modelos de projeto
 
@@ -93,7 +93,7 @@ O Visual Studio oferece uma lista de marcas internas. Ao adicionar uma marca int
 
 A lista a seguir mostra as marcas internas que estão disponíveis no Visual Studio. Os valores correspondentes são mostrados entre parênteses.
 
-| Marca de idioma | Marca de plataforma | Marca de tipo de projeto |
+| Marca de idioma | Marca de plataforma | Project tipo de marca |
 | -- | -- | -- |
 | C++ (`cpp`) | Android (`android`) | Nuvem (`cloud`) |
 | C# (`csharp`) | Azure (`azure`) | Console (`console`) |
@@ -123,7 +123,7 @@ O exemplo a seguir mostra os metadados para um modelo de projeto de um aplicativ
         <Description>A basic template</Description>
         <Icon>TemplateIcon.ico</Icon>
         <ProjectType>csharp</ProjectType>
-        <LanguageTag>C#</LanguageTag>
+        <LanguageTag>csharp</LanguageTag>
         <PlatformTag>windows</PlatformTag>
         <PlatformTag>linux</PlatformTag>
         <PlatformTag>My Platform</PlatformTag>
@@ -145,9 +145,9 @@ O exemplo a seguir mostra os metadados para um modelo de projeto de um aplicativ
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência de esquema de modelo do Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio de esquema de modelo](../extensibility/visual-studio-template-schema-reference.md)
 - [Criar modelos de projeto e de item](creating-project-and-item-templates.md)
 - [Personalizar modelos de projeto e de item](customizing-project-and-item-templates.md)
 - [Introdução ao modelo de projeto do VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
