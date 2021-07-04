@@ -1,6 +1,6 @@
 ---
 title: Tarefa Delete | Microsoft Docs
-description: Saiba mais sobre parâmetros e considerações sobre como usar a tarefa de exclusão do MSBuild para excluir arquivos especificados.
+description: saiba mais sobre parâmetros e considerações sobre como usar a tarefa MSBuild excluir para excluir os arquivos especificados.
 ms.custom: SEO-VS-2020
 ms.date: 06/11/2020
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: ghogen
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: b49ba26cc1e88ab3241094e1fd92be0907e8dd60
-ms.sourcegitcommit: ae6d47b09a439cd0e13180f5e89510e3e347fd47
+ms.openlocfilehash: 09945306a2260bed5b264d380dcea745ff3f7c07
+ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99877337"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113280426"
 ---
 # <a name="delete-task"></a>tarefa Delete
 
@@ -50,7 +50,7 @@ Além dos parâmetros listados acima, essa tarefa herda parâmetros da classe <x
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir exclui o arquivo *MyApp. pdb* quando você cria o `DeleteDebugSymbolFile` destino.
+O exemplo a seguir exclui o arquivo *ConsoleApp1. pdb* quando você cria o `DeleteDebugSymbolFile` destino.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -1,22 +1,22 @@
 ### YamlMime:Landing
 title: Visual Studio de controle de versão
-summary: Compartilhe seu código de dentro do Visual Studio 2019 usando tecnologias de controle de versão, como Git e GitHub.
+summary: Compartilhe seu código de dentro Visual Studio 2019 usando tecnologias de controle de versão, como Git e GitHub.
 metadata:
-  title: Controle de versão no Visual Studio
-  description: As tecnologias de controle de versão, como Git e GitHub, estão disponíveis diretamente no Visual Studio. Você pode usá-los para compartilhar e gerenciar seu código sem sair da base de código.
+  title: Controle de versão & controle do código-fonte com o Git Visual Studio
+  description: Use tecnologias de controle de versão Visual Studio. Você pode compartilhar, integrar e gerenciar suas versões de código no Git & GitHub sem sair da base de código.
   ms.topic: landing-page
-  ms.date: 04/20/2021
+  ms.date: 07/02/2021
   author: TerryGLee
   ms.author: tglee
   manager: jmartens
   ms.prod: visual-studio-windows
   ms.technology: vs-ide-general
-  ms.openlocfilehash: 385457bbeb63054a5f72a5055c55dedfeb9f9b1c
-  ms.sourcegitcommit: 113b7df611583307d3965984233a33355d6b0318
+  ms.openlocfilehash: 9bdd994d5fe1d5f54251ce49047feaf75145dcda
+  ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 06/16/2021
-  ms.locfileid: "112126509"
+  ms.lasthandoff: 07/03/2021
+  ms.locfileid: "113280396"
 landingContent:
 - title: Visão geral
   linkLists:

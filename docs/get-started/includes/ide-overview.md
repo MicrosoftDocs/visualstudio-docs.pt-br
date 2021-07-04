@@ -1,17 +1,17 @@
 ---
-ms.date: 06/29/2021
+ms.date: 07/01/2021
 ms.technology: vs-ide-general
 ms.custom: vs-get-started
 ms.author: tglee
 author: TerryGLee
 manager: jmartens
 ms.topic: include
-ms.openlocfilehash: 452549030d77b90049b12716087544bdd1288a3f
-ms.sourcegitcommit: 7393a37ce77c5b80312ce787baa060c91d41d959
+ms.openlocfilehash: 007327dc525f515523f98323bc95e133209e1531
+ms.sourcegitcommit: 8b75524dc544e34d09ef428c3ebbc9b09f14982d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113113656"
+ms.lasthandoff: 07/02/2021
+ms.locfileid: "113279987"
 ---
 O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inicialização criativo que você pode usar para editar, depurar e compilar o código e, em seguida, publicar um aplicativo. Um IDE (ambiente de desenvolvimento integrado) é um programa repleto de recursos que pode ser usado por muitos aspectos do desenvolvimento de software. Além do editor e do depurador padrão fornecidos pela maioria dos IDEs, o Visual Studio inclui compiladores, ferramentas de preenchimento de código, designers gráficos e muitos outros recursos para facilitar o processo de desenvolvimento de software.
 
@@ -23,13 +23,13 @@ O *ambiente de desenvolvimento integrado* do Visual Studio é um painel de inici
 
 ::: moniker range=">=vs-2019"
 
-:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="Uma captura de tela do IDE do Visual Studio, que inclui textos explicativos que indicam onde os principais recursos e funcionalidades estão localizados." lightbox="../media/vs-2019/ide-overview.png":::
+:::image type="content" source="../media/vs-2019/ide-overview.png" alt-text="uma captura de tela do Visual Studio IDE, que inclui textos explicativos que indicam onde os principais recursos e funcionalidades estão localizados." lightbox="../media/vs-2019/ide-overview.png":::
 
 ::: moniker-end
 
 Esta imagem mostra o Visual Studio com um projeto aberto e várias importantes janelas de ferramentas que você provavelmente usará:
 
-- O [Gerenciador de Soluções](../../ide/use-solution-explorer.md) (parte superior direita) permite exibir, navegar e gerenciar os arquivos de código. **Gerenciador de soluções** pode ajudar a organizar seu código agrupando os arquivos em [soluções e projetos](../../ide/use-solution-explorer.md).
+- O [Gerenciador de Soluções](../../ide/use-solution-explorer.md) (parte superior direita) permite exibir, navegar e gerenciar os arquivos de código. **Gerenciador de soluções** pode ajudar a organizar seu código agrupando os arquivos em [soluções e projetos](../../ide/solutions-and-projects-in-visual-studio.md).
 
 - A [janela do editor](../../ide/writing-code-in-the-code-and-text-editor.md) (parte central), na qual você provavelmente passará a maior parte do tempo, exibe o conteúdo do arquivo. É nela em que você pode editar o código ou criar uma interface do usuário, como uma janela com botões e caixas de texto.
 
@@ -47,7 +47,7 @@ Esta imagem mostra o Visual Studio com um projeto aberto e várias importantes j
 
 O Visual Studio está disponível para Windows e Mac. O [Visual Studio para Mac](/visualstudio/mac/) tem muitas das mesmas funcionalidades do Visual Studio 2017 e é otimizado para o desenvolvimento de aplicativos móveis e multiplataforma. Este artigo concentra-se na versão do Visual Studio 2017 para Windows.
 
-Há três edições do Visual Studio: Community, Professional e Enterprise. Consulte [comparar edições do Visual Studio](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
+há três edições do Visual Studio: Community, Professional e Enterprise. consulte [comparar Visual Studio edições](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
 
 ::: moniker-end
 
@@ -55,7 +55,7 @@ Há três edições do Visual Studio: Community, Professional e Enterprise. Cons
 
 O Visual Studio está disponível para Windows e Mac. O [Visual Studio para Mac](/visualstudio/mac/) tem muitas das mesmas funcionalidades do Visual Studio 2019 e é otimizado para o desenvolvimento de aplicativos móveis e multiplataforma. Este artigo concentra-se na versão do Visual Studio 2019 para Windows.
 
-Há três edições do Visual Studio 2019: Community, Professional e Enterprise. Consulte [comparar edições do Visual Studio](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
+há três edições do Visual Studio 2019: Community, Professional e Enterprise. consulte [comparar Visual Studio edições](https://visualstudio.microsoft.com/vs/compare/) para saber mais sobre quais recursos têm suporte em cada edição.
 
 ::: moniker-end
 
@@ -93,7 +93,7 @@ Alguns dos recursos populares no Visual Studio que ajudam você a ser mais produ
 
 - [Pesquisa do Visual Studio](../../ide/visual-studio-search.md)
 
-   O Visual Studio pode parecer assustador, às vezes, com tantas propriedades, opções e menus. O Visual Studio Search (**Ctrl** + **Q**) é uma ótima maneira de localizar rapidamente os recursos e o código do IDE em um único lugar.
+   O Visual Studio pode parecer assustador, às vezes, com tantas propriedades, opções e menus. a pesquisa de Visual Studio (**Ctrl** + **Q**) é uma ótima maneira de localizar rapidamente os recursos e o código do IDE em um único lugar.
 
    ::: moniker range="vs-2017"
 
@@ -107,7 +107,7 @@ Alguns dos recursos populares no Visual Studio que ajudam você a ser mais produ
 
    ![Caixa de pesquisa no Visual Studio 2019](../media/vs-2019/quick-launch-nuget.png)
 
-    Para obter informações e dicas de produtividade, consulte [como usar a pesquisa do Visual Studio](../../ide/visual-studio-search.md).
+    para obter informações e dicas de produtividade, consulte [como usar Visual Studio pesquisa](../../ide/visual-studio-search.md).
 
    ::: moniker-end
 
@@ -167,11 +167,11 @@ Vamos nos aprofundar e criar um programa simples.
 
 1. Abra o Visual Studio.
 
-1. Na barra de menus, escolha **arquivo** > **novo** > **projeto**.
+1. na barra de menus, escolha **arquivo** > **novo** > **Project**.
 
    ![Arquivo > Novo projeto na barra de menus](../media/file-new-project-menu.png)
 
-   A caixa de diálogo **novo projeto** mostra vários *modelos* de projeto. Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
+   a caixa de diálogo **novo Project** mostra vários *modelos* de projeto. Um modelo contém as configurações e os arquivos básicos necessários para um tipo de projeto fornecido.
 
 1. Escolha a categoria de modelo **.NET Core** em **Visual C#** e escolha o modelo **Aplicativo de Console (.NET Core)**. Na caixa de texto **Nome**, digite **HelloWorld** e, em seguida, selecione o botão **OK**.
 
@@ -198,7 +198,7 @@ Vamos nos aprofundar e criar um programa simples.
 
    O Visual Studio compila o aplicativo e uma janela do console é aberta com a mensagem **Olá, Mundo!**. Agora você tem um aplicativo em execução.
 
-   ![Captura de tela da janela cmd.exe console mostrando a saída 'Hello Word!' e "Pressione qualquer tecla para continuar".](../media/overview-console-window.png)
+   ![Captura de tela da janela do console cmd.exe mostrando a saída ' Olá Word! ' e ' pressione qualquer tecla para continuar '.](../media/overview-console-window.png)
 
 1. Para fechar a janela do console, pressione qualquer tecla do teclado.
 
@@ -217,7 +217,7 @@ Vamos nos aprofundar e criar um programa simples.
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. Execute o aplicativo novamente selecionando **Depurar** > **Iniciar Sem Depuração** ou pressionando **Ctrl** + **F5**.
+1. Execute o aplicativo novamente selecionando **depurar** > **Iniciar sem depuração** ou pressionando **Ctrl** + **F5**.
 
    O Visual Studio recompila o aplicativo e uma janela do console é aberta e solicita seu nome.
 
@@ -235,25 +235,25 @@ Vamos nos aprofundar e criar um programa simples.
 
    A janela de início é exibida com várias opções para clonar um repositório, abrir um projeto recente ou criar um projeto.
 
-1. Escolha **Criar um novo projeto.**
+1. Escolha **criar um novo projeto**.
 
-    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="Captura de tela da janela &quot;Criar um novo projeto&quot; no Visual Studio 2019.":::
+    :::image type="content" source="../media/vs-2019/start-window-create-new-project.png" alt-text="captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019.":::
 
    A janela **Criar um novo projeto** é aberta e mostra diversos *modelos* de projeto. Um modelo contém os arquivos básicos e as configurações necessárias para um determinado tipo de projeto.
 
-1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. Você pode filtrar ainda mais os  resultados do modelo escolhendo **C#** na lista de lista lista de todos os idiomas, **Windows** na lista Todas as **plataformas** e **Console** na lista Todos os tipos **de** projeto .
+1. Para localizar o modelo desejado, digite ou insira **console do .net core** na caixa de pesquisa. A lista de modelos disponíveis é filtrada automaticamente com base nas palavras-chave que você inseriu. você pode filtrar ainda mais os resultados do modelo escolhendo **C#** na lista suspensa **todos os idiomas** , **Windows** na lista **todas as plataformas** e **Console** na lista **todos os tipos de projeto** .
 
-    Selecione o **modelo Aplicativo de Console** e clique em **Próximo.**
+    Selecione o modelo de **aplicativo de console** e clique em **Avançar**.
 
-    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="Captura de tela da janela &quot;Criar um novo projeto&quot; no Visual Studio 2019, em que você seleciona o modelo que deseja.":::
+    :::image type="content" source="../media/vs-2019/create-new-project.png" alt-text="captura de tela da janela ' criar um novo projeto ' no Visual Studio 2019, onde você seleciona o modelo desejado.":::
 
-1. Na janela **Configurar seu** novo projeto,  insira **HelloWorld** na caixa Nome do projeto, opcionalmente altere o local do diretório para os arquivos de projeto (a localidade padrão é ) e clique `C:\Users\<name>\source\repos` em **Próximo**.
+1. na janela **configurar seu novo projeto** , digite **HelloWorld** na caixa **nome do Project** , opcionalmente, altere o local do diretório para os arquivos do projeto (a localidade padrão é `C:\Users\<name>\source\repos` ) e clique em **avançar**.
 
-    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="Captura de tela da janela &quot;Configurar seu novo projeto&quot; no Visual Studio 2019, em que você ins insira o nome do projeto.":::
+    :::image type="content" source="../media/vs-2019/configure-new-project.png" alt-text="captura de tela da janela ' configurar seu novo projeto ' no Visual Studio 2019, em que você insere o nome do projeto.":::
 
-1. Na janela **Informações adicionais,** verifique se **o .NET Core 3.1** aparece no menu suspenso Estrutura de Destino e clique em **Criar**. 
+1. Na janela **informações adicionais** , verifique se **.NET Core 3,1** aparece no menu suspenso **estrutura de destino** e, em seguida, clique em **criar**.
 
-    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="Captura de tela da janela &quot;Informações adicionais&quot; no Visual Studio 2019, em que você seleciona a versão do .NET Core Framework que deseja.":::
+    :::image type="content" source="../media/vs-2019/create-project-additional-info.png" alt-text="captura de tela da janela ' informações adicionais ' no Visual Studio 2019, onde você seleciona a versão do .net Core Framework que deseja.":::
 
    O Visual Studio cria o projeto. É um aplicativo "Olá, Mundo" simples que chama o método <xref:System.Console.WriteLine?displayProperty=nameWithType> para exibir a cadeia de caracteres literal "Olá, Mundo!" na janela do console (saída do programa).
 
@@ -273,7 +273,7 @@ Vamos nos aprofundar e criar um programa simples.
 
    O Visual Studio compila o aplicativo e uma janela do console é aberta com a mensagem **Olá, Mundo!**. Agora você tem um aplicativo em execução.
 
-   ![Captura de tela da janela Microsoft Visual Studio Console de Depuração mostrando a saída 'Hello Word!' e "Pressione qualquer tecla para fechar essa janela".](../media/vs-2019/overview-console-window.png)
+   ![captura de tela da janela do Console de depuração Microsoft Visual Studio mostrando a saída ' olá Word! ' e ' pressione qualquer tecla para fechar esta janela '.](../media/vs-2019/overview-console-window.png)
 
 1. Para fechar a janela do console, pressione qualquer tecla do teclado.
 
@@ -292,13 +292,13 @@ Vamos nos aprofundar e criar um programa simples.
    Console.WriteLine($"\nHello {name}!");
    ```
 
-1. Execute o aplicativo novamente selecionando **Depurar** > **Iniciar Sem Depuração** ou pressionando **Ctrl** + **F5**.
+1. Execute o aplicativo novamente selecionando **depurar** > **Iniciar sem depuração** ou pressionando **Ctrl** + **F5**.
 
    O Visual Studio recompila o aplicativo e uma janela do console é aberta e solicita seu nome.
 
 1. Insira seu nome na janela do console e pressione **Enter**.
 
-   ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o prompt de um nome, a entrada e a saída 'Hello Hello!'.](../media/vs-2019/overview-console-input.png)
+   ![captura de tela da janela do Console de depuração Microsoft Visual Studio mostrando o prompt para um nome, a entrada e a saída ' olá Georgette! '.](../media/vs-2019/overview-console-input.png)
 
 1. Pressione qualquer tecla para fechar a janela do console e interromper o programa em execução.
 
@@ -344,7 +344,7 @@ Primeiro, vamos renomear a variável `name`:
 
    ![O IntelliSense lista membros no Visual Studio](../media/intellisense-list-members.png)
 
-5. Selecione o membro chamado **Agora,** que é uma propriedade da classe , clicando duas vezes nele ou pressionando **Tab**. Conclua a linha de código adicionando um ponto e vírgula ao final.
+5. Selecione o membro chamado **Now**, que é uma propriedade da classe, clicando duas vezes nele ou pressionando **Tab**. Conclua a linha de código adicionando um ponto-e-vírgula ao final.
 
 6. Abaixo disso, digite ou cole as seguintes linhas de código:
 
@@ -380,7 +380,7 @@ Primeiro, vamos renomear a variável `name`:
 
 10. Execute o programa novamente pressionando **Ctrl** + **F5**. A saída é parecida com esta:
 
-    ![Captura de tela da Microsoft Visual Studio console de depuração mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 43'.](../media/vs-2019/overview-console-final.png)
+    ![Captura de tela da Microsoft Visual Studio do Console de Depuração mostrando o prompt de um nome, a entrada e a saída "Hello Hello! Dia do ano: 43'.](../media/vs-2019/overview-console-final.png)
 
 ::: moniker-end
 

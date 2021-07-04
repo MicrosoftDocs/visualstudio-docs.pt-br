@@ -4,17 +4,19 @@
   items:
     - name: Experiência de git no Visual Studio
       href: git-with-visual-studio.md
-    - name: Como o Visual Studio torna o controle do código-fonte fácil
+    - name: Configurações e preferências do git
+      href: git-settings.md
+    - name: como Visual Studio torna o controle do código-fonte fácil
       href: git-visual-studio-source-control.md
 - name: Introdução
   items:
-    - name: Introdução ao git e ao GitHub no Visual Studio
+    - name: Introdução ao Git e ao GitHub no Visual Studio
       href: /learn/modules/visual-studio-github-push/
     - name: Compare o git e o Team Explorer lado a lado
       href: git-team-explorer-feature-comparison.md
 - name: Novidades
   items:
-    - name: Produtividade aprimorada com o Git no Visual Studio (visualização)
+    - name: produtividade aprimorada com o Git no Visual Studio (versão prévia)
       href: 'https://devblogs.microsoft.com/visualstudio/enhanced-productivity-with-git-in-visual-studio/'
     - name: Notas de versão do Visual Studio 2019
       href: /visualstudio/releases/2019/release-notes/

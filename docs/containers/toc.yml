@@ -26,7 +26,7 @@
           href: deploy-app-service.md
         - name: Implantar no Docker Hub
           href: deploy-docker-hub.md
-        - name: Gerenciar perfis de inicialização (versão prévia)
+        - name: Gerenciar perfis de lançamento
           href: launch-profiles.md
         - name: Exibir e diagnosticar contêineres e imagens
           href: view-and-diagnose-containers.md
@@ -54,5 +54,5 @@
       href: overview-bridge-to-kubernetes.md
     - name: Configurar a Ponte para Kubernetes
       href: configure-bridge-to-kubernetes.md
-    - name: Usar identidades gerenciadas do Azure AD com o Bridge para kubernetes
+    - name: Usar identidades gerenciadas do Azure AD com Bridge to Kubernetes
       href: managed-identity.md

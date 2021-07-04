@@ -1,8 +1,10 @@
 ---
 title: Saiba mais sobre a janela de ferramentas de Gerenciador de Soluções
-description: Saiba como você pode usar a janela de ferramentas do Gerenciador de Soluções no Visual Studio para criar & gerenciar seus arquivos, projetos e soluções.
+description: saiba como você pode usar a janela de ferramentas do Gerenciador de Soluções no Visual Studio para criar & gerenciar seus arquivos, projetos e soluções.
 ms.date: 06/29/2021
 ms.topic: conceptual
+f1_keywords:
+- vs.addnewitem
 helpviewer_keywords:
 - solution explorer [Visual Studio]
 author: TerryGLee
@@ -10,12 +12,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: 005e6fd3e49d3a3ab739740d2aaa1dd77df5e5df
-ms.sourcegitcommit: 3d0f4930e0ccf49f89bbcfe12a949fbbf37aae07
+ms.openlocfilehash: fbbae8b974a7e88abffd9a12eb253dfea6c7165b
+ms.sourcegitcommit: 8fb1500acb7e6314fbb6b78eada78ef5d61d39bf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113131494"
+ms.lasthandoff: 07/03/2021
+ms.locfileid: "113280497"
 ---
 # <a name="how-to-use-solution-explorer"></a>Como usar Gerenciador de Soluções
 
@@ -26,9 +28,9 @@ Você pode usar a janela de ferramentas de Gerenciador de Soluções para criar 
 
 ## <a name="solution-explorer-tool-window"></a>Janela de ferramentas do Gerenciador de Soluções
 
-Para começar, vamos dar uma olhada na janela de ferramentas de Gerenciador de Soluções no [IDE do Visual Studio](../get-started/visual-studio-ide.md), com uma solução de console C# aberta que tem dois projetos.
+para começar, vamos dar uma olhada na janela de ferramentas de Gerenciador de Soluções no [IDE Visual Studio](../get-started/visual-studio-ide.md), com uma solução aberta de console C# que tem dois projetos.
 
-[![A janela de ferramentas do Gerenciador de Soluções no Visual Studio.](media/solution-explorer-tool-window.png)](media/solution-explorer-tool-window.png#lightbox)
+[![A janela de ferramentas de Gerenciador de Soluções no Visual Studio.](media/solution-explorer-tool-window.png)](media/solution-explorer-tool-window.png#lightbox)
 
 A janela de ferramentas contém os seguintes elementos da interface do usuário (interface de usuários):
 
@@ -36,13 +38,13 @@ A janela de ferramentas contém os seguintes elementos da interface do usuário 
 - **Barra de pesquisa**, onde você pode pesquisar arquivos e tipos de arquivos específicos
 - **Janela principal**, onde você pode exibir e gerenciar seus arquivos, projetos & soluções
 - **Nó da solução**, onde você pode gerenciar suas soluções
-- **Nó do projeto**, onde você pode gerenciar seus projetos
+- **Project nó**, onde você pode gerenciar seus projetos
 - **Nó Dependencies**, onde você pode gerenciar sua solução & dependências do projeto
 - **Nó de programa**, no qual você pode exibir, editar e gerenciar seu programa ou aplicativo (aplicativo)
-- **[Guia de alterações do git](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window)**, em que você pode usar o Git & GitHub no Visual Studio para colaborar em projetos com sua equipe
+- **[guia de alterações do git](../version-control/git-with-visual-studio.md?view=vs-2019&preserve-view=true#git-changes-window)**, em que você pode usar o git & GitHub em Visual Studio para colaborar em projetos com sua equipe
 
 > [!TIP]
-> Se você não vir a janela de ferramentas do Gerenciador de soluções, poderá abri-la na barra de menus do Visual Studio usando o **modo de exibição**  >  **Gerenciador de soluções** ou pressionando **Ctrl** + **ALT** + **L**.
+> se você não vir a janela de ferramentas Gerenciador de Soluções, poderá abri-la na barra de menus Visual Studio usando **View**  >  **Gerenciador de Soluções** ou pressionando **Ctrl** + **Alt** + **L**.
 
 ## <a name="solution-explorer-menu-bar"></a>Barra de menus Gerenciador de Soluções
 
