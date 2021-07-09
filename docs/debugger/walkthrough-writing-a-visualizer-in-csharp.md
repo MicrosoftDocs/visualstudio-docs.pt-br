@@ -1,6 +1,6 @@
 ---
 title: Escrever um visualizador em C# | Microsoft Docs
-description: Siga um passo a passos para criar um visualizador simples em C#. Ele mostra as etapas necessárias com e sem usar o modelo de item do visualizador.
+description: Siga um passo a passo para criar um visualizador simples em C#. Ele mostra as etapas necessárias com e sem usar o modelo de item visualizador.
 ms.custom: SEO-VS-2020
 ms.date: 07/02/2021
 ms.topic: conceptual
@@ -15,16 +15,16 @@ ms.author: mikejo
 manager: jmartens
 ms.workload:
 - dotnet
-ms.openlocfilehash: 47c7fa8eaa5a735f05b338101a1aefe0601e9915
-ms.sourcegitcommit: 4cd3eb514e9fa48e586279e38fe7c2e111ebb304
+ms.openlocfilehash: a6ce1a6d9f2f8a36d892d484cf9353e1312758b4
+ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2021
-ms.locfileid: "113298265"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "113549505"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>Instruções passo a passo: escrevendo um visualizador em C\#
 
-Este passo a passo mostra como escrever um visualizador simples usando C#. o visualizador que você criará neste passo a passos exibe o conteúdo de uma cadeia de caracteres usando um formulário de Windows. Esse visualizador simples de cadeia de caracteres não é especialmente útil em si mesmo, mas mostra as etapas básicas a seguir para criar visualizadores mais úteis para outros tipos de dados.
+Este passo a passo mostra como escrever um visualizador simples usando C#. O visualizador que você criará neste passo a passo exibe o conteúdo de uma cadeia de caracteres usando um formulário Windows dados. Esse visualizador simples de cadeia de caracteres não é especialmente útil em si mesmo, mas mostra as etapas básicas a seguir para criar visualizadores mais úteis para outros tipos de dados.
 
 > [!NOTE]
 > As caixas de diálogo e os comandos do menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da edição ou das configurações ativas. Para alterar as configurações, vá para o menu **Ferramentas** e escolha **Importar e Exportar Configurações**. Para obter mais informações, confira [Redefinir as configurações](../ide/environment-settings.md#reset-settings).
@@ -40,14 +40,14 @@ Siga as tarefas abaixo para criar um visualizador.
 * Crie um novo projeto de biblioteca de classes.
 
     ::: moniker range=">=vs-2019"
-    escolha **arquivo**  >  **novo**  >  **Project**. Na lista suspensa idioma, escolha **C#**. Na caixa de pesquisa, digite **biblioteca de classes** e escolha **biblioteca de classes (.NET Framework)**. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyFirstVisualizer` e clique em **criar**.
+    Escolha **Arquivo**  >  **Novo**  >  **Project**. Na lista de idiomas, escolha **C#**. Na caixa de pesquisa, digite **biblioteca de classes** e escolha Biblioteca de Classes **(.NET Framework)**. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyFirstVisualizer` e clique em **Criar**.
 
-    para o projeto do visualizador, certifique-se de selecionar um .NET Framework biblioteca de classes e não .net. embora o visualizador precise ser .NET Framework, o aplicativo de chamada pode ser .net Core.
+    Para o projeto do visualizador, selecione uma biblioteca de classes .NET Framework e não o .NET. Embora o visualizador precise ser .NET Framework, o aplicativo de chamada pode ser .NET Core.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    na barra de menus superior, escolha **arquivo**  >  **novo**  >  **Project**. no painel esquerdo da caixa de diálogo **novo projeto** , em **Visual C#**, escolha **.NET Framework** e, no painel central, escolha **biblioteca de classes (.NET Framework)**.
+    Na barra de menus superior, escolha **Arquivo**  >    >  **Novo Project**. No painel esquerdo da  caixa de diálogo Novo projeto, em **Visual C#,** escolha .NET Framework e, em seguida, no painel central, escolha Biblioteca de Classes **(.NET Framework)**.
 
-    Digite um nome apropriado para a biblioteca de classes, como `MyFirstVisualizer` e clique em **criar** ou em **OK**.
+    Digite um nome apropriado para a biblioteca de classes, como `MyFirstVisualizer` e clique em **Criar** ou **OK.**
     ::: moniker-end
 
    Depois de ter criado a biblioteca de classes, você deverá adicionar uma referência a Microsoft.VisualStudio.DebuggerVisualizers.DLL de forma que possa usar as classes definidas nela. Antes de adicionar a referência, no entanto, você deverá renomear algumas classes de modo que tenham nomes significativos.
@@ -63,13 +63,13 @@ Siga as tarefas abaixo para criar um visualizador.
 
 3. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e escolha **Adicionar Referência** no menu de atalho.
 
-4. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar** e localize o Microsoft.VisualStudio.DebuggerVisualizers.DLL.
+4. Na caixa **de diálogo** Adicionar Referência, na **guia Procurar,** selecione **Procurar** e encontre o Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
-    você pode encontrar a DLL no subdiretório *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* do diretório de instalação do Visual Studio.
+    Você pode encontrar a DLL no subdiretório *\<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* Visual Studio diretório de instalação do .
 
 5. Clique em **OK**.
 
-6. No DebuggerSide. cs, adicione o seguinte às `using` diretivas:
+6. Em DebuggerSide.cs, adicione o seguinte às `using` diretivas:
 
    ```csharp
    using Microsoft.VisualStudio.DebuggerVisualizers;
@@ -95,7 +95,7 @@ Siga as tarefas abaixo para criar um visualizador.
 
 #### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>Para substituir o método DialogDebuggerVisualizer.Show
 
-- No `public class DebuggerSide` , adicione o seguinte **método:**
+- Em `public class DebuggerSide` , adicione o seguinte **método:**
 
   ```csharp
   protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)
@@ -103,19 +103,19 @@ Siga as tarefas abaixo para criar um visualizador.
   }
   ```
 
-  O método `Show` contém o código que realmente cria a caixa de diálogo DO visualizador ou outra interface de usuário e exibe as informações que foram passadas para o visualizador do depurador. Adicione o código que cria a caixa de diálogo e exibe as informações. Neste passo a passo, você fará isso usando uma caixa de mensagem do Windows Forms. Primeiro, você deve adicionar uma referência e uma `using` diretiva para System. Windows. Formas.
+  O método `Show` contém o código que realmente cria a caixa de diálogo DO visualizador ou outra interface de usuário e exibe as informações que foram passadas para o visualizador do depurador. Adicione o código que cria a caixa de diálogo e exibe as informações. Neste passo a passo, você fará isso usando uma caixa de mensagem do Windows Forms. Primeiro, você deve adicionar uma referência e `using` uma diretiva para System.Windows. Forms.
 
 ### <a name="to-add-systemwindowsforms"></a>Para adicionar System.Windows.Forms
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **Referências** e escolha **Adicionar Referência** no menu de atalho.
 
-2. Na caixa de diálogo **Adicionar referência** , na guia **procurar** , selecione **procurar** e localize o System.Windows.Forms.DLL.
+2. Na caixa **de diálogo** Adicionar Referência, na **guia Procurar,** selecione **Procurar** e encontre o System.Windows.Forms.DLL.
 
-    você pode encontrar a DLL em *C:\ Windows \Microsoft.NET\Framework\v4.0.30319*.
+    Você pode encontrar a DLL *em C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
 3. Clique em **OK**.
 
-4. No DebuggerSide. cs, adicione o seguinte às `using` diretivas:
+4. Em DebuggerSide.cs, adicione o seguinte às `using` diretivas:
 
    ```csharp
    using System.Windows.Forms;
@@ -137,11 +137,11 @@ Siga as tarefas abaixo para criar um visualizador.
 
    Esse é o final do código do lado do depurador. Há mais uma etapa, porém; o atributo que diz ao lado a ser depurado qual coleção de classes integra o visualizador.
 
-### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>Para adicionar o tipo a ser visualizado para o código do lado do depurador
+### <a name="to-add-the-type-to-visualize-for-the-debuggee-side-code"></a>Para adicionar o tipo a ser visualizado para o código do lado do rodo de depuração
 
-No código do lado do depurador, você especifica o tipo a ser visualizado (a origem do objeto) para o depurado usando o <xref:System.Diagnostics.DebuggerVisualizerAttribute> atributo. A `Target` propriedade define o tipo a ser visualizado.
+No código do lado do depurador, especifique o tipo a ser visualizado (a origem do objeto) para o depurador usando o <xref:System.Diagnostics.DebuggerVisualizerAttribute> atributo . A `Target` propriedade define o tipo a ser visualizado.
 
-1. Adicione o seguinte código de atributo a DebuggerSide. cs, após as `using` diretivas, mas antes de `namespace MyFirstVisualizer` :
+1. Adicione o seguinte código de atributo a DebuggerSide.cs, após as `using` diretivas , mas antes de `namespace MyFirstVisualizer` :
 
    ```csharp
    [assembly:System.Diagnostics.DebuggerVisualizer(
@@ -169,23 +169,23 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 
 2. No menu **Compilar**, escolha **Compilar MyFirstVisualizer**. O projeto deve ser compilado com êxito. Corrija os erros de compilação antes de continuar.
 
-   Em seguida, você deverá criar um projeto executável para chamar sua DLL do visualizador. Para simplificar, use um projeto de aplicativo de console.
+   Em seguida, você deverá criar um projeto executável para chamar sua DLL do visualizador. Para simplificar, use um projeto de Aplicativo de Console.
 
 ### <a name="to-add-a-console-application-project-to-the-solution"></a>Para adicionar um projeto de aplicativo de console à solução
 
-1. Em Gerenciador de Soluções, clique com o botão direito do mouse na solução, escolha **Adicionar** e, em seguida, clique em **novo Project**.
+1. No Gerenciador de Soluções, clique com o botão direito do mouse na solução, escolha **Adicionar** e clique **em Novo Project**.
 
     ::: moniker range=">=vs-2019"
 
-    escolha **arquivo**  >  **novo**  >  **Project**. Na lista suspensa idioma, escolha **C#**. na caixa de pesquisa, digite **aplicativo de console** e, em seguida, selecione aplicativo de **console (.NET Framework)** ou **aplicativo de console** para .net. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyTestConsole` e clique em **criar**.
+    Escolha **Arquivo**  >  **Novo**  >  **Project**. Na lista de idiomas, escolha **C#**. Na caixa de pesquisa, digite **aplicativo de console** e escolha Aplicativo de Console **(.NET Framework)** ou **Aplicativo de Console** para .NET. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyTestConsole` e clique em **Criar**.
 
     > [!NOTE]
-    > se você quiser testar facilmente o visualizador usando um equipamento de teste, crie um aplicativo de console .NET Framework. Em vez disso, você pode criar um aplicativo de console .NET, mas o conjunto de teste descrito posteriormente ainda não tem suporte para .NET, portanto, você precisará instalar o visualizador para testá-lo. Para este cenário, primeiro crie o aplicativo de console aqui e siga as etapas descritas em [Adicionar um objeto de dados do lado do depurador](#add-a-debuggee-side-data-object).
+    > Se você quiser testar facilmente o visualizador usando um dispositivo de teste, crie um .NET Framework de console. Em vez disso, você pode criar um aplicativo de console do .NET, mas o harness de teste descrito posteriormente ainda não tem suporte para .NET, portanto, você precisará instalar o visualizador para testá-lo. Para um aplicativo de console do .NET, primeiro crie o aplicativo de console aqui, adicione as referências de projeto e DLL necessárias e, em seguida, siga as etapas descritas em Adicionar um objeto de dados do lado do rodo de [depuração](#add-a-debuggee-side-data-object).
     ::: moniker-end
     ::: moniker range="vs-2017"
-    na barra de menus superior, escolha **arquivo**  >  **novo**  >  **Project**. No painel esquerdo da caixa de diálogo **Novo projeto**, em **Visual C#**, escolha **Área de Trabalho do Windows** e, em seguida, no painel central, escolha **Aplicativo de Console (.NET Framework)**.
+    Na barra de menus superior, escolha **Arquivo**  >    >  **Novo Project**. No painel esquerdo da caixa de diálogo **Novo projeto**, em **Visual C#**, escolha **Área de Trabalho do Windows** e, em seguida, no painel central, escolha **Aplicativo de Console (.NET Framework)**.
 
-    Digite um nome apropriado para a biblioteca de classes, como `MyTestConsole` e clique em **OK**.
+    Digite um nome apropriado para a biblioteca de classes, como `MyTestConsole` e clique em **OK.**
     ::: moniker-end
 
    Agora, você deve adicionar as referências necessárias para que MyTestConsole possa chamar MyFirstVisualizer.
@@ -194,7 +194,7 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **MyTestConsole** e escolha **Adicionar Referência** no menu de atalho.
 
-2. Na caixa **de diálogo Adicionar** Referência, **guia** Procurar, escolha Microsoft.VisualStudio.DebuggerVisualizers.DLL.
+2. Na caixa de diálogo **Adicionar referência** , guia **procurar** , escolha Microsoft.VisualStudio.DebuggerVisualizers.DLL.
 
 3. Clique em **OK**.
 
@@ -213,9 +213,9 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 2. Edite o nome de Program.cs para algo mais significativo, por exemplo, TestConsole.cs.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] altera automaticamente a declaração de classe em TestConsole.cs para corresponder ao novo nome de arquivo.
+    > [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] altera automaticamente a declaração de classe em TestConsole. cs para corresponder ao novo nome de arquivo.
 
-3. Em TestConsole.cs, adicione o seguinte código às `using` diretivas:
+3. No TestConsole. cs, adicione o seguinte código às `using` diretivas:
 
    ```csharp
    using MyFirstVisualizer;
@@ -234,27 +234,31 @@ No código do lado do depurador, você especifica o tipo a ser visualizado (a or
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em **MyTestConsole** e escolha **Definir como Projeto de Inicialização** no menu de atalho.
 
-2. No menu **Depurar,** escolha **Iniciar**.
+2. No menu **depurar** , escolha **Iniciar**.
 
     O aplicativo de console inicia e o visualizador aparece e exibe a cadeia de caracteres “Hello World”.
 
-   Parabéns. Você acabou de construir e testar seu primeiro visualizador!
+   Parabéns. Você acabou de criar e testar seu primeiro Visualizador!
 
-   Se você quiser usar o visualizador no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] em vez de apenas chamá-lo do teste automatizado, será preciso instalá-lo. Para obter mais informações, [consulte Como instalar um visualizador.](../debugger/how-to-install-a-visualizer.md)
+   Se você quiser usar o visualizador no [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] em vez de apenas chamá-lo do teste automatizado, será preciso instalá-lo. Para obter mais informações, consulte [como: instalar um visualizador](../debugger/how-to-install-a-visualizer.md).
 
 ::: moniker range=">=vs-2019"
-## <a name="add-a-debuggee-side-data-object"></a>Adicionar um objeto de dados do lado do rodo de depuração
+## <a name="add-a-debuggee-side-data-object"></a>Adicionar um objeto de dados do lado do depurador
 
-Nesta seção, você alterna do objeto `System.String` de dados para um objeto de dados personalizado.  
+Nesta seção, você alterna do objeto de `System.String` dados para um objeto de dados personalizado.  
 
-1. Escolha **Arquivo**  >  **Novo**  >  **Project**. Na lista de idiomas, escolha **C#**. Na caixa de pesquisa, digite **biblioteca de** classes e escolha Biblioteca de Classes **(.NET Framework)** ou Biblioteca de Classes **para** .NET Standard.
+1. Em Gerenciador de Soluções, clique com o botão direito do mouse na solução, escolha **Adicionar** e, em seguida, clique em **novo Project**. Na lista suspensa idioma, escolha **C#**. na caixa de pesquisa, digite **biblioteca de classes** e escolha biblioteca de **classes (.NET Framework)** ou **biblioteca de classes** para .NET Standard.
 
    >[!NOTE]
-   >Se você estiver usando um .NET Framework de console de teste, crie um projeto .NET Framework biblioteca de classes.
+   >se você estiver usando um aplicativo de console de teste .NET Framework, certifique-se de criar um projeto de biblioteca de classes .NET Framework.
 
-1. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyDataObject` e clique em **Criar**.
+1. Clique em **Próximo**. Na caixa de diálogo exibida, digite o nome `MyDataObject` e clique em **criar**.
 
-1. (.NET Standard biblioteca de classes) No Gerenciador de Soluções, clique com o botão direito do mouse no projeto e **escolha Editar Project Arquivo**. Altere `<TargetFramework>` o valor para `netstandard2.0` .
+1. (Somente .NET Standard biblioteca de classes) em Gerenciador de Soluções, clique com o botão direito do mouse no projeto e escolha **editar Project arquivo**. Altere o `<TargetFramework>` valor para `netstandard2.0` .
+
+   ```xml
+   <TargetFramework>netstandard2.0</TargetFramework>
+   ```
 
 1. Dentro do `MyDataObject` namespace, substitua o código padrão pelo código a seguir.
 
@@ -274,11 +278,11 @@ Nesta seção, você alterna do objeto `System.String` de dados para um objeto d
 
    Em seguida, atualize o projeto MyFirstVisualizer para usar o novo objeto de dados.
 
-1. No Gerenciador de Soluções no projeto MyFirstVisualizer, clique com  o botão direito do mouse no nó Referências e escolha **Adicionar Referência**.
+1. Em Gerenciador de Soluções no projeto MyFirstVisualizer, clique com o botão direito do mouse no nó **referências** e escolha **Adicionar referência**.
 
-1. Em **Projetos,** selecione o **projeto MyDataObject.**
+1. Em **projetos**, selecione o projeto **myDataObject** .
 
-1. No código de atributo de DebuggerSide.cs, atualize o valor de Destino, alterando `System.String` para `MyDataObject.CustomDataObject` .
+1. No código de atributo de DebuggerSide. cs, atualize o valor de destino, alterando `System.String` para `MyDataObject.CustomDataObject` .
 
    ```csharp
    Target = typeof(MyDataObject.CustomDataObject),
@@ -299,9 +303,9 @@ Nesta seção, você alterna do objeto `System.String` de dados para um objeto d
 
    Em seguida, atualize o aplicativo de console para usar o objeto de dados personalizado.
 
-1. No Gerenciador de Soluções no projeto MyTestConsole, clique com o  botão direito do mouse no nó Referências ou **Dependências** e adicione uma referência de projeto a `MyDataObject` .
+1. Em Gerenciador de Soluções no projeto MyTestConsole, clique com o botão direito do mouse no nó **referências** ou **dependências** e adicione uma referência de projeto ao `MyDataObject` .
 
-1. Em Program.cs, substitua o código no `Main` método pelo código a seguir.
+1. Em Program. cs, substitua o código no `Main` método pelo código a seguir.
 
    ```csharp
    // String myString = "Hello, World";
@@ -310,7 +314,7 @@ Nesta seção, você alterna do objeto `System.String` de dados para um objeto d
    DebuggerSide.TestShowVisualizer(customDataObject.MyData);
    ```
 
-1. (Aplicativo de console do .NET) Coloque a chamada para `TestShowVisualizer` em uma instrução try-catch, pois não há suporte para o harness de teste.
+1. (Aplicativo de console .NET) Coloque a chamada para `TestShowVisualizer` em uma instrução try-catch, pois o equipamento de teste não tem suporte.
 
    ```csharp
    try
@@ -321,27 +325,27 @@ Nesta seção, você alterna do objeto `System.String` de dados para um objeto d
    }
    ```
 
-   O depurador precisa de uma referência ao visualizador. Uma maneira de manter a referência é manter o código anterior em uso.
+   O aplicativo de console precisa de uma referência de tempo de execução para o visualizador. Você pode manter a referência mantendo o código anterior em vez de comentar.
 
-1. Para um .NET Framework de console, você pode executar o harness de teste (pressione **F5**) ou pode seguir as instruções em Como [instalar um visualizador](../debugger/how-to-install-a-visualizer.md).
+1. para um aplicativo de console .NET Framework, você pode executar o equipamento de teste (pressione **F5**), ou você pode seguir as instruções em [como instalar um visualizador](../debugger/how-to-install-a-visualizer.md).
 
-   Se você executar o aplicativo usando o harness de teste, o aplicativo mostrará o Windows Formulário.
+   se você executar o aplicativo usando o equipamento de teste, o aplicativo mostrará o Windows formulário.
 
-1. Para um aplicativo de console do .NET, copie o e o para as pastas descritas em `MyFirstVisualizer.dll` Como instalar um `MyDataObject.dll` [visualizador.](../debugger/how-to-install-a-visualizer.md)
+1. Para um aplicativo de console .NET, copie o `MyFirstVisualizer.dll` e o `MyDataObject.dll` para as pastas descritas em [como: instalar um visualizador](../debugger/how-to-install-a-visualizer.md).
 
-1. Depois de instalar o visualizador, de definir um ponto de interrupção, execute o aplicativo de console e passe o mouse sobre `customDataObject` . Se tudo estiver definido corretamente, você deverá ver o ícone de lupa ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "Ícone do visualizador").
+1. Depois de instalar o visualizador, defina um ponto de interrupção, execute o aplicativo de console e passe o mouse sobre `customDataObject` . Se tudo estiver configurado corretamente, você deverá ver o ícone de lupa ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "Ícone do Visualizador").
 
    :::image type="content" source="../debugger/media/vs-2019/visualizer-csharp-data-object.png" alt-text="Ícone de lupa do visualizador.":::
 
-   Ao escolher **MyFirstVisualizer** na lupa, você verá o Formulário com o texto do objeto de dados no título.
+   Ao escolher **MyFirstVisualizer** da lupa, você verá o formulário com o texto do objeto de dados no título.
 
-   ![Visualizador mostrando um formulário Windows dados](../debugger/media/vs-2019/visualizer-csharp-windows-form.png)
+   ![visualizador mostrando um formulário de Windows](../debugger/media/vs-2019/visualizer-csharp-windows-form.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Criar um visualizador usando o modelo de item visualizador
+## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Criar um visualizador usando o modelo de item do Visualizador
 
 Até agora, este passo a passo mostrou como criar um visualizador manualmente. Isto foi feito como um exercício de aprendizado. Agora que você sabe como um visualizador simples funciona, há uma forma mais fácil de criar um: usando o modelo de item do visualizador.
 
@@ -349,11 +353,11 @@ Primeiro, você precisará criar um novo projeto de biblioteca de classes.
 
 ### <a name="to-create-a-new-class-library"></a>Para criar uma nova biblioteca de classes
 
-1. No menu **Arquivo,** escolha **Novo > Project**.
+1. No menu **arquivo** , escolha **novo > Project**.
 
-2. Na caixa **de diálogo Project,** em **Visual C#,** selecione **.NET Framework**.
+2. na caixa de diálogo **novo Project** , em **Visual C#**, selecione **.NET Framework**.
 
-3. No painel central, escolha Biblioteca **de Classes**.
+3. No painel central, escolha **biblioteca de classes**.
 
 4. Na caixa **Nome**, digite um nome apropriado para a biblioteca de classes, por exemplo, MySecondVisualizer.
 
@@ -367,7 +371,7 @@ Primeiro, você precisará criar um novo projeto de biblioteca de classes.
 
 2. No menu de atalho, escolha **Adicionar** e clique em **Novo Item**.
 
-3. Na caixa **de diálogo Adicionar Novo Item,** em Itens do Visual **C#,** selecione **Visualizador do Depurador**.
+3. Na caixa de diálogo **Adicionar novo item** , em **itens do Visual C#**, selecione **Visualizador do depurador**.
 
 4. Na caixa **Nome**, digite um nome apropriado, por exemplo, SecondVisualizer.cs.
 
@@ -378,6 +382,6 @@ Primeiro, você precisará criar um novo projeto de biblioteca de classes.
 
 ## <a name="see-also"></a>Confira também
 
-- [Arquitetura do visualizador](../debugger/visualizer-architecture.md)
+- [Arquitetura do Visualizador](../debugger/visualizer-architecture.md)
 - [Como instalar um visualizador](../debugger/how-to-install-a-visualizer.md)
 - [Criar visualizadores personalizados](../debugger/create-custom-visualizers-of-data.md)
