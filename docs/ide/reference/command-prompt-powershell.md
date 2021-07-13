@@ -1,6 +1,6 @@
 ---
 title: Shells de linha de comando & prompt para desenvolvedores
-description: Inicie em Ferramentas > menu Linha de Comando. Visual Studio Prompt de Comando do Desenvolvedor, o PowerShell do desenvolvedor e o terminal permitem que você use ferramentas .NET e C++ com mais facilidade.
+description: Inicie em Ferramentas > menu Linha de Comando. Visual Studio Prompt de Comando do Desenvolvedor, o PowerShell do desenvolvedor e o terminal permitem que você use ferramentas do .NET e do C++ com mais facilidade.
 author: TerryGLee
 ms.author: tglee
 ms.date: 06/11/2021
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual Studio terminal
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 no-loc: cmdlet
-ms.openlocfilehash: 858845ca5629f64e282e3864daa0201935316062
-ms.sourcegitcommit: b4cc3dee59421f7089112becf128a369acadaf61
+ms.openlocfilehash: fef783475304bb1faa1788bde591a22ed610d528
+ms.sourcegitcommit: e7629e132a4d2fad6bb5869e4d68d9dbeeae9631
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "112990513"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113649167"
 ---
 # <a name="visual-studio-developer-command-prompt-and-developer-powershell"></a>Visual Studio Prompt de Comando do Desenvolvedor e o PowerShell para desenvolvedores
 
@@ -29,10 +29,9 @@ Visual Studio 2019 inclui dois shells de linha de comando para desenvolvedores:
 
 - **Visual Studio PowerShell para Desenvolvedores** – mais eficiente do que um prompt de comando. Por exemplo, você pode passar a saída de um comando (conhecido como *cmdlet* um ) para outro cmdlet . Esse shell tem as mesmas variáveis de ambiente definidas como Prompt de Comando do Desenvolvedor. Disponível desde Visual Studio 2019.
 
-
 :::image type="content" source="media/developer-command-prompt-for-vs/command-prompt.png" alt-text="Prompt de Comando do Desenvolvedor para Visual Studio a ferramenta clrver":::
 
-A partir do Visual Studio 2019 versão 16.5, o Visual Studio inclui um **terminal** integrado que pode hospedar qualquer um desses shells (Prompt de Comando do Desenvolvedor e Developer PowerShell). Você também pode abrir várias guias de cada shell. O Visual Studio terminal é criado sobre [Terminal do Windows](/windows/terminal/). Para abrir o terminal no Visual Studio, escolha **Exibir**  >  **Terminal**.
+A partir do Visual Studio 2019 versão 16.5, o Visual Studio inclui um **terminal** integrado que pode hospedar qualquer um desses shells (Prompt de Comando do Desenvolvedor e PowerShell para desenvolvedores). Você também pode abrir várias guias de cada shell. O Visual Studio terminal é criado sobre [Terminal do Windows](/windows/terminal/). Para abrir o terminal no Visual Studio, escolha **Exibir**  >  **Terminal**.
 
 :::image type="content" source="media/developer-command-prompt-for-vs/vs-terminal.png" alt-text="Visual Studio terminal mostrando várias guias":::
 
@@ -43,8 +42,8 @@ Ambos os shells têm variáveis de ambiente específicas definidas que permitem 
 |Comandos populares|Descrição|
 |--|--|
 |[`MSBuild`](../../msbuild/msbuild-command-line-reference.md)|Criar um projeto ou solução|
-|[`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool)| Uma [.NET Framework para](/dotnet/framework/tools/index) clr.|
-|[`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler)|Uma [.NET Framework para](/dotnet/framework/tools/index) desmontador.|
+|[`clrver`](/dotnet/framework/tools/clrver-exe-clr-version-tool)| Uma [.NET Framework para](/dotnet/framework/tools/index) CLR|
+|[`ildasm`](/dotnet/framework/tools/ildasm-exe-il-disassembler)|Uma [.NET Framework para](/dotnet/framework/tools/index) desmontagem|
 |[`dotnet`](/dotnet/core/tools/dotnet)|Um [comando da CLI do .NET](/dotnet/core/tools/index)|
 |[`dotnet run`](/dotnet/core/tools/dotnet-run)|Um [comando da CLI do .NET](/dotnet/core/tools/index)|
 |[`CL`](/cpp/build/reference/compiler-command-line-syntax)|Ferramenta de compilação C/C++|
@@ -63,13 +62,13 @@ Siga estas etapas para abrir o Prompt de Comando do Desenvolvedor ou o Developer
 
    ![Item de menu do prompt de comando no Visual Studio](./media/developer-command-prompt-for-vs/vs-menu.png)
 
-## <a name="start-from-windows-menu"></a>Menu Iniciar do Windows
+## <a name="start-from-windows-menu"></a>Iniciar do Windows menu
 
-Outra maneira de iniciar os shells é do menu Iniciar. Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e quaisquer SDKs e cargas de trabalho adicionais que você instalou. 
+Outra maneira de iniciar os shells é a partir do menu Iniciar. Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e quaisquer SDKs e cargas de trabalho adicionais que você instalou. 
 
 ### <a name="windows-10"></a>Windows 10
 
-1. Selecione **Iniciar tecla** de logotipo do Windows no ![ teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) e role até a letra **V.**
+1. Selecione **Iniciar** ![ Windows tecla de logotipo no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) e role até a letra **V.**
 
 1. Expanda **a Visual Studio 2019.**
 
@@ -83,7 +82,7 @@ Outra maneira de iniciar os shells é do menu Iniciar. Você pode ter vários pr
 
 1. Vá para a tela **Inicial** pressionando a tecla do logotipo do Windows ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) no seu teclado, por exemplo.
 
-1. Na tela **Iniciar,** pressione **Ctrl** Tab para abrir a lista +  **Aplicativos** e pressione **V**. Isso abrirá uma lista que inclui todos os prompts Visual Studio comando instalados.
+1. Na tela **Iniciar,** pressione **Ctrl** Tab para abrir a lista +  **Aplicativos** e pressione **V**. Isso abrirá uma lista que inclui todos os prompts de Visual Studio instalados.
 
 1. Escolha **Prompt de Comando do Desenvolvedor para VS 2019** ou **PowerShell para Desenvolvedor para VS 2019.**
 
@@ -103,7 +102,7 @@ Normalmente, os atalhos para os shells instalados são colocados na pasta **Menu
 
 ### <a name="developer-command-prompt"></a>Prompt de Comando do Desenvolvedor
 
-Pesquise o nome do arquivo de prompt de comando, que éVsDevCmd.batou acesse *a* pasta Ferramentas do Visual Studio, como *%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools* (o caminho muda de acordo com sua versão, edição e local de instalação do Visual Studio).
+Pesquise o nome do arquivo de prompt de comando, que éVsDevCmd.batou acesse *a* pasta Ferramentas do Visual Studio, como *%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools* (alterações de caminho de acordo com sua versão, edição e local de instalação do Visual Studio).
 
 Depois de localizar o arquivo de prompt de comando, abra-o inserindo o seguinte comando em uma janela de prompt de comando regular:
 
@@ -111,18 +110,18 @@ Depois de localizar o arquivo de prompt de comando, abra-o inserindo o seguinte 
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
 ```
 
-Ou insira o seguinte comando na caixa de diálogo Windows **Run:**
+Ou digite o seguinte comando na caixa Windows **caixa de diálogo** Executar:
 
 ```cmd
 %comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"
 ```
 
 > [!TIP]
-> Você precisará editar o caminho para corresponder à instalação do Visual Studio.
+> Você precisará editar o caminho para corresponder à sua Visual Studio instalação.
 
 ### <a name="developer-powershell"></a>PowerShell para desenvolvedores
 
-Pesquise um arquivo de script do PowerShell chamadoLaunch-VsDevShell.ps1ou acesse *a* pasta Ferramentas do Visual Studio, como *%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools*. (O caminho muda de acordo com a versão Visual Studio, a edição e o local de instalação.) Depois de localizar o arquivo do PowerShell, execute-o inserindo o seguinte comando em um prompt Windows PowerShell ou PowerShell 6:
+Pesquise um arquivo de script do PowerShell chamadoLaunch-VsDevShell.ps1ou acesse *a* pasta Ferramentas do Visual Studio, como *%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\Common7\Tools.* (O caminho muda de acordo com sua versão Visual Studio, edição e local de instalação.) Depois de localizar o arquivo do PowerShell, execute-o inserindo o seguinte comando em um prompt Windows PowerShell ou PowerShell 6:
 
 ```powershell
 & 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1'
@@ -135,9 +134,7 @@ Por padrão, o PowerShell do desenvolvedor que é lançado é configurado para a
 
 ## <a name="see-also"></a>Confira também
 
-- [PowerShell para desenvolvedores](https://devblogs.microsoft.com/visualstudio/the-powershell-you-know-and-love-now-with-a-side-of-visual-studio/)
-- [Diga olá para a nova Visual Studio terminal](https://devblogs.microsoft.com/visualstudio/say-hello-to-the-new-visual-studio-terminal/)
 - [Terminal do Windows](/windows/terminal/)
 - [Ferramentas do .NET Framework](/dotnet/framework/tools/index)
-- [Gerenciar ferramentas externas](../managing-external-tools.md)
 - [Usar o pacote de ferramentas do Microsoft C++ na linha de comando](/cpp/build/building-on-the-command-line)
+- [Visual Studio Code usuários](https://code.visualstudio.com/docs/cpp/config-msvc#:~:text=To%20open%20the%20Developer%20Command,item%20to%20open%20the%20prompt.)

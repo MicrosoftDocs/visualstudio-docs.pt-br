@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Criar um aplicativo de console C# simples'
+title: 'Tutorial: Criar um aplicativo de console C# simples '
 description: Saiba como criar aplicativos de console em C# do Visual Basic no Visual Studio, passo a passo.
 ms.custom: vs-acquisition, get-started
 ms.date: 02/10/2021
@@ -15,16 +15,31 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5f155c2477c97b6f0d18a4cfd3d54386aee68dd9
-ms.sourcegitcommit: e3a364c014ccdada0860cc4930d428808e20d667
+ms.openlocfilehash: 20732b0d7fb09de6079b0c1b7b06d2ae89802a5b
+ms.sourcegitcommit: e7629e132a4d2fad6bb5869e4d68d9dbeeae9631
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112390366"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113649183"
 ---
-# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio"></a>Tutorial: Criar um aplicativo de console C# simples no Visual Studio
+# <a name="tutorial-create-a-simple-c-console-app-in-visual-studio-part-1-of-2"></a>Tutorial: Criar um aplicativo de console C# simples Visual Studio (parte 1 de 2)
 
-Neste tutorial do C#, você usará o Visual Studio para criar e executar um aplicativo de console e explorar alguns recursos do IDE (ambiente de desenvolvimento integrado) do Visual Studio durante esse processo.
+Neste tutorial, você usará o Visual Studio para criar e executar um aplicativo de console C# e explorar alguns recursos do IDE (ambiente de desenvolvimento integrado) do Visual Studio enquanto faz isso. Este tutorial é a parte 1 de uma série de tutoriais de duas partes.
+
+Neste tutorial, você irá:
+
+> [!div class="checklist"]
+> * Crie um Visual Studio projeto.
+> * Crie um aplicativo de console C#.
+> * Depure o aplicativo.
+> * Feche seu aplicativo.
+> * Inspecione o código completo.
+
+[Na parte 2,](tutorial-console-part-2.md)você estenderá esse aplicativo com projetos adicionais, truques de depuração e referenciar pacotes de terceiros.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Você deve ter o Visual Studio instalado.
 
 ::: moniker range="vs-2017"
 
@@ -40,7 +55,7 @@ Se você ainda não tiver instalado o Visual Studio, acesse a página [Visual St
 
 ::: moniker range="vs-2022"
 
-Se você ainda não tiver instalado o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
+Se você ainda não instalou o Visual Studio 2022 Preview, acesse a página de downloads do [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview/vs2022) para instalá-lo gratuitamente.
 
 ::: moniker-end
 
@@ -52,7 +67,7 @@ Para começar, criaremos um projeto de aplicativo em C#. O tipo de projeto inclu
 
 1. Abra o Visual Studio 2017.
 
-2. Na barra de menus superior, escolha **Arquivo**  >  **Novo**  >  **Projeto**.
+2. Na barra de menus superior, escolha **Arquivo**  >    >  **Novo Project**.
    (Como alternativa, pressione **Ctrl** + **Shift** + **N**).
 
 3. No painel esquerdo da caixa de diálogo **Novo Projeto**, expanda **C#** e, em seguida, escolha **.NET Core**. No painel central, escolha **Aplicativo de Console (.NET Core)**. Em seguida, nomeia a Calculadora **_de arquivos_**.
@@ -75,7 +90,7 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
 #### <a name="option-2-use-the-tools-menu-bar"></a>Opção 2: usar a barra de menus Ferramentas
 
-1. Cancele a caixa **de diálogo Novo** Projeto e, na barra de menus superior, escolha **Ferramentas** Obter Ferramentas > **e Recursos**.
+1. Cancele a caixa **de diálogo Novo Project** e, na barra de menus superior, escolha **Ferramentas** Obter Ferramentas > **e Recursos**.
 
 1. O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho **Desenvolvimento multiplaforma do .NET Core** e, em seguida, selecione **Modificar**.
 
@@ -89,7 +104,7 @@ Se o modelo de projeto **Aplicativo do Console (.NET Core)** não for exibido, v
 
    ![Exibir a janela 'Criar um novo projeto'](../../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. Na janela **Criar um novo projeto,** escolha **C#** na lista Idioma. Em seguida, **escolha Windows** na lista Plataforma e **Console** na lista de tipos de projeto. 
+1. Na janela **Criar um novo projeto,** escolha **C#** na lista Idioma. Em seguida, **Windows** na lista Plataforma e **Console** na lista de tipos de projeto. 
 
    Depois de aplicar os filtros de tipo de idioma, plataforma e projeto, escolha o **modelo Aplicativo** de Console e, em seguida, **escolha Próximo**.
 
@@ -251,7 +266,7 @@ Como mostrado na captura de tela a seguir, se você executar o aplicativo e divi
 
 Vamos corrigir o código para que ele identifique decimais.
 
-1. Pressione **Ctrl**  +  **H** para abrir o **controle Encontrar e** Substituir.
+1. Pressione **Ctrl**  +  **H** para abrir o controle **Localizar e substituir** .
 
 1. Altere cada instância da variável `int` para `float`.
 
@@ -292,7 +307,7 @@ Vamos examinar alguns erros comuns de entrada do usuário, localizá-los no depu
 
 Quando você tenta dividir um número por zero, o aplicativo de console pode congelar e, em seguida, mostrar o que há de errado no editor de código.
 
-   ![Captura de tela do editor de código do Visual Studio mostrando uma linha realçada em amarelo e um erro sem tratamento de exceção para ' tentativa de dividir por zero '.](./media/csharp-console-calculator-dividebyzero-error.png)
+   ![captura de tela do editor de código Visual Studio mostrando uma linha realçada em amarelo e um erro sem tratamento de exceção para ' tentativa de dividir por zero '.](./media/csharp-console-calculator-dividebyzero-error.png)
 
 > [!NOTE]
 > Às vezes, o aplicativo não congela e o depurador não mostrará um erro de divisão por zero. Em vez disso, o aplicativo pode retornar um resultado não numérico inesperado, como um símbolo de infinito. A correção de código a seguir ainda se aplica.
@@ -321,7 +336,7 @@ Vamos alterar o código para tratar esse erro.
 
 Agora, quando você dividir qualquer número por zero, o aplicativo solicitará outro número. Melhor ainda: não irá parar de perguntar até que você forneça um número diferente de zero.
 
-   ![Captura de tela do editor de código do Visual Studio mostrando o código para a instrução switch com a verificação de entrada de um divisor diferente de zero adicionado.](./media/csharp-console-calculator-dividebyzero.png)
+   ![captura de tela do editor de código Visual Studio mostrando o código para a instrução switch com a verificação de entrada de um divisor diferente de zero adicionado.](./media/csharp-console-calculator-dividebyzero.png)
 
 ### <a name="fix-the-format-error"></a>Corrigir o erro de "formato"
 
@@ -482,11 +497,11 @@ Vamos começar.
 
    ![Fechar o painel Saída no Visual Studio](./media/csharp-calculator-close-output-pane.png)
 
-1. No Visual Studio, pressione **Ctrl** + **S** para salvar seu aplicativo.
+1. em Visual Studio, pressione **Ctrl** + **S** para salvar seu aplicativo.
 
 1. Feche o Visual Studio.
 
-## <a name="code-complete"></a>Conclusão do código
+## <a name="review-code-complete"></a>Revisão: código concluído
 
 Durante este tutorial, fizemos muitas alterações no aplicativo de calculadora. O aplicativo agora manipula recursos de computação com mais eficiência e trata a maioria dos erros de entrada do usuário.
 
@@ -627,10 +642,15 @@ Continue com mais tutoriais:
 Continue com a segunda parte deste tutorial:
 
 > [!div class="nextstepaction"]
-> [Continuar com a parte 2](tutorial-console-part-2.md)
+> [Tutorial parte 2: usando vários projetos e pacotes de terceiros](tutorial-console-part-2.md)
 :::moniker-end
 
-## <a name="see-also"></a>Confira também
+Além de interesse:
 
-* [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
-* [Aprenda a depurar o código C# no Visual Studio](tutorial-debugger.md)
+- [Continuar com mais tutoriais do C#](/dotnet/csharp/tutorials/)
+- [início rápido: criar um aplicativo web ASP.NET Core](../../ide/quickstart-aspnet-core.md)
+- [Aprenda a depurar o código C# no Visual Studio](tutorial-debugger.md)
+- Orientações sobre como [criar e executar testes de unidade](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Executar um programa em C#](run-program.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [continuar com Visual Studio visão geral do IDE](/../visual-studio-ide.md)

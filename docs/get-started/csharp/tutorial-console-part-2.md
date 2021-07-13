@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Estender um aplicativo de console C# simples'
+title: 'Tutorial 2: Estender seu aplicativo de console C#'
 description: Saiba como desenvolver um aplicativo de console C# Visual Studio, passo a passo.
 ms.custom: vs-acquisition, get-started
 ms.date: 04/15/2021
@@ -16,20 +16,33 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84a79015dc4b1147f078b0a970df52c553189c92
-ms.sourcegitcommit: 4e09130bcd55bb9cb8ad157507c23b67aa209fad
+ms.openlocfilehash: f7d1ae7d0d5f045c0772243c7fc4011a9f31088e
+ms.sourcegitcommit: e7629e132a4d2fad6bb5869e4d68d9dbeeae9631
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113549492"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "113649154"
 ---
-# <a name="tutorial-extend-a-simple-c-console-app"></a>Tutorial: Estender um aplicativo de console C# simples
+# <a name="tutorial-extend-c-console-app-and-debug-in-visual-studio-part-2-of-2"></a>Tutorial: Estender o aplicativo de console C# e depurar Visual Studio (parte 2 de 2)
 
-Neste tutorial, você aprenderá a usar o Visual Studio para estender o aplicativo de console criado na primeira parte. Você aprenderá alguns dos recursos Visual Studio que você precisará para o desenvolvimento diário, como gerenciar vários projetos e referenciar pacotes de terceiros.
+Na parte 2 desta série de tutoriais, você se aprofundará um pouco nos recursos de build e depuração no Visual Studio que você precisará para o desenvolvimento diário, como gerenciar vários projetos, depurar e referenciar pacotes de terceiros. Você executará o aplicativo de console C# criado na [Parte 1 deste tutorial(tutorial-console.md) e explorará alguns recursos do IDE (ambiente de desenvolvimento integrado) do Visual Studio enquanto faz isso. Este tutorial é a parte 2 de uma série de tutoriais de duas partes.
 
-Se você acabou de concluir [a primeira parte](tutorial-console.md) desta série, já tem o aplicativo de console calculadora.  Para ignorar a parte 1, você pode começar abrindo o projeto de um GitHub repo. O aplicativo Calculadora de C# está no [repo vs-tutorial-samples,](https://github.com/MicrosoftDocs/vs-tutorial-samples)portanto, você pode simplesmente seguir as etapas em Tutorial: Abrir um projeto de um [repo](../tutorial-open-project-from-repo.md) para começar.
+Neste tutorial, você irá:
 
-## <a name="add-a-new-project"></a>Adicionar um novo projeto
+> [!div class="checklist"]
+> * Adicione outro projeto ao primeiro.
+> * Bibliotecas de referência e adicionar pacotes.
+> * Depurar um pouco mais.
+> * Inspecione o código completo.
+
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+Você deve:
++ Usar o [aplicativo de console calculadora da parte 1 desta série de tutoriais](tutorial-console.md) 
++ Use o aplicativo calculadora C# no [repo vs-tutorial-samples](https://github.com/MicrosoftDocs/vs-tutorial-samples) que você pode abrir em um [repo](../tutorial-open-project-from-repo.md) para começar.
+
+## <a name="add-another-project"></a>Adicionar outro projeto
 
 O código do mundo real envolve muitos projetos trabalhando juntos em uma solução. Agora, vamos adicionar outro projeto ao aplicativo calculadora. Essa será uma biblioteca de classes que fornece algumas das funções de calculadora.
 
@@ -749,15 +762,12 @@ namespace CalculatorProgram
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Parabéns por concluir este tutorial. Para saber ainda mais, acompanhe os tutoriais a seguir.
+Parabéns por concluir este tutorial. Para saber mais, continue com o seguinte conteúdo:
 
-> [!div class="nextstepaction"]
-> [Continuar com mais tutoriais do C#](/dotnet/csharp/tutorials/)
-
-> [!div class="nextstepaction"]
-> [Continuar com a Visual Studio do IDE](/../visual-studio-ide.md)
-
-## <a name="see-also"></a>Confira também
-
-- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [Continuar com mais tutoriais do C#](/dotnet/csharp/tutorials/)
+- [Início Rápido: criar um ASP.NET Core Web](../../ide/quickstart-aspnet-core.md)
 - [Aprenda a depurar o código C# no Visual Studio](tutorial-debugger.md)
+- Passo a passo sobre como [criar e executar testes de unidade](../../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Executar um programa em C#](run-program.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [Continuar com a Visual Studio do IDE](/../visual-studio-ide.md)
