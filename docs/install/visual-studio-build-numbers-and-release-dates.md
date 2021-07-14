@@ -5,19 +5,19 @@ description: Uma lista com as versões lançadas e números de build do Visual S
 author: TerryGLee
 ms.author: tglee
 manager: jmartens
-ms.date: 06/29/2021
+ms.date: 07/13/2021
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: cbd86d9dfa8b1f34ab7a352936a2d8f7f2f2e33f
-ms.sourcegitcommit: 0499d813d5c24052c970ca15373d556a69507250
+ms.openlocfilehash: c38650704a0f95c14e344e7112a8b3cbe44264b6
+ms.sourcegitcommit: 15821c790d6498210f30b3268402ffad6bb70c7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113046099"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "113725528"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Números de build e datas de lançamento do Visual Studio
 
@@ -33,7 +33,7 @@ A tabela a seguir lista os números de build e as datas de lançamento Visual St
 | 17.0.0 | Preview 1 | 17 de junho de 2021 | 17.0.31410.414 |
 
 > [!NOTE]
-> Para exibir dados da versão anterior, consulte [Visual Studio de build 2019 e datas de lançamento.](visual-studio-build-numbers-and-release-dates.md?view=vs-2019&preserve-view=true)
+> Para exibir dados da versão anterior, consulte Visual Studio [de build 2019 e datas de lançamento.](visual-studio-build-numbers-and-release-dates.md?view=vs-2019&preserve-view=true)
 
 ::: moniker-end
 
@@ -45,6 +45,10 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 
 | **Versão**| **Channel** | **Data de liberação** | **Versão de build** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.11.0 | Versão Prévia 3 | 13 de julho de 2021 | 16.11.31507.150 |
+| 16.9.9 | Versão | 13 de julho de 2021 | 16.9.31501.217 |
+| 16.7.17 | Versão | 13 de julho de 2021 | 16.7.31429.392 |
+| 16.4.24| Versão | 13 de julho de 2021 | 16.4.31429.391 |
 | 16.10.3 | Versão | 29 de junho de 2021 | 16.10.31424.327 |
 | 16.11.0 | Preview 2 | 15 de junho de 2021 | 16.11.31410.223 |
 | 16.10.2 | Versão | 15 de junho de 2021 | 16.10.31410.357 |
@@ -105,9 +109,9 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 | 16.8.0 | Visualização 4 | 13 de outubro de 2020 | 16.8.30608.117 |
 | 16.0.19 | Versão | 13 de outubro de 2020 | 16.0.28803.846 |
 | 16.4.14 | Versão | 13 de outubro de 2020 | 16.4.30607.51 |
-| 16.8.0 | Versão prévia 3.2 | 29 de setembro de 2020 | 16.8.30524.135 |
+| 16.8.0 | Versão prévia 3,2 | 29 de setembro de 2020 | 16.8.30524.135 |
 | 16.7.5 | Versão | 29 de setembro de 2020 |  16.7.30523.141 |
-| 16.8.0 | Versão prévia 3.1 | 22 de setembro de 2020 | 16.8.30516.212 |
+| 16.8.0 | Versão prévia 3,1 | 22 de setembro de 2020 | 16.8.30516.212 |
 | 16.7.4 | Versão | 21 de setembro de 2020 | 16.7.30517.126 |
 | 16.8.0 | Versão Prévia 3 | 14 de setembro de 2020 | 16.8.30509.190 |
 | 16.7.3 | Versão | 08 de setembro de 2020 | 16.7.30503.244 |
@@ -129,7 +133,7 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 | 16.4.11 | Versão | 14 de julho de 2020 | 16.4.30308.118 |
 | 16.0.16 | Versão | 14 de julho de 2020 | 16.0.28803.791 |
 | 16.6.3 | Versão | 30 de junho de 2020 | 16.6.30225.117 |
-| 16.7.0 | Versão prévia 3,1 | 25 de junho de 2020 | 16.7.30223.230 |
+| 16.7.0 | Versão prévia 3.1 | 25 de junho de 2020 | 16.7.30223.230 |
 | 16.7.0 | Versão Prévia 3 | 23 de junho de 2020 | 16.7.30218.91 |
 | 16.0.15 | Versão | 9 de junho de 2020 | 16.0.28803.753 |
 | 16.6.2 | Versão | 9 de junho de 2020 | 16.6.30204.135 |
@@ -244,9 +248,9 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 | 16.0.0 | Preview 1 | 4 de dezembro de 2018 | 16.0.28329.73 |
 
 > [!NOTE]
-> Para exibir dados para a versão *anterior* , consulte [números de compilação e datas de lançamento do Visual Studio 2017](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true).
+> Para exibir dados da *versão anterior,* consulte Visual Studio [de build 2017 e datas de lançamento.](visual-studio-build-numbers-and-release-dates.md?view=vs-2017&preserve-view=true)
 >
->Para exibir dados para a *próxima* versão, consulte [números de compilação e datas de lançamento do Visual Studio 2022](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true).
+>Para exibir dados para a *próxima versão,* [consulte Visual Studio de build 2022 e datas de lançamento.](visual-studio-build-numbers-and-release-dates.md?view=vs-2022&preserve-view=true)
 
 ::: moniker-end
 
@@ -256,8 +260,9 @@ A tabela a seguir lista os números de build e as datas de lançamento do Visual
 
 A tabela a seguir relaciona os números de build e as datas de lançamento do Visual Studio 2017 até o momento.
 
-| **Versão**      | **Channel** | **Data de liberação**   | **Versão da compilação** |
+| **Versão**      | **Channel** | **Data de liberação**   | **Versão de build** |
 |------------------|-------------|--------------------|-------------------|
+| 15.9.37          | Versão     | 13 de julho de 2021      | 15.9.28307.1585   |
 | 15.9.36          | Versão     | 11 de maio de 2021       | 15.9.28307.1525   |
 | 15.9.35          | Versão     | 13 de abril de 2021     | 15.9.28307.1500   |
 | 15.9.34          | Versão     | 9 de março de 2021      | 15.9.28307.1440   |
@@ -439,13 +444,13 @@ A tabela a seguir relaciona os números de build e as datas de lançamento do Vi
 | 15.0.0           | Versão     | 7 de março de 2017      | 15.0.26228.4      |
 
 > [!NOTE]
-> Para exibir dados para versões mais recentes, consulte Visual Studio [de build 2019](?preserve-view=true&view=vs-2019) e datas de lançamento ou Visual Studio [de build 2022](?preserve-view=true&view=vs-2022)e datas de lançamento.
+> para exibir dados para versões mais recentes, consulte [Visual Studio números de build do 2019 e datas de lançamento](?preserve-view=true&view=vs-2019) ou [Visual Studio números de build de 2022 e datas de lançamento](?preserve-view=true&view=vs-2022).
 
 ::: moniker-end
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 * [Roteiro do Visual Studio](/visualstudio/productinfo/vs-roadmap)
 * [Ritmo de lançamento do Visual Studio](/visualstudio/productinfo/release-rhythm)

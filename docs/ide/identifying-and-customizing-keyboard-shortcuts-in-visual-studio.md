@@ -18,12 +18,12 @@ ms.author: tglee
 manager: jmartens
 ms.workload:
 - multiple
-ms.openlocfilehash: a1a3aa2ace6279211c27847b8b9cc46d71b0d9ad
-ms.sourcegitcommit: 690bfc20744e4b543ee81030a60c8fc6d0d6610f
+ms.openlocfilehash: cc9b38b27df28d551fc33e9a23bdad8276a422a4
+ms.sourcegitcommit: 15821c790d6498210f30b3268402ffad6bb70c7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113038597"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "113725541"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Identificar e personalizar atalhos de teclado no Visual Studio
 
@@ -35,7 +35,7 @@ Você pode identificar atalhos de teclado para comandos do Visual Studio, person
 
 - Em que contexto você está quando escolhe o atalho. Por exemplo, o atalho **F2** invocará o comando `Edit.EditCell` se você estiver usando o **Designer de Configurações** e o comando `File.Rename` se você estiver usando o **Team Explorer**.
 
-Independentemente das configurações, da personalização e do contexto, você sempre pode localizar e alterar um atalho de teclado na caixa de diálogo **Opções**. Você também pode procurar os atalhos de teclado padrão de dezenas de comandos em [Atalhos de teclado populares](../ide/default-keyboard-shortcuts-in-visual-studio.md#most-popular-keyboard-shortcuts). Para obter uma lista completa de todos os atalhos padrão (com base nas configurações **Desenvolvimento Geral**), confira [Todos os atalhos de teclado](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+Independentemente das configurações, da personalização e do contexto, você sempre pode localizar e alterar um atalho de teclado na caixa de diálogo **Opções**. Você também pode procurar os atalhos de teclado padrão de dezenas de comandos em [Atalhos de teclado populares](../ide/default-keyboard-shortcuts-in-visual-studio.md#popular). Para obter uma lista completa de todos os atalhos padrão (com base nas configurações **Desenvolvimento Geral**), confira [Todos os atalhos de teclado](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
 Se um atalho for atribuído a um comando no contexto *Global* e em mais nenhum outro contexto, esse atalho sempre invocará o comando em questão. Porém, um atalho pode ser atribuído a um comando no contexto Global e a um comando diferente em um contexto específico. Se você usar tal atalho quando estiver no contexto específico, o atalho invocará o comando para o contexto específico, e não para o contexto Global.
 
@@ -106,7 +106,7 @@ Você pode compartilhar os atalhos de teclado personalizados exportando-os para 
 
 ### <a name="to-export-only-keyboard-shortcuts"></a>Para exportar apenas atalhos de teclado
 
-1. Na barra de menus, escolha **ferramentas**  >  **importar e exportar configurações**.
+1. na barra de menus, escolha **ferramentas**  >  **importar e exportar Configurações**.
 
 2. Escolha **Exportar configurações de ambiente selecionadas** e escolha **Avançar**.
 
@@ -120,7 +120,7 @@ Você pode compartilhar os atalhos de teclado personalizados exportando-os para 
 
 ::: moniker range="vs-2017"
 
-Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Documents\Visual Studio 2017 \ Settings* . O nome do arquivo reflete a data de quando as configurações foram exportadas, e a extensão é *.vssettings*.
+por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Documents\ Visual Studio 2017 \ Configurações* . O nome do arquivo reflete a data de quando as configurações foram exportadas, e a extensão é *.vssettings*.
 
 ::: moniker-end
 
@@ -132,7 +132,7 @@ Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Docume
 
 ### <a name="to-import-only-keyboard-shortcuts"></a>Para importar apenas atalhos de teclado
 
-1. Na barra de menus, escolha **ferramentas**  >  **importar e exportar configurações**.
+1. na barra de menus, escolha **ferramentas**  >  **importar e exportar Configurações**.
 
 2. Escolha o botão de opção **Importar configurações de ambiente selecionadas** e **Avançar**.
 
@@ -148,6 +148,6 @@ Por padrão, os atalhos são salvos em um arquivo na pasta *%USERPROFILE%\Docume
 
    ![Importar apenas atalhos de teclado personalizados](../ide/media/importshortcuts.png)
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Recursos de acessibilidade do Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)
